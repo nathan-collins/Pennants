@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Sunshinecoastgolf" product="MySQL" version="5.5.34-0ubuntu0.13.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.27 ( Revision: alexander.soklakov@oracle.com-20131021093118-gtm1bh1vb450xipt )" uuid="6fb29722-5297-4641-a4db-aa873c378137">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1:3306/sunshinecoastgolf</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfcddfcddfcfdf9fdf9bdf9adf9adfc4dfc9dfc5dfc6dfc6</user-password>
+    <schema-pattern>sunshinecoastgolf.*</schema-pattern>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/mysql/mysql-connector-java-5.1.27/mysql-connector-java-5.1.27-bin.jar</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="sunshinecoastgolf"/>
+    <table name="clubs" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="season_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="active" sqlType="ENUM" length="2" precision="0" nullable="false" jdbcType="1"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="games" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="club_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="opponent_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="host_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="player_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="versus_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="game_date" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="grades" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="season_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="migrations" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="migration" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="batch" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+    </table>
+    <table name="player_results" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="player_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="grade_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="game_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="hole" sqlType="SMALLINT" length="5" precision="0" nullable="false" jdbcType="5"/>
+      <column name="score" sqlType="SMALLINT" length="5" precision="0" nullable="false" jdbcType="5"/>
+      <column name="status" sqlType="ENUM" length="4" precision="0" nullable="false" jdbcType="1"/>
+      <column name="finished" sqlType="ENUM" length="2" precision="0" nullable="false" jdbcType="1"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="players" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="region_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="club_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="settings" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="handicap" sqlType="SMALLINT" length="5" precision="0" nullable="false" jdbcType="5"/>
+      <column name="golf_link_number" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="results" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="game_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="player_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="versus_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="result" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="seasons" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="year" sqlType="VARCHAR" length="5" precision="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="users_username_unique" unique="true" columns="username"/>
+    </table>
+  </data-source>
+  <data-source source="LOCAL" name="Show2me" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="44eceffe-0f2c-4311-bff6-ceb0201e1f65">
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1:3306/lnk2ws</jdbc-url>
+    <user-name>lnk2ws</user-name>
+    <user-password>dfc6dfc4dfc1df98dfdddfd9</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/mysql/mysql-connector-java-5.1.27/mysql-connector-java-5.1.27-bin.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

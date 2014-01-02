@@ -1,0 +1,8 @@
+USE sunshinecoastgolf;
+SELECT * FROM season;
+
+
+INSERT INTO season VALUES ('', '2014');
+
+
+

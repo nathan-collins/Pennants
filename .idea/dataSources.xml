@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3720148576">
+    <data-source source="LOCAL" name="Sunshinecoastgolf" product="MySQL" version="5.5.34-0ubuntu0.13.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.27 ( Revision: alexander.soklakov@oracle.com-20131021093118-gtm1bh1vb450xipt )" uuid="6fb29722-5297-4641-a4db-aa873c378137">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/sunshinecoastgolf</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfcddfcddfcfdf9fdf9bdf9adf9adfc4dfc9dfc5dfc6dfc6</user-password>
+      <schema-pattern>sunshinecoastgolf.*</schema-pattern>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/mysql/mysql-connector-java-5.1.27/mysql-connector-java-5.1.27-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Show2me" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="44eceffe-0f2c-4311-bff6-ceb0201e1f65">
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/lnk2ws</jdbc-url>
+      <user-name>lnk2ws</user-name>
+      <user-password>dfc6dfc4dfc1df98dfdddfd9</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/mysql/mysql-connector-java-5.1.27/mysql-connector-java-5.1.27-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
