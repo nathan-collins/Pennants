@@ -22,7 +22,7 @@ class GameController extends \BaseController {
 
 		return \Response::json(array(
 			'error' => false,
-			'games' => $games,
+			'game' => $games,
 			'code'	=> 200
 		));
 	}

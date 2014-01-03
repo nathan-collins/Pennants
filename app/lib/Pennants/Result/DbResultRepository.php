@@ -1,15 +1,14 @@
-<?php namespace Pennants\Repositories;
+<?php namespace Pennants\Result;
 
-use Pennants\Interfaces;
 use Results;
 
-class DbResultRepository implements Interfaces\ResultRepositoryInterface {
+class DbResultRepository implements ResultRepositoryInterface {
 
 	/**
 	 * @return mixed
 	 */
 
-	public function getAll()
+	public function all()
 	{
 		return Results::all();
 	}
@@ -20,8 +19,8 @@ class DbResultRepository implements Interfaces\ResultRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function find($id)
+	public function get($id)
 	{
-		return Results::findOrFail($id);
+		return Results::find($id);
 	}
 }

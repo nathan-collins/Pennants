@@ -124,8 +124,7 @@ class GradeController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		$season_id = 0;
-		$grade = $this->grade->delete($id, $season_id);
+		$grade = $this->grade->delete($id);
 
 		return \Response::json(array(
 			'error' => false,

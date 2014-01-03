@@ -61,10 +61,19 @@
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
+    <table name="player_seasons" schema="" catalog="sunshinecoastgolf" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="player_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="season_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="club_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="grade_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
     <table name="players" schema="" catalog="sunshinecoastgolf" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="region_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="club_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
       <column name="settings" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
       <column name="handicap" sqlType="SMALLINT" length="5" precision="0" nullable="false" jdbcType="5"/>
@@ -95,9 +104,12 @@
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="username" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <index name="users_email_unique" unique="true" columns="email"/>
       <index name="users_username_unique" unique="true" columns="username"/>
     </table>
   </data-source>

@@ -1,16 +1,10 @@
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: nathancollins
- * Date: 22/12/13
- * Time: 11:46 AM
- * To change this template use File | Settings | File Templates.
- */
-
-namespace Pennants\Interfaces;
-
+<?php namespace Pennants\Player;
 
 interface PlayerRepositoryInterface {
-	public function getAll();
-	public function find($id);
+	public function all();
+	public function get($id);
+	public function getWhere($column, $value);
+	public function update($id);
+	public function delete($id);
+	public function create($data);
 }

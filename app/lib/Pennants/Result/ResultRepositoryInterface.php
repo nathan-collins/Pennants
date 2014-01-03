@@ -1,16 +1,7 @@
-<?php
-	/**
-	 * Created by IntelliJ IDEA.
-	 * User: nathancollins
-	 * Date: 22/12/13
-	 * Time: 11:46 AM
-	 * To change this template use File | Settings | File Templates.
-	 */
-
-namespace Pennants\Interfaces;
+<?php namespace Pennants\Result;
 
 
 interface ResultRepositoryInterface {
-	public function getAll();
-	public function find($id);
+	public function all();
+	public function get($id);
 }

@@ -15,32 +15,6 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        coffee: {
-            options: {
-                bare: true
-            },
-            dist: {
-                options: {
-                    sourceMap: false
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'assets/scripts',
-                    src: '{,*/}*.coffee',
-                    dest: 'public/assets/scripts',
-                    ext: '.js'
-                }]
-            },
-            test: {
-                files: [{
-                    expand: true,
-                    cwd: 'assets/test/spec',
-                    src: '{,*/}*.coffee',
-                    dest: 'public/assets/test/spec',
-                    ext: '.js'
-                }]
-            }
-        },
         jshint: {
             options: {
                 jshintrc: '.jshintrc'
@@ -61,33 +35,6 @@ module.exports = function (grunt) {
                 '!public/assets/vendor/*'
             ],
             uglify: true
-        },
-        compass: {
-            options: {
-                sassDir: 'assets/styles',
-                cssDir: 'public/assets/styles',
-                generatedImagesDir: 'public/assets/images/out',
-                imagesDir: 'public/assets/images',
-                javascriptsDir: 'public/assets/scripts',
-                fontsDir: 'public/assets/styles/fonts',
-                importPath: 'assets/vendor',
-                httpImagesPath: '/assets/images',
-                httpGeneratedImagesPath: '/assets/images/out',
-                httpFontsPath: '/assets/styles/fonts',
-                relativeAssets: false,
-                assetCacheBuster: false
-            },
-            dist: {
-                options: {
-                    outputStyle: 'compressed',
-                    noLineComments: true
-                }
-            },
-            server: {
-                options: {
-                    debugInfo: true
-                }
-            }
         },
         autoprefixer: {
             options: {
@@ -116,37 +63,6 @@ module.exports = function (grunt) {
             },
             watch: {}
         },
-        watch: {
-            coffee: {
-                files: [ 'assets/scripts/{,*/}*.coffee' ],
-                tasks: [ 'coffee:dist' ]
-            },
-            coffeeTest: {
-                files: [ 'assets/test/spec/{,*/}*.coffee' ],
-                tasks: [ 'coffee:test' ]
-            },
-            compass: {
-                files: [ 'assets/styles/{,*/}*.{scss,sass}' ],
-                tasks: [ 'compass:server', 'autoprefixer' ]
-            },
-            styles: {
-                files: [ 'assets/styles/{,*/}*.css' ],
-                tasks: [ 'copy:dist', 'autoprefixer' ]
-            },
-            scripts: {
-                files: [ 'assets/scripts/{,*/}*.js' ],
-                tasks: [ 'jshint', 'copy:dist' ]
-            },
-            livereload: {
-                options: {
-                    livereload: true
-                },
-                files: [
-                    'app/views/{,*/}*.php',
-                    'public/assets/{,*/}*.*'
-                ]
-            }
-        },
         copy: {
             dist: {
                 expand: true,
@@ -160,8 +76,19 @@ module.exports = function (grunt) {
                 ],
                 dest: 'public/assets'
             }
+        },
+        cssmin: {
+            minify: {
+                expand: true,
+                cwd: 'public/assets/styles/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'public/assets/styles/',
+                ext: '.min.css'
+            }
         }
     });
+
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     grunt.registerTask('server', [
         'jshint',
@@ -174,12 +101,13 @@ module.exports = function (grunt) {
         'clean:dist',
         'autoprefixer',
         'modernizr',
-        'compass',
         'copy:dist'
     ]);
 
     grunt.registerTask('default', [
         'jshint',
-        'build'
+        'build',
+        'less',
+        'cssmin'
     ]);
 };

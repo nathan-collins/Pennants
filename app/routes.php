@@ -22,6 +22,7 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 	Route::resource('pennants/result', 'Api\ResultController');
 	Route::resource('pennants/player_result', 'Api\PlayerResultController');
 	Route::resource('pennants/user', 'Api\UserController');
+	Route::resource('pennants/player', 'Api\PlayerController');
 });
 
 Route::get('/', array('as' => 'home', function () {
