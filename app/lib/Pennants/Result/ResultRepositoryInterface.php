@@ -3,5 +3,5 @@
 
 interface ResultRepositoryInterface {
 	public function all();
-	public function get($id);
+	public function find($id);
 }

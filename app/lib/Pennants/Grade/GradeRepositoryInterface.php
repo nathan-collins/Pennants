@@ -9,7 +9,7 @@
 
 interface GradeRepositoryInterface {
 	public function all();
-	public function get($id);
+	public function find($id);
 	public function getWhere($column, $value);
 	public function update($id);
 	public function delete($id);

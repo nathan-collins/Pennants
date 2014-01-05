@@ -19,7 +19,7 @@ class DbResultRepository implements ResultRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function get($id)
+	public function find($id)
 	{
 		return Results::find($id);
 	}

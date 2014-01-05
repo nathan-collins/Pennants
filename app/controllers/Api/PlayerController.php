@@ -1,17 +1,14 @@
 <?php namespace Api;
 
 use Pennants\Player\PlayerRepositoryInterface;
-use Pennants\Grade\GradeRepositoryInterface;
 
 class PlayerController extends \BaseController {
 
 	protected $player;
-	protected $game;
 
-	public function __construct(PlayerRepositoryInterface $player, GradeRepositoryInterface $grade)
+	public function __construct(PlayerRepositoryInterface $player)
 	{
 		$this->player = $player;
-		$this->grade = $grade;
 	}
 
 	/**
@@ -59,23 +56,6 @@ class PlayerController extends \BaseController {
 	}
 
 	/**
-	 * @param $season_id
-	 *
-	 * @return mixed
-	 */
-
-	public function getClub($club_id)
-	{
-		$player = $this->grade->getWhere('club_id', $club_id);
-
-		return \Response::json(array(
-			'error' => false,
-			'player' => $player->toArray(),
-			'code' 	=> 200
-		));
-	}
-
-	/**
 	 * Display the specified resource.
 	 *
 	 * @param  int  $id
@@ -83,7 +63,7 @@ class PlayerController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$player = $this->player->get($id);
+		$player = $this->player->find($id);
 
 		return \Response::json(array(
 			'error' => false,
@@ -100,7 +80,7 @@ class PlayerController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$player = $this->player->get($id);
+		$player = $this->player->find($id);
 
 		return \View::make('player.edit')->with('player', $player);
 	}

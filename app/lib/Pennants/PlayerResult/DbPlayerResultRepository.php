@@ -22,6 +22,6 @@ class DbPlayerResultRepository implements Interfaces\PlayerResultRepositoryInter
 
 	public function find($id)
 	{
-		return PlayerResults::findOrFail($id);
+		return PlayerResults::find($id);
 	}
 }

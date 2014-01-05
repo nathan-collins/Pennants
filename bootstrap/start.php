@@ -28,7 +28,7 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('precise32'),
+	'local' => array('nathancollins-Latitude-E6540'),
 
 ));
 

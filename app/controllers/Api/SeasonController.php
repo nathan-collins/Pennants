@@ -24,9 +24,15 @@ class SeasonController extends BaseController {
 	{
 		$seasons = $this->season->all();
 
+		if($seasons) {
+			$seasons = $seasons->toArray();
+		} else {
+			$seasons = array();
+		}
+
 		return \Response::json(array(
 			'error' => false,
-			'season' => $seasons->toArray(),
+			'season' => $seasons,
 			'code'	=> 200
 		));
 	}
@@ -38,7 +44,7 @@ class SeasonController extends BaseController {
 	 */
 	public function create()
 	{
-		return \View::make('season.create');
+		return \View::make('api.season.create');
 	}
 
 	/**
@@ -68,11 +74,17 @@ class SeasonController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$season = $this->season->get($id);
+		$season = $this->season->find($id);
+
+		if($season) {
+			$season = $season->toArray();
+		} else {
+			$season = array();
+		}
 
 		return \Response::json(array(
 			'error' => false,
-			'season' => $season->toArray(),
+			'season' => $season,
 			'code' 	=> 200
 		));
 	}
@@ -85,9 +97,9 @@ class SeasonController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		$season = $this->season->get($id);
+		$season = $this->season->find($id);
 
-		return \View::make('season.edit')->with('season', $season);
+		return \View::make('api.season.edit', compact('season'));
 	}
 
 	/**

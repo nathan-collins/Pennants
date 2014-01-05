@@ -19,7 +19,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function get($id)
+	public function find($id)
 	{
 		return Grades::find($id);
 	}

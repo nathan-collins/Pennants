@@ -5,23 +5,19 @@ use Magniloquent\Magniloquent\Magniloquent;
 class Players extends Magniloquent {
 	protected $guarded = array('id');
 
-	protected $fillable = array('name', 'settings', 'golf_link_number');
+	protected $fillable = array('name', 'handicap', 'settings', 'golf_link_number');
 
 	public static $rules = array(
 		"save" => array(
 			'name' => 'required',
-			'golf_link_number' => 'required|numeric'
+			'handicap' => 'required',
+			'golf_link_number' => 'required|numeric|digits:10'
 		),
 		"create" => array(
 			'name' => 'required',
-			'golf_link_number' => 'required|numeric'
+			'handicap' => 'required',
+			'golf_link_number' => 'required|numeric|digits:10'
 		),
 		"update" => array()
-	);
-
-	protected static $relationships = array(
-		'user' => array('belongsTo', 'User', 'user_id'),
-		'region' => array('belongsTo', 'Season', 'season_id'),
-		'club' => array('belongsTo', 'Club', 'club_id')
 	);
 }

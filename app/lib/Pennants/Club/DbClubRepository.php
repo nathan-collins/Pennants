@@ -19,7 +19,7 @@ class DbClubRepository implements ClubRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function get($id)
+	public function find($id)
 	{
 		return Clubs::find($id);
 	}

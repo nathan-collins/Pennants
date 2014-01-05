@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "bff9bff009dbd7e44af103acd1e5ebf2",
+    "hash": "201899381c80a9a95f17a0fd7bae684b",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -350,12 +350,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "6f4294c3decd014627076982d99d626f5a3b1012"
+                "reference": "750c1804d01c048a9250c74858c7891baf23a88f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/6f4294c3decd014627076982d99d626f5a3b1012",
-                "reference": "6f4294c3decd014627076982d99d626f5a3b1012",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/750c1804d01c048a9250c74858c7891baf23a88f",
+                "reference": "750c1804d01c048a9250c74858c7891baf23a88f",
                 "shasum": ""
             },
             "require": {
@@ -408,7 +408,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2014-01-01 16:43:58"
+            "time": "2014-01-03 19:25:09"
         },
         {
             "name": "doctrine/inflector",
@@ -588,6 +588,52 @@
             "time": "2013-06-10 12:22:13"
         },
         {
+            "name": "fzaninotto/faker",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "1d143fd8caf4d264602450bc01d7484af788706b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/1d143fd8caf4d264602450bc01d7484af788706b",
+                "reference": "1d143fd8caf4d264602450bc01d7484af788706b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Faker": "src/",
+                    "Faker\\PHPUnit": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "time": "2013-12-16 21:56:48"
+        },
+        {
             "name": "goez/laravel-grunt",
             "version": "dev-master",
             "source": {
@@ -630,55 +676,6 @@
             ],
             "description": "Asset manager for Laravel 4 using the power of Grunt.",
             "time": "2013-11-20 06:00:38"
-        },
-        {
-            "name": "hybridauth/hybridauth",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hybridauth/hybridauth.git",
-                "reference": "6d89473b379fc7a904e69ee63f548af3308bd4d9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hybridauth/hybridauth/zipball/6d89473b379fc7a904e69ee63f548af3308bd4d9",
-                "reference": "6d89473b379fc7a904e69ee63f548af3308bd4d9",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Hybrid": "hybridauth/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "(MIT or GPL-3.0+)"
-            ],
-            "authors": [
-                {
-                    "name": "Miled",
-                    "email": "hybridauth@gmail.com"
-                }
-            ],
-            "description": "Open source social sign on PHP library.",
-            "homepage": "http://hybridauth.sourceforge.net",
-            "keywords": [
-                "OpenId",
-                "facebook",
-                "google",
-                "hybridauth",
-                "login",
-                "oauth",
-                "social",
-                "twitter",
-                "yahoo"
-            ],
-            "time": "2013-02-21 06:45:16"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -927,12 +924,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/philipbrown/magniloquent.git",
-                "reference": "7a1b4640a55dfec4283b84277579f960c2b20ea3"
+                "reference": "e8a6a76dd4e4793ee3e8d5a5f517a20aa88bf630"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philipbrown/magniloquent/zipball/7a1b4640a55dfec4283b84277579f960c2b20ea3",
-                "reference": "7a1b4640a55dfec4283b84277579f960c2b20ea3",
+                "url": "https://api.github.com/repos/philipbrown/magniloquent/zipball/e8a6a76dd4e4793ee3e8d5a5f517a20aa88bf630",
+                "reference": "e8a6a76dd4e4793ee3e8d5a5f517a20aa88bf630",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +966,7 @@
                 "eloquent",
                 "laravel"
             ],
-            "time": "2013-12-18 04:18:19"
+            "time": "2014-01-03 00:11:08"
         },
         {
             "name": "mockery/mockery",
@@ -1312,26 +1309,26 @@
         },
         {
             "name": "patchwork/utf8",
-            "version": "v1.1.16",
+            "version": "v1.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nicolas-grekas/Patchwork-UTF8.git",
-                "reference": "bc719e850b57791c1024d06f9fe7d474348e7ba6"
+                "reference": "1396fedf134f71d479236fce0833dc4c88079391"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/bc719e850b57791c1024d06f9fe7d474348e7ba6",
-                "reference": "bc719e850b57791c1024d06f9fe7d474348e7ba6",
+                "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/1396fedf134f71d479236fce0833dc4c88079391",
+                "reference": "1396fedf134f71d479236fce0833dc4c88079391",
                 "shasum": ""
             },
             "require": {
-                "lib-pcre": "*",
+                "lib-pcre": ">=7.9",
                 "php": ">=5.3.0"
             },
             "suggest": {
-                "ext-mbstring": "Use Mbstring for best performance",
-                "lib-iconv": "Use iconv for best performance",
-                "lib-icu": "Use Intl for best performance"
+                "ext-iconv": "Use iconv for best performance",
+                "ext-intl": "Use Intl for best performance",
+                "ext-mbstring": "Use Mbstring for best performance"
             },
             "type": "library",
             "autoload": {
@@ -1359,7 +1356,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2013-12-07 12:20:20"
+            "time": "2014-01-02 10:19:36"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2299,12 +2296,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "40612d5910ebe581e25db3846c10d6cf5c1f64c1"
+                "reference": "3c103d1e14cabd17de3fbff5af8db657da4a50e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/40612d5910ebe581e25db3846c10d6cf5c1f64c1",
-                "reference": "40612d5910ebe581e25db3846c10d6cf5c1f64c1",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/3c103d1e14cabd17de3fbff5af8db657da4a50e0",
+                "reference": "3c103d1e14cabd17de3fbff5af8db657da4a50e0",
                 "shasum": ""
             },
             "require": {
@@ -2340,7 +2337,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2014-01-01 08:13:43"
+            "time": "2014-01-02 21:42:04"
         },
         {
             "name": "symfony/http-kernel",
@@ -2467,12 +2464,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "55c4a5578907ed09548939a7945939b8ddcee3cb"
+                "reference": "f8e308cc2914fa9fcb99ba6a0e9a8768a5a6b30c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/55c4a5578907ed09548939a7945939b8ddcee3cb",
-                "reference": "55c4a5578907ed09548939a7945939b8ddcee3cb",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/f8e308cc2914fa9fcb99ba6a0e9a8768a5a6b30c",
+                "reference": "f8e308cc2914fa9fcb99ba6a0e9a8768a5a6b30c",
                 "shasum": ""
             },
             "require": {
@@ -2516,7 +2513,7 @@
             ],
             "description": "Symfony Routing Component",
             "homepage": "http://symfony.com",
-            "time": "2014-01-01 08:13:43"
+            "time": "2014-01-02 12:27:24"
         },
         {
             "name": "symfony/translation",
@@ -2716,6 +2713,48 @@
                 "laravel"
             ],
             "time": "2013-12-14 04:48:56"
+        },
+        {
+            "name": "zizaco/factory-muff",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zizaco/factory-muff.git",
+                "reference": "f2a384f2b50c4a966d9fea48b35e5d232718b4cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zizaco/factory-muff/zipball/f2a384f2b50c4a966d9fea48b35e5d232718b4cf",
+                "reference": "f2a384f2b50c4a966d9fea48b35e5d232718b4cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zizaco\\FactoryMuff": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zizaco Zizuini",
+                    "email": "zizaco@gmail.com",
+                    "homepage": "http://www.zizaco.net"
+                }
+            ],
+            "description": "The goal of this Package is to enable the rapid creation of objects for the purpose of testing.",
+            "keywords": [
+                "factory",
+                "laravel",
+                "testing"
+            ],
+            "time": "2013-06-10 12:07:19"
         }
     ],
     "packages-dev": [
@@ -2732,7 +2771,9 @@
         "mrclay/minify": 20,
         "mockery/mockery": 20,
         "magniloquent/magniloquent": 20,
-        "goez/laravel-grunt": 20
+        "goez/laravel-grunt": 20,
+        "zizaco/factory-muff": 20,
+        "fzaninotto/faker": 20
     },
     "platform": [
 

@@ -9,11 +9,19 @@ class DatabaseSeeder extends Seeder {
 	 */
 	public function run()
 	{
-//		\Eloquent::unguard();
+		Eloquent::unguard();
 
-		if(App::environment() === 'local') {
-			$this->call('GamesTableSeeder');
+		$tables = array(
+
+		);
+
+		foreach($tables as $table) {
+			DB::table($table)->truncate();
 		}
+
+		$this->call('GamesTableSeeder');
+		$this->call('SeasonsTableSeeder');
+		$this->call('TeamsTableSeeder');
 	}
 
 }

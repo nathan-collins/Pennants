@@ -88,7 +88,7 @@ class ClubController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$club = $this->club->get($id);
+		$club = $this->club->find($id);
 
 		return \Response::json(array(
 			'error' => false,
@@ -105,7 +105,7 @@ class ClubController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$club = $this->club->get($id);
+		$club = $this->club->find($id);
 
 		return \View::make('club.edit')->with('club', $club);
 	}

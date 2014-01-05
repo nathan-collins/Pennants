@@ -19,7 +19,7 @@ class DbSeasonRepository implements SeasonRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function get($id)
+	public function find($id)
 	{
 		return Seasons::find($id);
 	}

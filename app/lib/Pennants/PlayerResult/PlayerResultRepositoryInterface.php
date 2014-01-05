@@ -11,6 +11,6 @@ namespace Pennants\Interfaces;
 
 
 interface PlayerResultRepositoryInterface {
-	public function getAll();
+	public function all();
 	public function find($id);
 }

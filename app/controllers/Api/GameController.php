@@ -55,7 +55,7 @@ class GameController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$games = $this->games->get($id);
+		$games = $this->games->find($id);
 
 		return \Response::json(array(
 			'error' => false,
@@ -72,7 +72,7 @@ class GameController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$game = $this->games->get($id);
+		$game = $this->games->find($id);
 		$clubs = $this->clubs->where();
 
 		return \View::make('games.edit')->with('game', $game)->with('clubs', $clubs);

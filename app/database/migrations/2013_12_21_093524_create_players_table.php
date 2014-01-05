@@ -18,7 +18,7 @@ class CreatePlayersTable extends Migration {
 			$table->string('name', 100);
 			$table->text('settings');
 			$table->smallInteger('handicap');
-			$table->integer('golf_link_number');
+			$table->string('golf_link_number', 10);
 			$table->timestamps();
 		});
 	}

@@ -19,7 +19,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function get($id)
+	public function find($id)
 	{
 		return Players::find($id);
 	}
@@ -80,7 +80,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	{
 		$player = new Players($data);
 
-		$player->season_id = "1";
+		$player->settings = json_encode(array());
 
 		$player->save($player->toArray());
 

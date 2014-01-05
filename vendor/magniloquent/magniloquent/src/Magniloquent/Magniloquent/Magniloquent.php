@@ -92,9 +92,16 @@ class Magniloquent extends Model {
     {
         if (array_key_exists($key, static::$relationships))
         {
+            // If the relation is already loaded, just return it, 
+            // otherwise it will query the relation twice.
+            if (array_key_exists($key, $this->relations))
+            {
+                return $this->relations[$key];
+            }
+
             $relation = $this->callRelationships($key);
 
-            return $relation->getResults();
+            return $this->relations[$key] = $relation->getResults();
         }
 
         return parent::__get($key);
@@ -110,7 +117,7 @@ class Magniloquent extends Model {
      */
     public function save(array $new_attributes = array(), $forceSave = false)
     {
-			$options = array();
+        $options = array();
 
         if (array_key_exists('touch', $new_attributes))
         {
@@ -118,7 +125,7 @@ class Magniloquent extends Model {
             $new_attributes = array_except($new_attributes, array('touch'));
         }
 
-				$this->fill($new_attributes);
+        $this->fill($new_attributes);
 
         if (! $forceSave)
         {

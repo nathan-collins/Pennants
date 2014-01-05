@@ -19,7 +19,7 @@ class DbGameRepository implements GameRepositoryInterface {
 	}
 
 
-	public function get($id)
+	public function find($id)
 	{
 		return Games::find($id);
 	}

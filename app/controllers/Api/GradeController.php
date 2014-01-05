@@ -77,7 +77,7 @@ class GradeController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$grade = $this->grade->get($id);
+		$grade = $this->grade->find($id);
 
 		return \Response::json(array(
 			'error' => false,
@@ -93,7 +93,7 @@ class GradeController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$grade = $this->grade->get($id);
+		$grade = $this->grade->find($id);
 
 		return \View::make('grade.edit')->with('grade', $grade);
 	}

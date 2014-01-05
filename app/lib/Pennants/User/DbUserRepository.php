@@ -19,7 +19,7 @@ class DbUserRepository implements UserRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function get($id)
+	public function find($id)
 	{
 		return User::find($id);
 	}

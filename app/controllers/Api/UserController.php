@@ -64,7 +64,7 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$user = $this->user->get($id);
+		$user = $this->user->find($id);
 
 		return \Response::json(array(
 			'error' => false,
@@ -81,7 +81,7 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$user = $this->user->get($id);
+		$user = $this->user->find($id);
 
 		return \View::make('user.edit')->with('user', $user);
 	}

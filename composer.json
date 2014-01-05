@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.0.*",
-    "hybridauth/hybridauth": "*",
+//    "hybridauth/hybridauth": "*",
     "twitter/bootstrap": "dev-templated-customizer",
     "way/generators": "dev-master",
     "leafo/lessphp": "*",
@@ -15,7 +15,9 @@
     "phpunit/phpunit": "3.7.*",
     "nesbot/Carbon": "*",
     "magniloquent/magniloquent": "dev-master",
-    "goez/laravel-grunt": "dev-master"
+    "goez/laravel-grunt": "dev-master",
+    "zizaco/factory-muff": "dev-master",
+    "fzaninotto/faker": "1.3.*@dev"
 	},
 	"autoload": {
 		"classmap": [

@@ -2,41 +2,476 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f790a44c-7887-41dd-8045-4b4079a8362c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/2014_01_03_231816_create_player_seasons_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/Api/PlayerController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/PlayerSeasons.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/api/players/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/goez/laravel-grunt/src/Goez/LaravelGrunt/templates/assets/index.html.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/goez/laravel-grunt/src/Goez/LaravelGrunt/templates/assets/main.scss.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/Region.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/Api/HomeController.php" afterPath="$PROJECT_DIR$/app/controllers/HomeController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/clubs/create.blade.php" afterPath="$PROJECT_DIR$/app/views/api/clubs/create.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/games/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/api/games/edit.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/grades/create.blade.php" afterPath="$PROJECT_DIR$/app/views/api/grades/create.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/grades/index.blade.php" afterPath="$PROJECT_DIR$/app/views/api/players/create.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/season/create.blade.php" afterPath="$PROJECT_DIR$/app/views/api/season/create.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/season/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/api/season/edit.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/users/create.blade.php" afterPath="$PROJECT_DIR$/app/views/api/users/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/tests/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sunshinecoastgolf.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/2014_01_04_183735_create_teams_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/da_DK/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/de_AT/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/de_DE/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/el_GR/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_AU/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_CA/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_GB/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_PH/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_US/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_ZA/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_AR/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_ES/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_PE/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fi_FI/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_BE/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_FR/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/hy_AM/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/is_IS/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/it_IT/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ja_JP/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/lv_LV/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_BE/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_NL/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pl_PL/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pt_BR/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ro_MD/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ro_RO/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ru_RU/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sk_SK/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sr_Cyrl_RS/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sr_Latn_RS/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sr_RS/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/tr_TR/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/uk_UA/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/zh_CN/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Base.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/BaseTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/CHANGELOG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Color.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ru_RU/Color.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/uk_UA/Color.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/ColorTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/ORM/Doctrine/ColumnTypeGuesser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/ORM/Mandango/ColumnTypeGuesser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/ORM/Propel/ColumnTypeGuesser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/da_DK/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/de_DE/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_US/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_AR/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_ES/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_PE/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fi_FI/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_BE/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_FR/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/hy_AM/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/is_IS/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/it_IT/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ja_JP/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_BE/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_NL/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pl_PL/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pt_BR/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sk_SK/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/uk_UA/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/zh_CN/Company.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/fr_FR/CompanyTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/DateTime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/Pennants/Team/DbTeamRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Documentor.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/ORM/Doctrine/EntityPopulator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/ORM/Mandango/EntityPopulator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/ORM/Propel/EntityPopulator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Factory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/src/Zizaco/FactoryMuff/FactoryMuff.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/src/Zizaco/FactoryMuff/Facade/FactoryMuff.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/tests/FactoryMuffTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/seeds/GamesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Generator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/GeneratorTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/ImageTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/bg_BG/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/cs_CZ/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/da_DK/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/de_DE/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_AU/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_GB/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_ZA/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_ES/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fi_FI/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_BE/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_FR/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/hy_AM/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/is_IS/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/it_IT/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ja_JP/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/lv_LV/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_BE/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_NL/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pl_PL/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pt_BR/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ru_RU/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sk_SK/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/tr_TR/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/uk_UA/Internet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/PHPUnit/Framework/Constraint/IsValidSiren.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/PHPUnit/Framework/Constraint/IsValidSirenSiret.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/PHPUnit/Framework/Constraint/IsValidSiret.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/LocalizationTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Lorem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/LoremTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Miscellaneous.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Guesser/Name.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/NullGenerator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/bg_BG/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/cs_CZ/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/da_DK/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/de_AT/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/de_DE/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/el_GR/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_GB/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_ES/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_BE/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_FR/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/is_IS/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/it_IT/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/lv_LV/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_BE/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_NL/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pl_PL/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pt_BR/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sk_SK/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sr_Cyrl_RS/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sr_Latn_RS/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sr_RS/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/tr_TR/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/PaymentTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/bg_BG/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/cs_CZ/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/da_DK/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/de_AT/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/de_DE/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/el_GR/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_US/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_ZA/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_AR/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_ES/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_PE/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fi_FI/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_BE/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_FR/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/hy_AM/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/is_IS/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/it_IT/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ja_JP/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/lv_LV/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_BE/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_NL/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pl_PL/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pt_BR/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ro_MD/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ro_RO/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ru_RU/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sk_SK/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sr_Cyrl_RS/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sr_Latn_RS/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sr_RS/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/tr_TR/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/uk_UA/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/zh_CN/Person.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/PersonTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/bg_BG/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/cs_CZ/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/da_DK/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/de_DE/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/el_GR/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_AU/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_CA/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_GB/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_US/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/en_ZA/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_AR/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_ES/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/es_PE/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fi_FI/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_BE/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/fr_FR/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/hy_AM/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/is_IS/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/it_IT/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ja_JP/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/lv_LV/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_BE/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/nl_NL/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pl_PL/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/pt_BR/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ro_MD/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/ru_RU/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/sk_SK/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/tr_TR/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/uk_UA/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/zh_CN/PhoneNumber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/ORM/Doctrine/Populator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/ORM/Mandango/Populator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/ORM/Propel/Populator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/ProviderOverrideTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/src/Zizaco/FactoryMuff/SaveException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/unit_test/SeasonUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/seeds/SeasonsTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/Api/TeamController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/Pennants/Team/TeamRepositoryInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Teams.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/seeds/TeamsTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/UniqueGenerator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/UserAgent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/UserAgentTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Provider/Uuid.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/Faker/Provider/UuidTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/src/Zizaco/FactoryMuff/Wordlist.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/src/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/api/teams/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/documentor.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/api/teams/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fzaninotto/faker/test/test.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/SeasonTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/users.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/CHANGELOG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/README.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/Install.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-500px/Providers/px500.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-Identica/Providers/Identica.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-disqus/Providers/Disqus.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-draugiem/Providers/Draugiem.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-draugiem/thirdparty/Draugiem/DraugiemApi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-github/Providers/GitHub.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-goodreads/Providers/Goodreads.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-google-openid/Providers/Google.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-instagram/Providers/Instagram.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-lastfm/Providers/LastFM.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-lastfm/thirdparty/LastFM/LastFM.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-mailru/Providers/Mailru.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-murmur/Providers/Murmur.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-odnoklassniki/Providers/Odnoklassniki.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-pixnet/Providers/Pixnet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-plurk/Providers/Plurk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-qq/Providers/QQ.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-sina/Providers/Sina.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-sina/thirdparty/Sina/Sina.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-sina/thirdparty/Sina/saetv2.ex.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-skyrock/Providers/Skyrock.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-steam/Providers/Steam.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-tumblr/Providers/Tumblr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-twitchtv/Providers/TwitchTV.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-viadeo/Providers/Viadeo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-viadeo/thirdparty/Viadeo/ViadeoAPI.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-vimeo/Providers/Vimeo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-vimeo/thirdparty/Vimeo/Vimeo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-vkontakte/Providers/Vkontakte.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-xing/Providers/XING.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-yahoo-openid/Providers/Yahoo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/additional-providers/hybridauth-yandex/Providers/Yandex.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/facebook_integration/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/hello_world/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application.config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/base.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/controllers/authentications.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/controllers/home.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/controllers/pages.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/controllers/users.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/models/authentication.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/models/user.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/public/avatar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/public/css.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/views/pages/error.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/views/pages/help.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/views/users/complete_registration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/views/users/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/views/users/profile.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/application/views/users/register.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/database.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/signin_signup/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/activity.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/contacts.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/facebook_pages.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/includes/common.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/includes/debugger.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/includes/menu.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/includes/sidebar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/logout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/logout_all.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/profile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/public/avatar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/public/css.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/status.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/social_hub/timeline.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/mywebsite/arrow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/mywebsite/avatar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/mywebsite/inc_authenticated_user.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/mywebsite/inc_unauthenticated_user.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/mywebsite/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/css/colorbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/border.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/controls.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/fadegrey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/alert.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/blogger.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/flickr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/google.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/linkedin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/livejournal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/myspace.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/openid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/wordpress.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/icons/yahoo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/ie6/borderBottomCenter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/ie6/borderBottomLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/ie6/borderBottomRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/ie6/borderMiddleLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/ie6/borderMiddleRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/ie6/borderTopCenter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/ie6/borderTopLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/ie6/borderTopRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/loading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/orange.loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/images/overlay.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/js/jquery.colorbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/examples/widget_authentication/widget/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Endpoint.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Error.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Logger.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Provider_Adapter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Provider_Model.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Provider_Model_OAuth1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Provider_Model_OAuth2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Provider_Model_OpenID.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/AOL.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/Facebook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/Foursquare.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/Google.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/LinkedIn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/Live.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/MySpace.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/OpenID.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/Twitter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Providers/Yahoo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Storage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/User.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/User_Activity.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/User_Contact.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/User_Profile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/resources/config.php.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/resources/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/resources/openid_policy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/resources/openid_realm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/resources/openid_xrds.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/Facebook/base_facebook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/Facebook/facebook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/Facebook/fb_ca_chain_bundle.crt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/LinkedIn/LinkedIn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/OAuth/OAuth.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/OAuth/OAuth1Client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/OAuth/OAuth2Client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/OpenID/LightOpenID.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/hybridauth/hybridauth/hybridauth/install.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/tests/GamesTest.php" afterPath="$PROJECT_DIR$/app/tests/integration/GamesControllerTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/tests/GradesTest.php" afterPath="$PROJECT_DIR$/app/tests/integration/GradesControllerTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/tests/PlayersResultsTest.php" afterPath="$PROJECT_DIR$/app/tests/integration/PlayersResultsControllerTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/tests/PlayersTest.php" afterPath="$PROJECT_DIR$/app/tests/integration/PlayersControllerTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/tests/RegionTest.php" afterPath="$PROJECT_DIR$/app/tests/integration/RegionControllerTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/tests/ResultsTest.php" afterPath="$PROJECT_DIR$/app/tests/integration/ResultsControllerTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/tests/SeasonTest.php" afterPath="$PROJECT_DIR$/app/tests/integration/SeasonControllerTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_12_21_093524_create_players_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_12_21_093524_create_players_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/patchwork/utf8/class/Patchwork/Utf8/Bootup.php" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/class/Patchwork/Utf8/Bootup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/patchwork/utf8/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/ClubController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/ClubController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Grade/DbGradeRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Grade/DbGradeRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/PlayerResult/DbPlayerResultRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/PlayerResult/DbPlayerResultRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Result/DbResultRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Result/DbResultRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/User/DbUserRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/User/DbUserRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/GameController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/GameController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Game/GameRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Game/GameRepositoryInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/GradeController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/GradeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Grade/GradeRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Grade/GradeRepositoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/magniloquent/magniloquent/src/Magniloquent/Magniloquent/Magniloquent.php" afterPath="$PROJECT_DIR$/vendor/magniloquent/magniloquent/src/Magniloquent/Magniloquent/Magniloquent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/magniloquent/magniloquent/src/Magniloquent/Magniloquent/MagniloquentServiceProvider.php" afterPath="$PROJECT_DIR$/vendor/magniloquent/magniloquent/src/Magniloquent/Magniloquent/MagniloquentServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/patchwork/utf8/class/Patchwork/PHP/Shim/Mbstring.php" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/class/Patchwork/PHP/Shim/Mbstring.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/PlayerController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/PlayerController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Player/PlayerRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Player/PlayerRepositoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/PlayerResult/PlayerResultRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/PlayerResult/PlayerResultRepositoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Players.php" afterPath="$PROJECT_DIR$/app/models/Players.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/patchwork/utf8/README.md" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Request.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Request.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Result/ResultRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Result/ResultRepositoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Results.php" afterPath="$PROJECT_DIR$/app/models/Results.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Symfony/Component/Routing/Tests/RouteCollectionTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Symfony/Component/Routing/Tests/RouteCollectionTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Symfony/Component/Routing/Tests/RouteTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Symfony/Component/Routing/Tests/RouteTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLServer2012Platform.php" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLServer2012Platform.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLSrv/SQLSrvConnection.php" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLSrv/SQLSrvConnection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/SeasonController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/SeasonController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Season/SeasonRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Season/SeasonRepositoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Seasons.php" afterPath="$PROJECT_DIR$/app/models/Seasons.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/TestCase.php" afterPath="$PROJECT_DIR$/app/tests/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/UserController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/User/UserRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/User/UserRepositoryInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/patchwork/utf8/composer.json" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/clubs/create.blade.php" afterPath="$PROJECT_DIR$/app/views/api/clubs/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/grades/create.blade.php" afterPath="$PROJECT_DIR$/app/views/api/grades/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/players/create.blade.php" afterPath="$PROJECT_DIR$/app/views/api/players/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/users/create.blade.php" afterPath="$PROJECT_DIR$/app/views/api/users/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/games/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/api/games/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/season/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/api/season/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/patchwork/utf8/class/Patchwork/Utf8/Bootup/mbstring.php" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/class/Patchwork/Utf8/Bootup/mbstring.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/magniloquent/magniloquent/phpunit.xml" afterPath="$PROJECT_DIR$/vendor/magniloquent/magniloquent/phpunit.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/start.php" afterPath="$PROJECT_DIR$/bootstrap/start.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="golf.iws" />
@@ -141,58 +576,58 @@
     <file path="/2013_12_21_093449_create_season_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388212785887" ignored="false" />
     <file path="/2013_12_21_093505_create_region_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387619247933" ignored="false" />
     <file path="/2013_12_21_093513_create_grades_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387619033581" ignored="false" />
-    <file path="/2013_12_21_093524_create_players_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388787774005" ignored="false" />
+    <file path="/2013_12_21_093524_create_players_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388863098406" ignored="false" />
     <file path="/2013_12_21_093536_create_games_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387619608014" ignored="false" />
     <file path="/2013_12_21_093553_create_players_results_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387755354640" ignored="false" />
     <file path="/2013_12_21_093602_create_results_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387620340992" ignored="false" />
     <file path="/development.yml" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387621812689" ignored="false" />
-    <file path="/Dummy.txt" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388750902030" ignored="false" />
+    <file path="/Dummy.txt" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388869076382" ignored="false" />
     <file path="/GamesTest.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388220325804" ignored="false" />
     <file path="/GamesController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388201637883" ignored="false" />
     <file path="/DbGramesRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387671846814" ignored="false" />
-    <file path="/GameRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388612851516" ignored="false" />
+    <file path="/GameRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886982716" ignored="false" />
     <file path="/routes.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388557538840" ignored="false" />
     <file path="/query" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387676567246" ignored="false" />
-    <file path="/SeasonController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388545731916" ignored="false" />
-    <file path="/SeasonRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388453707082" ignored="false" />
-    <file path="/DbSeasonRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388471142594" ignored="false" />
+    <file path="/SeasonController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388907651971" ignored="false" />
+    <file path="/SeasonRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886834393" ignored="false" />
+    <file path="/DbSeasonRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886824465" ignored="false" />
     <file path="/RegionRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387758094421" ignored="false" />
     <file path="/DbRegionRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387759478620" ignored="false" />
     <file path="/DbGradesRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387691199575" ignored="false" />
-    <file path="/a.dummy" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388791662693" ignored="false" />
-    <file path="/GradeRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388478341715" ignored="false" />
-    <file path="/DbGameRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388472950621" ignored="false" />
-    <file path="/DbGradeRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388478782581" ignored="false" />
+    <file path="/a.dummy" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388868638825" ignored="false" />
+    <file path="/GradeRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886988652" ignored="false" />
+    <file path="/DbGameRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886962472" ignored="false" />
+    <file path="/DbGradeRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886956296" ignored="false" />
     <file path="/Seasons.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388277200201" ignored="false" />
-    <file path="/DbClubRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388542218525" ignored="false" />
-    <file path="/ClubRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388480175753" ignored="false" />
+    <file path="/DbClubRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886969432" ignored="false" />
+    <file path="/ClubRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886976089" ignored="false" />
     <file path="/2013_12_22_225709_create_clubs_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387753125704" ignored="false" />
     <file path="$PROJECT_DIR$/app/storage/logs/log-cli-2013-12-22.txt" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387753414961" ignored="false" />
     <file path="/DbPlayersRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387753841145" ignored="false" />
-    <file path="/DbPlayerResultRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387759460184" ignored="false" />
+    <file path="/DbPlayerResultRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886942457" ignored="false" />
     <file path="/2013_12_22_232123_rename_player_results_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387754563183" ignored="false" />
-    <file path="/ResultRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388792460390" ignored="false" />
-    <file path="/PlayerResultRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387758077835" ignored="false" />
-    <file path="/PlayerRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388785607952" ignored="false" />
-    <file path="/DbPlayerRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388785736466" ignored="false" />
-    <file path="/DbResultRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388792424890" ignored="false" />
-    <file path="/tmp/ide-phpunit.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388220496453" ignored="false" />
+    <file path="/ResultRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887013977" ignored="false" />
+    <file path="/PlayerResultRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887002593" ignored="false" />
+    <file path="/PlayerRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886994226" ignored="false" />
+    <file path="/DbPlayerRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886949908" ignored="false" />
+    <file path="/DbResultRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886921068" ignored="false" />
+    <file path="/tmp/ide-phpunit.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388919635933" ignored="false" />
     <file path="/Games.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388542808536" ignored="false" />
     <file path="/PennantsServiceProvider.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388469288012" ignored="false" />
     <file path="/hybridauth.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387999546758" ignored="false" />
-    <file path="/TestCase.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388113359979" ignored="false" />
+    <file path="/TestCase.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388875155526" ignored="false" />
     <file path="/GamesTableSeeder" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388114688151" ignored="false" />
-    <file path="/DatabaseSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388116050489" ignored="false" />
-    <file path="/GamesTableSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388118841836" ignored="false" />
+    <file path="/DatabaseSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388876355464" ignored="false" />
+    <file path="/GamesTableSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388875405204" ignored="false" />
     <file path="/filters.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388120826436" ignored="false" />
-    <file path="/GameController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388546092012" ignored="false" />
-    <file path="/edit.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388215368435" ignored="false" />
+    <file path="/GameController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887111514" ignored="false" />
+    <file path="/edit.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388912219614" ignored="false" />
     <file path="/create.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388790418963" ignored="false" />
-    <file path="/SeasonTest.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388255459103" ignored="false" />
+    <file path="/SeasonTest.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388868563755" ignored="false" />
     <file path="/Magniloquent.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388426676099" ignored="false" />
     <file path="/Model.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388426738807" ignored="false" />
     <file path="/SeasonTableSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388440006893" ignored="false" />
-    <file path="/GradeController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388546159115" ignored="false" />
+    <file path="/GradeController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887149938" ignored="false" />
     <file path="/Grades.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388476806179" ignored="false" />
     <file path="/Clubs.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388480107580" ignored="false" />
     <file path="/PlayerResults.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388542745041" ignored="false" />
@@ -200,27 +635,36 @@
     <file path="/Region.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388542866416" ignored="false" />
     <file path="/Results.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388542886552" ignored="false" />
     <file path="/BaseController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388545747821" ignored="false" />
-    <file path="/ClubController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388554670551" ignored="false" />
+    <file path="/ClubController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887078216" ignored="false" />
     <file path="/2014_01_01_054337_create_users_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388555487327" ignored="false" />
     <file path="$PROJECT_DIR$/app/storage/logs/log-cli-2014-01-01.txt" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388555801799" ignored="false" />
     <file path="/UserTableSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388556482716" ignored="false" />
     <file path="/users.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388556998835" ignored="false" />
     <file path="/layout.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388558627515" ignored="false" />
     <file path="/login.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388558759995" ignored="false" />
-    <file path="/DbUserRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388608327170" ignored="false" />
-    <file path="/UserController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388560520491" ignored="false" />
-    <file path="/UserRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388559744517" ignored="false" />
+    <file path="/DbUserRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887032404" ignored="false" />
+    <file path="/UserController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887224043" ignored="false" />
+    <file path="/UserRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887037705" ignored="false" />
     <file path="/User.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388608264320" ignored="false" />
     <file path="/2014_01_01_055633_create_users_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388650024891" ignored="false" />
     <file path="/home.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388653474115" ignored="false" />
     <file path="/profile.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388657069358" ignored="false" />
     <file path="/.gitignore" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388657571126" ignored="false" />
     <file path="/package.json" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388689978073" ignored="false" />
-    <file path="/PlayerController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388789100404" ignored="false" />
+    <file path="/PlayerController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887172025" ignored="false" />
     <file path="/a.txt" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388792520224" ignored="false" />
     <file path="/a.sql" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388792524611" ignored="false" />
-    <file path="/DbPlayerSeasonRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388791766201" ignored="false" />
-    <file path="/PlayerSeasonRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388791849678" ignored="false" />
+    <file path="/DbPlayerSeasonRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886929865" ignored="false" />
+    <file path="/PlayerSeasonRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887008153" ignored="false" />
+    <file path="/PlayerSeasonController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388858790005" ignored="false" />
+    <file path="/TeamController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887209289" ignored="false" />
+    <file path="/DbTeamRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886912637" ignored="false" />
+    <file path="/TeamRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887023104" ignored="false" />
+    <file path="/2014_01_04_183735_create_teams_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388860684041" ignored="false" />
+    <file path="/GamesControllerTest.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388869573793" ignored="false" />
+    <file path="/SeasonsTableSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388876836632" ignored="false" />
+    <file path="/SeasonControllerTest.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388912363849" ignored="false" />
+    <file path="/SeasonUnitTest.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388921240248" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,82 +730,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PlayerSeasons.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/PlayerSeasons.php">
+      <file leaf-file-name="FactoryMuff.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/zizaco/factory-muff/src/Zizaco/FactoryMuff/Facade/FactoryMuff.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="5" selection-start="144" selection-end="545" vertical-scroll-proportion="-14.375">
+            <state line="51" column="27" selection-start="1035" selection-end="1035" vertical-scroll-proportion="-6.8333335">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Results.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/Results.php">
+      <file leaf-file-name="Seasons.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Seasons.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="22" selection-start="401" selection-end="401" vertical-scroll-proportion="0.44609666">
+            <state line="31" column="21" selection-start="481" selection-end="481" vertical-scroll-proportion="-10.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Clubs.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Clubs.php">
+      <file leaf-file-name="SeasonUnitTest.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/tests/unit_test/SeasonUnitTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="5" selection-start="348" selection-end="448" vertical-scroll-proportion="-13.125">
+            <state line="42" column="0" selection-start="752" selection-end="752" vertical-scroll-proportion="0.38103756">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbResultRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Result/DbResultRepository.php">
+      <file leaf-file-name="TestCase.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tests/TestCase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultRepositoryInterface.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Result/ResultRepositoryInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="21" selection-start="117" selection-end="117" vertical-scroll-proportion="-3.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="65" selection-start="371" selection-end="432" vertical-scroll-proportion="8.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DbPlayerSeasonRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="20" selection-start="294" selection-end="294" vertical-scroll-proportion="-13.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerSeasonRepositoryInterface.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_01_01_055633_create_users_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_01_055633_create_users_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="36" selection-start="222" selection-end="254" vertical-scroll-proportion="-8.125">
+            <state line="18" column="29" selection-start="371" selection-end="371" vertical-scroll-proportion="-0.375">
               <folding />
             </state>
           </provider>
@@ -385,22 +784,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pennants/Player/PlayerRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Api/GradeController.php" />
-        <option value="$PROJECT_DIR$/app/models/Players.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_12_21_093524_create_players_table.php" />
         <option value="$PROJECT_DIR$/app/controllers/Api/PlayerController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Api/TeamController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Api/UserController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Api/SeasonController.php" />
         <option value="$PROJECT_DIR$/app/views/api/players/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_01_03_231816_create_player_seasons_table.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/models/PlayerSeasons.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pennants/Result/DbResultRepository.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pennants/Result/ResultRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_12_21_093602_create_results_table.php" />
+        <option value="$PROJECT_DIR$/app/views/api/grades/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/api/games/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/api/clubs/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/api/users/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/api/season/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/tests/integration/GamesControllerTest.php" />
+        <option value="$PROJECT_DIR$/app/tests/unit/SeasonUnitTest.php" />
+        <option value="$PROJECT_DIR$/app/tests/integration/SeasonControllerTest.php" />
         <option value="$PROJECT_DIR$/app/models/Seasons.php" />
-        <option value="$PROJECT_DIR$/app/models/Results.php" />
+        <option value="$PROJECT_DIR$/app/tests/TestCase.php" />
+        <option value="$PROJECT_DIR$/app/tests/unit_test/SeasonUnitTest.php" />
       </list>
     </option>
   </component>
@@ -470,61 +869,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -567,8 +912,22 @@
               <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,15 +945,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="season" />
+              <option name="myItemId" value="unit_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -612,93 +967,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="players" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grades" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clubs" />
+              <option name="myItemId" value="integration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -720,108 +993,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pennants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -833,32 +1004,33 @@
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/phpunit.xml" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/lib/Pennants/Team" />
       <recent name="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason" />
       <recent name="$PROJECT_DIR$/app/controllers/Api" />
       <recent name="$PROJECT_DIR$/app/config/local" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/tests/integration" />
+      <recent name="$PROJECT_DIR$/app/controllers/Api" />
       <recent name="$PROJECT_DIR$/app/views/users" />
       <recent name="$PROJECT_DIR$/app/views/api" />
       <recent name="$PROJECT_DIR$/app/controllers" />
-      <recent name="$PROJECT_DIR$/app/controllers/Api" />
-      <recent name="$PROJECT_DIR$/app/views/layouts" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Remote Debug.Debugging">
+  <component name="RunManager" selected="PHPUnit.Sunshine Coast Golf">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -936,6 +1108,11 @@
       <item index="0" class="java.lang.String" itemvalue="PHP Remote Debug.Debugging" />
       <item index="1" class="java.lang.String" itemvalue="PHPUnit.Sunshine Coast Golf" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.SeasonUnitTest" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -970,7 +1147,11 @@
       <created>1388657696066</created>
       <updated>1388657696066</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Player information added, api and interface repositories">
+      <created>1388793402440</created>
+      <updated>1388793402440</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -982,7 +1163,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.109508544" sideWeight="0.67070484" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6709539" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27863437" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40638766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -993,8 +1174,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="DatabaseBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.6709539" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14049146" sideWeight="0.67070484" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1650641" sideWeight="0.67070484" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SQL Schema" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1047,7 +1228,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrected layout extends" />
+    <option name="LAST_COMMIT_MESSAGE" value="Player information added, api and interface repositories" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1064,15 +1245,11 @@
     <MESSAGE value="first commit - adding files" />
     <MESSAGE value="fixing commits" />
     <MESSAGE value="corrected layout extends" />
+    <MESSAGE value="Player information added, api and interface repositories" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php</url>
-          <line>14</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/filters.php</url>
           <line>45</line>
@@ -1094,22 +1271,27 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vendor/magniloquent/magniloquent/src/Magniloquent/Magniloquent/Magniloquent.php</url>
-          <line>112</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php</url>
+          <line>80</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php</url>
-          <line>62</line>
-          <option name="timeStamp" value="18" />
+          <url>file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php</url>
+          <line>11</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/controllers/Api/SeasonController.php</url>
-          <line>50</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php</url>
+          <line>13</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/database/seeds/SeasonsTableSeeder.php</url>
+          <line>9</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="36" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1117,114 +1299,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/api/season/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/api/clubs/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="254" selection-end="322" vertical-scroll-proportion="-2.5">
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/players/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/api/users/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="604" vertical-scroll-proportion="-0.0">
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/players/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/storage/views/e9784ac668d80cf6e4aa9686be2a2102">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_01_055633_create_users_table.php">
+    <entry file="file://$PROJECT_DIR$/app/views/api/season/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="36" selection-start="222" selection-end="254" vertical-scroll-proportion="-8.125">
+        <state line="9" column="14" selection-start="199" selection-end="199" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_03_231816_create_player_seasons_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/SeasonsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="500" selection-end="500" vertical-scroll-proportion="-12.5">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php">
+    <entry file="file://$PROJECT_DIR$/phpunit.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="20" selection-start="294" selection-end="294" vertical-scroll-proportion="-13.125">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/integration/GamesControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+    <entry file="file://$PROJECT_DIR$/vendor/zizaco/factory-muff/src/Zizaco/FactoryMuff/FactoryMuff.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="65" selection-start="371" selection-end="432" vertical-scroll-proportion="8.75">
+        <state line="63" column="0" selection-start="1323" selection-end="1323" vertical-scroll-proportion="-16.166666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Result/DbResultRepository.php">
+    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.5">
+        <state line="986" column="0" selection-start="27313" selection-end="27313" vertical-scroll-proportion="0.3487395">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_12_21_093602_create_results_table.php">
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Season/SeasonRepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="338" selection-end="338" vertical-scroll-proportion="0.4182156">
+        <state line="7" column="20" selection-start="203" selection-end="203" vertical-scroll-proportion="-4.375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Result/ResultRepositoryInterface.php">
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="21" selection-start="117" selection-end="117" vertical-scroll-proportion="-3.125">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="26.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/integration/SeasonControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="4" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.4601227">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/zizaco/factory-muff/src/Zizaco/FactoryMuff/Facade/FactoryMuff.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="27" selection-start="1035" selection-end="1035" vertical-scroll-proportion="-6.8333335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="29" selection-start="371" selection-end="371" vertical-scroll-proportion="-0.375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Seasons.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="361" selection-end="361" vertical-scroll-proportion="0.44609666">
+        <state line="31" column="21" selection-start="481" selection-end="481" vertical-scroll-proportion="-10.375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Api/ResultController.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/unit_test/SeasonUnitTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/PlayerSeasons.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="5" selection-start="144" selection-end="545" vertical-scroll-proportion="-14.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Clubs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="5" selection-start="348" selection-end="448" vertical-scroll-proportion="-13.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="401" selection-end="401" vertical-scroll-proportion="0.44609666">
+        <state line="42" column="0" selection-start="752" selection-end="752" vertical-scroll-proportion="0.38103756">
           <folding />
         </state>
       </provider>
