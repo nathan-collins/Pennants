@@ -1,6 +1,6 @@
 <?php namespace Pennants\Grade;
 
-use Grades;
+use Grade;
 
 class DbGradeRepository implements GradeRepositoryInterface {
 
@@ -10,7 +10,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function all()
 	{
-		return Grades::all();
+		return Grade::all();
 	}
 
 	/**
@@ -21,7 +21,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function find($id)
 	{
-		return Grades::find($id);
+		return Grade::find($id);
 	}
 
 	/**
@@ -33,7 +33,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function getWhere($column, $value)
 	{
-		return Grades::where($column, $value)->get();
+		return Grade::where($column, $value)->get();
 	}
 
 	/**
@@ -78,7 +78,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function create($data)
 	{
-		$grade = new Grades($data);
+		$grade = new Grade($data);
 
 		$grade->season_id = "1";
 

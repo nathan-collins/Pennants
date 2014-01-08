@@ -4,110 +4,104 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        clean: {
-            dist: {
-                files: [{
-                    dot: true,
-                    src: [
-                        'public/assets/styles/*',
-                        'public/assets/scripts/*'
-                    ]
-                }]
-            }
-        },
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc'
-            },
-            all: [
-                'Gruntfile.js',
-                'assets/scripts/{,*/}*.js',
-                '!assets/vendor/*',
-                'assets/test/spec/{,*/}*.js'
-            ]
-        },
-        modernizr: {
-            devFile: 'assets/vendor/modernizr/modernizr.js',
-            outputFile: 'public/assets/vendor/modernizr/modernizr.js',
-            files: [
-                'public/assets/scripts/{,*/}*.js',
-                'public/assets/styles/{,*/}*.css',
-                '!public/assets/vendor/*'
+        concat: {
+          options: {
+            seperator: ';'
+          },
+          js_frontend: {
+            src: [
+              './app/assets/vendor/bootstrap/dist/js/bootstrap.js',
+              './app/assets/vendor/angular/angular.js',
+              './app/assets/vendor/modernizr/modernizr.js',
+              './app/assets/vendor/requirejs/require.js',
+              './app/assets/scripts/frontend.js'
             ],
-            uglify: true
+            dest: './public/assets/scripts/frontend.js'
+          },
+          js_backend: {
+            src: [
+              './app/assets/vendor/bootstrap/dist/js/bootstrap.js',
+              './app/assets/vendor/angular/angular.js',
+              './app/assets/vendor/modernizr/modernizr.js',
+              './app/assets/vendor/requirejs/require.js',
+              './app/assets/scripts/backend.js'
+            ],
+            dest: './public/assets/scripts/backend.js'
+          }
         },
-        autoprefixer: {
+        less: {
+          development: {
             options: {
-                browsers: [ 'last 1 version' ]
+              compress: true
             },
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'assets/styles/',
-                    src: '{,*/}*.css',
-                    dest: 'public/assets/styles/'
-                }]
+            files: {
+              "./public/assets/styles/frontend.css":"./app/assets/styles/frontend.less",
+              "./public/assets/styles/backend.css":"./app/assets/styles/backend.less"
             }
+          }
         },
-        php: {
+        uglify: {
+          options: {
+            mangle: false
+          },
+          frontend: {
+            files: {
+              './public/assets/scripts/frontend.js': ['./app/assets/scripts/frontend.js']
+            }
+          },
+          backend: {
+            files: {
+              './public/assets/scripts/backend.js': ['./app/assets/scripts/backend.js']
+            }
+          }
+        },
+        phpunit: {
+          classes: {
+          },
+          options: {
+          }
+        },
+        watch: {
+          js_frontend: {
+            files: [
+              './app/assets/vendor/bootstrap/dist/js/bootstrap.js',
+              './app/assets/scripts/frontend.js'
+            ],
+            tasks: ['concat:js_frontend', 'uglify:frontend'],
             options: {
-                router: 'server.php',
-                hostname: 'localhost',
-                port: 9999
-            },
-            test: {
-                options: {
-                    keepalive: true,
-                    open: true
-                }
-            },
-            watch: {}
-        },
-        copy: {
-            dist: {
-                expand: true,
-                dot: true,
-                cwd: 'assets',
-                src: [
-                    'styles/{,*/}*.css',
-                    'scripts/{,*/}*.js',
-                    'images/{,*/}*.*',
-                    'vendor/requirejs/require.js'
-                ],
-                dest: 'public/assets'
+              livereload: true
             }
-        },
-        cssmin: {
-            minify: {
-                expand: true,
-                cwd: 'public/assets/styles/',
-                src: ['*.css', '!*.min.css'],
-                dest: 'public/assets/styles/',
-                ext: '.min.css'
+          },
+          js_backend: {
+            files: [
+              './app/assets/vendor/bootstrap/dist/js/bootstrap.js',
+              './app/assets/scripts/backend.js'
+            ],
+            tasks: ['concat:js_backend', 'uglify:backend'],
+            options: {
+              livereload: true
             }
+          },
+          less: {
+            files: ['./app/assets/styles/*.less'],  //watched files
+            tasks: ['less'],                          //tasks to run
+            options: {
+              livereload: true                        //reloads the browser
+            }
+          },
+          tests: {
+            files: ['./app/controllers/*.php','./app/models/*.php'],  //the task will run only when you save files in this location
+            tasks: ['phpunit']
+          }
         }
     });
 
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-phpunit');
 
-    grunt.registerTask('server', [
-        'jshint',
-        'build',
-        'php:watch',
-        'watch'
-    ]);
-
-    grunt.registerTask('build', [
-        'clean:dist',
-        'autoprefixer',
-        'modernizr',
-        'copy:dist'
-    ]);
-
-    grunt.registerTask('default', [
-        'jshint',
-        'build',
-        'less',
-        'cssmin'
-    ]);
+  // Task definition
+  grunt.registerTask('default', ['watch']);
 };

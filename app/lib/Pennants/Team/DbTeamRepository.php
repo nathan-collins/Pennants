@@ -1,6 +1,6 @@
 <?php namespace Pennants\Team;
 
-use Teams;
+use Team;
 
 class DbTeamRepository implements TeamRepositoryInterface {
 
@@ -10,7 +10,7 @@ class DbTeamRepository implements TeamRepositoryInterface {
 
 	public function all()
 	{
-		return Teams::all();
+		return Team::all();
 	}
 
 	/**
@@ -21,7 +21,7 @@ class DbTeamRepository implements TeamRepositoryInterface {
 
 	public function find($id)
 	{
-		return Teams::find($id);
+		return Team::find($id);
 	}
 
 	/**
@@ -60,7 +60,7 @@ class DbTeamRepository implements TeamRepositoryInterface {
 
 	public function create($data)
 	{
-		$team = new Seasons($data);
+		$team = new Team($data);
 
 		$team->save($team->toArray());
 

@@ -17,12 +17,13 @@ class SeasonUnitTest extends TestCase {
 
 	public function testSeasonNameIsRequired()
 	{
-		$season = new Seasons;
+		$season = $this->factory->create('Season');
+
+		$user = $this->factory->create('User');
 
 		$season->name = "";
-		$season->year = "2013";
 
-		$this->assertFalse($season->save($season->toArray()));
+		$this->assertFalse($user->save($season->toArray()));
 
 		$errors = $season->errors()->all();
 
@@ -33,12 +34,15 @@ class SeasonUnitTest extends TestCase {
 
 	public function testSeasonYearIsNumeric()
 	{
-		$season = new Seasons;
+		$season = new Season();
+
+		$user = $this->factory->create('User');
 
 		$season->name = "Test Entry";
-		$season->year = "text";
+		$season->year = "Test";
+		$season->added_by = $user->id;
 
-		$this->assertFalse($season->save($season->toArray()));
+		$this->assertFalse($user->seasons()->save($season->toArray()));
 
 		$errors = $season->errors()->all();
 
@@ -49,12 +53,13 @@ class SeasonUnitTest extends TestCase {
 
 	public function testSeasonYearIsRequired()
 	{
-		$season = new Seasons;
+		$season = $this->factory->create('Season');
 
-		$season->name = "Test Entry";
+		$user = $this->factory->create('User');
+
 		$season->year = "";
 
-		$this->assertFalse($season->save($season->toArray()));
+		$this->assertFalse($user->seasons()->save($season->toArray()));
 
 		$errors = $season->errors()->all();
 
@@ -64,16 +69,33 @@ class SeasonUnitTest extends TestCase {
 	}
 
 	/**
+	 *
+	 */
+
+	public function testAddedByIsRequired()
+	{
+		$season = new Season();
+
+		$season->name = "Test Entry";
+		$season->year = "Test";
+
+		$this->assertFalse($season->save());
+
+		$errors = $season->errors()->all();
+
+		$this->assertCount(1, $errors);
+
+		$this->assertEquals($errors[0], "The added by field is required.");
+	}
+
+	/**
 	 * Test season saves correctly
 	 */
 
 	public function testSeasonSavesCorrectly()
 	{
 		// Create a new season
-		$season = new Seasons;
-
-		$season->year = "2013";
-		$season->name = "Test Entry";
+		$season = $this->factory->create('Season');
 
 		$this->assertTrue($season->save($season->toArray()));
 	}

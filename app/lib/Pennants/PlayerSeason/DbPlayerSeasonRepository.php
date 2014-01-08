@@ -1,6 +1,6 @@
 <?php namespace Pennants\PlayerSeason;
 
-use PlayerSeasons;
+use PlayerSeason;
 
 class DbPlayerSeasonRepository implements PlayerSeasonRepositoryInterface {
 
@@ -10,7 +10,7 @@ class DbPlayerSeasonRepository implements PlayerSeasonRepositoryInterface {
 
 	public function all()
 	{
-		return PlayerSeasons::all();
+		return PlayerSeason::all();
 	}
 
 	/**
@@ -21,6 +21,6 @@ class DbPlayerSeasonRepository implements PlayerSeasonRepositoryInterface {
 
 	public function find($id)
 	{
-		return PlayerSeasons::find($id);
+		return PlayerSeason::find($id);
 	}
 }

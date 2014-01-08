@@ -1,6 +1,6 @@
 <?php namespace Pennants\Player;
 
-use Players;
+use Player;
 
 class DbPlayerRepository implements PlayerRepositoryInterface {
 
@@ -10,7 +10,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function all()
 	{
-		return Players::all();
+		return Player::all();
 	}
 
 	/**
@@ -21,7 +21,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function find($id)
 	{
-		return Players::find($id);
+		return Player::find($id);
 	}
 
 	/**
@@ -33,7 +33,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function getWhere($column, $value)
 	{
-		return Players::where($column, $value)->get();
+		return Player::where($column, $value)->get();
 	}
 
 	/**
@@ -78,7 +78,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function create($data)
 	{
-		$player = new Players($data);
+		$player = new Player($data);
 
 		$player->settings = json_encode(array());
 

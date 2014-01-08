@@ -19,7 +19,7 @@ class User extends Magniloquent implements UserInterface, RemindableInterface {
 	 * @var bool
 	 */
 
-	protected $fillable = array('username', 'password', 'email');
+	protected $fillable = array('username', 'firstname', 'lastname', 'password', 'email');
 
 	protected $softDelete = true;
 
@@ -30,18 +30,28 @@ class User extends Magniloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
+	/**
+	 * @var array
+	 */
+
 	public static $rules = array(
 		"save" => array(
 			'username' => 'required',
 			'password' => 'required',
 			'email'	=> 'required|email'
 		),
-		"create" => array(
-			'username' => 'required',
-			'password' => 'required',
-			'email'	=> 'required|email'
-		),
+		"create" => array(),
 		"update" => array()
+	);
+
+	public static $factory = array(
+		'username' => 'string',
+		'password' => 'password',
+		'email' => 'email'
+	);
+
+	protected static $relationship = array(
+		'seasons' => array('hasMany', 'Season')
 	);
 
 	/**

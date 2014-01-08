@@ -1,6 +1,6 @@
 <?php namespace Pennants\Club;
 
-use Clubs;
+use Club;
 
 class DbClubRepository implements ClubRepositoryInterface {
 
@@ -10,7 +10,7 @@ class DbClubRepository implements ClubRepositoryInterface {
 
 	public function all()
 	{
-		return Clubs::all();
+		return Club::all();
 	}
 
 	/**
@@ -21,7 +21,7 @@ class DbClubRepository implements ClubRepositoryInterface {
 
 	public function find($id)
 	{
-		return Clubs::find($id);
+		return Club::find($id);
 	}
 
 	/**
@@ -33,7 +33,7 @@ class DbClubRepository implements ClubRepositoryInterface {
 
 	public function getWhere($column, $value)
 	{
-		return Clubs::where($column, $value)->get();
+		return Club::where($column, $value)->get();
 	}
 
 	/**
@@ -76,7 +76,7 @@ class DbClubRepository implements ClubRepositoryInterface {
 
 	public function create($data)
 	{
-		$club = new Clubs($data);
+		$club = new Club($data);
 
 		$club->save($club->toArray());
 

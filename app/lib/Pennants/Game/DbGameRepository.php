@@ -1,6 +1,6 @@
 <?php namespace Pennants\Game;
 
-use Games;
+use Game;
 
 class DbGameRepository implements GameRepositoryInterface {
 
@@ -15,29 +15,29 @@ class DbGameRepository implements GameRepositoryInterface {
 
 	public function all()
 	{
-		return Games::all();
+		return Game::all();
 	}
 
 
 	public function find($id)
 	{
-		return Games::find($id);
+		return Game::find($id);
 	}
 
 	public function getWhere($column, $value)
 	{
-		return Games::where($column, $value)->get();
+		return Game::where($column, $value)->get();
 	}
 
 
 	public function getRecent($limit)
 	{
-		return Games::take($limit)->get();
+		return Game::take($limit)->get();
 	}
 
 	public function create($data)
 	{
-		$games = new Games;
+		$games = new Game;
 
 		foreach($data as $games_key => $games_data) {
 			$games->$games_key = $games_data;
@@ -48,7 +48,7 @@ class DbGameRepository implements GameRepositoryInterface {
 
 	public function update($id, $data)
 	{
-		$games = Games::find($id);
+		$games = Game::find($id);
 
 		foreach($data as $games_key => $games_data) {
 			$games->$games_key = $games_data;
@@ -59,13 +59,13 @@ class DbGameRepository implements GameRepositoryInterface {
 
 	public function delete($id)
 	{
-		Games::find($id);
+		Game::find($id);
 
-		return Games::delete();
+		return Game::delete();
 	}
 
 	public function deleteWhere($column, $value)
 	{
-		return Games::where($column, $value)->delete();
+		return Game::where($column, $value)->delete();
 	}
 }

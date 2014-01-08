@@ -1,6 +1,6 @@
 <?php namespace Pennants\Season;
 
-use Seasons;
+use Season;
 
 class DbSeasonRepository implements SeasonRepositoryInterface {
 
@@ -10,7 +10,7 @@ class DbSeasonRepository implements SeasonRepositoryInterface {
 
 	public function all()
 	{
-		return Seasons::all();
+		return Season::all();
 	}
 
 	/**
@@ -21,7 +21,7 @@ class DbSeasonRepository implements SeasonRepositoryInterface {
 
 	public function find($id)
 	{
-		return Seasons::find($id);
+		return Season::find($id);
 	}
 
 	/**
@@ -60,7 +60,7 @@ class DbSeasonRepository implements SeasonRepositoryInterface {
 
 	public function create($data)
 	{
-		$season = new Seasons($data);
+		$season = new Season($data);
 
 		$season->save($season->toArray());
 

@@ -1,9 +1,8 @@
-<?php namespace Pennants\Repositories;
+<?php namespace Pennants\PlayerResults;
 
-use Pennants\Interfaces;
-use PlayerResults;
+use PlayerResult;
 
-class DbPlayerResultRepository implements Interfaces\PlayerResultRepositoryInterface {
+class DbPlayerResultRepository implements PlayerResultRepositoryInterface {
 
 	/**
 	 * @return mixed
@@ -11,7 +10,7 @@ class DbPlayerResultRepository implements Interfaces\PlayerResultRepositoryInter
 
 	public function getAll()
 	{
-		return PlayerResults::all();
+		return PlayerResult::all();
 	}
 
 	/**
@@ -22,6 +21,6 @@ class DbPlayerResultRepository implements Interfaces\PlayerResultRepositoryInter
 
 	public function find($id)
 	{
-		return PlayerResults::find($id);
+		return PlayerResult::find($id);
 	}
 }

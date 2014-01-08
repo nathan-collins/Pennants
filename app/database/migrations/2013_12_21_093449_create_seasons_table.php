@@ -17,6 +17,7 @@ class CreateSeasonsTable extends Migration {
 				$table->increments('id');
 				$table->string('year', 5);
 				$table->string('name', 100);
+				$table->integer('added_by');
 				$table->timestamps();
 			});
 		}

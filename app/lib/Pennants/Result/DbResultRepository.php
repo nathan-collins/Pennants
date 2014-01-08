@@ -1,6 +1,6 @@
 <?php namespace Pennants\Result;
 
-use Results;
+use Result;
 
 class DbResultRepository implements ResultRepositoryInterface {
 
@@ -10,7 +10,7 @@ class DbResultRepository implements ResultRepositoryInterface {
 
 	public function all()
 	{
-		return Results::all();
+		return Result::all();
 	}
 
 	/**
@@ -21,6 +21,6 @@ class DbResultRepository implements ResultRepositoryInterface {
 
 	public function find($id)
 	{
-		return Results::find($id);
+		return Result::find($id);
 	}
 }

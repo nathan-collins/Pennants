@@ -4,11 +4,11 @@ use Pennants\Game\GameRepositoryInterface;
 
 class GameController extends \BaseController {
 
-	protected $games;
+	protected $game;
 
-	public function __construct(GameRepositoryInterface $games)
+	public function __construct(GameRepositoryInterface $game)
 	{
-		$this->games = $games;
+		$this->game = $game;
 	}
 
 	/**
@@ -18,7 +18,7 @@ class GameController extends \BaseController {
 	 */
 	public function index()
 	{
-		$games = $this->games->all();
+		$games = $this->game->all();
 
 		return \Response::json(array(
 			'error' => false,
@@ -55,7 +55,7 @@ class GameController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$games = $this->games->find($id);
+		$games = $this->game->find($id);
 
 		return \Response::json(array(
 			'error' => false,
@@ -72,8 +72,8 @@ class GameController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$game = $this->games->find($id);
-		$clubs = $this->clubs->where();
+		$game = $this->game->find($id);
+		$clubs = $this->club->where();
 
 		return \View::make('games.edit')->with('game', $game)->with('clubs', $clubs);
 	}
@@ -86,7 +86,7 @@ class GameController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$games = $this->games->where('id', $id);
+		$games = $this->game->where('id', $id);
 		// we need to do a few checks.
 
 		if( \Request::get('club_id') && Request::get('opponent_id') ) {

@@ -4,11 +4,11 @@ use Pennants\Club\ClubRepositoryInterface;
 
 class ClubController extends \BaseController {
 
-	protected $clubs;
+	protected $club;
 
-	public function __construct(ClubRepositoryInterface $clubs)
+	public function __construct(ClubRepositoryInterface $club)
 	{
-		$this->club = $clubs;
+		$this->club = $club;
 	}
 
 	/**
