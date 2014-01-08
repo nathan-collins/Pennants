@@ -1,6 +1,10 @@
-.idea/
+.idea
 /node_modules
-/assets/vendor
 /.sass-cache
 /public.tmp
 /public/assets
+app/storage
+.vagrant
+.DS_Store
+*.iml
+bootstrap/compiled.php
