@@ -129,7 +129,14 @@ class UserController extends \BaseController {
 
 	public function login()
 	{
+		$user = array(
+			'username' => Input::get('username'),
+			'password' => Input::get('password')
+		);
 
+		if(Auth::attempt($user)) {
+
+		}
 	}
 
 }

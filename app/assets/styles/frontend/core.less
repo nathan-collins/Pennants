@@ -1,0 +1,70 @@
+@import "../base.less";
+@import "../variables.less";
+@import "../fonts.less";
+
+body {
+  padding-top: 70px;
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  font-family: "OpenSansRegular", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #696969;
+  line-height: 20px;
+
+  .widget {
+    margin-bottom: 40px;
+    fieldset {
+      border:0;
+    }
+  }
+
+  .widget-search {
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      -webkit-border-radius: 3px 0px 0px 3px;
+      -moz-border-radius: 3px 0px 0px 3px;
+      border-radius: 3px 0px 0px 3px;
+      padding: 7px 0px 7px 10px;
+      background: rgba(0,0,0,.07);
+    }
+    .input-group-addon {
+      color: #c4c4c4;
+      background: rgba(0,0,0,.07);
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      font-size: 13px;
+      padding: 5px 10px;
+      -webkit-border-radius: 0px 3px 3px 0px;
+      -moz-border-radius: 0px 3px 3px 0px;
+      border-radius: 0px 3px 3px 0px;
+      :last-child {
+        border-left:0;
+      }
+    }
+  }
+
+  .input-group {
+    input {
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      -webkit-border-radius: 3px 0px 0px 3px !important;
+      -moz-border-radius: 3px 0px 0px 3px !important;
+      border-radius: 3px 0px 0px 3px !important;
+      padding: 7px 0px 7px 10px;
+      background: rgba(0,0,0,.07);
+      width: 100%;
+    }
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 7px 0px 7px 10px;
+    background: rgba(0,0,0,.07);
+    width: 100%;
+  }
+}
