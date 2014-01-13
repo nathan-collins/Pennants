@@ -1,7 +1,11 @@
-$('#test').click(function() {
-  alert("Test");
-  alert("Another test");
-  alert("New test");
-  alert("YEW");
-  console.log("Test");
+var scg = angular.module('scg', ['ngRoute', 'ngSanitize']);
+
+scg.controller('PageContainer', function ($scope) {
+  $scope.isCollapsed = false;
 });
+
+scg.controller('NavigationContainer', function ($scope) {
+});
+
+
+

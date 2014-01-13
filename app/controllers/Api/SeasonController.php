@@ -24,27 +24,7 @@ class SeasonController extends BaseController {
 	{
 		$seasons = $this->season->all();
 
-		if($seasons) {
-			$seasons = $seasons->toArray();
-		} else {
-			$seasons = array();
-		}
-
-		return \Response::json(array(
-			'error' => false,
-			'season' => $seasons,
-			'code'	=> 200
-		));
-	}
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return \View::make('api.season.create');
+		return $seasons;
 	}
 
 	/**
@@ -61,9 +41,7 @@ class SeasonController extends BaseController {
 				->with('flash', 'A new season has been created');
 		}
 
-		return \Redirect::route('api.v1.pennants.season.create')
-			->withInput()
-			->withErrors($s->errors());
+		return $s->errors();
 	}
 
 	/**
@@ -76,30 +54,7 @@ class SeasonController extends BaseController {
 	{
 		$season = $this->season->find($id);
 
-		if($season) {
-			$season = $season->toArray();
-		} else {
-			$season = array();
-		}
-
-		return \Response::json(array(
-			'error' => false,
-			'season' => $season,
-			'code' 	=> 200
-		));
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		$season = $this->season->find($id);
-
-		return \View::make('api.season.edit', compact('season'));
+		return $season;
 	}
 
 	/**
@@ -117,9 +72,11 @@ class SeasonController extends BaseController {
 				->with('flash', 'The season was updated');
 		}
 
-		return \Redirect::route('api.v1.pennants.season.edit', $id)
-			->withInput()
-			->withErrors($s->errors());
+		return \Response::json(array(
+			'error' => true,
+			'season' => $s->errors(),
+			'code'	=> 400
+		));
 	}
 
 	/**

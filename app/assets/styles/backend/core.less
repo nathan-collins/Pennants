@@ -5,22 +5,23 @@
 
 body {
   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
-  font-size: 13px;
-  line-height: 1.428571429;
   color: #333;
 
-  #header {
-    display: block;
-    height: 49px;
-    position: relative;
-    margin: 0;
-    padding: 0 13px 0 0;
-    background-color: #ECECEC;
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(#f3f3f3),to(#e2e2e2));
-    background-image: -webkit-linear-gradient(top,#f3f3f3,#e2e2e2);
-    background-image: -webkit-gradient(linear,top left,bottom left,from(#f3f3f3),to(#e2e2e2));
-    background-image: linear-gradient(to bottom,#f3f3f3,#e2e2e2);
-    background-repeat: repeat-x;
+  header {
+    ul.nav {
+      li {
+        a {
+          padding: 15px !important;
+        }
+      }
+    }
+  }
+
+  #left-panel {
+    position: absolute;
+    top: 49px;
+    left: 0;
+    z-index: 500;
   }
 
   aside {

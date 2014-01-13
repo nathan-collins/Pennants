@@ -1,0 +1,22 @@
+<div ng-controller="ShowSeasonController" class="panel panel-default">
+  <div class="panel-heading"><h2>Seasons</h2></div>
+  <div class="panel-body">
+    A List of season
+  </div>
+  <div class="panel-header">
+    <label>Filter:</label>
+    <input name="filter_name" ng-model="name" />
+    <select name="" ng-model="year"><option value="2014">2014</option><option value="2015">2015</option></select>
+    </tr>
+  </div>
+  <table class="table table-striped">
+    <tr>
+      <th>Year</th>
+      <th>Name</th>
+    </tr>
+    <tr ng-repeat="season in seasons | filter:year | filter:name">
+      <td><a href="#EditSeason">{{ season.year }}</a></td>
+      <td>{{ season.name }}</td>
+    </tr>
+  </table>
+</div>

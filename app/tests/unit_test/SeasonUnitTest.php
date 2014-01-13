@@ -85,7 +85,7 @@ class SeasonUnitTest extends TestCase {
 
 		$this->assertCount(1, $errors);
 
-		$this->assertEquals($errors[0], "The added by field is required.");
+		$this->assertEquals($errors[1], "The added by field is required.");
 	}
 
 	/**

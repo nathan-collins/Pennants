@@ -11,8 +11,9 @@ module.exports = function (grunt) {
       js_frontend: {
         src: [
           './app/assets/vendor/angular/angular.js',
-          './app/assets/vendor/angular-bootstrap/ui-bootstrap.js',
+          './app/assets/vendor/angular-sanitize/angular-sanitize.js',
           './app/assets/vendor/bootstrap/dist/bootstrap.js',
+          './app/assets/vendor/angular-bootstrap/ui-bootstrap.js',
           './app/assets/vendor/modernizr/modernizr.js',
           './app/assets/vendor/requirejs/require.js',
           './app/assets/scripts/frontend/*.js'
@@ -28,12 +29,23 @@ module.exports = function (grunt) {
       js_backend: {
         src: [
           './app/assets/vendor/angular/angular.js',
+          './app/assets/vendor/angular-route/angular-route.js',
+          './app/assets/vendor/angular-sanitize/angular-sanitize.js',
+          './app/assets/vendor/bootstrap/dist/bootstrap.js',
           './app/assets/vendor/angular-bootstrap/ui-bootstrap.js',
           './app/assets/vendor/modernizr/modernizr.js',
           './app/assets/vendor/requirejs/require.js',
-          './app/assets/scripts/backend/*.js'
+          './app/assets/scripts/backend/core.js',
+          './app/assets/scripts/backend/auth.js',
+          './app/assets/scripts/backend/sidebar.js'
         ],
         dest: './public/assets/scripts/backend/core.js'
+      },
+      js_backend_season: {
+         src: [
+           './app/assets/scripts/backend/season/*.js'
+         ],
+        dest: './public/assets/scripts/backend/season.js'
       }
     },
     less: {
@@ -80,6 +92,7 @@ module.exports = function (grunt) {
             './public/assets/styles/bootstrap/glyphicons.css',
             './public/assets/styles/bootstrap/input-groups.css',
             './public/assets/styles/bootstrap/wells.css',
+            './public/assets/styles/bootstrap/buttons.css',
             './public/assets/styles/bootstrap/responsive-utilities.css',
           ],
           './public/assets/styles/frontend/core.css':
@@ -88,19 +101,33 @@ module.exports = function (grunt) {
           ],
           './public/assets/styles/frontend/font-awesome.css':
           [
-            './public/assets/styles/font-awesome/font-awesome.css'
+            './public/assets/styles/font-awesome/core.css',
+            './public/assets/styles/font-awesome/font-awesome.css',
+            './public/assets/styles/font-awesome/icons.css',
+            './public/assets/styles/font-awesome/list.css',
+            './public/assets/styles/font-awesome/path.css',
+            './public/assets/styles/font-awesome/bordered-pull.css'
           ],
           './public/assets/styles/backend/core.css':
           [
-            './app/assets/styles/backend/*.less',
             './public/assets/styles/bootstrap/forms.css',
+            './public/assets/styles/bootstrap/labels.css',
             './public/assets/styles/bootstrap/grid.css',
             './public/assets/styles/bootstrap/navs.css',
             './public/assets/styles/bootstrap/navbar.css',
             './public/assets/styles/bootstrap/print.css',
-            './public/assets/styles/bootstrap/theme.css',
+            './public/assets/styles/bootstrap/type.css',
+            './public/assets/styles/bootstrap/normalize.css',
+            './public/assets/styles/bootstrap/utilities.css',
+            './public/assets/styles/bootstrap/scaffolding.css',
+            './public/assets/styles/bootstrap/glyphicons.css',
+            './public/assets/styles/bootstrap/input-groups.css',
+            './public/assets/styles/bootstrap/wells.css',
+            './public/assets/styles/bootstrap/list-group.css',
+            './public/assets/styles/bootstrap/panels.css',
+            './public/assets/styles/bootstrap/tables.css',
+            './public/assets/styles/bootstrap/buttons.css',
             './public/assets/styles/bootstrap/responsive-utilities.css',
-            './public/assets/styles/font-awesome/*.css'
           ]
         }
       }
@@ -116,7 +143,8 @@ module.exports = function (grunt) {
       },
       backend: {
         files: {
-          './public/assets/scripts/backend/core.js': ['./public/assets/scripts/backend/core.js']
+          './public/assets/scripts/backend/core.js': ['./public/assets/scripts/backend/core.js'],
+          './public/assets/scripts/backend/season.js': ['./public/assets/scripts/backend/season.js']
         }
       }
     },
@@ -145,6 +173,15 @@ module.exports = function (grunt) {
           livereload: true
         }
       },
+      js_backend_admin: {
+        files: [
+          './app/assets/scripts/backend/**/*.js'
+        ],
+        tasks: ['concat:js_backend_season', 'uglify:backend'],
+        options: {
+          livereload: true
+        }
+      },
       less: {
         files: ['./app/assets/styles/frontend/*.less', './app/assets/styles/backend/*.less'],  //watched files
         tasks: ['less'],                          //tasks to run
@@ -162,7 +199,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('assemble-less');
-//  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-phpunit');
 

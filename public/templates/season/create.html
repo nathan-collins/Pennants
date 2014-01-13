@@ -1,0 +1,13 @@
+<div ng-controller="CreateSeasonController">
+  <form role="form" ng-submit="addSeason()">
+    <div class="form-group">
+      <label>Year</label>
+      <input name="year" class="form-control" ng-model="seasonYear" />
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input name="name" class="form-control"  ng-model="seasonName" />
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
