@@ -26,11 +26,15 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 	Route::resource('pennants/team', 'Api\TeamController');
 });
 
-Route::get('/', array('as' => 'home', function () {
-	return View::make('singlepage');
-}));
+Route::post('auth/login', array('before' => 'csrf_json', 'uses' => 'AuthController@login'));
+Route::get('auth/logout', 'AuthController@logout');
+Route::get('auth/status', 'AuthController@status');
+Route::get('auth/secrets','AuthController@secrets');
 
-Route::post('/auth/login', array('before' => 'csrf_json', 'uses' => 'AuthController@login'));
-Route::get('/auth/logout', 'AuthController@logout');
-Route::get('/auth/status', 'AuthController@status');
-Route::get('/auth/secrets','AuthController@secrets');
+Route::get('/', function() {
+	return View::make('singlepage');
+});
+
+Route::any('{path?}', function ($path) {
+	return View::make('singlepage');
+});

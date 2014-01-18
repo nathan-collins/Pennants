@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="scg">
+<html>
 <head>
-	<title>A Layout</title>
-	{{ HTML::style('assets/styles/backend/core.css') }}
+	<title>Test</title>
+	{{ HTML::style('/vendor/bootstrap/dist/bootstrap.css') }}
 	@section('header_scripts')
 	@show
 </head>
-<body ng-controller="PageContainer">
+<body id="golf">
 @include('partials.backend.header')
 @include('partials.backend.navigation')
 	<div class="container">
@@ -18,9 +18,15 @@
 			@yield('content')
 		</div>
 	</div><!-- end container -->
-	{{ HTML::script('assets/scripts/backend/core.js') }}
+	{{ HTML::script('/vendor/angular/angular.js') }}
+	{{ HTML::script('/vendor/angular-route/angular-route.js') }}
+	{{ HTML::script('/vendor/angular-sanitize/angular-sanitize.js') }}
+	{{ HTML::script('/vendor/underscore/underscore.js') }}
+	<script type="text/javascript" src="/vendor/requirejs/require.js" data-main="/scripts/appBootstrap.js"></script>
 	<script>
-    angular.module("app").constant("CSRF_TOKEN", '<?php echo csrf_token(); ?>');
+		define('global', function() {
+			return <?php echo json_encode(array('CSRF_TOKEN' => csrf_token())); ?>
+		});
   </script>
 	@section('templates')
 	@show

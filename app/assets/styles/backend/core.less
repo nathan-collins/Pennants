@@ -7,32 +7,34 @@ body {
   font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
   color: #333;
 
-  header {
-    ul.nav {
-      li {
-        a {
-          padding: 15px !important;
+  .navbar {
+    margin: 0;
+    min-height: 40px;
+    border: 0;
+    background: #34383c;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    z-index: 2;
+    .container {
+      width: 100%!important;
+      a {
+        #main-menu-toggle {
+          background: #1c1e21;
+          width: 40px;
+          height: 40px;
+          color: white;
+          position: absolute;
+          z-index: 1000;
+          top: 0;
+          left: 0;
+          padding: 8px 13px;
+          font-size: 16px;
+          text-shadow: none;
+          text-decoration: none;
+          cursor: pointer;
         }
       }
     }
-  }
-
-  #left-panel {
-    position: absolute;
-    top: 49px;
-    left: 0;
-    z-index: 500;
-  }
-
-  aside {
-    display: block;
-    overflow: hidden;
-    background: #3a3633;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…BoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-    background: -webkit-gradient(linear,left top,right top,color-stop(93%,#3a3633),color-stop(100%,#2a2725));
-    background: -webkit-linear-gradient(left,#3a3633 93%,#2a2725 100%);
-    background: -webkit-gradient(linear,top left,top right,from(#3a3633),to(#2a2725));
-    background: linear-gradient(to right,#3a3633 93%,#2a2725 100%);
-    min-height: 100%;
   }
 }

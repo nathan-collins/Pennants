@@ -2,7 +2,7 @@
 	<div class="login-info">
 
 	</div>
-	<nav ng-controller="NavigationContainer">
+	<nav>
 		<ul>
 			<li>
 				<a href="#">

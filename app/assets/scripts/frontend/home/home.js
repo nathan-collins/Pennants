@@ -1,1 +1,0 @@
-var BootstrapJs = angular.module('myApp', ['ui.bootstrap']);

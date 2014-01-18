@@ -1,6 +1,6 @@
-<?php namespace Admin;
+<?php
 
-class SeasonController extends \BaseController
+class AuthController extends \BaseController
 {
 
 	/**
@@ -22,7 +22,7 @@ class SeasonController extends \BaseController
 
 	public function login()
 	{
-		if(Auth::attempt(array('email' => Input::json('email'), 'password' => Input::json('password'))))
+		if(Auth::attempt(array('username' => Input::json('username'), 'password' => Input::json('password'))))
 		{
 			return Response::json(Auth::user());
 		} else {

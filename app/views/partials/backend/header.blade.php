@@ -1,15 +1,11 @@
-<header id="header">
-	<div class="navbar navbar-fixed-top navbar-default" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" bs-aside="aside">
-					<span class="sr-only">Toggle navigation</span>
+<header class="navbar">
+	<div class="container">
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".sidebar-nav.nav-collapse">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Project name</a>
-			</div>
-		</div><!-- /.container -->
-	</div>
+		</button>
+		<a id="main-menu-toggle" class="hidden-xs open"><i class="fa fa-bars"></i></a>
+		<a class="navbar-brand col-md-2 col-sm-1 col-xs-2" class="hidden-xs open"><span>Project name</span></a>
+	</div><!-- /.container -->
 </header>
