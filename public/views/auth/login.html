@@ -1,5 +1,13 @@
-<form>
-  <label>Username</label><input type="text" name="username">
-  <label>Password</label><input type="password" name="password">
-  <input type="submit" value="Submit">
-</form>
+<div id="login" class="row" ng-controller="LoginController">
+  <div class="large-6 large-offset-3">
+    <form role="form" method="POST" ng-submit="login()">
+      <div class="form-group">
+        <label type="username">Username</label><input type="text" name="username" placeholder="username" ng-model="credentials.username" required/>
+      </div>
+      <div class="form-group">
+        <label type="password">Password</label><input type="password" name="password" placeholder="password" ng-model="credentials.password" required/>
+      </div>
+      <button type="submit" id="submit" class="btn btn-default">Log In</button>
+    </form>
+  </div>
+</div>

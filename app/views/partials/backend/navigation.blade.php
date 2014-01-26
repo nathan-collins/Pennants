@@ -11,7 +11,7 @@
 					<b class="collapse-sign"><em class="fa fa-plus-square-o"></em></b>
 				</a>
 				<ul>
-					<li>Players</li>
+					<li><a ng-href="/pennants/season">Players</a></li>
 					<li>Games</li>
 				</ul>
 			</li>

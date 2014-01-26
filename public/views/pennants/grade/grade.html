@@ -1,0 +1,11 @@
+<section ng-controller="GradeController">
+  <a class="btn btn-default"  ng-href="/pennants/grade/add" role="button">Add Grade</a>
+  <h1>Select a grade</h1>
+  <div class="list-group">
+    <a ng-href="/pennants/grades/{{grade.id}}" class="list-group-item" ng-repeat="grade in grades">
+      <h4>{{ grade.name }}</h4>
+      <p>{{ grade.season_id }}</p>
+    </a>
+        <!--<td><a ng-href="/pennants/season/{{season.id}}/edit">Edit</a></td>-->
+  </div>
+</section>
