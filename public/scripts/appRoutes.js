@@ -6,13 +6,14 @@ define([], function()
       '/': {
         templateUrl: '/views/dashboard/dashboard.html',
         dependencies: [
-          'controllers/dashboard/DashboardController'
+          'controllers/dashboard/DashboardController',
         ]
       },
       '/pennants/season': {
         templateUrl: '/views/pennants/season/season.html',
         dependencies: [
-          'controllers/pennants/SeasonController'
+          'controllers/pennants/SeasonController',
+          '/scripts/directives/navigationDirective.js'
         ]
       },
       '/pennants/season/add': {
@@ -27,12 +28,60 @@ define([], function()
           'controllers/pennants/SeasonController'
         ]
       },
-      'pennants/grades/:seasonId': {
+
+
+      '/pennants/grade': {
+        templateUrl: '/views/pennants/grade/grade.html',
+        dependencies: [
+          'controllers/pennants/GradeController',
+          '/scripts/directives/seasonDirective.js'
+        ]
+      },
+      '/pennants/grade/add': {
+        templateUrl: '/views/pennants/grade/create.html',
+        dependencies: [
+          'controllers/pennants/GradeController'
+        ]
+      },
+      '/pennants/grade/:gradeId/edit': {
         templateUrl: '/views/pennants/grade/edit.html',
         dependencies: [
           'controllers/pennants/GradeController'
         ]
       },
+
+      '/pennants/games/:teamId': {
+        templateUrl: '/views/pennants/game/game.html',
+        dependencies: [
+          'controllers/pennants/GameController'
+        ]
+      },
+
+
+      '/pennants/draws': {
+        templateUrl: '/views/pennants/draws/draws.html',
+        dependencies: [
+          'controllers/pennants/DrawController',
+          'controllers/pennants/GameController',
+          'controllers/pennants/ClubController',
+          '/scripts/directives/seasonDirective.js',
+          '/scripts/directives/gradeDirective.js',
+          '/scripts/directives/componentsDirective.js'
+        ]
+      },
+
+      '/pennants/club/add': {
+        templateUrl: '/views/pennants/club/create.html',
+        dependecies: [
+          'controllers/pennants/ClubController',
+          '/scripts/directives/seasonDirective.js',
+          '/scripts/directives/gradeDirective.js'
+        ]
+      },
+
+
+
+
       '/login': {
         templateUrl: '/views/auth/login.html',
         dependencies: [

@@ -18,11 +18,7 @@ class GradeController extends \BaseController {
 	{
 		$grades = $this->grade->all();
 
-		return \Response::json(array(
-			'error' => false,
-			'grade' => $grades->toArray(),
-			'code'	=> 200
-		));
+		return $grades;
 	}
 
 	/**
@@ -63,11 +59,7 @@ class GradeController extends \BaseController {
 	{
 		$grade = $this->grade->getWhere('season_id', $season_id);
 
-		return \Response::json(array(
-			'error' => false,
-			'season' => $grade->toArray(),
-			'code' 	=> 200
-		));
+		return $grade;
 	}
 
 	/**
@@ -79,11 +71,7 @@ class GradeController extends \BaseController {
 	{
 		$grade = $this->grade->find($id);
 
-		return \Response::json(array(
-			'error' => false,
-			'season' => $grade->toArray(),
-			'code' 	=> 200
-		));
+		return $grade;
 	}
 
 	/**

@@ -5,7 +5,7 @@ use Magniloquent\Magniloquent\Magniloquent;
 class Grade extends Magniloquent {
 //	protected $guarded = array('id');
 
-	protected $fillable = array('name');
+	protected $fillable = array('name', 'season_id');
 
 	public static $rules = array(
 		"save" => array(

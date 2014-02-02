@@ -46,16 +46,16 @@ define(['appRoutes', 'services/dependencyResolverFor', 'services/authenticationS
     ]
   );
 
-//  app.run(function($rootScope, $location) {
-//    var routesThatRequireAuth = ['/pennants'];
-//
-//    $rootScope.$on('$routeChangeStart', function(event, next, current) {
-//      if(_(routesThatRequireAuth).contains($location.path()) && !authenticationService.isLoggedIn()) {
-//        $location.path('/login');
-//        FlashService.show("Please log in to continue.");
-//      }
-//    });
-//  });
+  app.run(function($rootScope, $location) {
+    var routesThatRequireAuth = ['/pennants'];
+
+    $rootScope.$on('$routeChangeStart', function(event, next, current) {
+      if(_(routesThatRequireAuth).contains($location.path()) && !authenticationService.isLoggedIn()) {
+        $location.path('/login');
+        FlashService.show("Please log in to continue.");
+      }
+    });
+  });
 
   return app;
 

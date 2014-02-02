@@ -10,7 +10,7 @@ class DbClubRepository implements ClubRepositoryInterface {
 
 	public function all()
 	{
-		return Club::all();
+		return Club::orderBy('name')->get();
 	}
 
 	/**
@@ -33,7 +33,7 @@ class DbClubRepository implements ClubRepositoryInterface {
 
 	public function getWhere($column, $value)
 	{
-		return Club::where($column, $value)->get();
+		return Club::where($column, $value)->orderBy('name')->get();
 	}
 
 	/**

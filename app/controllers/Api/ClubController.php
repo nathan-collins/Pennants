@@ -20,11 +20,7 @@ class ClubController extends \BaseController {
 	{
 		$clubs = $this->club->all();
 
-		return \Response::json(array(
-			'error' => false,
-			'club' => $clubs->toArray(),
-			'code'	=> 200
-		));
+		return $clubs;
 	}
 
 	/**
@@ -73,11 +69,7 @@ class ClubController extends \BaseController {
 
 		$club = $this->club->getWhere('season_id', $season_id);
 
-		return \Response::json(array(
-			'error' => false,
-			'season' => $club->toArray(),
-			'code' 	=> 200
-		));
+		return $club;
 	}
 
 	/**
@@ -90,11 +82,7 @@ class ClubController extends \BaseController {
 	{
 		$club = $this->club->find($id);
 
-		return \Response::json(array(
-			'error' => false,
-			'season' => $club->toArray(),
-			'code' 	=> 200
-		));
+		return $club;
 	}
 
 	/**

@@ -1,11 +1,14 @@
-<section ng-controller="GradeController">
-  <a class="btn btn-default"  ng-href="/pennants/grade/add" role="button">Add Grade</a>
-  <h1>Select a grade</h1>
-  <div class="list-group">
-    <a ng-href="/pennants/grades/{{grade.id}}" class="list-group-item" ng-repeat="grade in grades">
-      <h4>{{ grade.name }}</h4>
-      <p>{{ grade.season_id }}</p>
-    </a>
-        <!--<td><a ng-href="/pennants/season/{{season.id}}/edit">Edit</a></td>-->
+<div class="col-xs-12 col-md-6 col-lg-8 outer content-container">
+  <div class="jumbotron">
+    <div season-display></div>
   </div>
-</section>
+  <section ng-controller="GradeController">
+    <a class="btn btn-default"  ng-href="/pennants/grade/add" role="button">Add Grade</a>
+    <h1>Select a grade</h1>
+    <div class="list-group">
+      <a ng-href="/pennants/draws" class="list-group-item" ng-click="store(grade.id)" ng-repeat="grade in grades">
+        <h4>{{ grade.name }}</h4>
+      </a>
+    </div>
+  </section>
+</div>

@@ -1,4 +1,4 @@
-define(['appModule', 'services/flashService'], function(app, FlashService)
+define(['appModule', 'services/flashService', 'config/navigation'], function(app, FlashService, navigation)
 {
   app.lazy.controller('SeasonController',
     [
@@ -29,6 +29,41 @@ define(['appModule', 'services/flashService'], function(app, FlashService)
     [
       '$scope',
       '$http',
+      '$location',
+
+      function($scope, $http, $location)
+      {
+        $scope.master = {};
+        $scope.activePath = null;
+
+        $scope.page =
+        {
+          title: 'Pennants - Add Season'
+        }
+
+        $scope.addSeason = function(season, AddSeasonForm) {
+
+//            $scope.seasons.push(season);
+
+          $http.post('/api/v1/pennants/season', season).success(function() {
+            $scope.reset();
+            $scope.activePath = $location.path('/pennants/season');
+          });
+
+          $scope.reset = function() {
+            $scope.season = angular.copy($scope.master);
+          }
+
+//          $scope.reset();
+        }
+      }
+    ]
+  );
+
+  app.lazy.controller('EditSeasonController',
+    [
+      '$scope',
+      '$http',
       '$routeParams',
       '$location',
 
@@ -36,28 +71,10 @@ define(['appModule', 'services/flashService'], function(app, FlashService)
       {
         $scope.page =
         {
-          title: 'Pennants - Add Season'
+          title: 'Pennants - Edit Season'
         }
 
-        var seasonId = $routeParams.seasonId;
-
-        if(_.isUndefined(seasonId)) {
-          $scope.addSeason = function() {
-
-            var season = {
-              year: $scope.year,
-              name: $scope.name
-            }
-            $scope.seasons.push(season);
-
-            $http.post('/api/v1/pennants/season', season).success(function() {
-              $location.path('/pennants/season')
-            })
-              .error(function(data) {
-                FlashService.show(data.message);
-              });
-          }
-        } else {
+        $scope.editSeason = function() {
 
           $http.get('/api/v1/pennants/season/'+seasonId).success(function(season) {
             $scope.season = season;
@@ -67,27 +84,24 @@ define(['appModule', 'services/flashService'], function(app, FlashService)
             }
           );
 
-          console.log($scope.seasons);
+          var seasonId = $routeParams.seasonId;
 
-          $scope.editSeason = function() {
-
-            var season = {
-              year: $scope.year,
-              name: $scope.name,
-              id: seasonId
-            }
-
-            $scope.seasons.push(season);
-
-            $http.post('/api/v1/pennants/season/'+seasonId, season).success(function() {
-              $location.path('/pennants/season')
-            })
-              .error(function(data) {
-                FlashService.show(data.message);
-              });
+          var season = {
+            year: $scope.year,
+            name: $scope.name,
+            id: seasonId
           }
+
+          $scope.seasons.push(season);
+
+          $http.post('/api/v1/pennants/season/'+seasonId, season).success(function() {
+            $location.path('/pennants/season')
+          })
+            .error(function(data) {
+              FlashService.show(data.message);
+            });
         }
       }
     ]
-  );
+  )
 })

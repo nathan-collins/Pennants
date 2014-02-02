@@ -17,8 +17,6 @@ class CreateGamesTable extends Migration {
 			$table->integer('club_id');
 			$table->integer('opponent_id');
 			$table->integer('host_id');
-			$table->integer('player_id');
-			$table->integer('versus_id');
 			$table->timestamp('game_date');
 			$table->timestamps();
 		});

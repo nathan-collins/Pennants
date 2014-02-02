@@ -1,0 +1,13 @@
+<div class="col-xs-12 col-md-6 col-lg-8 outer content-container" ng-controller="DrawController">
+  <div class="jumbotron">
+    <div season-display></div>
+    <div grade-display></div>
+  </div>
+  <tabset justified="true">
+    <pane title="Draw"><div ng-include src="'/views/pennants/game/game.html'"></div></pane>
+    <pane title="Teams"><div ng-include src="'/views/pennants/club/club.html'"></div></pane>
+  </tabset>
+</div>
+<div id="sidebar" role="navigation" class="col-md-2 col-lg-2">
+  <div ng-switch on="RightNavigation" ng-include src="'/views/pennants/draws/nav.html'"></div>
+</div>

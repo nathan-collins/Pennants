@@ -10,7 +10,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function all()
 	{
-		return Grade::all();
+		return Grade::orderBy('name')->get();
 	}
 
 	/**
@@ -33,7 +33,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function getWhere($column, $value)
 	{
-		return Grade::where($column, $value)->get();
+		return Grade::where($column, $value)->orderBy('name')->get();
 	}
 
 	/**
@@ -79,8 +79,6 @@ class DbGradeRepository implements GradeRepositoryInterface {
 	public function create($data)
 	{
 		$grade = new Grade($data);
-
-		$grade->season_id = "1";
 
 		$grade->save($grade->toArray());
 

@@ -1,11 +1,12 @@
-<header class="navbar">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".sidebar-nav.nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-		</button>
-		<a id="main-menu-toggle" class="hidden-xs open"><i class="fa fa-bars"></i></a>
-		<a class="navbar-brand col-md-2 col-sm-1 col-xs-2" class="hidden-xs open"><span>Project name</span></a>
-	</div><!-- /.container -->
-</header>
+		<div class="navbar-header">
+				 <button type="button" class="navbar-toggle"  ng-click="toggle()" data-toggle="offcanvas" data-target=".sidebar-nav">
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+				 </button>
+				 <a class="navbar-brand" href="#">Project Name</a>
+		</div>
+	</div>
+</div>

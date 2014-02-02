@@ -13,7 +13,6 @@ module.exports = function (grunt) {
           './public/vendor/angular/angular.js',
           './public/vendor/angular-sanitize/angular-sanitize.js',
           './public/vendor/bootstrap/dist/bootstrap.js',
-          './public/vendor/angular-bootstrap/ui-bootstrap.js',
           './public/vendor/underscore/underscore.js',
           './public/vendor/modernizr/modernizr.js',
         ],
@@ -91,37 +90,38 @@ module.exports = function (grunt) {
 
           './public/assets/styles/backend/core.css':
             [
-              './public/styles/less/**/*.less'
+              './public/styles/less/core/*.less'
             ],
           './public/assets/styles/backend/font-awesome.css':
           [
-            './public/libs/font-awesome/core.css',
-            './public/libs/font-awesome/font-awesome.css',
-            './public/libs/font-awesome/icons.css',
-            './public/libs/font-awesome/list.css',
-            './public/libs/font-awesome/path.css',
-            './public/libs/font-awesome/bordered-pull.css'
+            './public/assets/lib/font-awesome/core.css',
+            './public/assets/lib/font-awesome/font-awesome.css',
+            './public/assets/lib/font-awesome/icons.css',
+            './public/assets/lib/font-awesome/list.css',
+            './public/assets/lib/font-awesome/path.css',
+            './public/assets/lib/font-awesome/bordered-pull.css'
           ],
           './public/assets/styles/backend/bootstrap.css':
           [
-            './public/libs/bootstrap/forms.css',
-            './public/libs/bootstrap/labels.css',
-            './public/libs/bootstrap/grid.css',
-            './public/libs/bootstrap/navs.css',
-            './public/libs/bootstrap/navbar.css',
-            './public/libs/bootstrap/print.css',
-            './public/libs/bootstrap/type.css',
-            './public/libs/bootstrap/normalize.css',
-            './public/libs/bootstrap/utilities.css',
-            './public/libs/bootstrap/scaffolding.css',
-            './public/libs/bootstrap/glyphicons.css',
-            './public/libs/bootstrap/input-groups.css',
-            './public/libs/bootstrap/wells.css',
-            './public/libs/bootstrap/list-group.css',
-            './public/libs/bootstrap/panels.css',
-            './public/libs/bootstrap/tables.css',
-            './public/libs/bootstrap/buttons.css',
-            './public/libs/bootstrap/responsive-utilities.css',
+            './public/assets/lib/bootstrap/forms.css',
+            './public/assets/lib/bootstrap/labels.css',
+            './public/assets/lib/bootstrap/grid.css',
+            './public/assets/lib/bootstrap/navs.css',
+            './public/assets/lib/bootstrap/navbar.css',
+            './public/assets/lib/bootstrap/print.css',
+            './public/assets/lib/bootstrap/type.css',
+            './public/assets/lib/bootstrap/normalize.css',
+            './public/assets/lib/bootstrap/utilities.css',
+            './public/assets/lib/bootstrap/scaffolding.css',
+            './public/assets/lib/bootstrap/glyphicons.css',
+            './public/assets/lib/bootstrap/input-groups.css',
+            './public/assets/lib/bootstrap/wells.css',
+            './public/assets/lib/bootstrap/list-group.css',
+            './public/assets/lib/bootstrap/panels.css',
+            './public/assets/lib/bootstrap/tables.css',
+            './public/assets/lib/bootstrap/buttons.css',
+            './public/assets/lib/bootstrap/jumbotron.css',
+            './public/assets/lib/bootstrap/responsive-utilities.css',
           ]
         }
       }

@@ -20,11 +20,7 @@ class TeamController extends \BaseController {
 	{
 		$teams = $this->team->all();
 
-		return \Response::json(array(
-			'error' => false,
-			'player' => $teams->toArray(),
-			'code'	=> 200
-		));
+		return $teams;
 	}
 
 	/**
@@ -65,11 +61,7 @@ class TeamController extends \BaseController {
 	{
 		$team = $this->team->find($id);
 
-		return \Response::json(array(
-			'error' => false,
-			'player' => $team->toArray(),
-			'code' 	=> 200
-		));
+		return $team;
 	}
 
 	/**
@@ -115,11 +107,7 @@ class TeamController extends \BaseController {
 	{
 		$team = $this->team->delete($id);
 
-		return \Response::json(array(
-			'error' => false,
-			'player' => $team,
-			'code' 	=> 200
-		));
+		return $team;
 	}
 
 }
