@@ -43,8 +43,6 @@ define(['appModule', 'services/flashService', 'config/navigation'], function(app
 
         $scope.addSeason = function(season, AddSeasonForm) {
 
-//            $scope.seasons.push(season);
-
           $http.post('/api/v1/pennants/season', season).success(function() {
             $scope.reset();
             $scope.activePath = $location.path('/pennants/season');

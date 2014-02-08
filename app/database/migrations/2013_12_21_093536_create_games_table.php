@@ -14,10 +14,10 @@ class CreateGamesTable extends Migration {
 	{
 		Schema::create('games', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('club_id');
-			$table->integer('opponent_id');
 			$table->integer('host_id');
-			$table->timestamp('game_date');
+			$table->integer('season_id');
+			$table->integer('grade_id');
+			$table->date('game_date');
 			$table->timestamps();
 		});
 	}

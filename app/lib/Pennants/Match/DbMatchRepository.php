@@ -1,8 +1,8 @@
-<?php namespace Pennants\Grade;
+<?php namespace Pennants\Match;
 
-use Grade;
+use Match;
 
-class DbGradeRepository implements GradeRepositoryInterface {
+class DbMatchRepository implements MatchRepositoryInterface {
 
 	/**
 	 * @return mixed
@@ -10,7 +10,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function all()
 	{
-		return Grade::orderBy('name')->get();
+		return Match::all();
 	}
 
 	/**
@@ -21,7 +21,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function find($id)
 	{
-		return Grade::find($id);
+		return Match::find($id);
 	}
 
 	/**
@@ -33,7 +33,7 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function getWhere($column, $value)
 	{
-		return Grade::where($column, $value)->orderBy('name')->get();
+		return Match::where($column, $value)->get();
 	}
 
 	/**
@@ -44,11 +44,11 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function update($id)
 	{
-		$grade = $this->get($id);
+		$match = $this->get($id);
 
-		$grade->save(\Input::all());
+		$match->save(\Input::all());
 
-		return $grade;
+		return $match;
 	}
 
 	/**
@@ -59,13 +59,13 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function delete($id)
 	{
-		$grade = $this->get($id);
+		$match = $this->get($id);
 
-		if(!$grade) {
+		if(!$match) {
 			return false;
 		}
 
-		return $grade->delete();
+		return $match->delete();
 	}
 
 	/**
@@ -76,10 +76,10 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function create($data)
 	{
-		$grade = new Grade($data);
+		$match = new Match($data);
 
-		$grade->save($grade->toArray());
+		$match->save($match->toArray());
 
-		return $grade;
+		return $match;
 	}
 }

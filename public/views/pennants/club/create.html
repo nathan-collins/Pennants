@@ -14,12 +14,9 @@
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default" ng-disabled="AddClubForm.$invalid || isUnchanged(club)" ng-click="addClub(club)">Submit</button>
+          <button type="submit" class="btn btn-default" required="Name is required" ng-required="true" ng-disabled="AddClubForm.$invalid || isUnchanged(club)" ng-click="addClub(club)">Submit</button>
         </div>
       </div>
     </form>
   </section>
-</div>
-<div id="sidebar" role="navigation" class="col-md-2 col-lg-2">
-  <div ng-switch on="create" ng-include src="'/views/pennants/club/nav.html'"></div>
 </div>

@@ -17,8 +17,9 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 	Route::resource('pennants/grade', 'Api\GradeController');
 	Route::get('pennants/grade/seasons/{id}', 'Api\GradeController@getSeasons');
 	Route::resource('pennants/club', 'Api\ClubController');
-	Route::get('pennants/club/seasons/{id}', 'Api\ClubController@getSeasons');
+	Route::get('pennants/club/season/{seasonId}/{gradeId}', 'Api\ClubController@getClubBySeason');
 	Route::resource('pennants/game', 'Api\GameController');
+	Route::get('pennants/game/season/{seasonId}/{gradeId}', 'Api\GameController@getGameBySeason');
 	Route::resource('pennants/result', 'Api\ResultController');
 	Route::resource('pennants/player_result', 'Api\PlayerResultController');
 	Route::resource('pennants/user', 'Api\UserController');

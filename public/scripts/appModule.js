@@ -21,7 +21,8 @@ define(['appRoutes', 'services/dependencyResolverFor', 'services/authenticationS
           directive  : $compileProvider.directive,
           filter     : $filterProvider.register,
           factory    : $provide.factory,
-          service    : $provide.service
+          service    : $provide.service,
+          constant   : $provide.constant
         };
 
         if(config.routes !== undefined)

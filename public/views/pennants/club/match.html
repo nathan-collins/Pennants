@@ -1,0 +1,11 @@
+<div class="col-xs-12 col-md-12 col-lg-12 outer content-container">
+  <section ng-controller="ClubMatchController">
+    <a class="btn btn-default"  ng-href="/pennants/club/add" role="button">Add Match</a>
+    <h1>Club Matches</h1>
+    <div class="list-group">
+      <a ng-href="/pennants/match/{{match.id}}" class="list-group-item" ng-repeat="match in matches">
+        <h4>{{ match.name }}</h4>
+      </a>
+    </div>
+  </section>
+</div>

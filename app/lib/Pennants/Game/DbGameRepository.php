@@ -24,9 +24,13 @@ class DbGameRepository implements GameRepositoryInterface {
 		return Game::find($id);
 	}
 
-	public function getWhere($column, $value)
+	public function getWhere($rows)
 	{
-		return Game::where($column, $value)->get();
+		foreach($rows as $column => $value) {
+			Game::where($column, $value);
+		}
+
+		return Game::orderBy('game_date')->get();
 	}
 
 
@@ -37,13 +41,11 @@ class DbGameRepository implements GameRepositoryInterface {
 
 	public function create($data)
 	{
-		$games = new Game;
+		$game = new Game($data);
 
-		foreach($data as $games_key => $games_data) {
-			$games->$games_key = $games_data;
-		}
+		$game->save($game->toArray());
 
-		return $games->save();
+		return $game;
 	}
 
 	public function update($id, $data)

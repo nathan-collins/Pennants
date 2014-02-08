@@ -7,10 +7,9 @@ define(['appModule', 'services/flashService'], function(app, FlashService) {
 
       function($scope, $http, $cookies) {
         var seasonId = $cookies.pennantsSeason;
+        var gradeId = $cookies.pennantsGrade;
 
-        console.log(seasonId);
-
-        $http.get('/api/v1/pennants/club/seasons/'+seasonId).success(function(clubs) {
+        $http.get('/api/v1/pennants/club/season/'+seasonId+'/'+gradeId).success(function(clubs) {
           $scope.clubs = clubs;
         });
 
@@ -47,6 +46,7 @@ define(['appModule', 'services/flashService'], function(app, FlashService) {
         $scope.addClub = function(club) {
 
           club.season_id = seasonId;
+          club.grade_id = gradeId;
 
           $http.post('/api/v1/pennants/club', club).success(function() {
             $scope.reset();
@@ -110,5 +110,57 @@ define(['appModule', 'services/flashService'], function(app, FlashService) {
         }
       }
     ]
-  )
+  );
+
+  app.lazy.controller('ClubPlayerController',
+    [
+      '$scope',
+      '$http',
+      '$routeParams',
+      '$cookies',
+      '$location',
+
+      function($scope, $http, $routeParams, $cookies, $location) {
+        var seasonId = $cookies.pennantsSeason;
+        var gradeId = $cookies.pennantsGrade;
+
+        if(_.isUndefined(seasonId)) {
+          $location.path('/pennants/season')
+        }
+
+        // Redirect back to grades so it can be assigned a value
+        if(_.isUndefined(gradeId)) {
+          $location.path('/pennants/grade')
+        }
+
+        var clubId = $routeParams.clubId;
+      }
+    ]
+  );
+
+  app.lazy.controller('ClubMatchController',
+    [
+      '$scope',
+      '$http',
+      '$routeParams',
+      '$cookies',
+      '$location',
+
+      function($scope, $http, $routeParams, $cookies, $location) {
+        var seasonId = $cookies.pennantsSeason;
+        var gradeId = $cookies.pennantsGrade;
+
+        if(_.isUndefined(seasonId)) {
+          $location.path('/pennants/season')
+        }
+
+        // Redirect back to grades so it can be assigned a value
+        if(_.isUndefined(gradeId)) {
+          $location.path('/pennants/grade')
+        }
+
+        var clubId = $routeParams.clubId;
+      }
+    ]
+  );
 });

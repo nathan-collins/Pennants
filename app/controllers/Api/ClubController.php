@@ -53,11 +53,12 @@ class ClubController extends \BaseController {
 
 	/**
 	 * @param $season_id
+	 * @param $grade_id
 	 *
 	 * @return mixed
 	 */
 
-	public function getSeasons($season_id)
+	public function getClubBySeason($season_id, $grade_id)
 	{
 		if(empty($season_id)) {
 			return \Response::json(array(
@@ -67,7 +68,7 @@ class ClubController extends \BaseController {
 			));
 		}
 
-		$club = $this->club->getWhere('season_id', $season_id);
+		$club = $this->club->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id));
 
 		return $club;
 	}

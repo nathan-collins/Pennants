@@ -1,14 +1,14 @@
 <?php namespace Api;
 
-use Pennants\Game\GameRepositoryInterface;
+use Pennants\Match\MatchRepositoryInterface;
 
-class GameController extends BaseController {
+class matchController extends \BaseController {
 
-	protected $game;
+	protected $match;
 
-	public function __construct(GameRepositoryInterface $game)
+	public function __construct(MatchRepositoryInterface $match)
 	{
-		$this->game = $game;
+		$this->match = $match;
 	}
 
 	/**
@@ -18,9 +18,23 @@ class GameController extends BaseController {
 	 */
 	public function index()
 	{
-		$games = $this->game->all();
+		$matches = $this->match->all();
 
-		return $games;
+		return \Response::json(array(
+			'error' => false,
+			'match' => $matches,
+			'code'	=> 200
+		));
+	}
+
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+		//
 	}
 
 	/**
@@ -30,14 +44,7 @@ class GameController extends BaseController {
 	 */
 	public function store()
 	{
-		$s = $this->game->create(\Input::all());
-
-		if($s->isSaved()) {
-			return \Redirect::route('api.v1.pennants.game.index')
-				->with('flash', 'A new season has been created');
-		}
-
-		return $s->errors();
+		//
 	}
 
 	/**
@@ -48,31 +55,26 @@ class GameController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$games = $this->game->find($id);
+		$matches = $this->match->find($id);
 
-		return $games;
+		return \Response::json(array(
+			'error' => false,
+			'matches' => $matches,
+			'code' 	=> 200
+		));
 	}
 
 	/**
-	 * @param $season_id
-	 * @param $grade_id
+	 * Show the form for editing the specified resource.
 	 *
-	 * @return mixed
+	 * @param  int  $id
+	 * @return Response
 	 */
-
-	public function getGameBySeason($season_id, $grade_id)
+	public function edit($id)
 	{
-		if(empty($season_id)) {
-			return \Response::json(array(
-				'error' => true,
-				'season' => array('message' => "No season supplied"),
-				'code' 	=> 400
-			));
-		}
+		$match = $this->match->find($id);
 
-		$club = $this->game->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id));
-
-		return $club;
+		return \View::make('matches.edit')->with('match', $match)->with('clubs', $match);
 	}
 
 	/**
@@ -83,14 +85,14 @@ class GameController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$games = $this->game->where('id', $id);
+		$matches = $this->match->where('id', $id);
 		// we need to do a few checks.
 
 		if( \Request::get('club_id') && Request::get('opponent_id') ) {
-			$games->club_id = Request::get('club_id');
-			$games->opponent_id = Request::get('opponent_id');
+			$matches->club_id = Request::get('club_id');
+			$matches->opponent_id = Request::get('opponent_id');
 
-			if($games->club_id === $games->opponent_id) {
+			if($matches->club_id === $matches->opponent_id) {
 				// We need to fail
 				return Response::json(array(
 					'error' 	=> true,
@@ -102,15 +104,15 @@ class GameController extends BaseController {
 
 		if( \Request::get('host_id') )
 		{
-			$games->host_id = Request::get('host_id');
+			$matches->host_id = Request::get('host_id');
 		}
 
 		if( \Request::get('player_id') && Request('versus_id') )
 		{
-			$games->player_id = Request::get('player_id');
-			$games->versus_id = Request::get('versus_id');
+			$matches->player_id = Request::get('player_id');
+			$matches->versus_id = Request::get('versus_id');
 
-			if($games->versus_id === $games->player_id) {
+			if($matches->versus_id === $matches->player_id) {
 				// We need to fail
 				return Response::json(array(
 					'error' 	=> true,
@@ -120,11 +122,11 @@ class GameController extends BaseController {
 			}
 		}
 
-		$games->save();
+		$matches->save();
 
 		return \Response::json(array(
 			'error' 	=> false,
-			'message' => 'game updated',
+			'message' => 'match updated',
 			'code' 		=> 200
 		));
 	}
@@ -139,7 +141,7 @@ class GameController extends BaseController {
 	{
 		return \Response::json(array(
 			'error' 	=> false,
-			'message' => 'game removed',
+			'message' => 'match removed',
 			'code' 		=> 200
 		));
 	}

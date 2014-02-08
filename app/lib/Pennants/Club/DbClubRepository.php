@@ -31,9 +31,13 @@ class DbClubRepository implements ClubRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function getWhere($column, $value)
+	public function getWhere($rows = array())
 	{
-		return Club::where($column, $value)->orderBy('name')->get();
+		foreach($rows as $column => $value) {
+			Club::where($column, $value);
+		}
+
+		return Club::orderBy('name')->get();
 	}
 
 	/**

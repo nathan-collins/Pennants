@@ -26,7 +26,7 @@ module.exports = function (grunt) {
           './public/vendor/angular-sanitize/angular-sanitize.js',
           './public/vendor/angular-resource/angular-resource.js',
           './public/vendor/angular-cookies/angular-cookies.js',
-          './public/vendor/bootstrap/dist/bootstrap.js',
+          './public/assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js',
           './public/vendor/underscore/underscore.js',
           './public/vendor/modernizr/modernizr.js',
           './public/vendor/underscore/underscore.js',
@@ -67,6 +67,7 @@ module.exports = function (grunt) {
           [
             './public/assets/lib/bootstrap/forms.css',
             './public/assets/lib/bootstrap/grid.css',
+            './public/assets/lib/bootstrap/dropdown.css',
             './public/assets/lib/bootstrap/navbar.css',
             './public/assets/lib/bootstrap/navs.css',
             './public/assets/lib/bootstrap/media.css',
@@ -114,6 +115,8 @@ module.exports = function (grunt) {
             './public/assets/lib/bootstrap/utilities.css',
             './public/assets/lib/bootstrap/scaffolding.css',
             './public/assets/lib/bootstrap/glyphicons.css',
+            './public/assets/lib/bootstrap/media.css',
+            './public/assets/lib/bootstrap/normalize.css',
             './public/assets/lib/bootstrap/input-groups.css',
             './public/assets/lib/bootstrap/wells.css',
             './public/assets/lib/bootstrap/list-group.css',
@@ -121,6 +124,7 @@ module.exports = function (grunt) {
             './public/assets/lib/bootstrap/tables.css',
             './public/assets/lib/bootstrap/buttons.css',
             './public/assets/lib/bootstrap/jumbotron.css',
+            './public/assets/lib/bootstrap/dropdowns.css',
             './public/assets/lib/bootstrap/responsive-utilities.css',
           ]
         }

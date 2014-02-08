@@ -2,215 +2,72 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/public/scripts/controllers/auth/LoginController.js" line="0" />
+    <bookmark url="file://$PROJECT_DIR$/public/scripts/directives/clubDirective.js" line="10" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790a44c-7887-41dd-8045-4b4079a8362c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/github-16px.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/img/glyphicons-halflings-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/img/glyphicons-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/header.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/GameController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/carousel/docs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/TeamController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/accordion/accordion-group.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/accordion/accordion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/accordion/accordion.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/accordion/test/accordion.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/alert/alert.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/alert/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/alert/test/alert.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/test-lib/angular-mocks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/test-lib/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/modal/backdrop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/progressbar/bar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/bindHtml/bindHtml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/buttons/buttons.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/buttons/test/buttons.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/carousel/carousel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/carousel/carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/carousel/test/carousel.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/changelog.tpl.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/club/club.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/collapse/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/collapse/test/collapse.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/componentsDirective.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/styles/less/core/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/club/create.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/game/create.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/grade/create.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/datepicker/datepicker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/datepicker/datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/datepicker/test/datepicker.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/accordion/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/alert/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/buttons/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/carousel/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/collapse/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/datepicker/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/dropdownToggle/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/modal/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/pagination/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/popover/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/progressbar/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/rating/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tabs/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/timepicker/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tooltip/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/typeahead/docs/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/accordion/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/alert/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/buttons/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/carousel/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/collapse/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/datepicker/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/dropdownToggle/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/modal/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/pagination/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/popover/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/progressbar/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/rating/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tabs/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/timepicker/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tooltip/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/typeahead/docs/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/draws/draws.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/dropdownToggle/dropdownToggle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/dropdownToggle/test/dropdownToggle.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/club/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/grade/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/game/game.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/styles/less/grade/grade.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/gradeDirective.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/test-lib/helpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/test-lib/jquery-1.8.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/modal/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/modal/test/modal.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/modal/test/modalWindow.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/docs/nav.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/draws/nav.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/grade/nav.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/season/nav.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/backend/navigation-right.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/config/navigation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/navigationDirective.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/pagination/pager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/pagination/test/pager.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/pagination/pagination.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/pagination/pagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/pagination/test/pagination.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/plunker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/popover/popover.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/popover/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/popover/test/popover.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/datepicker/popup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/position/position.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/progressbar/progress.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/progressbar/progressbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/progressbar/progressbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/progressbar/test/progressbar.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/rainbow-generic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/rainbow-html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/rainbow-javascript.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/rainbow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/rainbow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/rating/rating.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/rating/rating.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/rating/test/rating.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/accordion/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/alert/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/buttons/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/collapse/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/datepicker/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/dropdownToggle/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/modal/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/pagination/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/popover/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/progressbar/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/rating/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tabs/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/timepicker/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tooltip/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/typeahead/docs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/styles/less/season/season.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/seasonDirective.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/filters/segment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/carousel/slide.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/demo/assets/smoothscroll-angular-custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/modal/test/stackedMap.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/docs/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/tabs/tab.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tabs/tabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tabs/test/tabs.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/tabs/tabset.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/position/test/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/timepicker/timepicker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/timepicker/timepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/timepicker/test/timepicker.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/tooltip/tooltip-html-unsafe-popup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/tooltip/tooltip-popup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tooltip/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tooltip/test/tooltip.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/tooltip/test/tooltip2.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/transition/transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/transition/test/transition.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/typeahead/test/typeahead-highlight.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/typeahead/typeahead-match.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/typeahead/test/typeahead-parser.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/typeahead/typeahead-popup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/typeahead/test/typeahead-popup.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/typeahead/typeahead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/src/typeahead/test/typeahead.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/misc/validate-commit-msg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/ui.bootstrap/template/modal/window.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/2014_02_03_151956_create_matches_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/Pennants/Match/DbMatchRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Match.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/MatchController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/Api/MatchController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/Pennants/Match/MatchRepositoryInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/clubDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/datePickerDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/template/datepicker/datepicker.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/club/list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/club/match.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/match/match.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/club/player.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pennants/player/player.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/template/datepicker/popup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/positionDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/template/tabs/tab.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/tabsDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/template/tabs/tabset.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/timePickerDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/typeAheadDirective.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/scripts/directives/componentsDirective.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_12_21_093536_create_games_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_12_21_093536_create_games_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_12_22_225709_create_clubs_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_12_22_225709_create_clubs_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Club.php" afterPath="$PROJECT_DIR$/app/models/Club.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/ClubController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/ClubController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Grade/DbGradeRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Grade/DbGradeRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Game.php" afterPath="$PROJECT_DIR$/app/models/Game.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Grade.php" afterPath="$PROJECT_DIR$/app/models/Grade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/GradeController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/GradeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/GradeController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/GradeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/GameController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/GameController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/GameController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/GameController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Game/GameRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Game/GameRepositoryInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/PennantsServiceProvider.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/PennantsServiceProvider.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/SeasonController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/SeasonController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Api/TeamController.php" afterPath="$PROJECT_DIR$/app/controllers/Api/TeamController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/appModule.js" afterPath="$PROJECT_DIR$/public/scripts/appModule.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/appRoutes.js" afterPath="$PROJECT_DIR$/public/scripts/appRoutes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/backend.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/backend.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pennants/club/club.html" afterPath="$PROJECT_DIR$/public/views/pennants/club/club.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pennants/club/create.html" afterPath="$PROJECT_DIR$/public/views/pennants/club/create.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pennants/game/create.html" afterPath="$PROJECT_DIR$/public/views/pennants/game/create.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pennants/season/create.html" afterPath="$PROJECT_DIR$/public/views/pennants/season/create.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/directives/directives.js" afterPath="$PROJECT_DIR$/public/scripts/directives/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pennants/season/edit.html" afterPath="$PROJECT_DIR$/public/views/pennants/season/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pennants/grade/grade.html" afterPath="$PROJECT_DIR$/public/views/pennants/grade/grade.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/backend/header.blade.php" afterPath="$PROJECT_DIR$/app/views/partials/backend/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/backend/navigation.blade.php" afterPath="$PROJECT_DIR$/app/views/partials/backend/navigation.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pennants/season/season.html" afterPath="$PROJECT_DIR$/public/views/pennants/season/season.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pennants/draws/draws.html" afterPath="$PROJECT_DIR$/public/views/pennants/draws/draws.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pennants/game/game.html" afterPath="$PROJECT_DIR$/public/views/pennants/game/game.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/directives/seasonDirective.js" afterPath="$PROJECT_DIR$/public/scripts/directives/seasonDirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="golf.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/provision.yml" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390168848801" ignored="false" />
-    <file path="/laravel.conf" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390168826090" ignored="false" />
-    <file path="/Vagrantfile" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390168960057" ignored="false" />
-    <file path="/*.regexp" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390705264971" ignored="false" />
+    <file path="/provision.yml" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391541635376" ignored="false" />
+    <file path="/laravel.conf" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391541409024" ignored="false" />
+    <file path="/Vagrantfile" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391541663129" ignored="false" />
+    <file path="/*.regexp" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391326054764" ignored="false" />
     <file path="$PROJECT_DIR$/../../www.yesheis.com/zh-hans/sitemap.xml" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389778659495" ignored="false" />
     <file path="$PROJECT_DIR$/../../www.yesheis.com/en-in/sitemap_videos.xml" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389778659495" ignored="false" />
     <file path="$PROJECT_DIR$/../../www.yesheis.com/en-in/sitemap_images.xml" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389778659495" ignored="false" />
@@ -308,16 +165,16 @@
     <file path="/2013_12_21_093505_create_region_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387619247933" ignored="false" />
     <file path="/2013_12_21_093513_create_grades_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389084951774" ignored="false" />
     <file path="/2013_12_21_093524_create_players_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388863098406" ignored="false" />
-    <file path="/2013_12_21_093536_create_games_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387619608014" ignored="false" />
+    <file path="/2013_12_21_093536_create_games_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391440986955" ignored="false" />
     <file path="/2013_12_21_093553_create_players_results_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387755354640" ignored="false" />
     <file path="/2013_12_21_093602_create_results_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387620340992" ignored="false" />
     <file path="/development.yml" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387621812689" ignored="false" />
-    <file path="/Dummy.txt" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391071202709" ignored="false" />
+    <file path="/Dummy.txt" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391786417333" ignored="false" />
     <file path="/GamesTest.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388220325804" ignored="false" />
     <file path="/GamesController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388201637883" ignored="false" />
     <file path="/DbGramesRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387671846814" ignored="false" />
-    <file path="/GameRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886982716" ignored="false" />
-    <file path="/routes.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389991257749" ignored="false" />
+    <file path="/GameRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391798589478" ignored="false" />
+    <file path="/routes.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391844109961" ignored="false" />
     <file path="/query" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387676567246" ignored="false" />
     <file path="/SeasonController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389600222727" ignored="false" />
     <file path="/SeasonRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886834393" ignored="false" />
@@ -325,13 +182,13 @@
     <file path="/RegionRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387758094421" ignored="false" />
     <file path="/DbRegionRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387759478620" ignored="false" />
     <file path="/DbGradesRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387691199575" ignored="false" />
-    <file path="/a.dummy" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389638486798" ignored="false" />
+    <file path="/a.dummy" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391626979791" ignored="false" />
     <file path="/GradeRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886988652" ignored="false" />
-    <file path="/DbGameRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886962472" ignored="false" />
+    <file path="/DbGameRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391799403729" ignored="false" />
     <file path="/DbGradeRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391107313095" ignored="false" />
     <file path="/Seasons.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388277200201" ignored="false" />
-    <file path="/DbClubRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391106688003" ignored="false" />
-    <file path="/ClubRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388886976089" ignored="false" />
+    <file path="/DbClubRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391339087092" ignored="false" />
+    <file path="/ClubRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391339230203" ignored="false" />
     <file path="/2013_12_22_225709_create_clubs_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387753125704" ignored="false" />
     <file path="$PROJECT_DIR$/app/storage/logs/log-cli-2013-12-22.txt" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387753414961" ignored="false" />
     <file path="/DbPlayersRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1387753841145" ignored="false" />
@@ -351,7 +208,7 @@
     <file path="/DatabaseSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388876355464" ignored="false" />
     <file path="/GamesTableSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388875405204" ignored="false" />
     <file path="/filters.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389755881434" ignored="false" />
-    <file path="/GameController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887111514" ignored="false" />
+    <file path="/GameController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391799059896" ignored="false" />
     <file path="/edit.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388912219614" ignored="false" />
     <file path="/create.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388790418963" ignored="false" />
     <file path="/SeasonTest.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388868563755" ignored="false" />
@@ -366,7 +223,7 @@
     <file path="/Region.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388542866416" ignored="false" />
     <file path="/Results.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388542886552" ignored="false" />
     <file path="/BaseController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388545747821" ignored="false" />
-    <file path="/ClubController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388887078216" ignored="false" />
+    <file path="/ClubController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391799010349" ignored="false" />
     <file path="/2014_01_01_054337_create_users_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388555487327" ignored="false" />
     <file path="$PROJECT_DIR$/app/storage/logs/log-cli-2014-01-01.txt" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388555801799" ignored="false" />
     <file path="/UserTableSeeder.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1388556482716" ignored="false" />
@@ -428,7 +285,7 @@
     <file path="/show.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389637716339" ignored="false" />
     <file path="/season.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389580578182" ignored="false" />
     <file path="/edit.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389591501912" ignored="false" />
-    <file path="/create.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391112338918" ignored="false" />
+    <file path="/create.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391797851291" ignored="false" />
     <file path="/AuthController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389651038283" ignored="false" />
     <file path="/auth.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389924187414" ignored="false" />
     <file path="/login.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390084324157" ignored="false" />
@@ -463,10 +320,10 @@
     <file path="/controllers.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389845052351" ignored="false" />
     <file path="/dashboard.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389955598123" ignored="false" />
     <file path="/dashboardController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389855732062" ignored="false" />
-    <file path="/appRoutes.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391107759830" ignored="false" />
+    <file path="/appRoutes.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391844333213" ignored="false" />
     <file path="/dashboardController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389892515990" ignored="false" />
     <file path="/dependencyResolverFor.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389866344459" ignored="false" />
-    <file path="/appModule.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390793544632" ignored="false" />
+    <file path="/appModule.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391448779448" ignored="false" />
     <file path="/index_old.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389921665584" ignored="false" />
     <file path="$PROJECT_DIR$/../../l4-www.show2.me/app/controllers/HomeController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1389919978205" ignored="false" />
     <file path="/appBootstrap.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390094393163" ignored="false" />
@@ -492,14 +349,14 @@
     <file path="/seasonService.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390713613276" ignored="false" />
     <file path="/GradeController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391225167129" ignored="false" />
     <file path="/directives.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390718744865" ignored="false" />
-    <file path="/seasonDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390725645968" ignored="false" />
+    <file path="/seasonDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391368071879" ignored="false" />
     <file path="/gradeDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390725529946" ignored="false" />
     <file path="/TeamController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390944957257" ignored="false" />
-    <file path="/GameController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390803064744" ignored="false" />
-    <file path="/club.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391109437584" ignored="false" />
-    <file path="/draws.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391228395131" ignored="false" />
-    <file path="/game.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391109105182" ignored="false" />
-    <file path="/ClubController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391079388301" ignored="false" />
+    <file path="/GameController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391798497007" ignored="false" />
+    <file path="/club.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391843926089" ignored="false" />
+    <file path="/draws.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391845281406" ignored="false" />
+    <file path="/game.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391841982289" ignored="false" />
+    <file path="/ClubController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391846329258" ignored="false" />
     <file path="/singlepage.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390792553274" ignored="false" />
     <file path="/navigationDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390790354632" ignored="false" />
     <file path="/appNavigation.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390759368028" ignored="false" />
@@ -509,12 +366,40 @@
     <file path="/navigation-right.blade.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390791863197" ignored="false" />
     <file path="/season.less" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390792612811" ignored="false" />
     <file path="$PROJECT_DIR$/public/assets/styles/frontend/core.css" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390793291546" ignored="false" />
-    <file path="$PROJECT_DIR$/public/assets/styles/frontend/bootstrap.css" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1390793291546" ignored="false" />
     <file path="/DrawController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391224420477" ignored="false" />
     <file path="/Club.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391079021124" ignored="false" />
     <file path="/nav.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391225208816" ignored="false" />
     <file path="/segment.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391111444379" ignored="false" />
-    <file path="/componentsDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391279023567" ignored="false" />
+    <file path="/componentsDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391323301414" ignored="false" />
+    <file path="/tabsDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391330435290" ignored="false" />
+    <file path="/tabset.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391330545615" ignored="false" />
+    <file path="/clubDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391840346878" ignored="false" />
+    <file path="/2014_02_03_151956_create_games_table.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391441429724" ignored="false" />
+    <file path="/DbMatchRepository.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391441898828" ignored="false" />
+    <file path="/MatchRepositoryInterface.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391441934265" ignored="false" />
+    <file path="/Match.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391442506329" ignored="false" />
+    <file path="/typeAheadDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391443060945" ignored="false" />
+    <file path="/MatchController.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391443327465" ignored="false" />
+    <file path="/datePickerDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391787899595" ignored="false" />
+    <file path="/positionDirective.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391445159734" ignored="false" />
+    <file path="$PROJECT_DIR$/../../collections/Vagrantfile" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391541663129" ignored="false" />
+    <file path="$PROJECT_DIR$/../../collections/ansible/files/laravel.conf" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391541409024" ignored="false" />
+    <file path="$PROJECT_DIR$/../../collections/ansible/provision.yml" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391541635376" ignored="false" />
+    <file path="$PROJECT_DIR$/../../collections/composer.json" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391545341049" ignored="false" />
+    <file path="$PROJECT_DIR$/../../l4-www.show2.me/vendor/cvcnetwork/yesheiscatalog/src/migrations/2013_12_06_041246_add_mission_yesheiscatalog_items.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391626795379" ignored="false" />
+    <file path="/2013_12_06_041246_alter_yesheiscatalog_items.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391624421728" ignored="false" />
+    <file path="$PROJECT_DIR$/../../l4-www.show2.me/app/config/develop/database.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391628686314" ignored="false" />
+    <file path="$PROJECT_DIR$/../../l4-www.show2.me/bootstrap/start.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391626482542" ignored="false" />
+    <file path="$PROJECT_DIR$/../../l4-www.show2.me/vendor/cvcnetwork/yesheiscatalog/src/migrations/2013_09_17_032520_create_yesheiscatalog_tables.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391626565882" ignored="false" />
+    <file path="$PROJECT_DIR$/../../l4-www.show2.me/vendor/cvcnetwork/yesheiscatalog/src/CVCNetwork/YesheisCatalog/Models/Item.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391628613788" ignored="false" />
+    <file path="/Item.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391628613788" ignored="false" />
+    <file path="/datepicker.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391637327028" ignored="false" />
+    <file path="/Game.php" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391798329132" ignored="false" />
+    <file path="/match.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391846238605" ignored="false" />
+    <file path="/MatchController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391842832672" ignored="false" />
+    <file path="/list.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391845414598" ignored="false" />
+    <file path="/player.html" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391846227218" ignored="false" />
+    <file path="/PlayerController.js" changelist="f790a44c-7887-41dd-8045-4b4079a8362c" time="1391845569568" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -534,6 +419,7 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -570,7 +456,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -580,10 +465,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GradeController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/GradeController.js">
+      <file leaf-file-name="appRoutes.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/scripts/appRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="40" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+            <state line="106" column="50" selection-start="3341" selection-end="3341" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/pennants/club/list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="61" selection-start="364" selection-end="364" vertical-scroll-proportion="-4.375">
               <folding />
             </state>
           </provider>
@@ -592,81 +486,61 @@
       <file leaf-file-name="draws.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/views/pennants/draws/draws.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="90" selection-start="311" selection-end="311" vertical-scroll-proportion="-3.75">
+            <state line="9" column="46" selection-start="394" selection-end="394" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appRoutes.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/appRoutes.js">
+      <file leaf-file-name="player.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/pennants/club/player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="41" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.0">
+            <state line="1" column="36" selection-start="104" selection-end="104" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="componentsDirective.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/directives/componentsDirective.js">
+      <file leaf-file-name="match.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/pennants/club/match.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+            <state line="1" column="35" selection-start="103" selection-end="103" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <file leaf-file-name="PlayerController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.854133">
+            <state line="11" column="8" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backend.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/backend.blade.php">
+      <file leaf-file-name="ClubController.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="59" selection-start="807" selection-end="807" vertical-scroll-proportion="-15.0">
+            <state line="140" column="32" selection-start="3399" selection-end="3399" vertical-scroll-proportion="0.85081965">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ui-bootstrap-0.10.0.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/scripts/backend/min/ui-bootstrap-0.10.0.min.js">
+      <file leaf-file-name="club.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/pennants/club/club.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8514" selection-start="41010" selection-end="41010" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="1" column="46" selection-start="70" selection-end="110" vertical-scroll-proportion="-0.625">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gradeDirective.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/directives/gradeDirective.js">
+      <file leaf-file-name="DrawController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grade.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/pennants/grade/grade.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="513" selection-end="513" vertical-scroll-proportion="-8.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nav.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/pennants/grade/nav.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="9" selection-start="0" selection-end="467" vertical-scroll-proportion="-8.125">
               <folding />
             </state>
           </provider>
@@ -690,22 +564,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/singlepage.blade.php" />
-        <option value="$PROJECT_DIR$/public/scripts/filters/segment.js" />
-        <option value="$PROJECT_DIR$/public/views/pennants/club/create.html" />
-        <option value="$PROJECT_DIR$/public/views/pennants/season/season.html" />
-        <option value="$PROJECT_DIR$/public/views/pennants/club/nav.html" />
-        <option value="$PROJECT_DIR$/public/views/pennants/draws/nav.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Api/GameController.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php" />
+        <option value="$PROJECT_DIR$/public/scripts/directives/clubDirective.js" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/GameController.js" />
         <option value="$PROJECT_DIR$/public/views/pennants/game/game.html" />
-        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" />
-        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/GradeController.js" />
-        <option value="$PROJECT_DIR$/public/views/pennants/grade/nav.html" />
-        <option value="$PROJECT_DIR$/public/views/pennants/grade/grade.html" />
-        <option value="$PROJECT_DIR$/public/views/pennants/draws/draws.html" />
+        <option value="$PROJECT_DIR$/public/views/pennants/match/match.html" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/MatchController.js" />
+        <option value="$PROJECT_DIR$/public/views/pennants/club/club.html" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/public/scripts/appRoutes.js" />
-        <option value="$PROJECT_DIR$/public/assets/scripts/backend/min/ui-bootstrap-0.10.0.min.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/backend.blade.php" />
-        <option value="$PROJECT_DIR$/public/scripts/directives/componentsDirective.js" />
+        <option value="$PROJECT_DIR$/public/views/pennants/club/list.html" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js" />
+        <option value="$PROJECT_DIR$/public/views/pennants/draws/draws.html" />
+        <option value="$PROJECT_DIR$/public/views/pennants/club/player.html" />
+        <option value="$PROJECT_DIR$/public/views/pennants/club/match.html" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" />
       </list>
     </option>
   </component>
@@ -792,7 +666,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -810,7 +688,173 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datepicker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="match" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="draws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="club" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -832,15 +876,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
+              <option name="myItemId" value="directives" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -858,7 +898,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -866,11 +928,179 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="min" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Season" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Club" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -915,11 +1145,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/styles/fonts" />
+      <recent name="$PROJECT_DIR$/public/views/template" />
       <recent name="$PROJECT_DIR$/public/assets/styles" />
       <recent name="$PROJECT_DIR$/public/frontend/global/scripts" />
       <recent name="$PROJECT_DIR$/public/frontend/global/styles/less" />
-      <recent name="$PROJECT_DIR$/public/backend/global/styles/less" />
-      <recent name="$PROJECT_DIR$/public/backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/views/pennants/draws" />
@@ -1084,7 +1314,11 @@
       <created>1390715256876</created>
       <updated>1390715256876</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added multiple items, need to start sorting this correctly">
+      <created>1391322814865</created>
+      <updated>1391322814865</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1111,10 +1345,10 @@
     <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31229946" sideWeight="0.670406" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3197861" sideWeight="0.670406" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14476496" sideWeight="0.68502206" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17788461" sideWeight="0.6861234" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17788461" sideWeight="0.6802139" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40213904" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819384" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1126,14 +1360,14 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="DatabaseBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.68502206" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2008547" sideWeight="0.6877005" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1693376" sideWeight="0.6802139" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SQL Schema" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SQL" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.438326" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32197803" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33039647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1181,7 +1415,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added cookies&#10;added season controller&#10;add grades controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="added multiple items, need to start sorting this correctly" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1206,6 +1440,7 @@
     <MESSAGE value="authentication for angular system" />
     <MESSAGE value="angular lazy loading implemented" />
     <MESSAGE value="added cookies&#10;added season controller&#10;add grades controller" />
+    <MESSAGE value="added multiple items, need to start sorting this correctly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1217,13 +1452,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/controllers/Api/GameController.php</url>
-          <line>57</line>
+          <line>50</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/controllers/Api/GameController.php</url>
-          <line>74</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php</url>
@@ -1257,16 +1487,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/routes.php</url>
-          <line>38</line>
+          <line>39</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/routes.php</url>
-          <line>34</line>
+          <line>35</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="43" />
+      <option name="time" value="45" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1274,116 +1504,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/views/pennants/club/create.html">
+    <entry file="file://$PROJECT_DIR$/app/models/Game.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="21" selection-start="970" selection-end="970" vertical-scroll-proportion="-14.375">
+        <state line="7" column="30" selection-start="151" selection-end="151" vertical-scroll-proportion="-4.375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/pennants/club/club.html">
+    <entry file="file://$PROJECT_DIR$/public/views/pennants/match/match.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/pennants/game/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="53" selection-end="53" vertical-scroll-proportion="-1.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/pennants/draws/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="79" selection-start="0" selection-end="467" vertical-scroll-proportion="-0.625">
+        <state line="5" column="6" selection-start="199" selection-end="199" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/GradeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="40" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/directives/gradeDirective.js">
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/GameController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="51" selection-start="1595" selection-end="1595" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/MatchController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="107" selection-start="373" selection-end="379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="57" selection-start="729" selection-end="729" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/pennants/player/player.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/vendor/ui.bootstrap/template/tabs/tab.html">
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/scripts/backend/min/ui-bootstrap-0.10.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8514" selection-start="41010" selection-end="41010" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/appRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="41" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.0">
+        <state line="106" column="50" selection-start="3341" selection-end="3341" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/pennants/grade/grade.html">
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="513" selection-end="513" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/pennants/grade/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="0" selection-end="467" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/backend.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="59" selection-start="807" selection-end="807" vertical-scroll-proportion="-15.0">
+        <state line="11" column="8" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/views/pennants/draws/draws.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="90" selection-start="311" selection-end="311" vertical-scroll-proportion="-3.75">
+        <state line="9" column="46" selection-start="394" selection-end="394" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/directives/componentsDirective.js">
+    <entry file="file://$PROJECT_DIR$/public/views/pennants/club/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+        <state line="7" column="61" selection-start="364" selection-end="364" vertical-scroll-proportion="-4.375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/public/views/pennants/club/club.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.854133">
+        <state line="1" column="46" selection-start="70" selection-end="110" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/pennants/club/player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="36" selection-start="104" selection-end="104" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/pennants/club/match.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="35" selection-start="103" selection-end="103" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="32" selection-start="3399" selection-end="3399" vertical-scroll-proportion="0.85081965">
           <folding />
         </state>
       </provider>

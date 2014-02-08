@@ -5,8 +5,7 @@ define(['appModule'], function(app) {
 
       function($scope) {
         $scope.RightNavigation = 'list';
-        console.log($scope);
-        $scope.tabs;
+//        $scope.tabs;
       }
     ]
   )

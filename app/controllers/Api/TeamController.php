@@ -24,16 +24,6 @@ class TeamController extends \BaseController {
 	}
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return \View::make('api.teams.create');
-	}
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
@@ -46,9 +36,8 @@ class TeamController extends \BaseController {
 			return \Redirect::route('api.v1.pennants.team.index')
 				->with('flash', 'A new season has been created');
 		}
-		return \Redirect::route('api.v1.pennants.team.create')
-			->withInput()
-			->withErrors($s->errors());
+
+		return $s->errors();
 	}
 
 	/**

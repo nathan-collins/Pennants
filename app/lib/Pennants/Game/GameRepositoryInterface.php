@@ -8,7 +8,7 @@ interface GameRepositoryInterface {
 
 	public function find($id);
 
-	public function getWhere($column, $value);
+	public function getWhere($rows);
 
 	public function getRecent($limit);
 

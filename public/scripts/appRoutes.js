@@ -57,6 +57,16 @@ define([], function()
         ]
       },
 
+      '/pennants/game/add': {
+        templateUrl: '/views/pennants/game/create.html',
+        dependencies: [
+          'controllers/pennants/GameController',
+          '/scripts/directives/clubDirective.js',
+          '/scripts/directives/positionDirective.js',
+          '/scripts/directives/datePickerDirective.js'
+        ]
+      },
+
 
       '/pennants/draws': {
         templateUrl: '/views/pennants/draws/draws.html',
@@ -66,7 +76,16 @@ define([], function()
           'controllers/pennants/ClubController',
           '/scripts/directives/seasonDirective.js',
           '/scripts/directives/gradeDirective.js',
-          '/scripts/directives/componentsDirective.js'
+          '/scripts/directives/tabsDirective.js',
+          '/scripts/directives/clubDirective.js'
+        ]
+      },
+
+      '/pennants/game/:matchId': {
+        templateUrl: 'views/pennants/match/match.html',
+        dependencies: [
+          '/scripts/directives/seasonDirective.js',
+          '/scripts/directives/gradeDirective.js',
         ]
       },
 
@@ -76,6 +95,17 @@ define([], function()
           'controllers/pennants/ClubController',
           '/scripts/directives/seasonDirective.js',
           '/scripts/directives/gradeDirective.js'
+        ]
+      },
+      '/pennants/club/:clubId': {
+        templateUrl: '/views/pennants/club/list.html',
+        dependecies: [
+          'controllers/pennants/ClubController',
+          '/scripts/directives/seasonDirective.js',
+          '/scripts/directives/gradeDirective.js',
+          '/scripts/directives/seasonDirective.js',
+          '/scripts/directives/gradeDirective.js',
+          '/scripts/directives/tabsDirective.js'
         ]
       },
 

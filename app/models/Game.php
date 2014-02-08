@@ -5,23 +5,27 @@ use Magniloquent\Magniloquent\Magniloquent;
 class Game extends Magniloquent {
 	protected $guarded = array('id');
 
+	protected $fillable = array('season_id', 'grade_id', 'game_date', 'host_id');
+
 	public static $rules = array(
 		"save" => array(
-			'club_id'	=> 'required|numeric',
-			'opponent_id' => 'required|numeric',
-			'host_id'			=> 'required|numeric'
+			'game_date'	=> 'required',
+			'host_id'			=> 'required|numeric',
+			'season_id'		=> 'required|numeric',
+			'grade_id'		=> 'required|numeric'
 		),
 		"create" => array(
-			'club_id'	=> 'required|numeric',
-			'opponent_id' => 'required|numeric',
-			'host_id'			=> 'required|numeric'
+			'game_date'	=> 'required',
+			'host_id'			=> 'required|numeric',
+			'season_id'		=> 'required|numeric',
+			'grade_id'		=> 'required|numeric'
 		),
 		"update" => array()
 	);
 
 	protected static $relationships = array(
-		'club' => array('belongsTo', 'Club', 'club_id'),
 		'host' => array('belongsTo', 'Club', 'host_id'),
-		'opponent' => array('belongsTo', 'Club', 'opponent_id')
+		'season' => array('belongsTo', 'Season', 'season_id'),
+		'grade' => array('belongsTo', 'Grade', 'grade_id')
 	);
 }
