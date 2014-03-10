@@ -10,11 +10,13 @@ define(['appModule', 'services/flashService'], function(app, FlashService)
       {
         var seasonId = $cookies.pennantsSeason;
 
-        $http.get('/api/v1/pennants/grade/seasons/'+seasonId).success(function(grades) {
+        $http.get('/api/v1/pennants/grade/season/'+seasonId).success(function(grades) {
           $scope.grades = grades;
         });
 
         $scope.RightNavigation = "list";
+
+        $scope.seasonDisplay = true;
 
         $scope.page =
         {
@@ -23,7 +25,16 @@ define(['appModule', 'services/flashService'], function(app, FlashService)
 
         $scope.store = function(gradeId) {
           // Set the season we are using
+          console.log(gradeId);
           $cookies.pennantsGrade = gradeId;
+        }
+
+        $scope.deleteGrade = function(grade) {
+          grade.seasonId = seasonId;
+
+          $http.delete('/api/v1/pennants/grade/'+grade.id).success(function() {
+            $scope.activePath = $location.path('/pennants/grade');
+          })
         }
       }
     ]
@@ -87,8 +98,6 @@ define(['appModule', 'services/flashService'], function(app, FlashService)
             FlashService.show(data.message);
           }
         );
-
-        console.log($scope.grades);
 
         $scope.editGrade = function() {
 

@@ -22,16 +22,6 @@ class GradeController extends \BaseController {
 	}
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return \View::make('grades.create');
-	}
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
@@ -57,7 +47,11 @@ class GradeController extends \BaseController {
 
 	public function getSeasons($season_id)
 	{
-		$grade = $this->grade->getWhere('season_id', $season_id);
+		$fields = array(
+			'season_id' => $season_id
+		);
+
+		$grade = $this->grade->getWhere($fields);
 
 		return $grade;
 	}

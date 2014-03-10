@@ -27,10 +27,10 @@ class DbGameRepository implements GameRepositoryInterface {
 	public function getWhere($rows)
 	{
 		foreach($rows as $column => $value) {
-			Game::where($column, $value);
+			$game = Game::where($column, '=', $value);
 		}
 
-		return Game::orderBy('game_date')->get();
+		return $game->orderBy('game_date')->get();
 	}
 
 

@@ -1,0 +1,3 @@
+define(['appModule'], function(app) {
+
+});

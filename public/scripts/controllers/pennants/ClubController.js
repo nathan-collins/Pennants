@@ -4,10 +4,13 @@ define(['appModule', 'services/flashService'], function(app, FlashService) {
       '$scope',
       '$http',
       '$cookies',
+      '$routeParams',
 
-      function($scope, $http, $cookies) {
+      function($scope, $http, $cookies, $routeParams) {
         var seasonId = $cookies.pennantsSeason;
         var gradeId = $cookies.pennantsGrade;
+
+        var clubId = $routeParams.clubId;
 
         $http.get('/api/v1/pennants/club/season/'+seasonId+'/'+gradeId).success(function(clubs) {
           $scope.clubs = clubs;
@@ -27,11 +30,14 @@ define(['appModule', 'services/flashService'], function(app, FlashService) {
       '$http',
       '$cookies',
       '$location',
+      '$routeParams',
 
-      function($scope, $http, $cookies, $location) {
+      function($scope, $http, $cookies, $location, $routeParams) {
 
         var seasonId = $cookies.pennantsSeason;
         var gradeId = $cookies.pennantsGrade;
+
+        var clubId = $routeParams.clubId;
 
         if(_.isUndefined(seasonId)) {
           $location.path('/pennants/season')
@@ -112,33 +118,7 @@ define(['appModule', 'services/flashService'], function(app, FlashService) {
     ]
   );
 
-  app.lazy.controller('ClubPlayerController',
-    [
-      '$scope',
-      '$http',
-      '$routeParams',
-      '$cookies',
-      '$location',
-
-      function($scope, $http, $routeParams, $cookies, $location) {
-        var seasonId = $cookies.pennantsSeason;
-        var gradeId = $cookies.pennantsGrade;
-
-        if(_.isUndefined(seasonId)) {
-          $location.path('/pennants/season')
-        }
-
-        // Redirect back to grades so it can be assigned a value
-        if(_.isUndefined(gradeId)) {
-          $location.path('/pennants/grade')
-        }
-
-        var clubId = $routeParams.clubId;
-      }
-    ]
-  );
-
-  app.lazy.controller('ClubMatchController',
+  app.lazy.controller('ClubListController',
     [
       '$scope',
       '$http',

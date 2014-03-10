@@ -64,15 +64,19 @@ class GameController extends BaseController {
 	{
 		if(empty($season_id)) {
 			return \Response::json(array(
-				'error' => true,
-				'season' => array('message' => "No season supplied"),
-				'code' 	=> 400
+				'season' => array('message' => "No season supplied")
 			));
 		}
 
-		$club = $this->game->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id));
+		if(empty($grade_id)) {
+			return \Response::json(array(
+				'grade' => array('message' => "No grade supplied")
+			));
+		}
 
-		return $club;
+		$game = $this->game->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id));
+
+		return $game;
 	}
 
 	/**

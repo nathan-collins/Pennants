@@ -8,8 +8,11 @@ define(['appModule', 'services/flashService', 'config/navigation'], function(app
 
       function($scope, $http, $cookies)
       {
+
         $http.get('/api/v1/pennants/season').success(function(seasons) {
           $scope.seasons = seasons;
+          // Group the results to seperate in a header
+          $scope.groups = _.groupBy($scope.seasons, "year");
         });
 
         $scope.page =

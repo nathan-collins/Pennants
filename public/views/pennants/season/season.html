@@ -2,12 +2,14 @@
   <section ng-controller="SeasonController">
     <a class="btn btn-default"  ng-href="/pennants/season/add" role="button">Add Season</a>
     <h1>Select a season</h1>
-    <div class="list-group">
-      <a ng-href="/pennants/grade" class="list-group-item" ng-click="store(season.id)" ng-repeat="season in seasons">
-        <h4>{{ season.year }}</h4>
-        <p>{{ season.name }}</p>
-      </a>
-          <!--<td><a ng-href="/pennants/season/{{season.id}}/edit">Edit</a></td>-->
+    <div ng-repeat="(year, seasons) in groups">
+      <h4>{{ year }}</h4>
+      <div class="list-group">
+        <a ng-href="/pennants/grade" class="list-group-item" ng-click="store(season.id)" ng-repeat="season in seasons">
+          <h4>{{ season.year }}</h4>
+          <p>{{ season.name }}</p>
+        </a>
+      </div>
     </div>
   </section>
 </div>

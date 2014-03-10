@@ -34,10 +34,10 @@ class DbClubRepository implements ClubRepositoryInterface {
 	public function getWhere($rows = array())
 	{
 		foreach($rows as $column => $value) {
-			Club::where($column, $value);
+			$club = Club::where($column, $value);
 		}
 
-		return Club::orderBy('name')->get();
+		return $club->orderBy('name')->get();
 	}
 
 	/**

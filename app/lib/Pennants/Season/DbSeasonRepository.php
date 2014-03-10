@@ -10,7 +10,7 @@ class DbSeasonRepository implements SeasonRepositoryInterface {
 
 	public function all()
 	{
-		return Season::orderBy('name')->get();
+		return Season::orderBy('year', 'name')->get();
 	}
 
 	/**

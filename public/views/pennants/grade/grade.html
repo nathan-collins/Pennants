@@ -7,7 +7,8 @@
     <h1>Select a grade</h1>
     <div class="list-group">
       <a ng-href="/pennants/draws" class="list-group-item" ng-click="store(grade.id)" ng-repeat="grade in grades">
-        <h4>{{ grade.name }}</h4>
+        <h4 class="" style="display:inline-block">{{ grade.name }}</h4>
+        <span class="badge"></span>
       </a>
     </div>
   </section>

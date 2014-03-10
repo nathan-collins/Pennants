@@ -68,6 +68,14 @@ class ClubController extends \BaseController {
 			));
 		}
 
+		if(empty($grade_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'grade' => array('message' => "No grade supplied"),
+				'code' 	=> 400
+			));
+		}
+
 		$club = $this->club->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id));
 
 		return $club;

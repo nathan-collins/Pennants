@@ -4,15 +4,28 @@ define(['appModule'], function(app) {
       '$scope',
       '$http',
       '$cookies',
+      '$cacheFactory',
 
-      function($scope, $http, $cookies)
+      function($scope, $http, $cookies, $cacheFactory)
       {
         var seasonId = $cookies.pennantsSeason;
         var gradeId = $cookies.pennantsGrade;
 
-        $http.get('/api/v1/pennants/game/season/'+seasonId+'/'+gradeId).success(function(games) {
-          $scope.games = games;
-        });
+        console.log(gradeId);
+
+        var cache = $cacheFactory.get('$http');
+
+        var cacheData = cache.get('/api/v1/pennants/game/season/'+seasonId+'/'+gradeId);
+
+        if(!cacheData) {
+          $http.get('/api/v1/pennants/game/season/'+seasonId+'/'+gradeId).success(function(games) {
+            $scope.games = games;
+            console.log(games);
+            cache.put('/api/v1/pennants/game/season/'+seasonId+'/'+gradeId, games);
+          });
+        } else {
+          $scope.games = cacheData;
+        }
       }
     ]
   );

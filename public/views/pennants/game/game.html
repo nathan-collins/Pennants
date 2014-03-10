@@ -7,7 +7,7 @@
         <tr ng-repeat="game in games">
           <td>{{ game.game_date }}</td>
           <td club_id="{{ game.host_id }}" club-text></td>
-          <td>
+          <td width="60px">
             <a ng-href="/pennants/match/season/{{game.id}}">
               <button type="button" class="btn btn-default btn-sm">
                 <span class="glyphicon glyphicon-th-list"> Matches <span class="badge"></span></span>

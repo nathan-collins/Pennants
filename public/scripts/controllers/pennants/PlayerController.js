@@ -12,5 +12,20 @@ define(['appModule'], function(app) {
 
       }
     ]
+  );
+
+  app.lazy.controller('PlayerAddController',
+    [
+      '$scope',
+      '$http',
+      '$cookies',
+
+      function($scope, $http, $cookies) {
+        var seasonId = $cookies.pennantsSeason;
+        var gradeId = $cookies.pennantsGrade;
+
+
+      }
+    ]
   )
 });

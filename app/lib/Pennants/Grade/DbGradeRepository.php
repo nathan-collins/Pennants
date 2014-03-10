@@ -25,15 +25,18 @@ class DbGradeRepository implements GradeRepositoryInterface {
 	}
 
 	/**
-	 * @param $column
-	 * @param $value
+	 * @param $rows
 	 *
 	 * @return mixed
 	 */
 
-	public function getWhere($column, $value)
+	public function getWhere($rows)
 	{
-		return Grade::where($column, $value)->orderBy('name')->get();
+		foreach($rows as $column => $value) {
+			$grade = Grade::where($column, '=', $value);
+		}
+
+		return $grade->orderBy('name')->get();
 	}
 
 	/**
