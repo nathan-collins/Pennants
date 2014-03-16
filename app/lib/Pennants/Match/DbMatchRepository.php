@@ -31,9 +31,11 @@ class DbMatchRepository implements MatchRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function getWhere($column, $value)
+	public function getWhere($rows)
 	{
-		return Match::where($column, $value)->get();
+		foreach($rows as $column => $value) {
+			return Match::where($column, $value)->get();
+		}
 	}
 
 	/**

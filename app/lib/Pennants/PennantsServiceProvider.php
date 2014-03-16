@@ -56,6 +56,11 @@ class PennantsServiceProvider extends ServiceProvider {
 			'Pennants\Club\ClubRepositoryInterface',
 			'Pennants\Club\DbClubRepository'
 		);
+
+		$this->app->bind(
+			'Pennants\Match\MatchRepositoryInterface',
+			'Pennants\Match\DbMatchRepository'
+		);
 	}
 
 }

@@ -1,108 +1,88 @@
-define(['appModule', 'services/flashService', 'config/navigation'], function(app, FlashService, navigation)
-{
-  app.lazy.controller('SeasonController',
-    [
-      '$scope',
-      '$http',
-      '$cookies',
+var pennantsApp = angular.module('pennantsApp', ["ngCookies"], function($interpolateProvider) {
+  $interpolateProvider.startSymbol('<%');
+  $interpolateProvider.endSymbol('%>');
+});
 
-      function($scope, $http, $cookies)
-      {
+function SeasonController($scope, $http, $cookies) {
 
-        $http.get('/api/v1/pennants/season').success(function(seasons) {
-          $scope.seasons = seasons;
-          // Group the results to seperate in a header
-          $scope.groups = _.groupBy($scope.seasons, "year");
-        });
+  $http.get('/api/v1/pennants/season').success(function(seasons) {
+    $scope.seasons = seasons;
+    // Group the results to seperate in a header
+    $scope.groups = _.groupBy($scope.seasons, "year");
+  });
 
-        $scope.page =
-        {
-          title: 'Pennants'
-        }
+  $scope.page =
+  {
+    title: 'Pennants'
+  }
 
-        $scope.store = function(seasonId) {
-          // Set the season we are using
-          $cookies.pennantsSeason = seasonId;
-        }
-      }
-    ]
-  );
+  $scope.storeSeason = function(seasonId) {
+    // Set the season we are using
+    $cookies.pennantsSeason = seasonId;
+  }
 
-  app.lazy.controller('AddSeasonController',
-    [
-      '$scope',
-      '$http',
-      '$location',
+  $scope.destroySeason = function(seasonId) {
+    $http.delete('/api/v1/pennants/season', {seasonId: seasonId}).success(function(seasons) {
 
-      function($scope, $http, $location)
-      {
-        $scope.master = {};
-        $scope.activePath = null;
+    });
+  }
+};
 
-        $scope.page =
-        {
-          title: 'Pennants - Add Season'
-        }
+function AddSeasonController($scope, $http, $location) {
+  $scope.master = {};
+  $scope.activePath = null;
 
-        $scope.addSeason = function(season, AddSeasonForm) {
+  $scope.page =
+  {
+    title: 'Pennants - Add Season'
+  }
 
-          $http.post('/api/v1/pennants/season', season).success(function() {
-            $scope.reset();
-            $scope.activePath = $location.path('/pennants/season');
-          });
+  $scope.addSeason = function(season, AddSeasonForm) {
 
-          $scope.reset = function() {
-            $scope.season = angular.copy($scope.master);
-          }
+    $http.post('/api/v1/pennants/season', season).success(function() {
+      $scope.reset();
+      $scope.activePath = $location.path('/pennants/season');
+    });
+
+    $scope.reset = function() {
+      $scope.season = angular.copy($scope.master);
+    }
 
 //          $scope.reset();
-        }
+  }
+}
+
+function EditSeasonController($scope, $http, $routeParams, $location) {
+  $scope.page =
+  {
+    title: 'Pennants - Edit Season'
+  }
+
+  $scope.editSeason = function(seasonId) {
+
+    $http.get('/api/v1/pennants/season/'+seasonId).success(function(season) {
+      $scope.season = season;
+    })
+      .error(function(data) {
+        FlashService.show(data.message);
       }
-    ]
-  );
+    );
 
-  app.lazy.controller('EditSeasonController',
-    [
-      '$scope',
-      '$http',
-      '$routeParams',
-      '$location',
+    var seasonId = $routeParams.seasonId;
 
-      function($scope, $http, $routeParams, $location)
-      {
-        $scope.page =
-        {
-          title: 'Pennants - Edit Season'
-        }
+    var season = {
+      year: $scope.year,
+      name: $scope.name,
+      id: seasonId
+    }
 
-        $scope.editSeason = function() {
+    $scope.seasons.push(season);
 
-          $http.get('/api/v1/pennants/season/'+seasonId).success(function(season) {
-            $scope.season = season;
-          })
-            .error(function(data) {
-              FlashService.show(data.message);
-            }
-          );
-
-          var seasonId = $routeParams.seasonId;
-
-          var season = {
-            year: $scope.year,
-            name: $scope.name,
-            id: seasonId
-          }
-
-          $scope.seasons.push(season);
-
-          $http.post('/api/v1/pennants/season/'+seasonId, season).success(function() {
-            $location.path('/pennants/season')
-          })
-            .error(function(data) {
-              FlashService.show(data.message);
-            });
-        }
-      }
-    ]
-  )
-})
+    $http.post('/api/v1/pennants/season/'+seasonId, season).success(function() {
+      $location.path('/pennants/season')
+    })
+      .error(function(data) {
+        FlashService.show(data.message);
+      });
+  }
+}

@@ -1,11 +1,8 @@
-define(['appModule'], function(app) {
-  app.lazy.controller('DrawController',
-    [
-      '$scope',
-
-      function($scope) {
-
-      }
-    ]
-  )
+var pennantsApp = angular.module('pennantsApp', ['ngCookies'], function($interpolateProvider) {
+  $interpolateProvider.startSymbol('<%');
+  $interpolateProvider.endSymbol('%>');
 });
+
+function DrawController() {
+
+}

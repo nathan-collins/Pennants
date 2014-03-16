@@ -1,7 +1,7 @@
 <?php
 
 class PlayerSeason extends Eloquent {
-	protected $guarded = array();
+	protected $guarded = array('*');
 
 	protected $fillable = array();
 

@@ -1,3 +1,7 @@
+@extends('layouts.layout')
+
+
+@section('content')
 <div class="col-xs-12 col-md-6 col-lg-8 outer content-container">
   <section ng-controller="SeasonController">
     <a class="btn btn-default"  ng-href="/pennants/season/add" role="button">Add Season</a>
@@ -5,7 +9,7 @@
     <div ng-repeat="(year, seasons) in groups">
       <h4>{{ year }}</h4>
       <div class="list-group">
-        <a ng-href="/pennants/grade" class="list-group-item" ng-click="store(season.id)" ng-repeat="season in seasons">
+        <a ng-href="/pennants/grade" class="list-group-item season-list" ng-click="storeSeason(season.id)" ng-repeat="season in seasons">
           <h4>{{ season.year }}</h4>
           <p>{{ season.name }}</p>
         </a>
@@ -16,3 +20,4 @@
 <div id="sidebar" role="navigation" class="col-md-2 col-lg-2">
   <div ng-switch on="list" ng-include src="'/views/pennants/season/nav.html'"></div>
 </div>
+@stop

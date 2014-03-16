@@ -7,6 +7,10 @@ class Player extends Magniloquent {
 
 	protected $fillable = array('name', 'handicap', 'settings', 'golf_link_number');
 
+	protected static $relationships = array(
+		'player_season' => array('hasMany', 'Player')
+	);
+
 	public static $rules = array(
 		"save" => array(
 			'name' => 'required',

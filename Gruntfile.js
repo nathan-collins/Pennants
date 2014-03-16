@@ -68,8 +68,8 @@ module.exports = function (grunt) {
             './public/assets/lib/bootstrap/forms.css',
             './public/assets/lib/bootstrap/grid.css',
             './public/assets/lib/bootstrap/dropdown.css',
-            './public/assets/lib/bootstrap/navbar.css',
             './public/assets/lib/bootstrap/navs.css',
+            './public/assets/lib/bootstrap/navbar.css',
             './public/assets/lib/bootstrap/media.css',
             './public/assets/lib/bootstrap/print.css',
             './public/assets/lib/bootstrap/type.css',
@@ -91,7 +91,7 @@ module.exports = function (grunt) {
 
           './public/assets/styles/backend/core.css':
             [
-              './public/styles/less/core/*.less'
+              './public/styles/less/**/*.less'
             ],
           './public/assets/styles/backend/font-awesome.css':
           [
@@ -158,11 +158,11 @@ module.exports = function (grunt) {
         options: {
           livereload: true                        //reloads the browser
         }
-      },
-      tests: {
-        files: ['./app/controllers/*.php','./app/models/*.php'],  //the task will run only when you save files in this location
-        tasks: ['phpunit']
       }
+//      tests: {
+//        files: ['./app/controllers/*.php','./app/models/*.php'],  //the task will run only when you save files in this location
+//        tasks: ['phpunit']
+//      }
     }
   });
 
@@ -170,7 +170,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('assemble-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-phpunit');
+//  grunt.loadNpmTasks('grunt-phpunit');
 
   // Task definition
   grunt.registerTask('default', ['watch']);

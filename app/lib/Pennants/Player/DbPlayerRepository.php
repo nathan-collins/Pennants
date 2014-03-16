@@ -4,13 +4,18 @@ use Player;
 
 class DbPlayerRepository implements PlayerRepositoryInterface {
 
+	public function playerSeasons()
+	{
+		return $this->hasMany('PlayerSeason');
+	}
+
 	/**
 	 * @return mixed
 	 */
 
 	public function all()
 	{
-		return Player::all();
+		return Player::has('player_seasons')->get();
 	}
 
 	/**
@@ -25,20 +30,20 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	}
 
 	/**
-	 * @param $column
-	 * @param $value
+	 * @param $rows
 	 *
 	 * @return mixed
 	 */
 
-	public function getWhere($column, $value)
+	public function getWhere($rows)
 	{
-		return Player::where($column, $value)->get();
+		foreach($rows as $column => $value) {
+			return Player::where($column, $value)->get();
+		}
 	}
 
 	/**
 	 * @param $id
-	 * @param $region_id
 	 *
 	 * @return mixed
 	 */

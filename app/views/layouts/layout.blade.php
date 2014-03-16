@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="pennantsApp">
 <head>
 	<title>A Title</title>
-	{{ HTML::style('assets/styles/frontend/core.css') }}
+	{{ HTML::style('assets/styles/backend/core.css') }}
+	{{ HTML::style('assets/styles/backend/bootstrap.css') }}
+	{{ HTML::style('assets/styles/backend/font-awesome.css') }}
 	@section('header_scripts')
 	@show
 </head>
-<body ng-controller="PageContainer">
+<body>
 @include('partials.backend.header')
 @include('partials.backend.navigation')
 	<div class="container">
@@ -18,8 +20,8 @@
 			@yield('content')
 		</div>
 	</div><!-- end container -->
+	{{ HTML::script('assets/scripts/backend/min/core.js') }}
 	@section('footer_scripts')
-	{{ HTML::script('assets/scripts/frontend/core.js') }}
 	@show
 </body>
 </html>

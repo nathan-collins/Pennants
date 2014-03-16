@@ -13,29 +13,37 @@
 
 Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 {
-	Route::resource('pennants/season', 'Api\SeasonController');
-	Route::resource('pennants/grade', 'Api\GradeController');
-	Route::get('pennants/grade/season/{seasonId}', 'Api\GradeController@getSeasons');
-	Route::resource('pennants/club', 'Api\ClubController');
-	Route::get('pennants/club/season/{seasonId}/{gradeId}', 'Api\ClubController@getClubBySeason');
-	Route::resource('pennants/game', 'Api\GameController');
-	Route::get('pennants/game/season/{seasonId}/{gradeId}', 'Api\GameController@getGameBySeason');
-	Route::resource('pennants/result', 'Api\ResultController');
-	Route::resource('pennants/player_result', 'Api\PlayerResultController');
-	Route::resource('pennants/user', 'Api\UserController');
-	Route::resource('pennants/player', 'Api\PlayerController');
-	Route::resource('pennants/team', 'Api\TeamController');
+	Route::resource('pennants/season', 'api_v1\SeasonController');
+	Route::resource('pennants/grade', 'api_v1\GradeController');
+	Route::get('pennants/grade/season/{seasonId}', 'api_v1\GradeController@getSeasons');
+	Route::resource('pennants/club', 'api_v1\ClubController');
+	Route::get('pennants/club/season/{seasonId}/{gradeId}', 'api_v1\ClubController@getClubBySeason');
+	Route::resource('pennants/game', 'api_v1\GameController');
+	Route::get('pennants/game/season/{seasonId}/{gradeId}', 'api_v1\GameController@getGameBySeason');
+	Route::resource('pennants/result', 'api_v1\ResultController');
+	Route::resource('pennants/match', 'api_v1\MatchController');
+	Route::get('pennants/match/season/{seasonId}/{gradeId}/{clubId}', 'api_v1\MatchController@getMatchBySeason');
+	Route::resource('pennants/player_result', 'api_v1\PlayerResultController');
+	Route::resource('pennants/user', 'api_v1\UserController');
+	Route::resource('pennants/player', 'api_v1\PlayerController');
+	Route::get('pennants/player/season/{seasonId}/{gradeId}/{clubId}', 'api_v1\PlayerController@getPlayerBySeason');
+	Route::resource('pennants/team', 'api_v1\TeamController');
+});
+
+Route::group(array('prefix' => 'dashboard'), function()
+{
+	Route::get('pennants/season', 'dashboard\pennants\SeasonController@showSeason');
+	Route::get('pennants/season/add', 'dashboard\pennants\SeasonController@addSeason');
+	Route::get('pennants/grade', 'dashboard\pennants\GradeController@showGrade');
+	Route::get('pennants/draws', 'dashboard\pennants\DrawController@showDraw');
+	Route::get('pennants/club/{teamId}', 'dashboard\pennants\ClubController@showClub');
+	Route::get('pennants/game/add', 'dashboard\pennants\GameController@addGame');
+	Route::get('pennants/player/{teamId}', 'dashboard\pennants\PlayerController@showPlayer');
+	Route::get('pennants/player/add/{teamId}', 'dashboard\pennants\PlayerController@addPlayer');
+	Route::get('pennants/match/{teamId}', 'dashboard\pennants\MatchController@showMatch');
 });
 
 Route::post('auth/login', array('before' => 'csrf_json', 'uses' => 'AuthController@login'));
 Route::get('auth/logout', 'AuthController@logout');
 Route::get('auth/status', 'AuthController@status');
 Route::get('auth/secrets','AuthController@secrets');
-
-Route::get('/', function() {
-	return View::make('singlepage');
-});
-
-Route::any('{path?}', function ($path) {
-	return View::make('singlepage');
-});
