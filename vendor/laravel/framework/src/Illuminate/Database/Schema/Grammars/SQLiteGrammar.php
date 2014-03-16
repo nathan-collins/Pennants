@@ -38,6 +38,17 @@ class SQLiteGrammar extends Grammar {
 	}
 
 	/**
+	 * Compile the query to determine the list of columns.
+	 *
+	 * @param  string  $table
+	 * @return string
+	 */
+	public function compileColumnExists($table)
+	{
+		return 'pragma table_info('.str_replace('.', '__', $table).')';
+	}
+
+	/**
 	 * Compile a create table command.
 	 *
 	 * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
@@ -283,6 +294,17 @@ class SQLiteGrammar extends Grammar {
 	}
 
 	/**
+	 * Create the column definition for a char type.
+	 *
+	 * @param  \Illuminate\Support\Fluent  $column
+	 * @return string
+	 */
+	protected function typeChar(Fluent $column)
+	{
+		return 'varchar';
+	}
+
+	/**
 	 * Create the column definition for a string type.
 	 *
 	 * @param  \Illuminate\Support\Fluent  $column
@@ -426,7 +448,7 @@ class SQLiteGrammar extends Grammar {
 	}
 
 	/**
-	 * Create the column definition for a enum type.
+	 * Create the column definition for an enum type.
 	 *
 	 * @param  \Illuminate\Support\Fluent  $column
 	 * @return string
@@ -527,7 +549,7 @@ class SQLiteGrammar extends Grammar {
 	 */
 	protected function modifyIncrement(Blueprint $blueprint, Fluent $column)
 	{
-		if (in_array($column->type, $this->serials) and $column->autoIncrement)
+		if (in_array($column->type, $this->serials) && $column->autoIncrement)
 		{
 			return ' primary key autoincrement';
 		}

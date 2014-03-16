@@ -108,7 +108,6 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Pennants\PennantsServiceProvider',
-		'Goez\LaravelGrunt\LaravelGruntServiceProvider'
 
 	),
 

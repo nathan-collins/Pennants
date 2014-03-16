@@ -160,6 +160,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $client->request('GET', 'https://www.example.com');
         $headers = $client->getRequest()->getServer();
         $this->assertTrue($headers['HTTPS'], '->request() sets the HTTPS header');
+
+        $client = new TestClient();
+        $client->request('GET', 'http://www.example.com:8080');
+        $headers = $client->getRequest()->getServer();
+        $this->assertEquals('www.example.com:8080', $headers['HTTP_HOST'], '->request() sets the HTTP_HOST header with port');
     }
 
     public function testRequestURIConversion()
@@ -238,14 +243,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
     public function testClick()
     {
-        if (!class_exists('Symfony\Component\DomCrawler\Crawler')) {
-            $this->markTestSkipped('The "DomCrawler" component is not available');
-        }
-
-        if (!class_exists('Symfony\Component\CssSelector\CssSelector')) {
-            $this->markTestSkipped('The "CssSelector" component is not available');
-        }
-
         $client = new TestClient();
         $client->setNextResponse(new Response('<html><a href="/foo">foo</a></html>'));
         $crawler = $client->request('GET', 'http://www.example.com/foo/foobar');
@@ -257,14 +254,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
     public function testClickForm()
     {
-        if (!class_exists('Symfony\Component\DomCrawler\Crawler')) {
-            $this->markTestSkipped('The "DomCrawler" component is not available');
-        }
-
-        if (!class_exists('Symfony\Component\CssSelector\CssSelector')) {
-            $this->markTestSkipped('The "CssSelector" component is not available');
-        }
-
         $client = new TestClient();
         $client->setNextResponse(new Response('<html><form action="/foo"><input type="submit" /></form></html>'));
         $crawler = $client->request('GET', 'http://www.example.com/foo/foobar');
@@ -276,14 +265,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
     public function testSubmit()
     {
-        if (!class_exists('Symfony\Component\DomCrawler\Crawler')) {
-            $this->markTestSkipped('The "DomCrawler" component is not available');
-        }
-
-        if (!class_exists('Symfony\Component\CssSelector\CssSelector')) {
-            $this->markTestSkipped('The "CssSelector" component is not available');
-        }
-
         $client = new TestClient();
         $client->setNextResponse(new Response('<html><form action="/foo"><input type="submit" /></form></html>'));
         $crawler = $client->request('GET', 'http://www.example.com/foo/foobar');
@@ -295,14 +276,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
     public function testSubmitPreserveAuth()
     {
-        if (!class_exists('Symfony\Component\DomCrawler\Crawler')) {
-            $this->markTestSkipped('The "DomCrawler" component is not available');
-        }
-
-        if (!class_exists('Symfony\Component\CssSelector\CssSelector')) {
-            $this->markTestSkipped('The "CssSelector" component is not available');
-        }
-
         $client = new TestClient(array('PHP_AUTH_USER' => 'foo', 'PHP_AUTH_PW' => 'bar'));
         $client->setNextResponse(new Response('<html><form action="/foo"><input type="submit" /></form></html>'));
         $crawler = $client->request('GET', 'http://www.example.com/foo/foobar');
@@ -448,6 +421,24 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($headers, $client->getRequest()->getServer());
     }
 
+    public function testFollowRedirectWithPort()
+    {
+        $headers = array(
+            'HTTP_HOST'       => 'www.example.com:8080',
+            'HTTP_USER_AGENT' => 'Symfony2 BrowserKit',
+            'HTTPS'           => false
+        );
+
+        $client = new TestClient();
+        $client->followRedirects(false);
+        $client->setNextResponse(new Response('', 302, array(
+            'Location'    => 'http://www.example.com:8080/redirected',
+        )));
+        $client->request('GET', 'http://www.example.com:8080/');
+
+        $this->assertEquals($headers, $client->getRequest()->getServer());
+    }
+
     public function testBack()
     {
         $client = new TestClient();
@@ -520,10 +511,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
     public function testInsulatedRequests()
     {
-        if (!class_exists('Symfony\Component\Process\Process')) {
-            $this->markTestSkipped('The "Process" component is not available');
-        }
-
         $client = new TestClient();
         $client->insulate();
         $client->setNextScript("new Symfony\Component\BrowserKit\Response('foobar')");

@@ -1,7 +1,9 @@
 <?php namespace Illuminate\Cache;
 
 use Closure;
+use DateTime;
 use ArrayAccess;
+use Carbon\Carbon;
 
 class Repository implements ArrayAccess {
 
@@ -18,6 +20,13 @@ class Repository implements ArrayAccess {
 	 * @var int
 	 */
 	protected $default = 60;
+
+	/**
+	 * An array of registered Cache macros.
+	 *
+	 * @var array
+	 */
+	protected $macros = array();
 
 	/**
 	 * Create a new cache repository instance.
@@ -50,8 +59,23 @@ class Repository implements ArrayAccess {
 	public function get($key, $default = null)
 	{
 		$value = $this->store->get($key);
-		
+
 		return ! is_null($value) ? $value : value($default);
+	}
+
+	/**
+	 * Store an item in the cache.
+	 *
+	 * @param  string  $key
+	 * @param  mixed   $value
+	 * @param  \DateTime|int  $minutes
+	 * @return void
+	 */
+	public function put($key, $value, $minutes)
+	{
+		$minutes = $this->getMinutes($minutes);
+
+		$this->store->put($key, $value, $minutes);
 	}
 
 	/**
@@ -59,19 +83,24 @@ class Repository implements ArrayAccess {
 	 *
 	 * @param  string  $key
 	 * @param  mixed   $value
-	 * @param  int     $minutes
-	 * @return void
+	 * @param  \DateTime|int  $minutes
+	 * @return bool
 	 */
 	public function add($key, $value, $minutes)
 	{
-		if (is_null($this->get($key))) $this->put($key, $value, $minutes);
+		if (is_null($this->get($key)))
+		{
+			$this->put($key, $value, $minutes); return true;
+		}
+
+		return false;
 	}
 
 	/**
 	 * Get an item from the cache, or store the default value.
 	 *
-	 * @param  string   $key
-	 * @param  int      $minutes
+	 * @param  string  $key
+	 * @param  \DateTime|int  $minutes
 	 * @param  Closure  $callback
 	 * @return mixed
 	 */
@@ -121,7 +150,7 @@ class Repository implements ArrayAccess {
 
 		$this->forever($key, $value = $callback());
 
-		return $value;	
+		return $value;
 	}
 
 	/**
@@ -201,7 +230,39 @@ class Repository implements ArrayAccess {
 	}
 
 	/**
-	 * Dynamically pass missing methods to the store.
+	 * Calculate the number of minutes with the given duration.
+	 *
+	 * @param  \DateTime|int  $duration
+	 * @return int
+	 */
+	protected function getMinutes($duration)
+	{
+		if ($duration instanceof DateTime)
+		{
+			$duration = Carbon::instance($duration);
+
+			return max(0, Carbon::now()->diffInMinutes($duration, false));
+		}
+		else
+		{
+			return is_string($duration) ? intval($duration) : $duration;
+		}
+	}
+
+	/**
+	 * Register a macro with the Cache class.
+	 *
+	 * @param  string    $name
+	 * @param  callable  $callback
+	 * @return void
+	 */
+	public function macro($name, $callback)
+	{
+		$this->macros[$name] = $callback;
+	}
+
+	/**
+	 * Handle dynamic calls into macros or pass missing methods to the store.
 	 *
 	 * @param  string  $method
 	 * @param  array   $parameters
@@ -209,7 +270,15 @@ class Repository implements ArrayAccess {
 	 */
 	public function __call($method, $parameters)
 	{
-		return call_user_func_array(array($this->store, $method), $parameters);
+		if (isset($this->macros[$method]))
+		{
+			return call_user_func_array($this->macros[$method], $parameters);
+		}
+		else
+		{
+			return call_user_func_array(array($this->store, $method), $parameters);
+		}
 	}
+
 
 }
