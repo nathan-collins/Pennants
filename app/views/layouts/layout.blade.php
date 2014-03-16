@@ -20,8 +20,6 @@
 			@yield('content')
 		</div>
 	</div><!-- end container -->
-	{{ HTML::script('assets/scripts/backend/min/core.js') }}
-	@section('footer_scripts')
-	@show
+	@include('partials.backend.footer')
 </body>
 </html>

@@ -1,8 +1,14 @@
 <?php namespace dashboard\pennants;
 
+use Laracasts\Utilities\JavaScript\Facades\JavaScript;
+
 class ClubController extends \BaseController {
 
 	public function showClub($clubId) {
-		return \View::make('pennants.club.container')->with('clubId', $clubId);
+		JavaScript::put([
+			'clubId' => $clubId
+		]);
+
+		return \View::make('pennants.club.container');
 	}
 }

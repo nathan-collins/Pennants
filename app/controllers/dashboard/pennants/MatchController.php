@@ -7,8 +7,12 @@ class MatchController extends \BaseController {
 	 * @return mixed
 	 */
 
-	public function showMatch($teamId)
+	public function showMatch($clubId)
 	{
-		return \View::make('pennants.match.match')->with('temId', $teamId);
+		JavaScript::put([
+			'clubId' => $clubId
+		]);
+
+		return \View::make('pennants.match.match');
 	}
 }

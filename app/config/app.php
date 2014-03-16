@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => '4ZlRkI9uKGEMmgQ4bRCdPUQvWxzgkyRykR7ATeXJhYz8AcX5QSODxHG7uFZFnRf',
+	'key' => 'hqg0Wot6dLQBaPMVUC4OTEWTvuUPJJJU',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -108,6 +108,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Pennants\PennantsServiceProvider',
+		'Laracasts\Utilities\UtilitiesServiceProvider'
 
 	),
 

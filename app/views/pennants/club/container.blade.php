@@ -2,7 +2,7 @@
 
 @section('footer_scripts')
 {{ HTML::script('scripts/controllers/pennants/DrawController.js') }}
-{{ HTML::script('scripts/controllers/pennants/DrawController.js') }}
+{{ HTML::script('scripts/controllers/pennants/MatchController.js') }}
 {{ HTML::script('scripts/controllers/pennants/PlayerController.js') }}
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
