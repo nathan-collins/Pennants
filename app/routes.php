@@ -36,11 +36,15 @@ Route::group(array('prefix' => 'dashboard'), function()
 	Route::get('pennants/season/add', 'dashboard\pennants\SeasonController@addSeason');
 	Route::get('pennants/grade', 'dashboard\pennants\GradeController@showGrade');
 	Route::get('pennants/draws', 'dashboard\pennants\DrawController@showDraw');
-	Route::get('pennants/club/{teamId}', 'dashboard\pennants\ClubController@showClub');
+	Route::get('pennants/club/{clubId}', 'dashboard\pennants\ClubController@showClub');
+
+	Route::get('pennants/club/add', 'dashboard\pennants\ClubController@addClub');
+
 	Route::get('pennants/game/add', 'dashboard\pennants\GameController@addGame');
-	Route::get('pennants/player/{teamId}', 'dashboard\pennants\PlayerController@showPlayer');
-	Route::get('pennants/player/add/{teamId}', 'dashboard\pennants\PlayerController@addPlayer');
-	Route::get('pennants/match/{teamId}', 'dashboard\pennants\MatchController@showMatch');
+	Route::get('pennants/player/{clubId}', 'dashboard\pennants\PlayerController@showPlayer');
+	Route::get('pennants/player/add/{clubId}', 'dashboard\pennants\PlayerController@addPlayer');
+	Route::get('pennants/match/{clubId}', 'dashboard\pennants\MatchController@showMatch');
+	Route::get('pennants/match/add/{clubId}', 'dashboard\pennants\MatchController@addMatch');
 });
 
 Route::post('auth/login', array('before' => 'csrf_json', 'uses' => 'AuthController@login'));

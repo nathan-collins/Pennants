@@ -56,7 +56,7 @@ pennantsApp.directive('clubselect', function($cookies, $http, $cacheFactory) {
 
 pennantsApp.directive('clubText', function($cookies, $http, $cacheFactory) {
   return {
-    restrict: 'A',
+    restrict: 'AE',
     scope: {
       id: '@',
       club_id: '@'

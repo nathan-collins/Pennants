@@ -9,8 +9,13 @@
 	@show
 </head>
 <body>
-@include('partials.backend.header')
-@include('partials.backend.navigation')
+<div class="row row-offcanvas row-offcanvas-left">
+	<div class="col-xs-12 col-sm-12">
+	@include('partials.backend.header')
+	</div>
+	<div id="sidebar" role="navigation" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+	@include('partials.backend.navigation')
+	</div>
 	<div class="container">
 		<div class="row row-offcanvas row-offcanvas-right">
 			<!-- check for flash notification message -->
@@ -21,5 +26,10 @@
 		</div>
 	</div><!-- end container -->
 	@include('partials.backend.footer')
+	@include('partials.scripts.userscripts')
+	{{ HTML::script('assets/scripts/backend/min/core.js') }}
+	@section('footer_scripts')
+	@show
+</div>
 </body>
 </html>

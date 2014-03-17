@@ -12,8 +12,12 @@
 @stop
 
 @section('content')
-<div class="col-xs-12 col-md-6 col-lg-8 outer content-container">
-  <section ng-controller="AddGameController">
+<div class="col-xs-12 col-md-12 col-lg-12 outer content-container">
+  <div class="jumbotron">
+    <div season-display></div>
+    <div grade-display></div>
+  </div>
+	<section ng-controller="AddGameController">
     <h1>Add a new games</h1>
     <form name="AddGameForm" id="add-game-form" class="form-horizontal" role="form">
       <div class="form-group">

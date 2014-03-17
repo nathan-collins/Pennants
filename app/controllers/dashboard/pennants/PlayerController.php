@@ -1,12 +1,22 @@
 <?php namespace dashboard\pennants;
 
+use Laracasts\Utilities\JavaScript\Facades\JavaScript;
+
 class PlayerController extends \BaseController {
 
 	public function showPlayer($clubId) {
-		return \View::make('pennants.club.container')->with('clubId', $clubId);
+		JavaScript::put([
+			'clubId' => $clubId
+		]);
+
+		return \View::make('pennants.club.container');
 	}
 
 	public function addPlayer($clubId) {
-		return \View::make('pennants.club.create')->with('clubId', $clubId);
+		JavaScript::put([
+			'clubId' => $clubId
+		]);
+
+		return \View::make('pennants.player.create');
 	}
 }

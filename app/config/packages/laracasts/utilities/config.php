@@ -11,7 +11,7 @@ return [
     | you want to prepend the JavaScript variables to.
     |
     */
-    'bind_js_vars_to_this_view' => 'partials/backend/footer',
+    'bind_js_vars_to_this_view' => 'partials.scripts.userscripts',
 
     /*
     |--------------------------------------------------------------------------

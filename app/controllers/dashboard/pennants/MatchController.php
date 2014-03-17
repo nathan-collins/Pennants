@@ -1,5 +1,7 @@
 <?php namespace dashboard\pennants;
 
+use Laracasts\Utilities\JavaScript\Facades\JavaScript;
+
 class MatchController extends \BaseController {
 
 	/**
@@ -7,12 +9,21 @@ class MatchController extends \BaseController {
 	 * @return mixed
 	 */
 
-	public function showMatch($clubId)
+	public function showMatch($hostId)
 	{
 		JavaScript::put([
-			'clubId' => $clubId
+			'hostId' => $hostId
 		]);
 
 		return \View::make('pennants.match.match');
+	}
+
+	public function addMatch($hostId)
+	{
+		JavaScript::put([
+			'hostId' => $hostId
+		]);
+
+		return \View::make('pennants.match.create');
 	}
 }

@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-<div class="col-xs-12 col-md-6 col-lg-8 outer content-container">
+<div class="col-xs-12 col-md-12 col-lg-12 outer content-container">
   <section ng-controller="SeasonController">
     <a class="btn btn-default"  ng-href="season/add" role="button">Add Season</a>
     <h1>Select a season</h1>

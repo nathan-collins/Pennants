@@ -18,6 +18,8 @@ class CreatePlayerSeasonsTable extends Migration {
 			$table->integer('season_id');
 			$table->integer('club_id');
 			$table->integer('grade_id');
+			$table->smallInteger('handicap');
+			$table->string('golf_link_number', 10);
 			$table->timestamps();
 			$table->softDeletes();
 		});

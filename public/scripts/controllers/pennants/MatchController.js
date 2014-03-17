@@ -3,27 +3,32 @@ var pennantsApp = angular.module('pennantsApp', ['ngCookies'], function($interpo
   $interpolateProvider.endSymbol('%>');
 });
 
-function MatchController($scope, $http, $cookies) {
+pennantsApp.controller('MatchController', function($scope, $http, $cookies) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
-  var clubId = Pennants.clubId;
+  var hostId = Pennants.hostId;
 
-  $http.get('/api/v1/pennants/match/season/'+seasonId+'/'+gradeId+'/'+clubId).success(function(matches) {
+  $http.get('/api/v1/pennants/match/season/'+seasonId+'/grade/'+gradeId+'/host/'+hostId).success(function(matches) {
     $scope.matches = matches;
   });
+
+  $scope.hostId = hostId;
 
   $scope.page =
   {
     title: 'Pennants - Matches'
   }
-}
+});
 
-function AddMatchController($scope, $http, $cookies) {
+pennantsApp.controller('AddMatchController', function($scope, $http, $cookies) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
+  var hostId = Pennants.hostId;
+
+  $scope.hostId = hostId;
 
   $scope.page =
   {
     title: 'Pennants - Add A Matches'
   }
-}
+});

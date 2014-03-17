@@ -1,10 +1,11 @@
 <?php namespace Pennants\Player;
 
 use Player;
+use PlayerSeason;
 
 class DbPlayerRepository implements PlayerRepositoryInterface {
 
-	public function playerSeasons()
+	public function playerSeason()
 	{
 		return $this->hasMany('PlayerSeason');
 	}
@@ -81,13 +82,22 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	 * @return Players
 	 */
 
-	public function create($data)
+	public function create($player_season_data)
 	{
-		$player = new Player($data);
+		$player_data = array(
+			'name' => $player_season_data['name'],
+		);
+
+		unset($player_season_data['name']);
+
+		$player = new Player($player_data);
 
 		$player->settings = json_encode(array());
 
 		$player->save($player->toArray());
+
+		$player_season = new \PlayerSeason($player_season_data);
+		$player_season->save($player_season->toArray());
 
 		return $player;
 	}

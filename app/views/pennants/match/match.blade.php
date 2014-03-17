@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('footer_scripts')
-{{ HTML::script('scripts/controllers/pennants/SeasonController.js') }}
+{{ HTML::script('scripts/controllers/pennants/MatchController.js') }}
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 @stop
@@ -13,7 +13,7 @@
 		<div grade-display></div>
   </div>
 	<section ng-controller="MatchController">
-    <a class="btn btn-default"  ng-href="/dashboard/pennants/match/add" role="button">Add A Match</a>
+    <a class="btn btn-default"  ng-href="/dashboard/pennants/match/add/<% hostId %>" role="button">Add A Match</a>
     <h1>Select a match</h1>
     <div class="list-group">
       <a ng-href="/dashboard/pennants/match/<% match.id %>" class="list-group-item" ng-repeat="match in matches">

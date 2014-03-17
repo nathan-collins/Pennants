@@ -3,11 +3,9 @@ var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ngRoute'], functi
   $interpolateProvider.endSymbol('%>');
 });
 
-function ClubController($scope, $http, $cookies, $routeParams) {
+pennantsApp.controller('ClubController', function($scope, $http, $cookies, $routeParams) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
-
-  var clubId = $routeParams.clubId;
 
   $http.get('/api/v1/pennants/club/season/'+seasonId+'/'+gradeId).success(function(clubs) {
     $scope.clubs = clubs;
@@ -17,14 +15,12 @@ function ClubController($scope, $http, $cookies, $routeParams) {
   {
     title: 'Pennants'
   }
-}
+});
 
-function AddClubController($scope, $http, $cookies, $location, $routeParams) {
+pennantsApp.controller('AddClubController', function($scope, $http, $cookies, $location) {
 
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
-
-  var clubId = $routeParams.clubId;
 
   if(_.isUndefined(seasonId)) {
     $location.path('/pennants/season')
@@ -50,9 +46,9 @@ function AddClubController($scope, $http, $cookies, $location, $routeParams) {
       $scope.season = angular.copy($scope.master);
     }
   }
-}
+});
 
-function EditClubController($scope, $http, $routeParams, $cookies, $location) {
+pennantsApp.controller('EditClubController', function($scope, $http, $routeParams, $cookies, $location) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
 
@@ -91,7 +87,7 @@ function EditClubController($scope, $http, $routeParams, $cookies, $location) {
         FlashService.show(data.message);
       });
   }
-}
+});
 
 
 function ClubListController($scope, $http, $routeParams, $cookies, $location) {

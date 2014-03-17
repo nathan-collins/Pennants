@@ -6,19 +6,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790a44c-7887-41dd-8045-4b4079a8362c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/packages/laracasts/utilities/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/backend/footer.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/scripts/userscripts.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_12_21_093524_create_players_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_12_21_093524_create_players_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_03_231816_create_player_seasons_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_01_03_231816_create_player_seasons_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/MatchController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/MatchController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/app.php" afterPath="$PROJECT_DIR$/app/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Player.php" afterPath="$PROJECT_DIR$/app/models/Player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/pennants/PlayerController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/pennants/PlayerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/PlayerSeason.php" afterPath="$PROJECT_DIR$/app/models/PlayerSeason.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/club/container.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/club/container.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/golf.iml" afterPath="$PROJECT_DIR$/golf.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/tabs/pennants/club/club.html" afterPath="$PROJECT_DIR$/public/views/tabs/pennants/club/club.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/directives/clubDirective.js" afterPath="$PROJECT_DIR$/public/scripts/directives/clubDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/packages/laracasts/utilities/config.php" afterPath="$PROJECT_DIR$/app/config/packages/laracasts/utilities/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/game/create.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/game/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/match/create.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/match/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/player/create.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/player/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/backend/footer.blade.php" afterPath="$PROJECT_DIR$/app/views/partials/backend/footer.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/tabs/pennants/game/game.html" afterPath="$PROJECT_DIR$/public/views/tabs/pennants/game/game.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/layout.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/match/match.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/match/match.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/tabs/pennants/match/match.html" afterPath="$PROJECT_DIR$/public/views/tabs/pennants/match/match.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/player/player.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/player/player.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/tabs/pennants/player/player.html" afterPath="$PROJECT_DIR$/public/views/tabs/pennants/player/player.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/season/season.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/season/season.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/files/xdebug.ini" afterPath="$PROJECT_DIR$/ansible/files/xdebug.ini" />
     </list>
     <ignored path="golf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,64 +108,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ClubController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php">
+      <file leaf-file-name="PlayerController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/PlayerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="6" selection-start="182" selection-end="182" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="342">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatchController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/MatchController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="70" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatchController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="4" selection-start="175" selection-end="175" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="414">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/partials/backend/footer.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="198">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="container.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pennants/club/container.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="51" selection-start="175" selection-end="175" vertical-scroll-proportion="-1.4444444" vertical-offset="33" max-vertical-offset="522">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config/packages/laracasts/utilities/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="395" selection-end="395" vertical-scroll-proportion="0.3993174" vertical-offset="0" max-vertical-offset="594">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/layout.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="35" selection-start="728" selection-end="728" vertical-scroll-proportion="-12.814815" vertical-offset="50" max-vertical-offset="540">
+            <state line="19" column="0" selection-start="373" selection-end="373" vertical-scroll-proportion="0.5533981" vertical-offset="0" max-vertical-offset="618">
               <folding />
             </state>
           </provider>
@@ -168,38 +135,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/pennants/game/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/GameController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/DrawController.php" />
-        <option value="$PROJECT_DIR$/app/views/pennants/game/game.blade.php" />
-        <option value="$PROJECT_DIR$/public/views/template/datepicker/datepicker.html" />
-        <option value="$PROJECT_DIR$/public/views/template/datepicker/popup.html" />
-        <option value="$PROJECT_DIR$/public/scripts/directives/bootstrap/tabsDirective.js" />
-        <option value="$PROJECT_DIR$/public/scripts/directives/gradeDirective.js" />
-        <option value="$PROJECT_DIR$/public/scripts/directives/seasonDirective.js" />
-        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/TeamController.js" />
-        <option value="$PROJECT_DIR$/app/views/template/tabs/tabset.html" />
-        <option value="$PROJECT_DIR$/public/views/template/tabs/tab.html" />
-        <option value="$PROJECT_DIR$/public/views/template/tabs/tabset.html" />
-        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" />
         <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/SeasonController.js" />
         <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/GameController.js" />
         <option value="$PROJECT_DIR$/public/views/pennants/club/club.html" />
         <option value="$PROJECT_DIR$/public/views/pennants/game/game.html" />
-        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" />
-        <option value="$PROJECT_DIR$/public/views/tabs/pennants/game/game.html" />
-        <option value="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pennants/draws/draws.blade.php" />
-        <option value="$PROJECT_DIR$/public/views/tabs/pennants/club/club.html" />
         <option value="$PROJECT_DIR$/app/views/pennants/grade/grade.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/PlayerController.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/views/pennants/player/player.blade.php" />
-        <option value="$PROJECT_DIR$/app/models/Player.php" />
-        <option value="$PROJECT_DIR$/app/models/PlayerSeason.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php" />
-        <option value="$PROJECT_DIR$/public/views/tabs/pennants/player/player.html" />
-        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/artisan" />
         <option value="$PROJECT_DIR$/app/config/remote.php" />
@@ -211,14 +152,40 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/start/global.php" />
         <option value="$PROJECT_DIR$/app/storage/logs/log-apache2handler-2014-03-16.txt" />
-        <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/app/views/layouts/layout.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pennants/club/container.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php" />
-        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/MatchController.js" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php" />
         <option value="$PROJECT_DIR$/app/views/partials/backend/footer.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/laracasts/utilities/src/Laracasts/Utilities/JavaScript/PHPToJavaScriptTransformer.php" />
+        <option value="$PROJECT_DIR$/vendor/laracasts/utilities/src/Laracasts/Utilities/JavaScript/LaravelViewBinder.php" />
+        <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/app/config/packages/laracasts/utilities/config.php" />
+        <option value="$PROJECT_DIR$/app/views/layouts/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/DrawController.php" />
+        <option value="$PROJECT_DIR$/app/views/pennants/season/season.blade.php" />
+        <option value="$PROJECT_DIR$/public/views/tabs/pennants/game/game.html" />
+        <option value="$PROJECT_DIR$/public/views/tabs/pennants/club/club.html" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php" />
+        <option value="$PROJECT_DIR$/public/views/tabs/pennants/match/match.html" />
+        <option value="$PROJECT_DIR$/ansible/files/xdebug.ini" />
+        <option value="$PROJECT_DIR$/app/views/pennants/game/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/MatchController.js" />
+        <option value="$PROJECT_DIR$/app/views/pennants/match/match.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/pennants/match/create.blade.php" />
+        <option value="$PROJECT_DIR$/public/views/tabs/pennants/player/player.html" />
+        <option value="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/pennants/club/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/views/pennants/player/player.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/PlayerController.php" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" />
+        <option value="$PROJECT_DIR$/public/scripts/directives/clubDirective.js" />
+        <option value="$PROJECT_DIR$/app/views/pennants/player/create.blade.php" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_12_21_093524_create_players_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_01_03_231816_create_player_seasons_table.php" />
+        <option value="$PROJECT_DIR$/app/models/Player.php" />
+        <option value="$PROJECT_DIR$/app/models/PlayerSeason.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php" />
       </list>
     </option>
   </component>
@@ -229,10 +196,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="25" />
+    <option name="x" value="1919" />
     <option name="width" value="1922" />
-    <option name="height" value="1056" />
+    <option name="height" value="1081" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -290,220 +256,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laracasts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laracasts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Laracasts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Utilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laracasts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Laracasts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Utilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaScript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laracasts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pennants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -522,7 +274,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -540,11 +292,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -562,73 +310,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="start" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pennants" />
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -783,7 +469,8 @@
       <workItem from="1394739070578" duration="6673000" />
       <workItem from="1394782605573" duration="52871000" />
       <workItem from="1394979368772" duration="3165000" />
-      <workItem from="1394982546435" duration="219000" />
+      <workItem from="1394982546435" duration="2913000" />
+      <workItem from="1395009196393" duration="10545000" />
     </task>
     <task id="LOCAL-00001" summary="first commit - adding files">
       <created>1388656845278</created>
@@ -861,11 +548,15 @@
       <created>1394976994933</created>
       <updated>1394976994933</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added js controller">
+      <created>1394982777597</created>
+      <updated>1394982777597</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66192000" />
+    <option name="totallyTimeSpent" value="79431000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -888,17 +579,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
+    <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31769723" sideWeight="0.670406" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3007284" sideWeight="0.670406" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41880342" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41831425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14476496" sideWeight="0.68502206" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17788461" sideWeight="0.6795284" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3976546" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3975026" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819384" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -917,9 +609,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SQL" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.438326" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17032968" sideWeight="0.32905984" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -953,19 +644,15 @@
     <MESSAGE value="moved back to laravel views&#10;upgraded to laravel 4.1.*" />
     <MESSAGE value="successfully upgraded to laravel 4.1&#10;Removed behat&#10;Added a few more packages" />
     <MESSAGE value="more stuff for 4.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="more stuff for 4.1" />
+    <MESSAGE value="added js controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="added js controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/filters.php</url>
-          <line>45</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php</url>
-          <line>85</line>
+          <line>86</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -984,16 +671,6 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php</url>
-          <line>32</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php</url>
-          <line>28</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/controllers/api_v1/MatchController.php</url>
           <line>20</line>
           <option name="timeStamp" value="66" />
@@ -1005,13 +682,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php</url>
-          <line>15</line>
+          <line>17</line>
           <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/controllers/dashboard/pennants/DrawController.php</url>
-          <line>6</line>
-          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/controllers/dashboard/pennants/GameController.php</url>
@@ -1019,17 +691,22 @@
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/routes.php</url>
-          <line>13</line>
-          <option name="timeStamp" value="74" />
+          <url>file://$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php</url>
+          <line>19</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php</url>
+          <line>26</line>
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php</url>
-          <line>8</line>
-          <option name="timeStamp" value="76" />
+          <line>11</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="79" />
+      <option name="time" value="89" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1037,285 +714,361 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/GameController.php">
+    <entry file="file://$PROJECT_DIR$/app/views/partials/backend/navigation.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="122" selection-end="122" vertical-scroll-proportion="0.17716536" vertical-offset="0" max-vertical-offset="508">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/backend.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="3" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/GameController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="1" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0" vertical-offset="1013" max-vertical-offset="1602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/tabs/pennants/game/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="40" selection-start="489" selection-end="489" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="504">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/draws/draws.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="862" selection-end="862" vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/tabs/pennants/club/club.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="274" selection-end="274" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="288" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/grade/grade.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="41" selection-start="253" selection-end="253" vertical-scroll-proportion="-4.4814816" vertical-offset="23" max-vertical-offset="558" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/player/player.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="77" selection-start="190" selection-end="190" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="465" column="25" selection-start="9802" selection-end="9802" vertical-scroll-proportion="-24.592592" vertical-offset="7400" max-vertical-offset="48042" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/PlayerSeason.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="31" selection-start="75" selection-end="75" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="558" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="32" selection-start="278" selection-end="278" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="1782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/GradeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="60" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2322" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/SeasonController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="1" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1674" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="12" selection-start="259" selection-end="259" vertical-scroll-proportion="0.23818898" vertical-offset="59" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/PlayerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2736" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/tabs/pennants/player/player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="83" selection-start="196" selection-end="196" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/ResultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="535" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="3" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/PlayerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="70" selection-start="310" selection-end="310" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/artisan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="14" selection-start="2451" selection-end="2451" vertical-scroll-proportion="-8.0" vertical-offset="918" max-vertical-offset="1242" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/remote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="2" selection-start="1540" selection-end="1540" vertical-scroll-proportion="-31.333334" vertical-offset="198" max-vertical-offset="1152" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="28" selection-start="4047" selection-end="4047" vertical-scroll-proportion="-28.0" vertical-offset="1476" max-vertical-offset="2394" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/queue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="4" selection-start="1494" selection-end="1494" vertical-scroll-proportion="-29.333334" vertical-offset="306" max-vertical-offset="1260" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lang/en/reminders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="2" selection-start="687" selection-end="687" vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="522" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="61.666668" vertical-offset="1773" max-vertical-offset="32508" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="909" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1404" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/unit_test/GradeUnitTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1260" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/SeasonController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="516" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.bowerrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/packages/goez/laravel-grunt/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="792" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/hybridauth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="537" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3764706" vertical-offset="702" max-vertical-offset="2340" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/storage/logs/log-apache2handler-2014-03-16.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="738" column="112" selection-start="84828" selection-end="84918" vertical-scroll-proportion="0.0" vertical-offset="13120" max-vertical-offset="13860" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="12" selection-start="1585" selection-end="1585" vertical-scroll-proportion="-28.666666" vertical-offset="0" max-vertical-offset="882" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="25" selection-start="1835" selection-end="1835" vertical-scroll-proportion="-12.888889" vertical-offset="516" max-vertical-offset="1512" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="42" selection-start="2299" selection-end="2299" vertical-scroll-proportion="-13.333333" vertical-offset="216" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="75" selection-start="614" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2088" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/club/club.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="282" selection-end="282" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="288" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laracasts/utilities/src/Laracasts/Utilities/JavaScript/PHPToJavaScriptTransformer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="20" selection-start="1305" selection-end="1305" vertical-scroll-proportion="-18.777779" vertical-offset="609" max-vertical-offset="3960">
+        <state line="11" column="58" selection-start="282" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="756">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="728" selection-end="728" vertical-scroll-proportion="-12.814815" vertical-offset="50" max-vertical-offset="540">
+        <state line="32" column="6" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="720">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/club/container.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/views/tabs/pennants/game/game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="51" selection-start="175" selection-end="175" vertical-scroll-proportion="-1.4444444" vertical-offset="33" max-vertical-offset="522">
+        <state line="2" column="40" selection-start="151" selection-end="151" vertical-scroll-proportion="0.07114624" vertical-offset="0" max-vertical-offset="506">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/backend/footer.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/views/tabs/pennants/match/match.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="198">
+        <state line="2" column="40" selection-start="152" selection-end="152" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/files/xdebug.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="34" selection-start="407" selection-end="407" vertical-scroll-proportion="0.40986717" vertical-offset="0" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1111" selection-end="1111" vertical-scroll-proportion="-6.4814816" vertical-offset="473" max-vertical-offset="1584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="325" selection-end="325" vertical-scroll-proportion="-6.4814816" vertical-offset="329" max-vertical-offset="1404">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/game/game.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/season/season.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="31" selection-start="184" selection-end="184" vertical-scroll-proportion="0.22857143" vertical-offset="6" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/pennants/match/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/pennants/match/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/draws/draws.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="8" selection-start="635" selection-end="728" vertical-scroll-proportion="0.58285713" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Match/MatchRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="21" selection-start="87" selection-end="90" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/MatchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="31" selection-start="365" selection-end="365" vertical-scroll-proportion="0.39363816" vertical-offset="162" max-vertical-offset="3204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Match/DbMatchRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/GradeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2322">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/SeasonController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1674">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/TeamController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="530">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="175" selection-end="175" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="414">
+        <state line="26" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="-13.296296" vertical-offset="109" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/PlayerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="50" selection-start="4008" selection-end="4008" vertical-scroll-proportion="0.71165645" vertical-offset="1632" max-vertical-offset="3348">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2736">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laracasts/utilities/src/Laracasts/Utilities/JavaScript/Facades/JavaScript.php">
+    <entry file="file://$PROJECT_DIR$/public/views/tabs/pennants/player/player.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="103" selection-end="103" vertical-scroll-proportion="0.14723927" vertical-offset="0" max-vertical-offset="489">
+        <state line="2" column="94" selection-start="207" selection-end="207" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="306">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php">
+    <entry file="file://$PROJECT_DIR$/public/views/tabs/pennants/club/club.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="182" selection-end="182" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="342">
+        <state line="2" column="40" selection-start="151" selection-end="151" vertical-scroll-proportion="0.068571426" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/DrawController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.20571429" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/club/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="512">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/club/club.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="51" selection-start="175" selection-end="175" vertical-scroll-proportion="0.13714285" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/club/container.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="536" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/TeamController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="38" selection-start="2558" selection-end="2558" vertical-scroll-proportion="-12.444445" vertical-offset="330" max-vertical-offset="882">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/player/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/match/match.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="341" selection-end="432" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/player/player.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="271" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="486">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/season/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="112" selection-start="276" selection-end="379" vertical-scroll-proportion="0.30857143" vertical-offset="0" max-vertical-offset="648">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="12.0" vertical-offset="324" max-vertical-offset="1692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/ClubController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="38.0" vertical-offset="1026" max-vertical-offset="2736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="55" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="2016">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/MatchController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="70" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="612">
+        <state line="14" column="25" selection-start="555" selection-end="555" vertical-scroll-proportion="0.45652175" vertical-offset="0" max-vertical-offset="702">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/packages/laracasts/utilities/config.php">
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/match/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="395" selection-end="395" vertical-scroll-proportion="0.3993174" vertical-offset="0" max-vertical-offset="594">
+        <state line="13" column="8" selection-start="432" selection-end="432" vertical-scroll-proportion="0.4457143" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_12_21_093524_create_players_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="31" selection-start="411" selection-end="411" vertical-scroll-proportion="0.612" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_03_231816_create_player_seasons_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="45" selection-start="529" selection-end="529" vertical-scroll-proportion="0.7894737" vertical-offset="0" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/GameController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="4" selection-start="886" selection-end="1091" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1602">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/player/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="9" selection-start="1635" selection-end="1635" vertical-scroll-proportion="-13.333333" vertical-offset="324" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/directives/clubDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="17" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/game/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="14" selection-start="1932" selection-end="2185" vertical-scroll-proportion="-12.296296" vertical-offset="442" max-vertical-offset="954">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="33" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-11.296296" vertical-offset="1459" max-vertical-offset="1962">
+          <folding>
+            <element signature="e#34#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/PlayerSeason.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="13" selection-end="13" vertical-scroll-proportion="0.071570575" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="3" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0" vertical-offset="564" max-vertical-offset="1134">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Player.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="27" selection-start="395" selection-end="395" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="486">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/PlayerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="373" selection-end="373" vertical-scroll-proportion="0.5533981" vertical-offset="0" max-vertical-offset="618">
           <folding />
         </state>
       </provider>
