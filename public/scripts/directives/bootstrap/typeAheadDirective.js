@@ -1,3 +1,1 @@
-define(['appModule'], function(app) {
-
-});
+pennantsApp.directive('');

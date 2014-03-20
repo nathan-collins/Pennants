@@ -1,4 +1,4 @@
-pennantsApp.directive('tabset', function() {
+angular.directive('tabset', function() {
   return {
     restrict: 'EA',
     transclude: true,
@@ -46,7 +46,7 @@ pennantsApp.directive('tabset', function() {
   };
 });
 
-pennantsApp.directive('tab',
+angular.directive('tab',
   ['$parse',
     function($parse) {
       return {

@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class CreateClubsTable extends Migration {
+class CreateRatingsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,17 +12,14 @@ class CreateClubsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('clubs', function(Blueprint $table) {
+		Schema::create('ratings', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('season_id');
-			$table->integer('grade_id');
+			$table->integer('club_id');
 			$table->string('name');
-			$table->string('state');
-			$table->enum('active', array('Y', 'N'));
+			$table->text('ratings');
 			$table->timestamps();
 		});
 	}
-
 
 	/**
 	 * Reverse the migrations.
@@ -31,7 +28,7 @@ class CreateClubsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('clubs');
+		Schema::drop('ratings');
 	}
 
 }

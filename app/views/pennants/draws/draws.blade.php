@@ -1,13 +1,13 @@
 @extends('layouts.layout')
 
 @section('footer_scripts')
-{{ HTML::script('scripts/controllers/pennants/DrawController.js') }}
+{{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
 {{ HTML::script('scripts/controllers/pennants/GameController.js') }}
 {{ HTML::script('scripts/controllers/pennants/ClubController.js') }}
+{{ HTML::script('scripts/controllers/pennants/DrawController.js') }}
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
-{{ HTML::script('scripts/directives/bootstrap/tabsDirective.js') }}
 @stop
 
 @section('content')
@@ -17,8 +17,8 @@
     <div grade-display></div>
   </div>
   <tabset justified="true">
-    <tab heading="Draw" template-url="/views/tabs/pennants/game/game.html"></tab>
-    <tab heading="Clubs" template-url="/views/tabs/pennants/club/club.html"></tab>
+    <tab heading="Draw">@include('pennants.tabs.game.game')</tab>
+    <tab heading="Clubs">@include('pennants.tabs.club.club')</tab>
   </tabset>
 </div>
 @stop

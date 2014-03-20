@@ -7,7 +7,7 @@
 {{ HTML::script('scripts/directives/clubDirective.js') }}
 {{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-0.10.0.min.js') }}
 {{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
-{{ HTML::script('scripts/directives/positionDirective.js') }}
+{{ HTML::script('scripts/directives/bootstrap/positionDirective.js') }}
 {{ HTML::script('scripts/directives/bootstrap/datePickerDirective.js') }}
 @stop
 

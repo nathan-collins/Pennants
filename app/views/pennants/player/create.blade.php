@@ -5,6 +5,7 @@
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
+{{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
 @stop
 
 @section('content')
@@ -18,7 +19,8 @@
 			<div class="form-group">
 				<label for="name" class="col-sm-2 control-label">Name</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" ng-model="player.name" id="player-input-name" placeholder="Name">
+					<input type="text" ng-model="asyncSelected" class="form-control" ng-model="player.name" id="player-input-name" placeholder="Name" typeahead="address for address in getPlayer($playerValue) | filter:$playerValue" typeahead-loading="loadingPlayers">
+					<i ng-show="loadingPlayers" class="glyphicon glyphicon-refresh"></i>
 				</div>
 			</div>
 			<div class="form-group">

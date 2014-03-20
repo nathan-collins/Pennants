@@ -3,7 +3,7 @@ var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ngRoute'], functi
   $interpolateProvider.endSymbol('%>');
 });
 
-pennantsApp.controller('ClubController', function($scope, $http, $cookies, $routeParams) {
+pennantsApp.controller('ClubController', function($scope, $http, $cookies) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
 

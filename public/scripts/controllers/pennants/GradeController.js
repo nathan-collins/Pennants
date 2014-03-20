@@ -67,8 +67,6 @@ pennantsApp.controller('AddGradeController',
 
         grade.season_id = seasonId;
 
-        console.log(grade);
-
         $http.post('/api/v1/pennants/grade', grade).success(function() {
           $scope.reset();
           $scope.activePath = $location.path('/pennants/grade');

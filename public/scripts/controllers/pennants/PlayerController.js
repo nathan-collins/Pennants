@@ -38,6 +38,23 @@ pennantsApp.controller('AddPlayerController', function($scope, $http, $cookies) 
 
   $scope.clubId = clubId;
 
+  $scope.selected = undefined;
+
+  $scope.getPlayer = function(val) {
+    return $http.get('/api/v1/pennants/player', {
+      params: {
+        player: val,
+        sensor: false
+      }
+    }).then(function(res) {
+      var players = [];
+      angular.forEach(res.data.results, function(item) {
+        players.push(item);
+      });
+      return players;
+    });
+  }
+
   $scope.addPlayer = function(player, AddPlayerForm) {
     player.season_id = seasonId;
     player.grade_id = gradeId;

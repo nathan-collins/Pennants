@@ -15,7 +15,7 @@
     <h1>Select a grade</h1>
     <div class="list-group">
       <a ng-href="/dashboard/pennants/draws" class="list-group-item" ng-click="store(grade.id)" ng-repeat="grade in grades">
-        <h4 class="" style="display:inline-block"><% grade.name %></h4>
+        <h4 class="inline"><% grade.name %></h4>
         <button type="button" class="btn btn-default btn-sm pull-right">
           <span class="glyphicon glyphicon glyphicon-remove"></span>
         </button>
