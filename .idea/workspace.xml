@@ -7,17 +7,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790a44c-7887-41dd-8045-4b4079a8362c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/alerts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/badges.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/backend/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/frontend/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/bordered-pulled.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/breadcrumbs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/button-groups.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/buttons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/carousel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/close.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/code.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/component-animations.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/core.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/backend/core.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/frontend/core.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/scripts/backend/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/scripts/backend/min/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/scripts/frontend/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/scripts/frontend/min/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/dropdowns.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/extras.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/fixed-width.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/backend/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/forms.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/styles/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/glyphicons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/icons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/input-groups.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/jumbotron.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/labels.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/larger.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/list-group.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/list.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/media.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/modals.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/navbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/navs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/normalize.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/pager.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/pagination.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/panels.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/path.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/popovers.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/progress-bars.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/responsive-utilities.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/rotated-flipped.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/scaffolding.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/spinning.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/font-awesome/stacked.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/tables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/thumbnails.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/tooltip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/type.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/utilities.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/wells.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="golf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,7 +157,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -284,6 +343,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -558,7 +649,7 @@
       <workItem from="1395849198041" duration="15448000" />
       <workItem from="1395873910942" duration="12000" />
       <workItem from="1395933329549" duration="2764000" />
-      <workItem from="1395936155051" duration="783000" />
+      <workItem from="1395936155051" duration="916000" />
     </task>
     <task id="LOCAL-00001" summary="first commit - adding files">
       <created>1388656845278</created>
@@ -660,11 +751,15 @@
       <created>1395936219570</created>
       <updated>1395936219570</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="gitignore changes for .idea files">
+      <created>1395936947942</created>
+      <updated>1395936947942</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191974000" />
+    <option name="totallyTimeSpent" value="192107000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -790,7 +885,8 @@
     <MESSAGE value="goutwee and guzzle package added" />
     <MESSAGE value="ratings pulled from golf.org.au, also matches the name&#10;" />
     <MESSAGE value=".gitignore changes" />
-    <option name="LAST_COMMIT_MESSAGE" value=".gitignore changes" />
+    <MESSAGE value="gitignore changes for .idea files" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore changes for .idea files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1164,7 +1260,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
           <folding />
         </state>
       </provider>

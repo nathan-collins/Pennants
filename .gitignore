@@ -1,9 +1,7 @@
-.idea/*
-.idea/workspace.xml
+.idea
 /node_modules
 /.sass-cache
 /public.tmp
-/public/assets
 app/storage
 .vagrant
 .DS_Store
