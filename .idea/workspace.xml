@@ -7,25 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790a44c-7887-41dd-8045-4b4079a8362c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Rating.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/api_v1/RatingController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/Rating/RatingTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/api/rating/fetch.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_03_17_060913_create_ratings_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_03_17_060913_create_ratings_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Rating/DbRatingRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Rating/DbRatingRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Rating/RatingRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Rating/RatingRepositoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Ratings/Ratings.php" afterPath="$PROJECT_DIR$/app/lib/Ratings/Ratings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/tabs/club/club.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/tabs/club/club.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/draws/draws.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/draws/draws.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="golf.iws" />
@@ -95,10 +76,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Ratings.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Ratings.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/Ratings/Ratings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="25" selection-start="884" selection-end="884" vertical-scroll-proportion="0.179402" vertical-offset="432" max-vertical-offset="4140">
+            <state line="33" column="25" selection-start="884" selection-end="884" vertical-scroll-proportion="-4.0" vertical-offset="432" max-vertical-offset="4140">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="628">
               <folding />
             </state>
           </provider>
@@ -167,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php" />
         <option value="$PROJECT_DIR$/public/views/tabs/pennants/match/match.html" />
         <option value="$PROJECT_DIR$/ansible/files/xdebug.ini" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php" />
@@ -218,6 +207,7 @@
         <option value="$PROJECT_DIR$/app/lib/Pennants/Rating/DbRatingRepository.php" />
         <option value="$PROJECT_DIR$/app/models/Rating.php" />
         <option value="$PROJECT_DIR$/app/lib/Ratings/Ratings.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -656,7 +646,7 @@
       <workItem from="1395647854075" duration="26079000" />
       <workItem from="1395849198041" duration="15448000" />
       <workItem from="1395873910942" duration="12000" />
-      <workItem from="1395933329549" duration="2235000" />
+      <workItem from="1395933329549" duration="2816000" />
     </task>
     <task id="LOCAL-00001" summary="first commit - adding files">
       <created>1388656845278</created>
@@ -750,11 +740,15 @@
       <created>1395344497508</created>
       <updated>1395344497508</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="ratings pulled from golf.org.au, also matches the name&#10;">
+      <created>1395935606013</created>
+      <updated>1395935606013</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190662000" />
+    <option name="totallyTimeSpent" value="191243000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -781,10 +775,10 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30063966" sideWeight="0.670406" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30021366" sideWeight="0.670406" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33582088" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33547008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14476496" sideWeight="0.68502206" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13791268" sideWeight="0.6795284" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39658847" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -793,6 +787,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -808,7 +803,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3281412" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17032968" sideWeight="0.32905984" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -879,7 +873,8 @@
     <MESSAGE value="Players add form" />
     <MESSAGE value="changed layout and angular views to laravel views" />
     <MESSAGE value="goutwee and guzzle package added" />
-    <option name="LAST_COMMIT_MESSAGE" value="goutwee and guzzle package added" />
+    <MESSAGE value="ratings pulled from golf.org.au, also matches the name&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ratings pulled from golf.org.au, also matches the name&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -973,11 +968,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/tabs/game/game.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="270" selection-end="336" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="486" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pennants/draws/draws.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="87" selection-start="142" selection-end="142" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="504" />
@@ -1249,7 +1239,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/Ratings/Ratings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="25" selection-start="884" selection-end="884" vertical-scroll-proportion="0.179402" vertical-offset="432" max-vertical-offset="4140">
+        <state line="33" column="25" selection-start="884" selection-end="884" vertical-scroll-proportion="-4.0" vertical-offset="432" max-vertical-offset="4140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="628">
           <folding />
         </state>
       </provider>
