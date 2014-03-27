@@ -1,9 +1,10 @@
-var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ngRoute'], function($interpolateProvider) {
+var pennantsApp = angular.module('pennantsApp', ['ngCookies'], function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
   $interpolateProvider.endSymbol('%>');
 });
 
-pennantsApp.controller('ClubController', function($scope, $http, $cookies) {
+
+pennantsApp.controller('ClubController', ['$scope', function($scope, $http, $cookies) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
 
@@ -15,7 +16,7 @@ pennantsApp.controller('ClubController', function($scope, $http, $cookies) {
   {
     title: 'Pennants'
   }
-});
+}]);
 
 pennantsApp.controller('AddClubController', function($scope, $http, $cookies, $location) {
 
@@ -23,12 +24,12 @@ pennantsApp.controller('AddClubController', function($scope, $http, $cookies, $l
   var gradeId = $cookies.pennantsGrade;
 
   if(_.isUndefined(seasonId)) {
-    $location.path('/pennants/season')
+    $location.path('/dashboard/pennants/season')
   }
 
   // Redirect back to grades so it can be assigned a value
   if(_.isUndefined(gradeId)) {
-    $location.path('/pennants/grade')
+    $location.path('/dashboard/pennants/grade')
   }
 
 
@@ -39,7 +40,7 @@ pennantsApp.controller('AddClubController', function($scope, $http, $cookies, $l
 
     $http.post('/api/v1/pennants/club', club).success(function() {
       $scope.reset();
-      $scope.activePath = $location.path('/pennants/draws')
+      $scope.activePath = $location.path('/dashboard/pennants/draws')
     });
 
     $scope.reset = function() {
@@ -53,12 +54,12 @@ pennantsApp.controller('EditClubController', function($scope, $http, $routeParam
   var gradeId = $cookies.pennantsGrade;
 
   if(_.isUndefined(seasonId)) {
-    $location.path('/pennants/season')
+    $location.path('/dashboard/pennants/season')
   }
 
   // Redirect back to grades so it can be assigned a value
   if(_.isUndefined(gradeId)) {
-    $location.path('/pennants/grade')
+    $location.path('/dashboard/pennants/grade')
   }
 
   var clubId = $routeParams.clubId;
@@ -81,7 +82,7 @@ pennantsApp.controller('EditClubController', function($scope, $http, $routeParam
     $scope.clubs.push(club);
 
     $http.post('/api/v1/pennants/club/'+clubId, club).success(function() {
-      $location.path('/pennants/draws')
+      $location.path('/dashboard/pennants/draws')
     })
       .error(function(data) {
         FlashService.show(data.message);
@@ -90,18 +91,18 @@ pennantsApp.controller('EditClubController', function($scope, $http, $routeParam
 });
 
 
-function ClubListController($scope, $http, $routeParams, $cookies, $location) {
+pennantsApp.controller('ClubListController', function($scope, $http, $routeParams, $cookies, $location) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
 
   if(_.isUndefined(seasonId)) {
-    $location.path('/pennants/season')
+    $location.path('/dashboard/pennants/season')
   }
 
   // Redirect back to grades so it can be assigned a value
   if(_.isUndefined(gradeId)) {
-    $location.path('/pennants/grade')
+    $location.path('/dashboard/pennants/grade')
   }
 
   var clubId = $routeParams.clubId;
-}
+});

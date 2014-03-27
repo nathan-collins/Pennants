@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="col-xs-12 col-md-12 col-lg-12 outer content-container">
-  <section ng-controller="ClubController">
+  <section data-ng-controller="ClubController">
     <a class="btn btn-default"  ng-href="/pennants/club/add" role="button">Add Club</a>
     <h1>Select a club</h1>
     <div class="list-group">

@@ -56,6 +56,23 @@ class DbClubRepository implements ClubRepositoryInterface {
 	}
 
 	/**
+	 * @param $name
+	 * @param $id
+	 * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|static
+	 */
+
+	public function updateName($name, $id)
+	{
+		$club = Club::find($id);
+
+		$club->name = $name;
+
+		$club->save();
+
+		return $club;
+	}
+
+	/**
 	 * @param $id
 	 *
 	 * @return bool

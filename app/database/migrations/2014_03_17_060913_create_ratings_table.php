@@ -15,8 +15,10 @@ class CreateRatingsTable extends Migration {
 		Schema::create('ratings', function(Blueprint $table) {
 			$table->increments('id');
 			$table->integer('club_id');
-			$table->string('name');
+			$table->string('tee_name');
+			$table->string('tee_sex');
 			$table->text('ratings');
+			$table->string('holes', 10)->nullable();
 			$table->timestamps();
 		});
 	}

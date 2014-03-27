@@ -13,6 +13,7 @@ interface ClubRepositoryInterface {
 	public function find($id);
 	public function getWhere($rows);
 	public function update($id);
+	public function updateName($name, $id);
 	public function delete($id);
 	public function create($data);
 }
