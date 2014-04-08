@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.backend')
 
 @section('footer_scripts')
 {{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}

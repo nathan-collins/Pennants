@@ -1,5 +1,5 @@
-define([], function() {
-  return function() {
+angular.module('pennantsApp', [])
+  .factory('sessionService', function() {
     return {
       get: function(key) {
         return sessionStorage.getItem(key);
@@ -11,5 +11,5 @@ define([], function() {
         return sessionStorage.removeItem(key);
       }
     }
-  };
-})
+  }
+);

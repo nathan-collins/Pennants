@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.backend')
 
 @section('footer_scripts')
 {{ HTML::script('scripts/controllers/pennants/DrawController.js') }}

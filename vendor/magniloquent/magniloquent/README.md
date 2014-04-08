@@ -44,13 +44,13 @@ Your validation rules are simply stored as a static parameter and are seperated 
 public static $rules = array(
   "save" => array(
     'username' => 'required|min:4',
-    'email' => 'required|email',
+    'email'    => 'required|email',
     'password' => 'required|min:8'
   ),
   "create" => array(
-    'username' => 'unique:users',
-    'email' => 'unique:users',
-    'password' => 'confirmed',
+    'username'              => 'unique:users',
+    'email'                 => 'unique:users',
+    'password'              => 'confirmed',
     'password_confirmation' => 'required|min:8'
   ),
   "update" => array()
@@ -60,6 +60,8 @@ The `save` array are validation rules that are applicable whenever the model is 
 
 So in the example above, when a user is created, the username should be unique. When the user updates any of their information, the uniqueness validation test won't be applied.
 
+Note: Magniloquent is able to correctly ignore the current object when validatings unique values.
+
 ##Easier Relationships
 Defining relationships in Laravel can take up a ton of room in a model.  This can make reading and maintaining your models much more difficult.  Luckily, Magniloquent makes defining relationships a cinch.  Add a `$relationships` multi-dimensional array to your model.  Inside it, define the name of the relationship that will be called as the key and the value to be an array of parameters.  The first parameter is the type of relationship.  The rest are the parameters to be passed to that function.  Below is an example:
 
@@ -68,8 +70,8 @@ class Athlete extends Magniloquent {
 
     protected static $relationships = array(
         'trophies' => array('hasMany', 'Trophy'),
-        'team' => array('belongsTo', 'Team', 'team_id'),
-        'sports' => array('belongsToMany', 'Sport', 'athletes_sports', 'athlete_id', 'sport_id')
+        'team'     => array('belongsTo', 'Team', 'team_id'),
+        'sports'   => array('belongsToMany', 'Sport', 'athletes_sports', 'athlete_id', 'sport_id')
     );
 
 }
@@ -91,6 +93,17 @@ Anytime this model is saved, the `$ssn` attribute will be removed from the objec
 ```php
 $account->save(Input::all());
 ```
+
+##Custom Display Names
+Magniloquent gives you the ability to customize the display name of each of the fields that are under validation.  Just add a `protected $niceNames` array to your model where the keys are the field names and the values are their display names.  Below is an example.
+
+```php
+protected $niceNames = array(
+    'email'     => 'email address'
+);
+```
+
+Now, anytime there are issues with email validation, the message to the user will say "email address" instead of "email."
 
 ##Controller Example
 Here is an example `store` method:

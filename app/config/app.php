@@ -108,7 +108,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Pennants\PennantsServiceProvider',
-		'Laracasts\Utilities\UtilitiesServiceProvider'
+		'Laracasts\Utilities\UtilitiesServiceProvider',
+		'Fbf\LaravelBlog\LaravelBlogServiceProvider'
 
 	),
 

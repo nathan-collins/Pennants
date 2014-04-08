@@ -85,4 +85,8 @@ App::down(function()
 |
 */
 
+App::bind('Fbf\LaravelBlog\PostsController', function() {
+	return new Fbf\LaravelBlog\PostsController(new Post);
+});
+
 require app_path().'/filters.php';

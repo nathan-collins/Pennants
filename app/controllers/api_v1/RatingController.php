@@ -15,6 +15,11 @@ class RatingController extends \BaseController {
 
 	public function fetchRatings($clubId)
 	{
+		return \View::make('api.rating.fetch');
+	}
+
+	public function doSomething($clubId)
+	{
 		$club = Club::find($clubId);
 
 		$ratings = new Ratings($club->name, $state = "QLD", $clubId, $this->rating, $this->club);
@@ -23,8 +28,5 @@ class RatingController extends \BaseController {
 		$total_ratings = $ratings->getRatings();
 
 //		$rating = $this->rating->where('club_id', '=', $clubId)->get();
-
-
-		return \View::make('api.rating.fetch');
 	}
 }

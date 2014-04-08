@@ -7,7 +7,11 @@ pennantsApp.controller('DrawController', ['$scope', function($scope) {
 
 }]);
 
-pennantsApp.controller('ClubController', function($scope, $http, $cookies, $modal) {
+/**
+ * Club Controller inside the tab
+ */
+
+pennantsApp.controller('ClubController', function($scope, $http, $cookies, $rootScope,  $modal) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
 
@@ -20,7 +24,7 @@ pennantsApp.controller('ClubController', function($scope, $http, $cookies, $moda
     title: 'Pennants'
   }
 
-  $scope.getRatings = function(clubId) {
+  $scope.launch = function(clubId) {
     var modalInstance = $modal.open({
       templateUrl: "/api/v1/pennants/rating/fetch/" + clubId,
       controller: 'RatingFetchController',
@@ -61,5 +65,5 @@ pennantsApp.controller('GameController', function($scope, $http, $cookies, $cach
 
 pennantsApp.controller('RatingFetchController', function()
 {
-  alert("Test");
+
 });

@@ -82,17 +82,21 @@ module.exports = function (grunt) {
             './public/assets/lib/bootstrap/buttons.css',
             './public/assets/lib/bootstrap/responsive-utilities.css',
           ],
-          './public/assets/styles/frontend/core.css':
+          './public/assets/styles/frontend/blog/blog.css':
           [
-            './public/styles/less/**/*.less'
+            './public/styles/less/blog/blog.less'
+          ],
+
+          './public/assets/styles/backend/core.css':
+          [
+            './public/styles/less/core/core.less'
+          ],
+          './public/assets/styles/backend/login/login.css':
+          [
+            './public/styles/less/login/login.less'
           ],
 
 
-
-          './public/assets/styles/backend/core.css':
-            [
-              './public/styles/less/**/*.less'
-            ],
           './public/assets/styles/backend/font-awesome.css':
           [
             './public/assets/lib/font-awesome/core.css',
@@ -104,6 +108,8 @@ module.exports = function (grunt) {
           ],
           './public/assets/styles/backend/bootstrap.css':
           [
+            './public/assets/lib/bootstrap/alerts.css',
+            './public/assets/lib/bootstrap/close.css',
             './public/assets/lib/bootstrap/forms.css',
             './public/assets/lib/bootstrap/labels.css',
             './public/assets/lib/bootstrap/grid.css',

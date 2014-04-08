@@ -13,6 +13,11 @@
 
 Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 {
+	Route::post('auth/login', array('before' => 'csrf_json', 'uses' => 'api_v1\AuthController@login'));
+	Route::get('auth/logout', 'api_v1\AuthController@logout');
+	Route::get('auth/status', 'api_v1\AuthController@status');
+	Route::get('auth/secrets','api_v1\AuthController@secrets');
+
 	Route::resource('pennants/season', 'api_v1\SeasonController');
 	Route::resource('pennants/grade', 'api_v1\GradeController');
 	Route::get('pennants/grade/season/{seasonId}', 'api_v1\GradeController@getSeasons');
@@ -31,8 +36,9 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 	Route::get('pennants/rating/fetch/{courseId}', 'api_v1\RatingController@fetchRatings');
 });
 
-Route::group(array('prefix' => 'dashboard'), function()
+Route::group(array('prefix' => 'dashboard', 'before' => 'auth'), function()
 {
+	Route::get('/', 'dashboard\DashboardController@showIndex');
 	Route::get('pennants/season', 'dashboard\pennants\SeasonController@showSeason');
 	Route::get('pennants/season/add', 'dashboard\pennants\SeasonController@addSeason');
 	Route::get('pennants/grade', 'dashboard\pennants\GradeController@showGrade');
@@ -48,7 +54,8 @@ Route::group(array('prefix' => 'dashboard'), function()
 	Route::get('pennants/match/add/{clubId}', 'dashboard\pennants\MatchController@addMatch');
 });
 
-Route::post('auth/login', array('before' => 'csrf_json', 'uses' => 'AuthController@login'));
-Route::get('auth/logout', 'AuthController@logout');
-Route::get('auth/status', 'AuthController@status');
-Route::get('auth/secrets','AuthController@secrets');
+Route::get('/', 'Fbf\LaravelBlog\PostsController@index');
+Route::get('pennants', 'PennantsController@showIndex');
+Route::get('links', 'LinksController@showIndex');
+Route::get('login', 'AuthController@showLogin');
+Route::get('user/profile', array('before' => 'auth', 'uses' => 'UserController@showProfile'));

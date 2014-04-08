@@ -1,5 +1,5 @@
-define([], function(app) {
-  return function($rootScope) {
+angular.module('pennantsApp.services', [])
+  .factory('FlashService', ['$rootScope', function($rootScope) {
     return {
       show: function(message) {
         $rootScope.flash = message;
@@ -8,5 +8,5 @@ define([], function(app) {
         $rootScope.flash = "";
       }
     }
-  };
-})
+  }]
+);
