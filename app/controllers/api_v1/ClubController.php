@@ -77,7 +77,6 @@ class ClubController extends \BaseController {
 		}
 
 		$club = $this->club->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id));
-		$club['totals'] = $this->club->countClubs($season_id, $grade_id);
 
 		return $club;
 	}
