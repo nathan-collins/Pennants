@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790a44c-7887-41dd-8045-4b4079a8362c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
@@ -17,9 +16,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_v1/ClubController.php" afterPath="$PROJECT_DIR$/app/controllers/api_v1/ClubController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/tabs/match/match.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/tabs/match/match.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/tabs/player/player.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/tabs/player/player.blade.php" />
     </list>
     <ignored path="golf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1282,7 +1278,7 @@
       <workItem from="1397806353717" duration="778000" />
       <workItem from="1397808558099" duration="1852000" />
       <workItem from="1397844331687" duration="32676000" />
-      <workItem from="1397950219984" duration="15700000" />
+      <workItem from="1397950219984" duration="16030000" />
     </task>
     <task id="LOCAL-00001" summary="first commit - adding files">
       <created>1388656845278</created>
@@ -1404,11 +1400,15 @@
       <created>1398014621943</created>
       <updated>1398014621943</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="removed idea folder from git cache">
+      <created>1398016705137</created>
+      <updated>1398016705137</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="409211000" />
+    <option name="totallyTimeSpent" value="409541000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1512,7 +1512,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="corrected layout extends" />
     <MESSAGE value="Player information added, api and interface repositories" />
     <MESSAGE value="Season test cases completed" />
     <MESSAGE value="massive amount of changes and packages added" />
@@ -1537,7 +1536,8 @@
     <MESSAGE value="authcontroller having a few issues, ill commit to fix it" />
     <MESSAGE value="Authentication, front section" />
     <MESSAGE value="layout changes in dashboard and frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="layout changes in dashboard and frontend" />
+    <MESSAGE value="removed idea folder from git cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed idea folder from git cache" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
