@@ -11,9 +11,10 @@
 |
 */
 
+Route::post('auth/login', array('before' => 'csrf_json', 'uses' => 'api_v1\AuthController@login'));
+
 Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 {
-	Route::post('auth/login', array('before' => 'csrf_json', 'uses' => 'api_v1\AuthController@login'));
 	Route::get('auth/logout', 'api_v1\AuthController@logout');
 	Route::get('auth/status', 'api_v1\AuthController@status');
 	Route::get('auth/secrets','api_v1\AuthController@secrets');
@@ -56,6 +57,8 @@ Route::group(array('prefix' => 'dashboard', 'before' => 'auth'), function()
 
 Route::get('/', 'Fbf\LaravelBlog\PostsController@index');
 Route::get('pennants', 'PennantsController@showIndex');
+Route::get('pennants/{alias}/{seasonYear}', 'PennantsController@showIndex');
+Route::get('pennants/players/{alias}/{seasonYear}/{gradeName}', 'PennantsController@showLeaderboard');
 Route::get('links', 'LinksController@showIndex');
 Route::get('login', 'AuthController@showLogin');
 Route::get('user/profile', array('before' => 'auth', 'uses' => 'UserController@showProfile'));

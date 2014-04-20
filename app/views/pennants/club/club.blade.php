@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('title')
+Pennants Clubs
+@stop
+
 @section('footer_scripts')
 {{ HTML::script('scripts/controllers/pennants/ClubController.js') }}
 {{ HTML::script('scripts/controllers/pennants/MatchController.js') }}

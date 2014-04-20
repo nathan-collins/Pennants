@@ -19,11 +19,6 @@ pennantsApp.controller('ClubController', function($scope, $http, $cookies, $root
     $scope.clubs = clubs;
   });
 
-  $scope.page =
-  {
-    title: 'Pennants'
-  }
-
   $scope.launch = function(clubId) {
     var modalInstance = $modal.open({
       templateUrl: "/api/v1/pennants/rating/fetch/" + clubId,
@@ -66,4 +61,30 @@ pennantsApp.controller('GameController', function($scope, $http, $cookies, $cach
 pennantsApp.controller('RatingFetchController', function()
 {
 
+});
+
+pennantsApp.controller('MatchController', function($scope, $http, $cookies)
+{
+  var seasonId = $cookies.pennantsSeason;
+  var gradeId = $cookies.pennantsGrade;
+  var hostId = Pennants.hostId;
+
+  $http.get('/api/v1/pennants/match/season/'+seasonId+'/'+gradeId+'/'+hostId).success(function(matches) {
+    $scope.matches = matches;
+  });
+
+  $scope.hostId = hostId;
+});
+
+pennantsApp.controller('PlayerController', function($scope, $http, $cookies)
+{
+  var seasonId = $cookies.pennantsSeason;
+  var gradeId = $cookies.pennantsGrade;
+  var clubId = Pennants.clubId;
+
+  $http.get('/api/v1/pennants/player/season/'+seasonId+'/'+gradeId+'/'+clubId).success(function(players) {
+    $scope.players = players;
+  });
+
+  $scope.clubId = clubId;
 });

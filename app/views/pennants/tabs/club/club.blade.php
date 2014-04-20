@@ -1,9 +1,17 @@
-<div class="col-xs-12 col-md-12 col-lg-12 outer content-container">
-	<a class="btn btn-default pull-right"  ng-href="/dashboard/pennants/club/add" role="button">Add Club</a>
-	<h1>Select a club</h1>
-	<section data-ng-controller="ClubController">
-		<div class="list-group">
-			<table class="table">
+<section data-ng-controller="ClubController">
+	<div class="widget" style="margin-top: 10px">
+		<div class="widget-header">
+			<h3>Clubs</h3>
+			<div class="btn-group widget-header-toolbar">
+				<a ng-href="/dashboard/pennants/club/add">
+					<button type="button" class="btn btn-primary btn-sm btn-ajax"><i class="fa fa-floppy-o"></i>
+						<span>Add Club</span>
+					</button>
+				</a>
+			</div>
+		</div>
+		<div class="widget-content">
+			<table class="table-condensed message-table" width="100%">
 				<tr ng-repeat="club in clubs">
 					<td><a ng-href="/dashboard/pennants/club/<% club.id %>"><% club.name %></a></td>
 					<td>
@@ -14,5 +22,5 @@
 				</tr>
 			</table>
 		</div>
-	</section>
-</div>
+	</div>
+</section>

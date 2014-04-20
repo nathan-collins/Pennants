@@ -9,14 +9,23 @@
 @stop
 
 @section('content')
-<div class="col-xs-12 col-md-12 col-lg-12 outer content-container" ng-controller="DrawController">
-  <div class="jumbotron">
+<div class="col-md-6 content-container" ng-controller="DrawController">
+  <div class="well well-lg">
     <div season-display></div>
     <div grade-display></div>
   </div>
-  <tabset justified="true">
-    <tab heading="Draw">@include('pennants.tabs.game.game')</tab>
-    <tab heading="Clubs">@include('pennants.tabs.club.club')</tab>
-  </tabset>
+	<div class="widget">
+		<div class="widget-header">
+			<h3>Draws</h3>
+		</div>
+		<div class="widget-content">
+			<div class="row">
+				<tabset>
+					<tab heading="Draw">@include('pennants.tabs.game.game')</tab>
+					<tab heading="Clubs">@include('pennants.tabs.club.club')</tab>
+				</tabset>
+			</div>
+		</div>
+	</div>
 </div>
 @stop

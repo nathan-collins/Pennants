@@ -11,11 +11,6 @@ pennantsApp.controller('ClubController', ['$scope', function($scope, $http, $coo
   $http.get('/api/v1/pennants/club/season/'+seasonId+'/'+gradeId).success(function(clubs) {
     $scope.clubs = clubs;
   });
-
-  $scope.page =
-  {
-    title: 'Pennants'
-  }
 }]);
 
 pennantsApp.controller('AddClubController', function($scope, $http, $cookies, $location) {

@@ -7,6 +7,10 @@ class SeasonController extends \BaseController {
 	}
 
 	public function addSeason() {
+		\JavaScript::put([
+			'competition_id' => \Config::get('pennants.competition_id')
+		]);
+
 		return \View::make('pennants.season.create');
 	}
 }

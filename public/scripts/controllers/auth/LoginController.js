@@ -28,7 +28,7 @@ pennantsApp.service('flashService', ['$rootScope', function($rootScope) {
   }
 }]);
 
-pennantsApp.service('authenticationService', ['$rootScope', '$http', 'flashService', 'sessionService', function ($rootScope, $http, FlashService, SessionService, $sanitize) {
+pennantsApp.service('authenticationService', ['$rootScope', '$http', 'flashService', 'sessionService', '$sanitize', function ($rootScope, $http, FlashService, SessionService, $sanitize) {
   var cacheSession   = function() {
     SessionService.set('authenticated', true);
   };
@@ -46,7 +46,7 @@ pennantsApp.service('authenticationService', ['$rootScope', '$http', 'flashServi
     return {
       username:  	$sanitize(credentials.username),
       password: 	$sanitize(credentials.password),
-      csrf_token: pennants.CSRF_TOKEN
+      csrf_token: Pennants.CSRF_TOKEN
     };
   };
 
@@ -72,14 +72,14 @@ pennantsApp.service('authenticationService', ['$rootScope', '$http', 'flashServi
   return {
     login: function(credentials)
     {
-      var login = $http.post("api/v1/auth/login", sanitizeCredentials(credentials));
+      var login = $http.post("/auth/login", sanitizeCredentials(credentials));
       login.success(cacheSession);
       login.success(FlashService.clear);
       login.error(loginError);
       return login;
     },
     logout: function() {
-      var logout = $httpProvider.get("api/v1/auth/logout");
+      var logout = $httpProvider.get("/api/v1/auth/logout");
       logout.success(uncacheSession);
       return logout;
     },
@@ -108,7 +108,7 @@ pennantsApp.controller('LoginController', [
       $scope.preventDefault;
       AuthenticationService.login($scope.credentials)
         .success(function() {
-          $location.path('/dashbaord');
+          $window.location.href = '/dashboard';
         })
         .error(function() {
           $rootScope.error = "Failed to login";

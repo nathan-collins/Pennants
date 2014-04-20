@@ -12,7 +12,7 @@ class Season extends Magniloquent {
 	 * @var array
 	 */
 
-	protected $fillable = array('name', 'year');
+	protected $fillable = array('year', 'competition_id');
 
 	/**
 	 * Validation rules
@@ -22,8 +22,8 @@ class Season extends Magniloquent {
 
 	public static $rules = array(
 		"save" => array(
-			'name' => 'required',
-			'year' => 'required|numeric'
+			'year' => 'required|numeric',
+			'competition_id' => 'numeric'
 		),
 		"create" => array(),
 		"update" => array()
@@ -36,8 +36,8 @@ class Season extends Magniloquent {
 	 */
 
 	public static $factory = array(
-		'name' => 'string',
 		'year' => 'string',
+		'competition_id' => 'factory|Competition',
 		'added_by' => 'factory|User'
 	);
 
@@ -45,7 +45,24 @@ class Season extends Magniloquent {
 	 * @var array
 	 */
 
-	protected static $relationship = array(
+	protected static $relationships = array(
+		'competition' => array('belongsTo', 'Competition'),
 		'user' => array('belongsTo', 'User', 'added_by')
 	);
+
+	/**
+	 * @param $query
+	 * @param $alias
+	 * @param $year
+	 * @return mixed
+	 */
+
+	public function scopeGetSeasonId($query, $alias, $year)
+	{
+		$season = $query->select('seasons.id AS seasonId');
+			$query->leftJoin('competitions', 'seasons.competition_id', '=', 'competitions.id');
+			$query->where('alias', $alias);
+			$query->where('year', $year);
+		return $season->first();
+	}
 }

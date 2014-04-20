@@ -40,6 +40,17 @@ class DbGradeRepository implements GradeRepositoryInterface {
 	}
 
 	/**
+	 * @param $seasonId
+	 * @return int
+	 */
+
+	public function countGrades($seasonId)
+	{
+		$seasons = $this->getWhere(array('season_id' => $seasonId));
+		return count($seasons);
+	}
+
+	/**
 	 * @param $id
 	 *
 	 * @return mixed

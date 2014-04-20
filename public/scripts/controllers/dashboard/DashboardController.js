@@ -1,15 +1,13 @@
-define(['appModule'], function(app)
-{
-  app.lazy.controller('DashboardController',
-  [
-    '$scope',
+var pennantsApp = angular.module('pennantsApp', [], function($interpolateProvider) {
+  $interpolateProvider.startSymbol('<%');
+  $interpolateProvider.endSymbol('%>');
+});
 
-    function($scope)
-    {
-      $scope.page =
-      {
-        title: 'Dashboard'
-      }
-    }
-  ])
-})
+pennantsApp.controller('DashboardController', [
+  '$scope',
+
+  function($scope)
+  {
+
+  }
+]);

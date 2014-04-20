@@ -10,6 +10,7 @@ Login
 
 @section('footer_scripts')
 {{ HTML::script('scripts/controllers/auth/LoginController.js') }}
+{{ HTML::script('vendor/angular-sanitize/angular-sanitize.min.js') }}
 @stop
 
 @section('content')

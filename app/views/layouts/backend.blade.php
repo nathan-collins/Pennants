@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html ng-app="pennantsApp">
 <head>
-	<title>A Title</title>
-	{{ HTML::style('assets/styles/backend/core.css') }}
+	<title>
+		@section('title')
+		@show
+	</title>
 	{{ HTML::style('assets/styles/backend/bootstrap.css') }}
 	{{ HTML::style('assets/styles/backend/font-awesome.css') }}
+	{{ HTML::style('assets/styles/backend/core.css') }}
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
@@ -14,28 +17,43 @@
 	@section('header_scripts')
 	@show
 </head>
-<body>
-<div class="row row-offcanvas row-offcanvas-left">
-	<div class="col-xs-12 col-sm-12">
-	@include('partials.backend.header')
-	</div>
-	<div id="sidebar" role="navigation" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-	@include('partials.backend.navigation')
-	</div>
-	<div class="container">
-		<div class="row row-offcanvas row-offcanvas-right">
-			<!-- check for flash notification message -->
-			@if(Session::has('flash_notice'))
-				<div class="col-md-12" id="flash_notice">{{ Session::get('flash_notice') }}</div>
-			@endif
-			@yield('content')
+<body class="dashboard">
+	<div class="wrapper">
+		<div class="top-bar">
+			@include('partials.backend.header')
 		</div>
-	</div><!-- end container -->
-	@include('partials.backend.footer')
+	</div>
+	<div class="bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 left-sidebar">
+					@include('partials.backend.navigation')
+				</div>
+				<div class="col-md-10 content-wrapper">
+					<div class="row">
+						<div class="col-md-4">
+							@include('partials.backend.breadcrumb')
+						</div>
+						<div class="col-md-8">
+							@include('partials.backend.stats')
+						</div>
+					</div>
+					<div class="content">
+						@include('partials.backend.main_header')
+						<div class="main-content">
+					 		@yield('content')
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		@include('partials.backend.footer')
+	</div>
 	@include('partials.scripts.userscripts')
 	{{ HTML::script('assets/scripts/backend/min/core.js') }}
+	{{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
+	{{ HTML::script('scripts/controllers/dashboard/DropdownController.js') }}
 	@section('footer_scripts')
 	@show
-</div>
 </body>
 </html>

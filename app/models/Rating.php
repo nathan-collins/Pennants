@@ -21,6 +21,8 @@ class Rating extends Magniloquent
 	);
 
 	/**
+	 *
+	 *
 	 * @param $query
 	 * @param $tee_name
 	 * @param $tee_sex

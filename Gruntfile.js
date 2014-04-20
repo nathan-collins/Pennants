@@ -22,11 +22,9 @@ module.exports = function (grunt) {
         src: [
           './public/vendor/jquery/jquery.js',
           './public/vendor/angular/angular.js',
-          './public/vendor/angular-route/angular-route.js',
           './public/vendor/angular-sanitize/angular-sanitize.js',
           './public/vendor/angular-resource/angular-resource.js',
           './public/vendor/angular-cookies/angular-cookies.js',
-          './public/assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js',
           './public/vendor/underscore/underscore.js',
           './public/vendor/modernizr/modernizr.js',
           './public/vendor/underscore/underscore.js',
@@ -86,14 +84,30 @@ module.exports = function (grunt) {
           [
             './public/styles/less/blog/blog.less'
           ],
+          './public/assets/styles/frontend/core.css':
+          [
+            './public/styles/less/core/frontend/core.less'
+          ],
+          './public/assets/styles/frontend/pennants/pennants.css':
+          [
+            './public/styles/less/pennants/pennants.less'
+          ],
 
           './public/assets/styles/backend/core.css':
           [
-            './public/styles/less/core/core.less'
+            './public/styles/less/core/backend/core.less'
           ],
           './public/assets/styles/backend/login/login.css':
           [
             './public/styles/less/login/login.less'
+          ],
+          './public/assets/styles/backend/season/season.css':
+          [
+            './public/styles/less/season/season.less'
+          ],
+          './public/assets/styles/backend/grade/grade.css':
+          [
+            './public/styles/less/grade/grade.less'
           ],
 
 
@@ -109,6 +123,8 @@ module.exports = function (grunt) {
           './public/assets/styles/backend/bootstrap.css':
           [
             './public/assets/lib/bootstrap/alerts.css',
+            './public/assets/lib/bootstrap/badges.css',
+            './public/assets/lib/bootstrap/breadcrumbs.css',
             './public/assets/lib/bootstrap/close.css',
             './public/assets/lib/bootstrap/forms.css',
             './public/assets/lib/bootstrap/labels.css',

@@ -125,17 +125,54 @@ class Post extends \Eloquent {
 	 * @param $size
 	 * @return null|string
 	 */
-	public function getImage($type, $size)
+	public function getImage($type, $size, $attributes)
 	{
 		if (empty($this->$type))
 		{
 			return null;
 		}
-		$html = '<img src="' . $this->getImageSrc($type, $size) . '"';
-		$html .= ' alt="' . $this->{$type.'_alt'} . '"';
-		$html .= ' width="' . $this->getImageWidth($type, $size) . '"';
-		$html .= ' height="' . $this->getImageHeight($type, $size) . '" />';
+
+		$attributes['width'] = $this->getImageWidth($type, $size);
+		$attributes['height'] = $this->getImageHeight($type, $size);
+
+		$attributes = $this->attributes($attributes);
+
+		$html = HTML::image($this->getImageSrc($type, $size, $this->{$type.'_alt'}, $attributes));
+
 		return $html;
+	}
+
+	/**
+	 * @param $attributes
+	 * @return string
+	 */
+
+	public function attributes($attributes)
+	{
+		$html = array();
+
+		foreach((array) $attributes as $key => $value)
+		{
+			$element = $this->attributeElement($key, $value);
+
+			if ( ! is_null($element)) $html[] = $element;
+		}
+
+		return count($html) > 0 ? ' '.implode(' ', $html) : '';
+	}
+
+
+	/**
+	 * @param $key
+	 * @param $value
+	 * @return string
+	 */
+
+	public function attributeElement($key, $value)
+	{
+		if (is_numeric($key)) $key = $value;
+
+		if ( ! is_null($value)) return $key.'="'.e($value).'"';
 	}
 
 	/**

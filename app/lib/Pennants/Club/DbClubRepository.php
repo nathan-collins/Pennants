@@ -25,9 +25,9 @@ class DbClubRepository implements ClubRepositoryInterface {
 	}
 
 	/**
-	 * @param $column
-	 * @param $value
 	 *
+	 *
+	 * @param array $rows
 	 * @return mixed
 	 */
 
@@ -38,6 +38,17 @@ class DbClubRepository implements ClubRepositoryInterface {
 		}
 
 		return $club->orderBy('name')->get();
+	}
+
+	/**
+	 * @param $seasonId
+	 * @param $gradeId
+	 * @return int
+	 */
+
+	public function countClubs($seasonId, $gradeId) {
+		$clubs = $this->getWhere(array('season_id', $seasonId, 'grade_id' => $gradeId));
+		return count($clubs);
 	}
 
 	/**

@@ -1,5 +1,6 @@
 <?php namespace Pennants\Season;
 
+use Illuminate\Support\Facades\Config;
 use Season;
 
 class DbSeasonRepository implements SeasonRepositoryInterface {
@@ -10,7 +11,19 @@ class DbSeasonRepository implements SeasonRepositoryInterface {
 
 	public function all()
 	{
-		return Season::orderBy('year', 'name')->get();
+		$competition_id = Config::get('pennants.competition_id');
+		if(!$competition_id) {
+			return \Response::json(array(
+				'error' => true,
+				'season' => array('message' => "Competition ID is required"),
+				'code' 	=> 400
+			));
+		}
+		return Season::select('seasons.id AS season_id', 'seasons.*', 'competitions.*')
+			->leftJoin('competitions', 'competitions.id', '=', 'seasons.competition_id')
+			->where('seasons.competition_id', '=', $competition_id)
+			->orderBy('year', 'DESC')
+			->get();
 	}
 
 	/**
@@ -21,7 +34,8 @@ class DbSeasonRepository implements SeasonRepositoryInterface {
 
 	public function find($id)
 	{
-		return Season::find($id);
+		$season = Season::find($id);
+		return $season;
 	}
 
 	/**
@@ -65,5 +79,10 @@ class DbSeasonRepository implements SeasonRepositoryInterface {
 		$season->save($season->toArray());
 
 		return $season;
+	}
+
+	public function getSeasonId($alias, $year)
+	{
+		return Season::getSeasonId($alias, $year);
 	}
 }

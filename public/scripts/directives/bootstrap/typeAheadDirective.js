@@ -1,1 +1,0 @@
-pennantsApp.directive('');

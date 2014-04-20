@@ -48,11 +48,19 @@
     .blg-text {
       line-height: 22px;
     }
-    .blg-text a > img {
-      width: 250px;
-      padding:10px;
-      margin:5px;
-      border: 1px solid #EEE;
+    .blg-text {
+      a {
+        img {
+          padding:10px;
+          margin:5px;
+          border: 1px solid #EEE;
+          .img-responsive {
+            display: block;
+            height: auto;
+            max-width: 100%;
+          }
+        }
+      }
     }
     margin-bottom: 50px;
     position:relative;

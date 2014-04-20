@@ -10,12 +10,12 @@
 						</a>
 					</h3>
 					<div class="timeline-info hidden-xs">
-			      <img src="img/client-2.jpg" class="blg-author" alt="...">
+						<img src="img/client-2.jpg" class="blg-author" alt="...">
 						<time datetime="{{ $post->getDate() }}" class="hidden-xs">{{ $post->getDate() }}</time>
 					</div>
 					<ul class="text-muted list-inline blg-header">
 				  	<li><i class="fa fa-user"></i> <a href="profile.html">Administrator</a></li>
-				  	<li><i class="fa fa-calendar"></i>{{ $post->getDate() }}</li>
+				  	<li><i class="fa fa-calendar"></i> {{ $post->getDate() }}</li>
 			    </ul>
 					<hr />
 					<p class="blg-text">
@@ -25,7 +25,7 @@
 							</a>
 						@elseif (!empty($post->main_image))
 							<a href="{{ $post->getUrl() }}" title="{{ $post->title }}">
-								{{ $post->getImage('main_image', 'thumbnail') }}
+								{{ $post->getImage('main_image', 'thumbnail', array('class' => 'img-responsive')) }}
 							</a>
 						@endif
 						{{ $post->summary }}

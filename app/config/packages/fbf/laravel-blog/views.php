@@ -11,7 +11,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'published_date_format' => 'M j, Y',
+	'published_date_format' => 'F j, Y',
 
 	/**
 	 * Configuration options for the index page

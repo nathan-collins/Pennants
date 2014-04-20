@@ -66,6 +66,11 @@ class PennantsServiceProvider extends ServiceProvider {
 			'Pennants\Rating\RatingRepositoryInterface',
 			'Pennants\Rating\DbRatingRepository'
 		);
+
+		$this->app->bind(
+			'Pennants\Competition\CompetitionRepositoryInterface',
+			'Pennants\Competition\DbCompetitionRepository'
+		);
 	}
 
 }

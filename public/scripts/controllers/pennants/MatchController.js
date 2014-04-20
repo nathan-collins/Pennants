@@ -13,11 +13,6 @@ pennantsApp.controller('MatchController', function($scope, $http, $cookies) {
   });
 
   $scope.hostId = hostId;
-
-  $scope.page =
-  {
-    title: 'Pennants - Matches'
-  }
 });
 
 pennantsApp.controller('AddMatchController', function($scope, $http, $cookies) {

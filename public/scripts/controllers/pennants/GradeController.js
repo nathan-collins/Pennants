@@ -26,7 +26,7 @@ pennantsApp.controller('GradeController',
         title: 'Pennants'
       }
 
-      $scope.store = function(gradeId) {
+      $scope.storeGrade = function(gradeId) {
         // Set the season we are using
         console.log(gradeId);
         $cookies.pennantsGrade = gradeId;

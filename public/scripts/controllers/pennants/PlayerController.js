@@ -14,11 +14,6 @@ pennantsApp.controller('PlayerController', function($scope, $http, $cookies, $ro
   });
 
   $scope.clubId = clubId;
-
-  $scope.page =
-  {
-    title: 'Pennants - Matches'
-  }
 })
 
 

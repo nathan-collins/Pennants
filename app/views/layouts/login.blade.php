@@ -10,9 +10,6 @@
 </head>
 <body>
 	<div class="row row-offcanvas-left">
-		<div class="col-xs-12 col-sm-12">
-		@include('partials.backend.header')
-		</div>
 		<!-- check for flash notification message -->
 		@if(Session::has('flash_notice'))
 			<div class="col-xs-12" id="flash" class="alert alert-notice">{{ Session::get('flash_notice') }}</div>

@@ -12,6 +12,7 @@ interface GradeRepositoryInterface {
 	public function find($id);
 	public function getWhere($rows);
 	public function update($id);
+	public function countGrades($seasonId);
 	public function delete($id);
 	public function create($data);
 }

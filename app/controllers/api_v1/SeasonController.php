@@ -45,6 +45,29 @@ class SeasonController extends BaseController {
 	}
 
 	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 *
+	 * @return mixed
+	 */
+
+	public function getGradeBySeason($season_id)
+	{
+		if(empty($season_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'season' => array('message' => "No season supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		$grade = $this->grade->getWhere(array('season_id' => $season_id));
+		$grade['totals'] = $this->grade->countGrades($season_id);
+
+		return $grade;
+	}
+
+	/**
 	 * Display the specified resource.
 	 *
 	 * @param  int  $id
@@ -95,5 +118,4 @@ class SeasonController extends BaseController {
 			'code' 	=> 200
 		));
 	}
-
 }
