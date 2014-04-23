@@ -10,9 +10,11 @@ module.exports = function (grunt) {
       },
       js_frontend: {
         src: [
+          './public/vendor/jquery/jquery.js',
           './public/vendor/angular/angular.js',
           './public/vendor/angular-sanitize/angular-sanitize.js',
-          './public/vendor/bootstrap/dist/bootstrap.js',
+          './public/vendor/angular-resource/angular-resource.js',
+          './public/vendor/angular-cookies/angular-cookies.js',
           './public/vendor/underscore/underscore.js',
           './public/vendor/modernizr/modernizr.js',
         ],
@@ -26,8 +28,7 @@ module.exports = function (grunt) {
           './public/vendor/angular-resource/angular-resource.js',
           './public/vendor/angular-cookies/angular-cookies.js',
           './public/vendor/underscore/underscore.js',
-          './public/vendor/modernizr/modernizr.js',
-          './public/vendor/underscore/underscore.js',
+          './public/vendor/modernizr/modernizr.js'
         ],
         dest: './public/assets/scripts/backend/core.js'
       }

@@ -375,7 +375,7 @@ class BelongsToMany extends Relation {
 	 *
 	 * @param  array   $models
 	 * @param  string  $relation
-	 * @return void
+	 * @return array
 	 */
 	public function initRelation(array $models, $relation)
 	{
@@ -556,17 +556,19 @@ class BelongsToMany extends Relation {
 	}
 
 	/**
-	 * Sync the intermediate tables with a list of IDs.
+	 * Sync the intermediate tables with a list of IDs or collection of models.
 	 *
-	 * @param  array  $ids
+	 * @param  $ids
 	 * @param  bool   $detaching
 	 * @return array
 	 */
-	public function sync(array $ids, $detaching = true)
+	public function sync($ids, $detaching = true)
 	{
 		$changes = array(
 			'attached' => array(), 'detached' => array(), 'updated' => array()
 		);
+
+		if ($ids instanceof Collection) $ids = $ids->modelKeys();
 
 		// First we need to attach any of the associated models that are not currently
 		// in this joining table. We'll spin through the given IDs, checking to see
@@ -698,7 +700,7 @@ class BelongsToMany extends Relation {
 	 * Create an array of records to insert into the pivot table.
 	 *
 	 * @param  array  $ids
-	 * @return void
+	 * @return array
 	 */
 	protected function createAttachRecords($ids, array $attributes)
 	{
@@ -783,7 +785,7 @@ class BelongsToMany extends Relation {
 	}
 
 	/**
-	 * Set the creation and update timstamps on an attach record.
+	 * Set the creation and update timestamps on an attach record.
 	 *
 	 * @param  array  $record
 	 * @param  bool   $exists
@@ -963,7 +965,7 @@ class BelongsToMany extends Relation {
 	}
 
 	/**
-	 * Get the key for comparing against the pareny key in "has" query.
+	 * Get the key for comparing against the parent key in "has" query.
 	 *
 	 * @return string
 	 */
@@ -993,7 +995,7 @@ class BelongsToMany extends Relation {
 	}
 
 	/**
-	 * Get the fully qualified parent key naem.
+	 * Get the fully qualified parent key name.
 	 *
 	 * @return string
 	 */

@@ -10,6 +10,7 @@ Sunshine Coast Golf
 @stop
 
 @section('footer_scripts')
+{{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
 {{ HTML::script('scripts/controllers/pennants/LeaderBoardController.js') }}
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 @stop

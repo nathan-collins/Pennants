@@ -17,7 +17,9 @@ class CreateRatingsTable extends Migration {
 			$table->integer('club_id');
 			$table->string('tee_name');
 			$table->string('tee_sex');
-			$table->text('ratings');
+			$table->smallInteger('par');
+			$table->smallInteger('scratch');
+			$table->smallInteger('slope');
 			$table->string('holes', 10)->nullable();
 			$table->timestamps();
 		});

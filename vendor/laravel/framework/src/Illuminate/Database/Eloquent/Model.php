@@ -399,6 +399,54 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	}
 
 	/**
+	 * Create a collection of models from plain arrays.
+	 *
+	 * @param  array  $items
+	 * @param  string  $connection
+	 * @return \Illuminate\Database\Eloquent\Collection
+	 */
+	public static function hydrate(array $items, $connection = null)
+	{
+		$collection = with($instance = new static)->newCollection();
+
+		foreach ($items as $item)
+		{
+			$model = $instance->newFromBuilder($item);
+
+			if ( ! is_null($connection))
+			{
+				$model->setConnection($connection);
+			}
+
+			$collection->push($model);
+		}
+
+		return $collection;
+	}
+
+	/**
+	 * Create a collection of models from a raw query.
+	 *
+	 * @param  string  $query
+	 * @param  array  $bindings
+	 * @param  string  $connection
+	 * @return \Illuminate\Database\Eloquent\Collection
+	 */
+	public static function hydrateRaw($query, $bindings = array(), $connection = null)
+	{
+		$instance = new static;
+
+		if ( ! is_null($connection))
+		{
+			$instance->setConnection($connection);
+		}
+
+		$items = $instance->getConnection()->select($query, $bindings);
+
+		return static::hydrate($items, $connection);
+	}
+
+	/**
 	 * Save a new model and return the instance.
 	 *
 	 * @param  array  $attributes
@@ -505,6 +553,22 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	}
 
 	/**
+	 * Find a model by its primary key.
+	 *
+	 * @param  mixed  $id
+	 * @param  array  $columns
+	 * @return \Illuminate\Database\Eloquent\Model|Collection|static
+	 */
+	public static function find($id, $columns = array('*'))
+	{
+		if (is_array($id) && empty($id)) return new Collection;
+
+		$instance = new static;
+
+		return $instance->newQuery()->find($id, $columns);
+	}
+
+	/**
 	 * Find a model by its primary key or return new static.
 	 *
 	 * @param  mixed  $id
@@ -516,6 +580,22 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 		if ( ! is_null($model = static::find($id, $columns))) return $model;
 
 		return new static($columns);
+	}
+
+	/**
+	 * Find a model by its primary key or throw an exception.
+	 *
+	 * @param  mixed  $id
+	 * @param  array  $columns
+	 * @return \Illuminate\Database\Eloquent\Model|Collection|static
+	 *
+	 * @throws ModelNotFoundException
+	 */
+	public static function findOrFail($id, $columns = array('*'))
+	{
+		if ( ! is_null($model = static::find($id, $columns))) return $model;
+
+		throw with(new ModelNotFoundException)->setModel(get_called_class());
 	}
 
 	/**
@@ -605,7 +685,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	{
 		// If no relation name was given, we will use this debug backtrace to extract
 		// the calling method's name and use that as the relationship name as most
-		// of the time this will be what we desire to use for the relatinoships.
+		// of the time this will be what we desire to use for the relationships.
 		if (is_null($relation))
 		{
 			list(, $caller) = debug_backtrace(false);
@@ -665,7 +745,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 			);
 		}
 
-		// If we are not eager loading the relatinship, we will essentially treat this
+		// If we are not eager loading the relationship we will essentially treat this
 		// as a belongs-to style relationship since morph-to extends that class and
 		// we will pass in the appropriate values so that it behaves as expected.
 		else
@@ -1257,7 +1337,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 
 		// To sync all of the relationships to the database, we will simply spin through
 		// the relationships and save each model via this "push" method, which allows
-		// us to recurse into all of these nested relations for the model instance.
+		// us to recurs into all of these nested relations for this model instance.
 		foreach ($this->relations as $models)
 		{
 			foreach (Collection::make($models) as $model)
@@ -1842,7 +1922,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	}
 
 	/**
-	 * Set the number of models ot return per page.
+	 * Set the number of models to return per page.
 	 *
 	 * @param  int   $perPage
 	 * @return void
@@ -2565,13 +2645,33 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 
 		foreach ($this->attributes as $key => $value)
 		{
-			if ( ! array_key_exists($key, $this->original) || $value !== $this->original[$key])
+			if ( ! array_key_exists($key, $this->original))
+			{
+				$dirty[$key] = $value;
+			}
+			elseif ($value !== $this->original[$key] &&
+                                 ! $this->originalIsNumericallyEquivalent($key))
 			{
 				$dirty[$key] = $value;
 			}
 		}
 
 		return $dirty;
+	}
+
+	/**
+	 * Determine if the new and old values for a given key are numerically equivalent.
+	 *
+	 * @param  string  $key
+	 * @return bool
+	 */
+	protected function originalIsNumericallyEquivalent($key)
+	{
+		$current = $this->attributes[$key];
+
+		$original = $this->original[$key];
+
+		return is_numeric($current) && is_numeric($original) && strcmp((string) $current, (string) $original) === 0;
 	}
 
 	/**
@@ -2807,7 +2907,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 * Determine if an attribute exists on the model.
 	 *
 	 * @param  string  $key
-	 * @return void
+	 * @return bool
 	 */
 	public function __isset($key)
 	{

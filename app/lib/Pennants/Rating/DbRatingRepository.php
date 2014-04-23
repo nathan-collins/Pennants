@@ -33,7 +33,7 @@ class DbRatingRepository implements RatingRepositoryInterface {
 	public function getWhere($rows)
 	{
 		foreach($rows as $column => $value) {
-			$rating = Rating::wheres($column, '=', $value);
+			$rating = Rating::where($column, '=', $value);
 		}
 		return $rating->get();
 	}

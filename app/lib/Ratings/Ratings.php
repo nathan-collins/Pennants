@@ -158,24 +158,15 @@ class Ratings {
 						break;
 				}
 
-				// Now we need to prepare json returned values
-				$course_rating = array(
-					'club_id' => $this->clubId,
-					'tee_name' => $rating[1],
-					'tee_sex' => $rating[2],
-					'par' => $rating[3],
-					'scratch' => $rating[4],
-					'holes' => $holes,
-					'slope' => $rating[5]
-
-				);
 				// other values that we need to filter on
 				$values = array(
 					'club_id' => $this->clubId,
 					'tee_name' => $rating[1],
 					'tee_sex' => $rating[2],
+					'par' => (int)$rating[3],
+					'scratch' => (int)$rating[4],
 					'holes' => $holes,
-					'ratings' => json_encode($course_rating)
+					'slope' => (int)$rating[5]
 				);
 
 				$ratings[] = $values;
@@ -201,7 +192,9 @@ class Ratings {
 					'club_id' => $rating['club_id'],
 					'tee_name' => $rating['tee_name'],
 					'tee_sex' => $rating['tee_sex'],
-					'ratings' => $rating['ratings'],
+					'par' => $rating['par'],
+					'scratch' => $rating['scratch'],
+					'slope' => $rating['slope'],
 					'holes' => $rating['holes']
 				);
 

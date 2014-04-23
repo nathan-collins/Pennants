@@ -9,8 +9,8 @@
 @stop
 
 @section('content')
-<div class="col-xs-12 col-md-12 col-lg-12 outer content-container">
-  <div class="jumbotron">
+<div class="col-md-6 content-container">
+  <div class="well well-lg">
     <div season-display></div>
 		<div grade-display></div>
   </div>

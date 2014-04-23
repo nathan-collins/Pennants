@@ -34,6 +34,8 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 	Route::resource('pennants/player', 'api_v1\PlayerController');
 	Route::get('pennants/player/season/{seasonId}/{gradeId}/{clubId}', 'api_v1\PlayerController@getPlayerBySeason');
 	Route::resource('pennants/team', 'api_v1\TeamController');
+	Route::resource('pennants/rating', 'api_v1\RatingController');
+	Route::get('pennants/rating/club/{clubId}', 'api_v1\RatingController@getRatingByClub');
 	Route::get('pennants/rating/fetch/{courseId}', 'api_v1\RatingController@fetchRatings');
 });
 

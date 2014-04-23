@@ -23,6 +23,7 @@
 				<tabset>
 					<tab heading="Draw">@include('pennants.tabs.match.match')</tab>
 					<tab heading="Players">@include('pennants.tabs.player.player')</tab>
+					<tab heading="Ratings">@include('pennants.tabs.club.ratings')</tab>
 				</tabset>
 			</div>
 		</div>

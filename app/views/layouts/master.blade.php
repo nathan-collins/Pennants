@@ -8,9 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	{{ HTML::style('assets/styles/backend/bootstrap.css') }}
+	{{ HTML::style('assets/styles/frontend/bootstrap.css') }}
 	{{ HTML::style('assets/styles/backend/font-awesome.css') }}
-	{{ HTML::style('assets/styles/backend/core.css') }}
+	{{ HTML::style('assets/styles/frontend/core.css') }}
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	@section('header_scripts')

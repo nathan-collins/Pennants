@@ -4,7 +4,7 @@ use Magniloquent\Magniloquent\Magniloquent;
 
 class Rating extends Magniloquent
 {
-	protected $fillable = array('club_id', 'tee_name', 'tee_sex', 'ratings', 'holes');
+	protected $fillable = array('club_id', 'tee_name', 'tee_sex', 'par', 'holes', 'holes', 'scratch', 'slope');
 
 	public static $rules = array(
 		"save" => array(

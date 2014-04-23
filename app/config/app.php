@@ -109,8 +109,8 @@ return array(
 		'Way\Generators\GeneratorsServiceProvider',
 		'Pennants\PennantsServiceProvider',
 		'Laracasts\Utilities\UtilitiesServiceProvider',
-		'Fbf\LaravelBlog\LaravelBlogServiceProvider'
-
+		'Fbf\LaravelBlog\LaravelBlogServiceProvider',
+		'Mj\Breadcrumb\BreadcrumbServiceProvider'
 	),
 
 	/*
@@ -176,6 +176,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'Breadcrumb' 			=> 'Mj\Breadcrumb\Facades\breadcrumb'
 	),
 
 );

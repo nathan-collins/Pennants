@@ -13,8 +13,36 @@ class RatingController extends \BaseController {
 		$this->rating = $rating;
 	}
 
+	/**
+	 * @param $clubId
+	 */
+
+	public function index()
+	{
+		$ratings = $this->rating->all();
+
+		return $ratings;
+	}
+
+	public function getRatingByClub($club_id)
+	{
+		if(empty($club_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'rating' => array('message' => "No club supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		$ratings = $this->rating->getWhere(array('club_id' => $club_id));
+
+		return $ratings;
+	}
+
 	public function fetchRatings($clubId)
 	{
+		$this->doSomething($clubId);
+
 		return \View::make('api.rating.fetch');
 	}
 

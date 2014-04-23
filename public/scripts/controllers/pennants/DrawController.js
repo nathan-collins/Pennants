@@ -88,3 +88,9 @@ pennantsApp.controller('PlayerController', function($scope, $http, $cookies)
 
   $scope.clubId = clubId;
 });
+
+pennantsApp.controller('ClubRatings', function($scope, $http) {
+  $http.get('/api/v1/pennants/rating/club/'+Pennants.clubId).success(function(ratings) {
+    $scope.ratings = ratings;
+  });
+});
