@@ -106,6 +106,10 @@ module.exports = function (grunt) {
           [
             './public/styles/less/season/season.less'
           ],
+          './public/assets/styles/backend/player/player.css':
+          [
+            './public/styles/less/player/player.less'
+          ],
           './public/assets/styles/backend/grade/grade.css':
           [
             './public/styles/less/grade/grade.less'

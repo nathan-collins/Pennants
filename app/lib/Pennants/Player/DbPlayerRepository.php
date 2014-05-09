@@ -16,7 +16,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function all()
 	{
-		return Player::has('player_seasons')->get();
+		return Player::get()->player_season;
 	}
 
 	/**
@@ -27,20 +27,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function find($id)
 	{
-		return Player::find($id);
-	}
-
-	/**
-	 * @param $rows
-	 *
-	 * @return mixed
-	 */
-
-	public function getWhere($rows)
-	{
-		foreach($rows as $column => $value) {
-			return Player::where($column, $value)->get();
-		}
+		return Player::find($id)->player_season;
 	}
 
 	/**
@@ -82,13 +69,13 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	 * @return Players
 	 */
 
-	public function create($player_season_data)
+	public function create($data)
 	{
 		$player_data = array(
-			'name' => $player_season_data['name'],
+			'name' => $data['name'],
 		);
 
-		unset($player_season_data['name']);
+		unset($data['name']);
 
 		$player = new Player($player_data);
 
@@ -96,7 +83,16 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 		$player->save($player->toArray());
 
-		$player_season = new \PlayerSeason($player_season_data);
+		$player_season_data = array(
+			'player_id' 				=> $player->id,
+			'season_id' 				=> $data['season_id'],
+			'club_id' 					=> $data['club_id'],
+			'grade_id'		 			=> $data['grade_id'],
+			'golf_link_number' 	=> $data['golf_link_number'],
+			'handicap' 					=> $data['handicap']
+		);
+
+		$player_season = new PlayerSeason($player_season_data);
 		$player_season->save($player_season->toArray());
 
 		return $player;

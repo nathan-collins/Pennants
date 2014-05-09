@@ -23,6 +23,7 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 	Route::resource('pennants/grade', 'api_v1\GradeController');
 	Route::get('pennants/grade/season/{seasonId}', 'api_v1\GradeController@getSeasons');
 	Route::resource('pennants/club', 'api_v1\ClubController');
+	Route::get('pennants/club/status/{status}/{clubId}', 'api_v1\ClubController@updateStatus');
 	Route::get('pennants/club/season/{seasonId}/{gradeId}', 'api_v1\ClubController@getClubBySeason');
 	Route::resource('pennants/game', 'api_v1\GameController');
 	Route::get('pennants/game/season/{seasonId}/{gradeId}', 'api_v1\GameController@getGameBySeason');
@@ -46,9 +47,8 @@ Route::group(array('prefix' => 'dashboard', 'before' => 'auth'), function()
 	Route::get('pennants/season/add', 'dashboard\pennants\SeasonController@addSeason');
 	Route::get('pennants/grade', 'dashboard\pennants\GradeController@showGrade');
 	Route::get('pennants/draws', 'dashboard\pennants\DrawController@showDraw');
-	Route::get('pennants/club/{clubId}', 'dashboard\pennants\ClubController@showClub');
-
 	Route::get('pennants/club/add', 'dashboard\pennants\ClubController@addClub');
+	Route::get('pennants/club/{clubId}', 'dashboard\pennants\ClubController@showClub');
 
 	Route::get('pennants/game/add', 'dashboard\pennants\GameController@addGame');
 	Route::get('pennants/player/{clubId}', 'dashboard\pennants\PlayerController@showPlayer');

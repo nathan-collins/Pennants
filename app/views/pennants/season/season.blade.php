@@ -33,11 +33,10 @@ Pennants Seasons
 			</div>
 			<div class="widget-content">
 				<div class="knowledge" ng-repeat="(year, seasons) in groups">
-					<h3><% year %></h3>
 					<ul class="list-unstyled">
 						<li ng-repeat="season in seasons">
 							<i class="fa fa-th-list pull-left"></i>
-							<a ng-href="grade" ng-click="storeSeason(season.season_id)"><% season.name %><span class="badge element-bg-color-green pull-right"><% season.totals %></span></a>
+							<a ng-href="grade" ng-click="storeSeason(season.season_id)"><% season.name %> (<% year %>) <span class="badge element-bg-color-green pull-right"><% season.totals %></span></a>
 						</li>
 					</ul>
 				</div>

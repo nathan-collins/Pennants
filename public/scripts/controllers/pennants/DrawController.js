@@ -89,6 +89,21 @@ pennantsApp.controller('PlayerController', function($scope, $http, $cookies)
   $scope.clubId = clubId;
 });
 
+pennantsApp.config(function($httpProvider) {
+  $httpProvider.interceptors.push(function($q, $rootScope) {
+    return {
+      'request': function(config) {
+        $rootScope.$broadcast('loading-started');
+        return config || $q.when(config);
+      },
+      'response': function(response) {
+        $rootScope.$broadcast('loading-complete');
+        return response || $q.when(response);
+      }
+    }
+  })
+});
+
 pennantsApp.controller('ClubRatings', function($scope, $http) {
   $http.get('/api/v1/pennants/rating/club/'+Pennants.clubId).success(function(ratings) {
     $scope.ratings = ratings;

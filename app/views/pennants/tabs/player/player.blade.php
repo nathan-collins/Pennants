@@ -14,6 +14,8 @@
 			<table class="table-condensed message-table" width="100%">
 				<tr ng-repeat="player in players">
 					<td width="100px"><% player.name %></td>
+					<td width="100px"><% player.golf_link_number %></td>
+					<td width="100px"><% player.handicap %></td>
 					<td width="60px">
 						<a ng-href="dashboard/pennants/player/<% player.id %>">
 							<button type="button" class="btn btn-default btn-sm">
@@ -22,7 +24,7 @@
 						</a>
 					</td>
 				</tr>
-				<p ng-show="!matches.length">No players for this club</p>
+				<p ng-show="!players.length">No players for this club</p>
 			</table>
 		</div>
 	</div>

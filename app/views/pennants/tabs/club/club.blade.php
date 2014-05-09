@@ -14,11 +14,6 @@
 			<table class="table-condensed message-table" width="100%">
 				<tr ng-repeat="club in clubs">
 					<td><a ng-href="/dashboard/pennants/club/<% club.id %>"><% club.name %></a></td>
-					<td>
-						<button type="button" class="btn btn-default btn-sm pull-right"  ng-click="launch(club.id)">
-							<span class="glyphicon glyphicon-th-list"></span>
-						</button>
-					</td>
 				</tr>
 			</table>
 		</div>

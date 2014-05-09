@@ -27,15 +27,37 @@ pennantsApp.controller('AddClubController', function($scope, $http, $cookies, $l
     $location.path('/dashboard/pennants/grade')
   }
 
-
   $scope.addClub = function(club) {
+
+    if(_.isUndefined(club)) {
+      var club = {};
+    }
 
     club.season_id = seasonId;
     club.grade_id = gradeId;
 
-    $http.post('/api/v1/pennants/club', club).success(function() {
+    $http.post('/api/v1/pennants/club', club).success(function(data) {
+
+      $scope.data = data;
+      $scope.loading = true;
+
       $scope.reset();
-      $scope.activePath = $location.path('/dashboard/pennants/draws')
+    }).error(function(data, status, headers, config) {
+      // This will display the error messages
+    }).then(function( response ) {
+      $http.get('/api/v1/pennants/rating/fetch/'+$scope.data.club.id).success(function(data) {
+        if(data.code == 200) {
+          $scope.loading = false;
+          alert("Seemed to work");
+        } else {
+          $scope.loading = false;
+          alert("Something wrong");
+        }
+      }).error(function() {
+        $http.get('/api/v1/pennants/club/status/disabled/'+$scope.data.club.id).success(function() {
+          alert('Club Disabled');
+        });
+      });
     });
 
     $scope.reset = function() {

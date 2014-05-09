@@ -4,4 +4,5 @@
 interface PlayerSeasonRepositoryInterface {
 	public function all();
 	public function find($id);
+	public function getPlayerByParams($season_id, $grade_id, $club_id);
 }

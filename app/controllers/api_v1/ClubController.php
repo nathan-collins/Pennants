@@ -40,15 +40,32 @@ class ClubController extends \BaseController {
 	 */
 	public function store()
 	{
+
+
 		$s = $this->club->create(\Input::all());
 
 		if($s->isSaved()) {
-			return \Redirect::route('api.v1.pennants.club.index')
-				->with('flash', 'A new season has been created');
+			return \Response::json(array(
+				'code' => 201,
+				'club' => $s->toArray(),
+				'error' => false
+			));
+		} else {
+			$response = $s->errors();
+			if(!$s->isValid()) {
+				return \Response::json(array(
+					'code' => 400,
+					'message' => $response,
+					'error' => true
+				));
+			}
+			// this has been updated
+			return \Response::json(array(
+				'code' => 202,
+				'club' => $s->toArray(),
+				'error' => false
+			));
 		}
-		return \Redirect::route('api.v1.pennants.club.create')
-			->withInput()
-			->withErrors($s->errors());
 	}
 
 	/**
@@ -76,7 +93,7 @@ class ClubController extends \BaseController {
 			));
 		}
 
-		$club = $this->club->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id));
+		$club = $this->club->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id, 'active' => 'Y'));
 
 		return $club;
 	}
@@ -116,6 +133,26 @@ class ClubController extends \BaseController {
 	public function update($id)
 	{
 		$s = $this->club->update($id);
+
+		if($s->isSaved()) {
+			return \Redirect::route('api.v1.pennants.club.show', $id)
+				->with('flash', 'The grade was updated');
+		}
+
+		return \Redirect::route('api.v1.pennants.club.edit', $id)
+			->withInput()
+			->withErrors($s->errors());
+	}
+
+	/**
+	 * Enable/Disable the clubs status
+	 *
+	 * @param $status
+	 * @param $id
+	 */
+
+	public function updateStatus($status, $id) {
+		$s = $this->club->updateStatus($status, $id);
 
 		if($s->isSaved()) {
 			return \Redirect::route('api.v1.pennants.club.show', $id)

@@ -33,6 +33,11 @@ class PennantsServiceProvider extends ServiceProvider {
 		);
 
 		$this->app->bind(
+			'Pennants\PlayerSeason\PlayerSeasonRepositoryInterface',
+			'Pennants\PlayerSeason\DbPlayerSeasonRepository'
+		);
+
+		$this->app->bind(
 			'Pennants\PlayersResult\PlayerResultRepositoryInterface',
 			'Pennants\PlayersResult\DbPlayerResultRepository'
 		);

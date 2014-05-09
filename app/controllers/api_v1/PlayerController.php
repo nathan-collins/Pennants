@@ -1,14 +1,16 @@
 <?php namespace api_v1;
 
+use Pennants\PlayerSeason\PlayerSeasonRepositoryInterface;
 use Pennants\Player\PlayerRepositoryInterface;
 
 class PlayerController extends \BaseController {
 
 	protected $player;
 
-	public function __construct(PlayerRepositoryInterface $player)
+	public function __construct(PlayerRepositoryInterface $player, PlayerSeasonRepositoryInterface $player_season)
 	{
 		$this->player = $player;
+		$this->player_season = $player_season;
 	}
 
 	/**
@@ -47,6 +49,7 @@ class PlayerController extends \BaseController {
 		$s = $this->player->create(\Input::all());
 
 		if($s->isSaved()) {
+
 			return \Redirect::route('api.v1.pennants.player.index')
 				->with('flash', 'A new season has been created');
 		}
@@ -89,7 +92,7 @@ class PlayerController extends \BaseController {
 			));
 		}
 
-		$player = $this->player->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id, 'club_id' => $club_id));
+		$player = $this->player_season->getPlayerByParams($season_id, $grade_id, $club_id)->get();
 
 		return $player;
 	}

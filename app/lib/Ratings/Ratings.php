@@ -11,6 +11,15 @@ class Ratings {
 	protected $position;
 	protected $clubId;
 
+	/**
+	 * @param $courseName
+	 * @param $state
+	 * @param $clubId
+	 * @param RatingRepositoryInterface $rating
+	 * @param ClubRepositoryInterface $club
+	 * @param null $position
+	 */
+
 	public function __construct($courseName, $state, $clubId, RatingRepositoryInterface $rating, ClubRepositoryInterface $club, $position = null)
 	{
 		$this->state = $state;
@@ -21,6 +30,10 @@ class Ratings {
 		$this->rating = $rating;
 		$this->clubId = $clubId;
 	}
+
+	/**
+	 * @return Crawler
+	 */
 
 	protected function connection()
 	{
@@ -37,18 +50,23 @@ class Ratings {
 	public function checkCourse()
 	{
 		$crawler = $this->connection();
+		// Get a list of all of the courses.
 		$courses = $crawler->filter('tr.rowheader td:first-child')->each(function($node) {
 			return $node->text();
 		});
+		// Match the course named to one in the list.
 		if(in_array($this->courseName, $courses)) {
+			// If course is found in the list, lets tell the system the position it is found in the list
 			$this->position = $this->setPosition($courses);
 			$course = $this->courseName;
 		} else {
+
 			$courses_found = $this->modifyCourse($courses, $this->clubId);
-			if(count($courses_found) > 1) {
+			if($courses_found) {
 				$course = $this->checkCourses($courses_found, $this->clubId);
 			} else {
-				return $courses_found;
+				// Return a message the no course could be located
+				return false;
 			}
 		}
 		return $course;
@@ -72,6 +90,16 @@ class Ratings {
 		}
 
 		$course = $this->checkCourses($courses_found);
+
+		// The course returned, has it already been added and exists in the database
+		if(!empty($course)) {
+			$course_exists = Club::name($course)->active('N')->first();
+			if($course_exists) {
+				// Lets active the site
+				$this->club->updateStatus('active', $course_exists->id);
+			}
+		}
+
 		return $course;
 	}
 
@@ -110,9 +138,12 @@ class Ratings {
 			}
 		}
 
-		$this->club->updateName($courses_found[0], $this->clubId);
-		// If we hit this point, lets update the courses name so it matches for future checks.
-		return $courses_found[0];
+		if(count($courses_found) > 0) {
+			// If we hit this point, lets update the courses name so it matches for future checks.
+			$this->club->updateName($courses_found[$this->position], $this->clubId);
+			return $courses_found[$this->position];
+		}
+		return false;
 	}
 
 	/**
@@ -189,13 +220,13 @@ class Ratings {
 				$check_rating = $this->rating->getRating($rating['tee_name'], $rating['tee_sex'], $rating['club_id'], $rating['holes']);
 
 				$values = array(
-					'club_id' => $rating['club_id'],
-					'tee_name' => $rating['tee_name'],
-					'tee_sex' => $rating['tee_sex'],
-					'par' => $rating['par'],
-					'scratch' => $rating['scratch'],
-					'slope' => $rating['slope'],
-					'holes' => $rating['holes']
+					'club_id' 	=> $rating['club_id'],
+					'tee_name' 	=> $rating['tee_name'],
+					'tee_sex' 	=> $rating['tee_sex'],
+					'par' 			=> (int)$rating['par'],
+					'scratch' 	=> (int)$rating['scratch'],
+					'slope' 		=> (int)$rating['slope'],
+					'holes' 		=> $rating['holes']
 				);
 
 				if(count($check_rating) == 0) {
@@ -204,13 +235,24 @@ class Ratings {
 						$action[] = $inserted;
 					}
 				} else {
-					$old_payload = json_decode($check_rating[0]->ratings);
-					$new_payload = json_decode($rating['ratings']);
-					$difference = array_diff_assoc((array)$old_payload, (array)$new_payload);
-					if(count($difference) > 0) {
-						$updated = $this->rating->update($values, $check_rating->id);
-						if($updated) {
-							$action[] = $updated;
+					if($check_rating) {
+						foreach($check_rating as $rating) {
+							$check = array(
+								'club_id' 	=> $rating->club_id,
+								'par' 			=> (int)$rating->par,
+								'tee_name' 	=> $rating->tee_name,
+								'tee_sex' 	=> $rating->tee_sex,
+								'holes' 		=> $rating->holes,
+								'scratch' 	=> (int)$rating->scratch,
+								'slope' 		=> (int)$rating->slope
+							);
+
+							if(array_diff_assoc($values, $check)) {
+								$updated = $this->rating->update($values, $rating->id);
+								if($updated) {
+									$action[] = $updated;
+								}
+							}
 						}
 					}
 				}

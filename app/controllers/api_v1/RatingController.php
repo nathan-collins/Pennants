@@ -14,7 +14,7 @@ class RatingController extends \BaseController {
 	}
 
 	/**
-	 * @param $clubId
+	 * @return mixed
 	 */
 
 	public function index()
@@ -41,9 +41,21 @@ class RatingController extends \BaseController {
 
 	public function fetchRatings($clubId)
 	{
-		$this->doSomething($clubId);
+		$data = $this->doSomething($clubId);
 
-		return \View::make('api.rating.fetch');
+		if(!$data) {
+			return \Response::json(array(
+				'error' => true,
+				'message' => "The course you entered could not be found.",
+				'code' 	=> 400
+			));
+		} else {
+			return \Response::json(array(
+				'error' => false,
+				'message' => "The course you entered was successfully added.",
+				'code' 	=> 200
+			));
+		}
 	}
 
 	public function doSomething($clubId)
@@ -53,8 +65,10 @@ class RatingController extends \BaseController {
 		$ratings = new Ratings($club->name, $state = "QLD", $clubId, $this->rating, $this->club);
 		$course = $ratings->checkCourse();
 
-		$total_ratings = $ratings->getRatings();
-
-//		$rating = $this->rating->where('club_id', '=', $clubId)->get();
+		if(!empty($course)) {
+			$total_ratings = $ratings->getRatings();
+		} else {
+			return false;
+		}
 	}
 }

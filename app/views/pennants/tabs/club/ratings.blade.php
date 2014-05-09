@@ -30,5 +30,6 @@
 				</tr>
 			</table>
 		</div>
+		<div loading-indicator></div>
 	</div>
 </section>
