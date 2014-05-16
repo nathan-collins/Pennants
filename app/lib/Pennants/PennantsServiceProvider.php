@@ -8,6 +8,11 @@ class PennantsServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->app->bind(
+			'Pennants\Competition\CompetitionRepositoryInterface',
+			'Pennants\Competition\DbCompetitionRepository'
+		);
+
+		$this->app->bind(
 			'Pennants\Season\SeasonRepositoryInterface',
 			'Pennants\Season\DbSeasonRepository'
 		);
@@ -70,11 +75,6 @@ class PennantsServiceProvider extends ServiceProvider {
 		$this->app->bind(
 			'Pennants\Rating\RatingRepositoryInterface',
 			'Pennants\Rating\DbRatingRepository'
-		);
-
-		$this->app->bind(
-			'Pennants\Competition\CompetitionRepositoryInterface',
-			'Pennants\Competition\DbCompetitionRepository'
 		);
 	}
 

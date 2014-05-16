@@ -24,7 +24,7 @@ class Club extends Magniloquent {
 	);
 
 	protected static $relationships = array(
-		'region' => array('belongsTo', 'Season', 'season_id'),
+		'season' => array('belongsTo', 'Season', 'season_id'),
 		'grade' => array('belongsTo', 'Grade', 'grade_id')
 	);
 
@@ -33,7 +33,7 @@ class Club extends Magniloquent {
 	 * @param $name
 	 * @return mixed
 	 */
-	public function scopeName($query, $name)
+	public function scopeGetName($query, $name)
 	{
 		return $query->where('name', '=', $name);
 	}
@@ -43,7 +43,7 @@ class Club extends Magniloquent {
 	 * @param $season_id
 	 * @return mixed
 	 */
-	public function scopeSeason($query, $season_id)
+	public function scopeGetSeason($query, $season_id)
 	{
 		return $query->where('season_id', '=', $season_id);
 	}
@@ -53,7 +53,7 @@ class Club extends Magniloquent {
 	 * @param $grade_id
 	 * @return mixed
 	 */
-	public function scopeGrade($query, $grade_id)
+	public function scopeGetGrade($query, $grade_id)
 	{
 		return $query->where('grade_id', '=', $grade_id);
 	}
@@ -62,7 +62,7 @@ class Club extends Magniloquent {
 	 * @param $query
 	 * @param $status
 	 */
-	public function scopeActive($query, $status ){
+	public function scopeGetActive($query, $status ){
 		return $query->where('active', '=', $status);
 	}
 }

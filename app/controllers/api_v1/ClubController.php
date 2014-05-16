@@ -93,7 +93,7 @@ class ClubController extends \BaseController {
 			));
 		}
 
-		$club = $this->club->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id, 'active' => 'Y'));
+		$club = $this->club->getActiveClubs($season_id, $grade_id)->get();
 
 		return $club;
 	}

@@ -5,7 +5,6 @@
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
-{{ HTML::script('scripts/directives/bootstrap/tabsDirective.js') }}
 @stop
 
 @section('content')

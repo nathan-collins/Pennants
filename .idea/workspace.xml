@@ -8,37 +8,320 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790a44c-7887-41dd-8045-4b4079a8362c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/directives/loadingDirective.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/styles/less/player/player.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pennants/modal/club/rating_log.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/api_v1/CompetitionController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/GolfLink/GolfLink.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/AbstractHasDispatcher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/Collection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/Event.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/Exception/BadMethodCallException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/Exception/ExceptionCollection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/Exception/GuzzleException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/Exception/InvalidArgumentException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/Exception/RuntimeException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/Exception/UnexpectedValueException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/FromConfigInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/HasDispatcherInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/ToArrayInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/Version.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/common/Guzzle/Common/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/AbstractEntityBodyDecorator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/CachingEntityBody.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/ClientInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Curl/CurlHandle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Curl/CurlMulti.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Curl/CurlMultiInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Curl/CurlMultiProxy.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Curl/CurlVersion.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Curl/RequestMediator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/EntityBody.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/EntityBodyInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Exception/BadResponseException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Exception/ClientErrorResponseException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Exception/CouldNotRewindStreamException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Exception/CurlException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Exception/HttpException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Exception/MultiTransferException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Exception/RequestException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Exception/ServerErrorResponseException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Exception/TooManyRedirectsException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/IoEmittingEntityBody.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/AbstractMessage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/EntityEnclosingRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/EntityEnclosingRequestInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/Header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/Header/CacheControl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/Header/HeaderCollection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/Header/HeaderFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/Header/HeaderFactoryInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/Header/HeaderInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/Header/Link.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/MessageInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/PostFile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/PostFileInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/Request.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/RequestFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/RequestFactoryInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/RequestInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Message/Response.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Mimetypes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/QueryAggregator/CommaAggregator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/QueryAggregator/DuplicateAggregator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/QueryAggregator/PhpAggregator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/QueryAggregator/QueryAggregatorInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/QueryString.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/ReadLimitEntityBody.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/RedirectPlugin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Resources/cacert.pem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Resources/cacert.pem.md5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/StaticClient.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Url.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/Cookie/CookieParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/Cookie/CookieParserInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/Message/AbstractMessageParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/Message/MessageParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/Message/MessageParserInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/Message/PeclHttpMessageParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/ParserRegistry.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/UriTemplate/PeclUriTemplate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/UriTemplate/UriTemplate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/UriTemplate/UriTemplateInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/Url/UrlParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/Url/UrlParserInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/parser/Guzzle/Parser/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/stream/Guzzle/Stream/PhpStreamRequestFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/stream/Guzzle/Stream/Stream.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/stream/Guzzle/Stream/StreamInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/stream/Guzzle/Stream/StreamRequestFactoryInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzle/stream/Guzzle/Stream/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/README.git" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/build.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/create_pear_package.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/package.xml.tpl" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/.gitignore" afterPath="$PROJECT_DIR$/vendor/laravel/framework/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/.travis.yml" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/.travis.yml" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/File/ASN1.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/File/ASN1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/AbstractFilterableInputStream.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/AbstractFilterableInputStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/AbstractHeader.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/AbstractHeader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/AbstractProcessTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Tests/AbstractProcessTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Voter/AclVoter.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Voter/AclVoter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Voter/AclVoterTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Voter/AclVoterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/AntiFloodPlugin.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/AntiFloodPlugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Application.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Application.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/ApplicationTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/ApplicationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/ArrayByteStream.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/ArrayByteStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream/ArrayCharacterStream.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream/ArrayCharacterStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/ArrayKeyCache.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/ArrayKeyCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/ArrayRecipientIterator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/ArrayRecipientIterator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Attachment.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Attachment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Authenticator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Authenticator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/Base64ContentEncoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/Base64ContentEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/Base64Encoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/Base64Encoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/BeanstalkdQueue.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/BeanstalkdQueue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Math/BigInteger.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Math/BigInteger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/BinaryFileResponse.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/BinaryFileResponse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/patchwork/utf8/class/Patchwork/Utf8/Bootup.php" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/class/Patchwork/Utf8/Bootup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/BufferHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/BufferHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/ByteArrayReplacementFilter.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/ByteArrayReplacementFilter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mockery/mockery/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/mockery/mockery/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/patchwork/utf8/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/patchwork/utf8/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/CHANGELOG.mdown" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/CHANGELOG.mdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/CHANGES" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/CHANGES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/vendor/laravel/framework/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Carbon.php" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Carbon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/ChromePHPHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/ChromePHPHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/ChromePHPHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/ChromePHPHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/Goutte/Client.php" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/Goutte/Client.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/Goutte/Tests/ClientTest.php" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/Goutte/Tests/ClientTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Club.php" afterPath="$PROJECT_DIR$/app/models/Club.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_v1/ClubController.php" afterPath="$PROJECT_DIR$/app/controllers/api_v1/ClubController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Competition.php" afterPath="$PROJECT_DIR$/app/models/Competition.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Competition/CompetitionRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Competition/CompetitionRepositoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/ConfigPublisher.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/ConfigPublisher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ConfigurableSpool.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ConfigurableSpool.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/ConstructTest.php" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/ConstructTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Cookie.php" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Cookie.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Tests/CookieTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Tests/CookieTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/CramMd5Authenticator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/CramMd5Authenticator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DKIMSigner.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DKIMSigner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/DateHeader.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/DateHeader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" afterPath="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Competition/DbCompetitionRepository.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Competition/DbCompetitionRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/DependencyContainer.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/DependencyContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/DiskKeyCache.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/DiskKeyCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DomainKeySigner.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DomainKeySigner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/EchoLogger.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/EchoLogger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/EmbeddedFile.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/EmbeddedFile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Encryption/Encrypter.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Encryption/Encrypter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Pagination/Environment.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Pagination/Environment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/debug/Symfony/Component/Debug/ErrorHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/debug/Symfony/Component/Debug/ErrorHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/debug/Symfony/Component/Debug/Tests/ErrorHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/debug/Symfony/Component/Debug/Tests/ErrorHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpHandler.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/Event.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventDispatcher.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventDispatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventObject.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventObject.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mockery/mockery/library/Mockery/Expectation.php" afterPath="$PROJECT_DIR$/vendor/mockery/mockery/library/Mockery/Expectation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mockery/mockery/tests/Mockery/ExpectationTest.php" afterPath="$PROJECT_DIR$/vendor/mockery/mockery/tests/Mockery/ExpectationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zizaco/factory-muff/src/Zizaco/FactoryMuff/FactoryMuff.php" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/src/Zizaco/FactoryMuff/FactoryMuff.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zizaco/factory-muff/tests/FactoryMuffTest.php" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/tests/FactoryMuffTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/FileByteStream.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/FileByteStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/FileSpool.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/FileSpool.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/finder/Symfony/Component/Finder/Finder.php" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Symfony/Component/Finder/Finder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/FirePHPHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/FirePHPHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/FirePHPHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/FirePHPHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/FormatterHelperTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Tests/Helper/FormatterHelperTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/GenericFixedWidthReader.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/GenericFixedWidthReader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/pennants/GradeController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/pennants/GradeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Guard.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Guard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Header.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderFactory.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderSet.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderSet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/Helper.php" afterPath="$PROJECT_DIR$/vendor/symfony/console/Symfony/Component/Console/Helper/Helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HitReporter.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HitReporter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpCache/HttpCache.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpCache/HttpCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/HttpCacheTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/HttpCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/IcuResFileDumperTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/Dumper/IcuResFileDumperTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/InputByteStream.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/InputByteStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Math/BigInteger/InternalTest.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Math/BigInteger/InternalTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/IoBuffer.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/IoBuffer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Kernel.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/LoadBalancedTransport.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/LoadBalancedTransport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/LogEntriesHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/LogEntriesHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/LogEntriesHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/LogEntriesHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Logger.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Logger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/MailInvoker.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/MailInvoker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/MailboxHeader.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/MailboxHeader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Capsule/Manager.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Capsule/Manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Manager.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/MemcachedStore.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/MemcachedStore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Processor/MemoryProcessor.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Processor/MemoryProcessor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MemorySpool.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MemorySpool.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Message.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Message.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/MessageLogger.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/MessageLogger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/MimePart.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/MimePart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mockery/mockery/library/Mockery/Mock.php" afterPath="$PROJECT_DIR$/vendor/mockery/mockery/library/Mockery/Mock.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mockery/mockery/library/Mockery/MockInterface.php" afterPath="$PROJECT_DIR$/vendor/mockery/mockery/library/Mockery/MockInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mockery/mockery/tests/Mockery/MockTest.php" afterPath="$PROJECT_DIR$/vendor/mockery/mockery/tests/Mockery/MockTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphTo.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphTo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/NTLMAuthenticator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/NTLMAuthenticator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream/NgCharacterStream.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream/NgCharacterStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/NullKeyCache.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/NullKeyCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/NullTransport.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/NullTransport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/OpenDKIMSigner.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/OpenDKIMSigner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/OutputByteStream.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/OutputByteStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/ParameterizedHeader.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/ParameterizedHeader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/PennantsServiceProvider.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/PennantsServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Player.php" afterPath="$PROJECT_DIR$/app/models/Player.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_v1/PlayerController.php" afterPath="$PROJECT_DIR$/app/controllers/api_v1/PlayerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/Player/PlayerRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/Player/PlayerRepositoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/PlayerSeason.php" afterPath="$PROJECT_DIR$/app/models/PlayerSeason.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php" afterPath="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_v1/RatingController.php" afterPath="$PROJECT_DIR$/app/controllers/api_v1/RatingController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/PlainAuthenticator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/PlainAuthenticator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/PoFileLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Loader/PoFileLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/PopBeforeSmtpPlugin.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/PopBeforeSmtpPlugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Preferences.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Preferences.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Process.php" afterPath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/Process.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/ProcessBuilder.php" afterPath="$PROJECT_DIR$/vendor/symfony/process/Symfony/Component/Process/ProcessBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/PushoverHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/PushoverHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/QpEncoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/QpEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/QpHeaderEncoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/QpHeaderEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mockery/mockery/README.md" afterPath="$PROJECT_DIR$/vendor/mockery/mockery/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zizaco/factory-muff/README.md" afterPath="$PROJECT_DIR$/vendor/zizaco/factory-muff/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/README.rst" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/RSA.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/RSA.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Ratings/Ratings.php" afterPath="$PROJECT_DIR$/app/lib/Ratings/Ratings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/RavenHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/RavenHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/RecipientIterator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/RecipientIterator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/finder/Symfony/Component/Finder/Iterator/RecursiveDirectoryIterator.php" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Symfony/Component/Finder/Iterator/RecursiveDirectoryIterator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporter.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/Repository.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/Repository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Request.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/ResponseEvent.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/ResponseEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/Rfc2231Encoder.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/Rfc2231Encoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/RotatingFileHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/RotatingFileHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Symfony/Component/Routing/Annotation/Route.php" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Symfony/Component/Routing/Annotation/Route.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/SMimeSigner.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/SMimeSigner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Season.php" afterPath="$PROJECT_DIR$/app/models/Season.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_v1/SeasonController.php" afterPath="$PROJECT_DIR$/app/controllers/api_v1/SeasonController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SendEvent.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SendEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SimpleEventDispatcher.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SimpleEventDispatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/SimpleFormAuthenticationListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/SimpleFormAuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderFactory.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderSet.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderSet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SimpleMailInvoker.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SimpleMailInvoker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMessage.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMessage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMimeEntity.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMimeEntity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Sleeper.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Sleeper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SmtpTransport.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SmtpTransport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Spool.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Spool.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SpoolTransport.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SpoolTransport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Str.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Str.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilter.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/StringReplacementFilter.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/StringReplacementFilter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/StringsTest.php" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/tests/StringsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Processor/TagProcessorTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Processor/TagProcessorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Math/BigInteger/TestCase.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Math/BigInteger/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ThrottlerPlugin.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ThrottlerPlugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenGenerator/TokenGeneratorInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenGenerator/TokenGeneratorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Symfony/Component/CssSelector/Parser/Tokenizer/TokenizerEscaping.php" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Symfony/Component/CssSelector/Parser/Tokenizer/TokenizerEscaping.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/UsAsciiReader.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/UsAsciiReader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Validator/Constraints/UserPassword.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Validator/Constraints/UserPassword.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/Utf8Reader.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/Utf8Reader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/VERSION" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/VERSION" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Validate.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Validate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/Validator.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/Validator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Formatter/WildfireFormatter.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Formatter/WildfireFormatter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/app.php" afterPath="$PROJECT_DIR$/app/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/tabs/club/club.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/tabs/club/club.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/club/create.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/club/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/game/create.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/game/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/player/create.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/player/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/rating/fetch.blade.php" afterPath="$PROJECT_DIR$/app/views/api/rating/fetch.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/match/match.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/match/match.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/tabs/player/player.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/tabs/player/player.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/tabs/club/ratings.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/tabs/club/ratings.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/code-sniffer-ruleset.xml" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/code-sniffer-ruleset.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/fabpot/goutte/composer.json" afterPath="$PROJECT_DIR$/vendor/fabpot/goutte/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/composer.json" afterPath="$PROJECT_DIR$/vendor/laravel/framework/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Encryption/composer.json" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Encryption/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/composer.json" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/club/container.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/club/container.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/grade/create.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/grade/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/history.md" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/history.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/doc/installing.rst" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/doc/installing.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mockery/mockery/package.xml" afterPath="$PROJECT_DIR$/vendor/mockery/mockery/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/readme.md" afterPath="$PROJECT_DIR$/vendor/laravel/framework/readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pennants/season/season.blade.php" afterPath="$PROJECT_DIR$/app/views/pennants/season/season.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -110,30 +393,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PlayerController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/PlayerController.php">
+      <file leaf-file-name="Club.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Club.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="0.3084577" vertical-offset="714" max-vertical-offset="2790">
-              <folding>
-                <element signature="e#25#83#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DbPlayerRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="0" selection-start="1488" selection-end="1488" vertical-scroll-proportion="-15.407408" vertical-offset="1312" max-vertical-offset="1872">
+            <state line="35" column="26" selection-start="798" selection-end="798" vertical-scroll-proportion="6.0" vertical-offset="792" max-vertical-offset="1332">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Handler.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Exception/Handler.php">
+      <file leaf-file-name="ClubController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/ClubController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="0" selection-start="4511" selection-end="4511" vertical-scroll-proportion="-6.888889" vertical-offset="3018" max-vertical-offset="6930">
+            <state line="95" column="33" selection-start="1648" selection-end="1648" vertical-scroll-proportion="25.851852" vertical-offset="2408" max-vertical-offset="3402">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="club.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pennants/club/club.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="57" selection-start="411" selection-end="411" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="630">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="container.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pennants/club/container.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="57" selection-start="301" selection-end="301" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="648">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClubRepositoryInterface.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="18" selection-start="625" selection-end="625" vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="504">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DbClubRepository.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="-6.9259257" vertical-offset="227" max-vertical-offset="3096">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ratings.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/lib/Ratings/Ratings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="154" column="0" selection-start="3784" selection-end="3784" vertical-scroll-proportion="-6.9259257" vertical-offset="2531" max-vertical-offset="4770">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clubDirective.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/scripts/directives/clubDirective.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.17763157" vertical-offset="108" max-vertical-offset="1566">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Builder.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="136" column="0" selection-start="3066" selection-end="3066" vertical-scroll-proportion="-6.9259257" vertical-offset="2207" max-vertical-offset="16884">
               <folding />
             </state>
           </provider>
@@ -142,43 +477,7 @@
       <file leaf-file-name="Application.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="711" column="0" selection-start="16186" selection-end="16186" vertical-scroll-proportion="-6.888889" vertical-offset="12288" max-vertical-offset="20088">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="player.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pennants/player/player.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="486">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="player.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pennants/tabs/player/player.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="28" selection-start="1021" selection-end="1021" vertical-scroll-proportion="-17.333334" vertical-offset="0" max-vertical-offset="666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DbPlayerSeasonRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="149" selection-start="650" selection-end="650" vertical-scroll-proportion="-16.407408" vertical-offset="169" max-vertical-offset="756">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+            <state line="711" column="0" selection-start="16186" selection-end="16186" vertical-scroll-proportion="-12.925926" vertical-offset="12125" max-vertical-offset="20088">
               <folding />
             </state>
           </provider>
@@ -202,21 +501,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tests/acceptance/FrontPageCept.php" />
-        <option value="$PROJECT_DIR$/app/views/layouts/master.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/pennants/leaderboard/leaderboard.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/pennants/club/container.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_17_060913_create_ratings_table.php" />
-        <option value="$PROJECT_DIR$/app/models/Rating.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/app/models/User.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/DashboardController.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/backend/breadcrumb.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/SeasonController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/GradeController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/DrawController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/PlayerController.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_01_03_231816_create_player_seasons_table.php" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/GameController.php" />
         <option value="$PROJECT_DIR$/app/lib/Pennants/Rating/DbRatingRepository.php" />
@@ -226,33 +510,48 @@
         <option value="$PROJECT_DIR$/public/scripts/directives/loadingDirective.js" />
         <option value="$PROJECT_DIR$/app/views/pennants/tabs/club/ratings.blade.php" />
         <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/DrawController.js" />
-        <option value="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pennants/tabs/club/club.blade.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/lib/Ratings/Ratings.php" />
         <option value="$PROJECT_DIR$/app/views/api/rating/fetch.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/api_v1/RatingController.php" />
         <option value="$PROJECT_DIR$/app/views/pennants/club/create.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php" />
-        <option value="$PROJECT_DIR$/app/models/Club.php" />
-        <option value="$PROJECT_DIR$/app/controllers/api_v1/ClubController.php" />
         <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php" />
         <option value="$PROJECT_DIR$/app/views/pennants/match/match.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pennants/game/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/pennants/season/season.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pennants/player/create.blade.php" />
         <option value="$PROJECT_DIR$/app/lib/Pennants/Player/PlayerRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" />
         <option value="$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php" />
         <option value="$PROJECT_DIR$/app/models/Player.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pennants/PennantsServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php" />
         <option value="$PROJECT_DIR$/app/models/PlayerSeason.php" />
         <option value="$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php" />
         <option value="$PROJECT_DIR$/app/views/pennants/tabs/player/player.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/api_v1/PlayerController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/GradeController.php" />
+        <option value="$PROJECT_DIR$/app/views/pennants/grade/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/lib/GolfLink/GolfLink.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pennants/PennantsServiceProvider.php" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/pennants/SeasonController.js" />
+        <option value="$PROJECT_DIR$/app/controllers/api_v1/CompetitionController.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pennants/Competition/CompetitionRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/config/app.php" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/pennants/SeasonController.php" />
+        <option value="$PROJECT_DIR$/app/config/pennants.php" />
+        <option value="$PROJECT_DIR$/app/models/Season.php" />
+        <option value="$PROJECT_DIR$/app/models/Competition.php" />
+        <option value="$PROJECT_DIR$/app/views/pennants/season/season.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/api_v1/SeasonController.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pennants/Competition/DbCompetitionRepository.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/models/Club.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php" />
+        <option value="$PROJECT_DIR$/app/controllers/api_v1/ClubController.php" />
+        <option value="$PROJECT_DIR$/app/lib/Ratings/Ratings.php" />
+        <option value="$PROJECT_DIR$/app/views/pennants/club/club.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/pennants/club/container.blade.php" />
       </list>
     </option>
   </component>
@@ -295,7 +594,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -324,7 +622,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -341,8 +639,92 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pennants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -399,14 +781,6 @@
               <option name="myItemId" value="pennants" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -430,99 +804,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tabs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pennants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="season" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pennants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pennants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="club" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -614,8 +896,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -819,7 +1120,19 @@
       <workItem from="1399342577420" duration="27000" />
       <workItem from="1399392155822" duration="624000" />
       <workItem from="1399478501425" duration="2944000" />
-      <workItem from="1399608860002" duration="7840000" />
+      <workItem from="1399608860002" duration="14001000" />
+      <workItem from="1399736310079" duration="1789000" />
+      <workItem from="1399810728875" duration="8116000" />
+      <workItem from="1399849995537" duration="29000" />
+      <workItem from="1399871365211" duration="8414000" />
+      <workItem from="1399951112466" duration="36000" />
+      <workItem from="1400005913043" duration="3071000" />
+      <workItem from="1400021059788" duration="233000" />
+      <workItem from="1400092150171" duration="3097000" />
+      <workItem from="1400108716056" duration="13000" />
+      <workItem from="1400128979886" duration="500000" />
+      <workItem from="1400173597816" duration="2083000" />
+      <workItem from="1400262754471" duration="8309000" />
     </task>
     <task id="LOCAL-00001" summary="first commit - adding files">
       <created>1388656845278</created>
@@ -961,11 +1274,19 @@
       <created>1398233214926</created>
       <updated>1398233214926</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="lots of changes&#10;Adding Players,&#10;Ratings tidied up a bit.&#10;Sorted out eloquent queries&#10;sorted out scope responses.">
+      <created>1399616754342</created>
+      <updated>1399616754342</updated>
+    </task>
+    <task id="LOCAL-00037" summary="lots of changes&#10;Adding Players,&#10;Ratings tidied up a bit.&#10;Sorted out eloquent queries&#10;sorted out scope responses.">
+      <created>1399616799644</created>
+      <updated>1399616799644</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="495200000" />
+    <option name="totallyTimeSpent" value="537051000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -995,16 +1316,16 @@
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29807693" sideWeight="0.670406" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26012793" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23290598" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14476496" sideWeight="0.68502206" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13791268" sideWeight="0.6795284" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3440171" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34188035" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819384" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17625134" sideWeight="0.40064102" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1026,12 +1347,12 @@
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29807693" sideWeight="0.670406" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14476496" sideWeight="0.68502206" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13791268" sideWeight="0.6795284" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14476496" sideWeight="0.68502206" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819384" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="SQL Schema" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SQL Schema" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="SimpleHttpClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1044,15 +1365,15 @@
       <window_info id="SQL" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.438326" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26012793" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23397435" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34434968" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3414855" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17032968" sideWeight="0.32905984" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17625134" sideWeight="0.40064102" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -1069,7 +1390,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added behat and styling" />
     <MESSAGE value="authentication for angular system" />
     <MESSAGE value="angular lazy loading implemented" />
     <MESSAGE value="added cookies&#10;added season controller&#10;add grades controller" />
@@ -1094,7 +1414,8 @@
     <MESSAGE value="removed workspace file" />
     <MESSAGE value="backend layout changes&#10;changed ratings system" />
     <MESSAGE value="backend layout changes&#10;changed ratings system&#10;added bookmarking to dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend layout changes&#10;changed ratings system&#10;added bookmarking to dashboard" />
+    <MESSAGE value="lots of changes&#10;Adding Players,&#10;Ratings tidied up a bit.&#10;Sorted out eloquent queries&#10;sorted out scope responses." />
+    <option name="LAST_COMMIT_MESSAGE" value="lots of changes&#10;Adding Players,&#10;Ratings tidied up a bit.&#10;Sorted out eloquent queries&#10;sorted out scope responses." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1135,11 +1456,6 @@
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php</url>
-          <line>76</line>
-          <option name="timeStamp" value="113" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/vendor/fbf/laravel-blog/src/models/Post.php</url>
           <line>134</line>
           <option name="timeStamp" value="166" />
@@ -1170,37 +1486,37 @@
           <option name="timeStamp" value="203" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/lib/Ratings/Ratings.php</url>
-          <line>154</line>
-          <option name="timeStamp" value="207" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php</url>
-          <line>133</line>
-          <option name="timeStamp" value="211" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/controllers/api_v1/ClubController.php</url>
           <line>53</line>
           <option name="timeStamp" value="212" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/lib/Ratings/Ratings.php</url>
-          <line>39</line>
-          <option name="timeStamp" value="213" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/lib/Ratings/Ratings.php</url>
-          <line>205</line>
-          <option name="timeStamp" value="214" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php</url>
           <line>79</line>
           <option name="timeStamp" value="216" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/lib/GolfLink/GolfLink.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/controllers/api_v1/SeasonController.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/lib/Pennants/Competition/DbCompetitionRepository.php</url>
+          <line>24</line>
+          <option name="timeStamp" value="229" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php</url>
+          <line>85</line>
+          <option name="timeStamp" value="231" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="221" />
+      <option name="time" value="241" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1208,348 +1524,318 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/Season.php">
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/tabs/player/player.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="28.0" vertical-offset="756" max-vertical-offset="1332" />
+        <state line="26" column="28" selection-start="1021" selection-end="1021" vertical-scroll-proportion="-17.333334" vertical-offset="0" max-vertical-offset="666" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.9141324" vertical-offset="1070" max-vertical-offset="1656" />
+        <state line="34" column="149" selection-start="650" selection-end="650" vertical-scroll-proportion="-16.407408" vertical-offset="169" max-vertical-offset="756" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/database.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/PlayerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5479143" vertical-offset="486" max-vertical-offset="2340" />
+        <state line="48" column="0" selection-start="913" selection-end="913" vertical-scroll-proportion="-6.888889" vertical-offset="678" max-vertical-offset="2790">
+          <folding>
+            <element signature="e#25#83#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/rating/fetch.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="144" />
+        <state line="79" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="-6.888889" vertical-offset="1218" max-vertical-offset="1872">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/GradeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="60" selection-start="1909" selection-end="1909" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="2340" />
+        <state line="33" column="45" selection-start="1047" selection-end="1047" vertical-scroll-proportion="-16.592592" vertical-offset="146" max-vertical-offset="738" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pennants/club/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="57" selection-start="344" selection-end="344" vertical-scroll-proportion="2.0" vertical-offset="234" max-vertical-offset="1134" />
+        <state line="18" column="9" selection-start="415" selection-end="511" vertical-scroll-proportion="-3.3333333" vertical-offset="234" max-vertical-offset="1134" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Session/Middleware.php">
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/grade/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2189" selection-end="2189" vertical-scroll-proportion="-6.9259257" vertical-offset="1091" max-vertical-offset="4644">
+        <state line="23" column="30" selection-start="538" selection-end="538" vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Game/GameRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="31" selection-start="5" selection-end="30" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="486" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Game/DbGameRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1404" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="757" selection-end="757" vertical-scroll-proportion="6.0" vertical-offset="360" max-vertical-offset="1134" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/GolfLink/GolfLink.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="18" selection-start="454" selection-end="470" vertical-scroll-proportion="-11.740741" vertical-offset="133" max-vertical-offset="774">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/guzzle/http/Guzzle/Http/Curl/CurlMulti.php">
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Season/SeasonRepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="2041" selection-end="2041" vertical-scroll-proportion="-6.4814816" vertical-offset="779" max-vertical-offset="6570" />
+        <state line="3" column="18" selection-start="89" selection-end="89" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="270" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/RatingController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1422">
-          <folding />
-        </state>
+        <state line="207" column="0" selection-start="4128" selection-end="4128" vertical-scroll-proportion="-6.9259257" vertical-offset="3539" max-vertical-offset="4140" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Ratings/Ratings.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Config/Repository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="0" selection-start="6769" selection-end="6769" vertical-scroll-proportion="0.0" vertical-offset="4680" max-vertical-offset="4824">
-          <folding />
-        </state>
+        <state line="100" column="0" selection-start="2039" selection-end="2039" vertical-scroll-proportion="-6.9259257" vertical-offset="1577" max-vertical-offset="7542" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/MatchController.php">
+    <entry file="file://$PROJECT_DIR$/app/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3204">
-          <folding />
-        </state>
+        <state line="80" column="23" selection-start="2619" selection-end="2619" vertical-scroll-proportion="8.481482" vertical-offset="1669" max-vertical-offset="3366" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/MatchController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/mj/breadcrumb/src/Mj/Breadcrumb/breadcrumb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="52" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="828">
-          <folding />
-        </state>
+        <state line="4" column="6" selection-start="39" selection-end="39" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="1098" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/match/list.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/SeasonController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-          <folding />
-        </state>
+        <state line="12" column="28" selection-start="378" selection-end="378" vertical-scroll-proportion="0.3369735" vertical-offset="0" max-vertical-offset="641" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/match/match.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PennantsServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="558">
-          <folding />
-        </state>
+        <state line="15" column="23" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="362" max-vertical-offset="1548" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/match/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/config/pennants.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-          <folding />
-        </state>
+        <state line="3" column="23" selection-start="43" selection-end="43" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="180" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/game/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="87" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1188">
+        <state line="792" column="0" selection-start="16754" selection-end="16754" vertical-scroll-proportion="0.0" vertical-offset="14256" max-vertical-offset="18432" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="0" selection-start="3165" selection-end="3165" vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="36000" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/magniloquent/magniloquent/src/Magniloquent/Magniloquent/Magniloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="0" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.0" vertical-offset="1944" max-vertical-offset="8316" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/SeasonController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="37" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="1458" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/grade/grade.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="55" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1026" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Competition/CompetitionRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="216">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pennants/season/season.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="103" selection-start="1145" selection-end="1145" vertical-scroll-proportion="-18.0" vertical-offset="198" max-vertical-offset="990">
+        <state line="38" column="62" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/directives/seasonDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="56" selection-start="414" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/player/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/ClubController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="32" selection-start="1185" selection-end="1185" vertical-scroll-proportion="-4.0" vertical-offset="504" max-vertical-offset="1296">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2340">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/PlayerController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Competition.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="54" selection-start="918" selection-end="918" vertical-scroll-proportion="0.8825623" vertical-offset="62" max-vertical-offset="702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="0" selection-start="4083" selection-end="4083" vertical-scroll-proportion="-6.9259257" vertical-offset="3485" max-vertical-offset="4140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="0" selection-start="3742" selection-end="3742" vertical-scroll-proportion="-6.9259257" vertical-offset="3683" max-vertical-offset="10080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="0" selection-start="5058" selection-end="5058" vertical-scroll-proportion="-6.9259257" vertical-offset="4115" max-vertical-offset="4968">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1867" selection-end="1867" vertical-scroll-proportion="-6.6666665" vertical-offset="936" max-vertical-offset="4446">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="977" column="0" selection-start="24910" selection-end="24910" vertical-scroll-proportion="-6.6666665" vertical-offset="17262" max-vertical-offset="28962">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/FrameGuard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1007" selection-end="1007" vertical-scroll-proportion="-12.0" vertical-offset="360" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Match.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
+        <state line="21" column="42" selection-start="417" selection-end="417" vertical-scroll-proportion="0.6725979" vertical-offset="0" max-vertical-offset="562">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Grade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.4252669" vertical-offset="239" max-vertical-offset="828">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.08896797" vertical-offset="50" max-vertical-offset="828">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/pennants/ClubController.php">
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Competition/DbCompetitionRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="46" selection-start="548" selection-end="548" vertical-scroll-proportion="0.3594306" vertical-offset="32" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/ClubController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="885" selection-end="885" vertical-scroll-proportion="1.7615658" vertical-offset="0" max-vertical-offset="3402">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Club.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="51" selection-start="864" selection-end="864" vertical-scroll-proportion="0.6666667" vertical-offset="702" max-vertical-offset="1332">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="66" selection-start="2197" selection-end="2197" vertical-scroll-proportion="-15.481482" vertical-offset="2246" max-vertical-offset="2808">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="914" column="0" selection-start="22859" selection-end="22859" vertical-scroll-proportion="0.33214286" vertical-offset="16212" max-vertical-offset="16884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/MessageBag.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="773" selection-end="773" vertical-scroll-proportion="0.33214286" vertical-offset="390" max-vertical-offset="5346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/magniloquent/magniloquent/src/Magniloquent/Magniloquent/Magniloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.33214286" vertical-offset="984" max-vertical-offset="8226">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2960" column="0" selection-start="68775" selection-end="68775" vertical-scroll-proportion="0.33214286" vertical-offset="52752" max-vertical-offset="53478">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="270" column="0" selection-start="8237" selection-end="8237" vertical-scroll-proportion="0.31964287" vertical-offset="4537" max-vertical-offset="6516">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/AliasLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.31964287" vertical-offset="991" max-vertical-offset="2952">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="529" selection-end="529" vertical-scroll-proportion="0.61071426" vertical-offset="0" max-vertical-offset="560">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="50" selection-start="173" selection-end="173" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PennantsServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="43" selection-start="827" selection-end="827" vertical-scroll-proportion="-10.0" vertical-offset="378" max-vertical-offset="1548">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/PlayerSeason.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="59" selection-start="951" selection-end="951" vertical-scroll-proportion="-9.333333" vertical-offset="378" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/PlayerSeasonRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="162" selection-end="162" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="234">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Player/PlayerRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="123" selection-end="123" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="252">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="711" column="0" selection-start="16186" selection-end="16186" vertical-scroll-proportion="-6.888889" vertical-offset="12288" max-vertical-offset="20088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/controllers/pennants/PlayerController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/player/player.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="565">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pennants/tabs/player/player.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="1021" selection-end="1021" vertical-scroll-proportion="-17.333334" vertical-offset="0" max-vertical-offset="666">
+        <state line="24" column="129" selection-start="415" selection-end="426" vertical-scroll-proportion="0.76868325" vertical-offset="0" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Exception/Handler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="0" selection-start="4511" selection-end="4511" vertical-scroll-proportion="-6.888889" vertical-offset="3018" max-vertical-offset="6930">
+        <state line="178" column="0" selection-start="4245" selection-end="4245" vertical-scroll-proportion="0.3202847" vertical-offset="2934" max-vertical-offset="6930">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/PlayerSeason/DbPlayerSeasonRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Season.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="149" selection-start="650" selection-end="650" vertical-scroll-proportion="-16.407408" vertical-offset="169" max-vertical-offset="756">
+        <state line="48" column="52" selection-start="765" selection-end="776" vertical-scroll-proportion="-3.4814816" vertical-offset="770" max-vertical-offset="1332">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Player/DbPlayerRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/GradeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="0" selection-start="1488" selection-end="1488" vertical-scroll-proportion="-15.407408" vertical-offset="1312" max-vertical-offset="1872">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="28.0" vertical-offset="756" max-vertical-offset="2214">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/PlayerController.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/SeasonController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="0.3084577" vertical-offset="714" max-vertical-offset="2790">
-          <folding>
-            <element signature="e#25#83#0" expanded="true" />
-          </folding>
+        <state line="59" column="0" selection-start="1151" selection-end="1151" vertical-scroll-proportion="-0.5053381" vertical-offset="1328" max-vertical-offset="1890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/CompetitionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="17" selection-start="411" selection-end="411" vertical-scroll-proportion="-1.658363" vertical-offset="1292" max-vertical-offset="1854">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Season/DbSeasonRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="785" selection-end="785" vertical-scroll-proportion="-6.9259257" vertical-offset="443" max-vertical-offset="1656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/AliasLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="1245" selection-end="1245" vertical-scroll-proportion="-6.9259257" vertical-offset="983" max-vertical-offset="2952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="270" column="0" selection-start="8237" selection-end="8237" vertical-scroll-proportion="-6.9259257" vertical-offset="4529" max-vertical-offset="6516">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2974" column="0" selection-start="69140" selection-end="69140" vertical-scroll-proportion="-6.9259257" vertical-offset="53003" max-vertical-offset="53730">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="290" column="0" selection-start="6020" selection-end="6020" vertical-scroll-proportion="-11.481482" vertical-offset="4838" max-vertical-offset="5400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Club.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="26" selection-start="798" selection-end="798" vertical-scroll-proportion="6.0" vertical-offset="792" max-vertical-offset="1332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="0" selection-start="3066" selection-end="3066" vertical-scroll-proportion="-6.9259257" vertical-offset="2207" max-vertical-offset="16884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="711" column="0" selection-start="16186" selection-end="16186" vertical-scroll-proportion="-12.925926" vertical-offset="12125" max-vertical-offset="20088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Club/DbClubRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="-6.9259257" vertical-offset="227" max-vertical-offset="3096">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Ratings/Ratings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="0" selection-start="3784" selection-end="3784" vertical-scroll-proportion="-6.9259257" vertical-offset="2531" max-vertical-offset="4770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pennants/Club/ClubRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="18" selection-start="625" selection-end="625" vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_v1/ClubController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="33" selection-start="1648" selection-end="1648" vertical-scroll-proportion="25.851852" vertical-offset="2408" max-vertical-offset="3402">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/club/club.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="57" selection-start="411" selection-end="411" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pennants/club/container.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="301" selection-end="301" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="648">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/directives/clubDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.17763157" vertical-offset="108" max-vertical-offset="1566">
+          <folding />
         </state>
       </provider>
     </entry>

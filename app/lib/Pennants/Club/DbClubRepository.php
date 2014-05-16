@@ -47,8 +47,8 @@ class DbClubRepository implements ClubRepositoryInterface {
 	 */
 
 	public function countClubs($seasonId, $gradeId) {
-		$clubs = $this->getWhere(array('season_id' => $seasonId, 'grade_id' => $gradeId));
-		return count($clubs);
+		$clubs = $this->season($seasonId)->grade($gradeId)->count();
+		return $clubs;
 	}
 
 	/**
@@ -131,7 +131,7 @@ class DbClubRepository implements ClubRepositoryInterface {
 	{
 		$club = new Club($data);
 
-		$exists = $this->getClubByParams($club->name, $club->season_id, $club->grade_id);
+		$exists = $this->getClubByParams($club->name, $club->season_id, $club->grade_id)->first();
 
 		if(count($exists) == 0) {
 			$club->save($club->toArray());
@@ -144,8 +144,24 @@ class DbClubRepository implements ClubRepositoryInterface {
 		return $club;
 	}
 
+	/**
+	 * @param $name
+	 * @param $season_id
+	 * @param $grade_id
+	 * @return mixed
+	 */
 	public function getClubByParams($name, $season_id, $grade_id)
 	{
-		return Club::name($name)->season($season_id)->grade($grade_id);
+		return Club::getName($name)->getSeason($season_id)->getGrade($grade_id)->getActive('Y');
+	}
+
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @return mixed
+	 */
+	public function getActiveClubs($season_id, $grade_id)
+	{
+		return Club::getSeason($season_id)->getGrade($grade_id)->getActive('Y');
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 
 use Goutte\Client;
-use \Pennants\Club\ClubRepositoryInterface;
+use Pennants\Club\ClubRepositoryInterface;
 use Pennants\Rating\RatingRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -93,7 +93,7 @@ class Ratings {
 
 		// The course returned, has it already been added and exists in the database
 		if(!empty($course)) {
-			$course_exists = Club::name($course)->active('N')->first();
+			$course_exists = Club::getName($course)->getActive('N')->first();
 			if($course_exists) {
 				// Lets active the site
 				$this->club->updateStatus('active', $course_exists->id);

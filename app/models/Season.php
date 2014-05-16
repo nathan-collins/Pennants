@@ -59,7 +59,7 @@ class Season extends Magniloquent {
 
 	public function scopeGetSeasonId($query, $alias, $year)
 	{
-		$season = $query->select('seasons.id AS seasonId');
+		$season = $query->select('seasons.id AS seasonId, competition.name');
 			$query->leftJoin('competitions', 'seasons.competition_id', '=', 'competitions.id');
 			$query->where('alias', $alias);
 			$query->where('year', $year);

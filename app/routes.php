@@ -46,6 +46,7 @@ Route::group(array('prefix' => 'dashboard', 'before' => 'auth'), function()
 	Route::get('pennants/season', 'dashboard\pennants\SeasonController@showSeason');
 	Route::get('pennants/season/add', 'dashboard\pennants\SeasonController@addSeason');
 	Route::get('pennants/grade', 'dashboard\pennants\GradeController@showGrade');
+	Route::get('pennants/grade/add', 'dashboard\pennants\GradeController@addGrade');
 	Route::get('pennants/draws', 'dashboard\pennants\DrawController@showDraw');
 	Route::get('pennants/club/add', 'dashboard\pennants\ClubController@addClub');
 	Route::get('pennants/club/{clubId}', 'dashboard\pennants\ClubController@showClub');

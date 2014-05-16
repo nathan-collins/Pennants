@@ -1,20 +1,17 @@
 <?php namespace api_v1;
 
 use Pennants\Competition\CompetitionRepositoryInterface;
-use Pennants\Season\SeasonRepositoryInterface;
 
-class SeasonController extends BaseController {
+class CompetitionController extends BaseController {
 
 	/**
-	 * @param SeasonRepositoryInterface $season
+	 * @param CompetitionRepositoryInterface $competition
 	 */
 
-	protected $season;
 	protected $competition;
 
-	public function __construct(SeasonRepositoryInterface $season, CompetitionRepositoryInterface $competition)
+	public function __construct(CompetitionRepositoryInterface $competition)
 	{
-		$this->season = $season;
 		$this->competition = $competition;
 	}
 
@@ -25,7 +22,7 @@ class SeasonController extends BaseController {
 	 */
 	public function index()
 	{
-		$seasons = $this->competition->find(\Config::get('pennants.competition_id'));
+		$seasons = $this->competition->all();
 
 		return $seasons;
 	}
@@ -37,7 +34,7 @@ class SeasonController extends BaseController {
 	 */
 	public function store()
 	{
-		$s = $this->season->create(\Input::all());
+		$s = $this->competition->create(\Input::all());
 
 		if($s->isSaved()) {
 			return \Redirect::route('api.v1.pennants.season.index')
@@ -55,9 +52,9 @@ class SeasonController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$season = $this->season->find($id);
+		$competition = $this->competition->find($id);
 
-		return $season;
+		return $competition;
 	}
 
 	/**
@@ -68,7 +65,7 @@ class SeasonController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$s = $this->season->update($id);
+		$s = $this->competition->update($id);
 
 		if($s->isSaved()) {
 			return \Redirect::route('api.v1.pennants.season.show', $id)
@@ -90,11 +87,11 @@ class SeasonController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		$season = $this->season->delete($id);
+		$competition = $this->competition->delete($id);
 
 		return \Response::json(array(
 			'error' => false,
-			'season' => $season,
+			'season' => $competition,
 			'code' 	=> 200
 		));
 	}

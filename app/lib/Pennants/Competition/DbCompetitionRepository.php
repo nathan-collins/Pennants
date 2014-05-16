@@ -2,7 +2,18 @@
 
 use Competition;
 
-class DbCompetitionRepository implements \CompetitionRepositoryInterface {
+class DbCompetitionRepository implements CompetitionRepositoryInterface {
+
+	/**
+	 * @return mixed
+	 */
+
+	public function all()
+	{
+		return Competition::get();
+	}
+
+
 	/**
 	 * @param $id
 	 *
@@ -11,7 +22,7 @@ class DbCompetitionRepository implements \CompetitionRepositoryInterface {
 
 	public function find($id)
 	{
-		$season = Competition::find($id)->season;
-		return $season;
+		$competition = Competition::leftJoin('seasons', 'seasons.competition_id', '=', 'competitions.id')->where('seasons.competition_id', '=', $id)->get();
+		return $competition;
 	}
 }

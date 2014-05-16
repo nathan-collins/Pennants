@@ -19,4 +19,5 @@ interface ClubRepositoryInterface {
 	public function delete($id);
 	public function create($data);
 	public function getClubByParams($name, $season_id, $grade_id);
+	public function getActiveClubs($season_id, $grade_id);
 }
