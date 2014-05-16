@@ -816,7 +816,7 @@
       <workItem from="1400108716056" duration="13000" />
       <workItem from="1400128979886" duration="500000" />
       <workItem from="1400173597816" duration="2083000" />
-      <workItem from="1400262754471" duration="8527000" />
+      <workItem from="1400262754471" duration="8548000" />
     </task>
     <task id="LOCAL-00001" summary="first commit - adding files">
       <created>1388656845278</created>
@@ -978,11 +978,15 @@
       <created>1400279691880</created>
       <updated>1400279691880</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="removed workspace from github cache">
+      <created>1400279731638</created>
+      <updated>1400279731638</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="537269000" />
+    <option name="totallyTimeSpent" value="537290000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
