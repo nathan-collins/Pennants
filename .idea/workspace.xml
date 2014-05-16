@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790a44c-7887-41dd-8045-4b4079a8362c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="golf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -816,7 +816,7 @@
       <workItem from="1400108716056" duration="13000" />
       <workItem from="1400128979886" duration="500000" />
       <workItem from="1400173597816" duration="2083000" />
-      <workItem from="1400262754471" duration="8474000" />
+      <workItem from="1400262754471" duration="8527000" />
     </task>
     <task id="LOCAL-00001" summary="first commit - adding files">
       <created>1388656845278</created>
@@ -974,11 +974,15 @@
       <created>1400279615300</created>
       <updated>1400279615300</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="removed workspace from github cache">
+      <created>1400279691880</created>
+      <updated>1400279691880</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="537216000" />
+    <option name="totallyTimeSpent" value="537269000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1082,7 +1086,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="angular lazy loading implemented" />
     <MESSAGE value="added cookies&#10;added season controller&#10;add grades controller" />
     <MESSAGE value="added multiple items, need to start sorting this correctly" />
     <MESSAGE value="setting up the layout for the site." />
@@ -1107,7 +1110,8 @@
     <MESSAGE value="backend layout changes&#10;changed ratings system&#10;added bookmarking to dashboard" />
     <MESSAGE value="lots of changes&#10;Adding Players,&#10;Ratings tidied up a bit.&#10;Sorted out eloquent queries&#10;sorted out scope responses." />
     <MESSAGE value="added scopes to models&#10;updgrade laravel&#10;ratings modified&#10;corrected some bugs&#10;Pennants players added" />
-    <option name="LAST_COMMIT_MESSAGE" value="added scopes to models&#10;updgrade laravel&#10;ratings modified&#10;corrected some bugs&#10;Pennants players added" />
+    <MESSAGE value="removed workspace from github cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed workspace from github cache" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
