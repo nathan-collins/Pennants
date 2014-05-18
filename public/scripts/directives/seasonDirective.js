@@ -14,7 +14,6 @@ pennantsApp.directive('seasonDisplay', function($cookies, $http, $cacheFactory) 
 
       if(!cacheData) {
         $http.get('/api/v1/pennants/season/'+seasonId, {cache: true}).success(function(season) {
-          console.log(season);
           $scope.season = season;
           cache.put('/api/v1/pennants/season/'+seasonId, season);
         });

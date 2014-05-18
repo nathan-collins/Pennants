@@ -1,6 +1,7 @@
 <?php namespace Pennants\Game;
 
 use Game;
+use Carbon\Carbon;
 
 class DbGameRepository implements GameRepositoryInterface {
 
@@ -41,6 +42,14 @@ class DbGameRepository implements GameRepositoryInterface {
 
 	public function create($data)
 	{
+		$year = date('Y', strtotime($data['game_date']));
+		$month = date('m', strtotime($data['game_date']));
+		$day = date('d', strtotime($data['game_date']));
+
+		$date = Carbon::createFromDate($year, $month, $day, 'Australia/Brisbane')->toDateString();
+		$data['game_date'] = $date;
+
+
 		$game = new Game($data);
 
 		$game->save($game->toArray());

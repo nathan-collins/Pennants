@@ -8,9 +8,13 @@ pennantsApp.controller('MatchController', function($scope, $http, $cookies) {
   var gradeId = $cookies.pennantsGrade;
   var hostId = Pennants.hostId;
 
-  $http.get('/api/v1/pennants/match/season/'+seasonId+'/grade/'+gradeId+'/host/'+hostId).success(function(matches) {
+  $http.get('/api/v1/pennants/match/season/'+seasonId+'/'+gradeId+'/'+hostId).success(function(matches) {
     $scope.matches = matches;
   });
+
+  $scope.storeHost = function(hostId) {
+    $cookies.pennantsHost = hostId;
+  }
 
   $scope.hostId = hostId;
 });

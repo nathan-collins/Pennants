@@ -9,6 +9,7 @@
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
+{{ HTML::script('scripts/directives/datepickerLocaledateDirective.js') }}
 {{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
 @stop
 

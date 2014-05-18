@@ -25,20 +25,6 @@ class DbMatchRepository implements MatchRepositoryInterface {
 	}
 
 	/**
-	 * @param $column
-	 * @param $value
-	 *
-	 * @return mixed
-	 */
-
-	public function getWhere($rows)
-	{
-		foreach($rows as $column => $value) {
-			return Match::where($column, $value)->get();
-		}
-	}
-
-	/**
 	 * @param $id
 	 *
 	 * @return mixed
@@ -83,5 +69,16 @@ class DbMatchRepository implements MatchRepositoryInterface {
 		$match->save($match->toArray());
 
 		return $match;
+	}
+
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @param $club_id
+	 * @return mixed
+	 */
+	public function getMatchesFromHost($season_id, $grade_id, $club_id)
+	{
+		return Match::getSeason($season_id)->getGrade($grade_id)->getClub($club_id);
 	}
 }

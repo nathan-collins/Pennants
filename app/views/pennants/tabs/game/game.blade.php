@@ -16,9 +16,9 @@
 					<td width="100px"><% game.game_date %></td>
 					<td club_id="<% game.host_id %>" club-text></td>
 					<td width="60px">
-						<a ng-href="/dashboard/pennants/match/<% game.id %>">
+						<a ng-click="hostStore(<% game.host_id %>)" ng-href="/dashboard/pennants/match">
 							<button type="button" class="btn btn-default btn-sm">
-								<span class="glyphicon glyphicon-th-list"> Matches <span class="badge"></span></span>
+								<span class="fa fa-users" title="Matches"><span class="badge"></span></span>
 							</button>
 						</a>
 					</td>

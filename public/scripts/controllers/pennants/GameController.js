@@ -1,4 +1,4 @@
-var pennantsApp = angular.module('pennantsApp', ["ngCookies"], function($interpolateProvider) {
+var pennantsApp = angular.module('pennantsApp', ["ngCookies", "ui.bootstrap"], function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
   $interpolateProvider.endSymbol('%>');
 });

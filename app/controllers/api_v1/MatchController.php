@@ -132,7 +132,7 @@ class MatchController extends \BaseController {
 	}
 
 
-	public function getMatchBySeason($season_id, $grade_id, $club_id)
+	public function getMatchBySeason($season_id, $grade_id, $host_id)
 	{
 		if(empty($season_id)) {
 			return \Response::json(array(
@@ -150,7 +150,7 @@ class MatchController extends \BaseController {
 			));
 		}
 
-		$match = $this->match->getWhere(array('season_id' => $season_id, 'grade_id' => $grade_id, 'club_id' => $club_id));
+		$match = $this->match->getMatchesFromHost($season_id, $grade_id, $host_id)->get();
 
 		return $match;
 	}

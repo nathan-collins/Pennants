@@ -34,7 +34,9 @@ class DbSeasonRepository implements SeasonRepositoryInterface {
 
 	public function find($id)
 	{
-		$season = Season::find($id);
+		$season = Season::leftJoin('competitions', 'competitions.id', '=', 'seasons.competition_id')
+			->where('seasons.id', '=', $id)
+			->first();
 		return $season;
 	}
 

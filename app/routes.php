@@ -54,7 +54,7 @@ Route::group(array('prefix' => 'dashboard', 'before' => 'auth'), function()
 	Route::get('pennants/game/add', 'dashboard\pennants\GameController@addGame');
 	Route::get('pennants/player/{clubId}', 'dashboard\pennants\PlayerController@showPlayer');
 	Route::get('pennants/player/add/{clubId}', 'dashboard\pennants\PlayerController@addPlayer');
-	Route::get('pennants/match/{clubId}', 'dashboard\pennants\MatchController@showMatch');
+	Route::get('pennants/match', 'dashboard\pennants\MatchController@showMatch');
 	Route::get('pennants/match/add/{clubId}', 'dashboard\pennants\MatchController@addMatch');
 });
 
