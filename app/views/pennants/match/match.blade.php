@@ -1,9 +1,14 @@
 @extends('layouts.backend')
 
+@section('title')
+Pennants Matches
+@stop
+
 @section('footer_scripts')
 {{ HTML::script('scripts/controllers/pennants/MatchController.js') }}
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
+{{ HTML::script('scripts/directives/clubDirective.js') }}
 @stop
 
 @section('content')
@@ -12,12 +17,12 @@
     <div season-display></div>
 		<div grade-display></div>
   </div>
-	<section ng-controller="MatchController">
+	<section ng-controller="MatchClubController">
     <div class="widget" style="margin-top: 10px">
 			<div class="widget-header">
 			<h3>Select a match</h3>
 			<div class="btn-group widget-header-toolbar">
-				<a ng-href="/dashboard/pennants/match/add">
+				<a ng-href="/dashboard/pennants/match/add/<?php echo $hostId?>">
 					<button type="button" class="btn btn-primary btn-sm btn-ajax"><i class="fa fa-floppy-o"></i>
 						<span>Add Match</span>
 					</button>
@@ -28,9 +33,10 @@
 			<div class="list-group">
 				<table class="table">
 				<tr ng-repeat="match in matches">
-					<td width="100px"><% match.game_date %></td>
+					<td width="100px"><% match.game_time %></td>
 					<td club_id="<% match.club_id %>" club-text></td>
-					<td club_id="<% match.club_id %>" club-text></td>
+					<td>VS</td>
+					<td club_id="<% match.opponent_id %>" club-text></td>
 					<td width="60px">
 						<a ng-href="/dashboard/pennants/match/<% game.id %>">
 							<button type="button" class="btn btn-default btn-sm">

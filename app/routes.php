@@ -29,7 +29,8 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 	Route::get('pennants/game/season/{seasonId}/{gradeId}', 'api_v1\GameController@getGameBySeason');
 	Route::resource('pennants/result', 'api_v1\ResultController');
 	Route::resource('pennants/match', 'api_v1\MatchController');
-	Route::get('pennants/match/season/{seasonId}/{gradeId}/{clubId}', 'api_v1\MatchController@getMatchBySeason');
+	Route::get('pennants/match/club/{seasonId}/{gradeId}/{clubId}', 'api_v1\MatchController@getMatchFromClub');
+	Route::get('pennants/match/host/{seasonId}/{gradeId}/{clubId}', 'api_v1\MatchController@getMatchFromHost');
 	Route::resource('pennants/player_result', 'api_v1\PlayerResultController');
 	Route::resource('pennants/user', 'api_v1\UserController');
 	Route::resource('pennants/player', 'api_v1\PlayerController');
@@ -43,19 +44,27 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 Route::group(array('prefix' => 'dashboard', 'before' => 'auth'), function()
 {
 	Route::get('/', 'dashboard\DashboardController@showIndex');
+
 	Route::get('pennants/season', 'dashboard\pennants\SeasonController@showSeason');
 	Route::get('pennants/season/add', 'dashboard\pennants\SeasonController@addSeason');
+
 	Route::get('pennants/grade', 'dashboard\pennants\GradeController@showGrade');
 	Route::get('pennants/grade/add', 'dashboard\pennants\GradeController@addGrade');
+
 	Route::get('pennants/draws', 'dashboard\pennants\DrawController@showDraw');
+
 	Route::get('pennants/club/add', 'dashboard\pennants\ClubController@addClub');
 	Route::get('pennants/club/{clubId}', 'dashboard\pennants\ClubController@showClub');
+	Route::get('pennants/club/players/{clubId}', 'dashboard\pennants\ClubController@showPlayers');
+	Route::get('pennants/club/matches/{clubId}', 'dashboard\pennants\ClubController@showMatches');
 
 	Route::get('pennants/game/add', 'dashboard\pennants\GameController@addGame');
+
 	Route::get('pennants/player/{clubId}', 'dashboard\pennants\PlayerController@showPlayer');
 	Route::get('pennants/player/add/{clubId}', 'dashboard\pennants\PlayerController@addPlayer');
-	Route::get('pennants/match', 'dashboard\pennants\MatchController@showMatch');
-	Route::get('pennants/match/add/{clubId}', 'dashboard\pennants\MatchController@addMatch');
+
+	Route::get('pennants/match/{matchId}', 'dashboard\pennants\MatchController@showMatch');
+	Route::get('pennants/match/add/{hostId}', 'dashboard\pennants\MatchController@addMatch');
 });
 
 Route::get('/', 'Fbf\LaravelBlog\PostsController@index');

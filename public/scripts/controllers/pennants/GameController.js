@@ -24,18 +24,9 @@ function GameController($scope, $http, $cookies, $cacheFactory)
 }
 
 
-function AddGameController($scope, $http, $cookies, $location) {
+function AddGameController($scope, $http, $cookies, $filter) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
-
-  if(_.isUndefined(seasonId)) {
-    $location.path('/pennants/season')
-  }
-
-  // Redirect back to grades so it can be assigned a value
-  if(_.isUndefined(gradeId)) {
-    $location.path('/pennants/grade')
-  }
 
   $scope.today = function() {
     $scope.dt = new Date();
@@ -63,7 +54,7 @@ function AddGameController($scope, $http, $cookies, $location) {
     'starting-day': 1
   };
 
-  $scope.formats = ['dd-MMMM-yyyy', 'yyyy-MM-dd', 'shortDate'];
+  $scope.formats = ['dd-MMMM-yyyy', 'yyyy-MM-dd', '', 'shortDate'];
   $scope.format = $scope.formats[0];
 
   $scope.addGame = function(game, AddGameForm) {
@@ -74,7 +65,6 @@ function AddGameController($scope, $http, $cookies, $location) {
 
     $http.post('/api/v1/pennants/game', game).success(function() {
       $scope.reset();
-      $scope.activePath = $location.path('/pennants/draws')
     });
 
     $scope.reset = function() {

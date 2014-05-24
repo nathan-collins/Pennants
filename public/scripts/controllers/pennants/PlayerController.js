@@ -22,15 +22,6 @@ pennantsApp.controller('AddPlayerController', function($scope, $http, $cookies) 
   var gradeId = $cookies.pennantsGrade;
   var clubId = Pennants.clubId;
 
-  if(_.isUndefined(seasonId)) {
-    $location.path('/pennants/season')
-  }
-
-  // Redirect back to grades so it can be assigned a value
-  if(_.isUndefined(gradeId)) {
-    $location.path('/pennants/grade')
-  }
-
   $scope.clubId = clubId;
 
   $scope.selected = undefined;

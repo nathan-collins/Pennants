@@ -114,6 +114,10 @@ module.exports = function (grunt) {
           [
             './public/styles/less/grade/grade.less'
           ],
+          './public/assets/styles/backend/draws/draws.css':
+          [
+            './public/styles/less/draws/draws.less'
+          ],
 
 
           './public/assets/styles/backend/font-awesome.css':

@@ -6,8 +6,8 @@ Vagrant.configure("2") do |config|
 
 	config.vm.provider :virtualbox do |v|
 		v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-		v.customize ["modifyvm", :id, "--memory", 512]
-		v.customize ["modifyvm", :id, "--name", "SCG"]
+		v.customize ["modifyvm", :id, "--memory", 1024]
+		v.customize ["modifyvm", :id, "--name", "SCG2"]
 	end
 
 	config.vm.synced_folder "./", "/var/www/sites/www.sunshinecoastgolf.org/golf", id: "vagrant-root", :owner => "www-data"
@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
 	config.vm.provision "ansible" do |ansible|
 		ansible.playbook = "ansible/provision.yml"
 		ansible.sudo = "true"
+		ansible.host_key_checking = "true"
 	end
 
 end

@@ -28,23 +28,17 @@ class MatchController extends \BaseController {
 	}
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-		//
+		$s = $this->match->create(\Input::all());
+
+		if($s->isSaved()) {
+
+		}
 	}
 
 	/**
@@ -132,7 +126,29 @@ class MatchController extends \BaseController {
 	}
 
 
-	public function getMatchBySeason($season_id, $grade_id, $host_id)
+	public function getMatchFromHost($season_id, $grade_id, $club_id) {
+		if(empty($season_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'season' => array('message' => "No season supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		if(empty($grade_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'grade' => array('message' => "No grade supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		$match = $this->match->getMatchesFromHost($season_id, $grade_id, $club_id)->get();
+
+		return $match;
+	}
+
+	public function getMatchFromClub($season_id, $grade_id, $club_id)
 	{
 		if(empty($season_id)) {
 			return \Response::json(array(
@@ -150,7 +166,7 @@ class MatchController extends \BaseController {
 			));
 		}
 
-		$match = $this->match->getMatchesFromHost($season_id, $grade_id, $host_id)->get();
+		$match = $this->match->getMatchesFromClub($season_id, $grade_id, $club_id)->get();
 
 		return $match;
 	}

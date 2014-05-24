@@ -13,7 +13,26 @@
 		<div class="widget-content">
 			<table class="table-condensed message-table" width="100%">
 				<tr ng-repeat="club in clubs">
-					<td><a ng-href="/dashboard/pennants/club/<% club.id %>"><% club.name %></a></td>
+					<td class="club-action"><% club.name %></td>
+					<td width="40px">
+						<button type="button" class="btn btn-default btn-sm pull-right" title="Ratings" ng-click="getRatings(club.id, club.name)">
+							<span class="glyphicon glyphicon-signal"></span>
+						</button>
+					</td>
+					<td width="40px">
+						<a ng-href="/dashboard/pennants/club/players/<% club.id %>">
+							<button type="button" class="btn btn-default btn-sm pull-right" title="Players">
+								<span class="fa fa-users"></span>
+							</button>
+						</a>
+					</td>
+					<td width="40px">
+						<a ng-href="/dashboard/pennants/club/matches/<% club.id %>">
+							<button type="button" class="btn btn-default btn-sm pull-right" title="Matches">
+								<span class="fa fa-list"></span>
+							</button>
+						</a>
+					</td>
 				</tr>
 			</table>
 		</div>

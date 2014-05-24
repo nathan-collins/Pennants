@@ -13,11 +13,6 @@ pennantsApp.controller('TeamController',
       $http.get('/api/v1/pennants/team').success(function(seasons) {
         $scope.teams = seasons;
       });
-
-      $scope.page =
-      {
-        title: 'Pennants'
-      }
     }
   ]
 );

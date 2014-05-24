@@ -18,15 +18,6 @@ pennantsApp.controller('AddClubController', function($scope, $http, $cookies, $l
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
 
-  if(_.isUndefined(seasonId)) {
-    $location.path('/dashboard/pennants/season')
-  }
-
-  // Redirect back to grades so it can be assigned a value
-  if(_.isUndefined(gradeId)) {
-    $location.path('/dashboard/pennants/grade')
-  }
-
   $scope.addClub = function(club) {
 
     if(_.isUndefined(club)) {
@@ -112,14 +103,39 @@ pennantsApp.controller('ClubListController', function($scope, $http, $routeParam
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
 
-  if(_.isUndefined(seasonId)) {
-    $location.path('/dashboard/pennants/season')
-  }
-
-  // Redirect back to grades so it can be assigned a value
-  if(_.isUndefined(gradeId)) {
-    $location.path('/dashboard/pennants/grade')
-  }
-
   var clubId = $routeParams.clubId;
+});
+
+
+pennantsApp.controller('ClubMatchController', function($scope, $http, $cookies) {
+  var seasonId = $cookies.pennantsSeason;
+  var gradeId = $cookies.pennantsGrade;
+  var clubId = Pennants.clubId;
+
+  $http.get('/api/v1/pennants/match/club/'+seasonId+'/'+gradeId+'/'+clubId).success(function(matches) {
+    console.log(matches);
+    angular.forEach(matches, function(match, key) {
+      matches[key].versus = _.isEqual(Pennants.clubId, matches[key].club_id) ? matches[key].opponent_id : matches[key].club_id;
+    });
+    console.log(matches);
+    $scope.matches = matches;
+  });
+
+  $scope.clubId = clubId;
+});
+
+/**
+ *
+ */
+pennantsApp.controller('ClubPlayerController', function($scope, $http, $cookies)
+{
+  var seasonId = $cookies.pennantsSeason;
+  var gradeId = $cookies.pennantsGrade;
+  var clubId = Pennants.clubId;
+
+  $http.get('/api/v1/pennants/player/season/'+seasonId+'/'+gradeId+'/'+clubId).success(function(players) {
+    $scope.players = players;
+  });
+
+  $scope.clubId = clubId;
 });

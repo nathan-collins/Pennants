@@ -3,9 +3,20 @@ var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ui.bootstrap'], f
   $interpolateProvider.endSymbol('%>');
 });
 
-pennantsApp.controller('DrawController', ['$scope', function($scope) {
-
-}]);
+pennantsApp.controller('DrawController', function($scope, $http) {
+  $scope.getRatings = function(clubId, clubName) {
+    $scope.clubId = clubId;
+    $scope.clubName = clubName;
+    $('#display-info').show();
+    $('#display-info .widget').slideUp();
+    $('#hoverable').addClass('fa fa-spinner fa-4 fa-spin');
+    $http.get('/api/v1/pennants/rating/club/'+clubId).success(function(ratings) {
+      $scope.ratings = ratings;
+      $('#hoverable').removeClass('fa fa-spinner fa-4 fa-spin');
+      $('#display-info .widget').slideDown();
+    });
+  }
+});
 
 /**
  * Club Controller inside the tab
@@ -58,35 +69,17 @@ pennantsApp.controller('GameController', function($scope, $http, $cookies, $cach
   }
 });
 
-pennantsApp.controller('RatingFetchController', function()
-{
-
-});
-
 pennantsApp.controller('MatchController', function($scope, $http, $cookies)
 {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
-  var hostId = Pennants.hostId;
+  var hostId = Pennants.clubId;
 
   $http.get('/api/v1/pennants/match/season/'+seasonId+'/'+gradeId+'/'+hostId).success(function(matches) {
     $scope.matches = matches;
   });
 
   $scope.hostId = hostId;
-});
-
-pennantsApp.controller('PlayerController', function($scope, $http, $cookies)
-{
-  var seasonId = $cookies.pennantsSeason;
-  var gradeId = $cookies.pennantsGrade;
-  var clubId = Pennants.clubId;
-
-  $http.get('/api/v1/pennants/player/season/'+seasonId+'/'+gradeId+'/'+clubId).success(function(players) {
-    $scope.players = players;
-  });
-
-  $scope.clubId = clubId;
 });
 
 pennantsApp.config(function($httpProvider) {
@@ -104,8 +97,6 @@ pennantsApp.config(function($httpProvider) {
   })
 });
 
-pennantsApp.controller('ClubRatings', function($scope, $http) {
-  $http.get('/api/v1/pennants/rating/club/'+Pennants.clubId).success(function(ratings) {
-    $scope.ratings = ratings;
-  });
+$(function() {
+  $('#display-info').hide();
 });
