@@ -1,10 +1,16 @@
 <?php namespace dashboard\pennants;
 
+use Laracasts\Utilities\JavaScript;
+
 class GameController extends \BaseController {
 	public function showGame()
 	{
 		return \View::make('pennants.draws.draws');
 	}
+
+	/**
+	 * @return mixed
+	 */
 
 	public function addGame()
 	{

@@ -5,11 +5,6 @@ use PlayerSeason;
 
 class DbPlayerRepository implements PlayerRepositoryInterface {
 
-	public function playerSeason()
-	{
-		return $this->hasMany('PlayerSeason');
-	}
-
 	/**
 	 * @return mixed
 	 */
@@ -88,7 +83,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 			'season_id' 				=> $data['season_id'],
 			'club_id' 					=> $data['club_id'],
 			'grade_id'		 			=> $data['grade_id'],
-			'golf_link_number' 	=> $data['golf_link_number'],
+			'golf_link_number' 	=> isset($data['golf_link_number']) ? $data['golf_link_number'] : '',
 			'handicap' 					=> $data['handicap']
 		);
 

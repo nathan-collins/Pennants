@@ -119,6 +119,11 @@ module.exports = function (grunt) {
             './public/styles/less/draws/draws.less'
           ],
 
+          './public/assets/styles/backend/match/match.css':
+          [
+            './public/styles/less/match/match.less'
+          ],
+
 
           './public/assets/styles/backend/font-awesome.css':
           [

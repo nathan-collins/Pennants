@@ -32,10 +32,44 @@ Add a new player
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Name</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" ng-model="player.name" id="player-input-name" placeholder="Name" typeahead="player for players in getPlayer($playerValue) | filter:$playerValue" typeahead-loading="loadingPlayers">
+							<input type="text" class="form-control" ng-model="player.name" id="player-input-name" placeholder="Name">
 							<i ng-show="loadingPlayers" class="glyphicon glyphicon-refresh"></i>
 						</div>
 					</div>
+					<div class="player-display">
+						<table class="table">
+							<tr>
+								<th>Player Name</th>
+								<th>Year</th>
+								<th>Club</th>
+								<th>Golf Link Number</th>
+								<th width="40px">Action</th>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									<a ng-href="/dashboard/pennants/results/<% match.id %>">
+										<button type="button" class="btn btn-default btn-sm">
+											<span class="fa fa-hand-o-down" title="Results"><span class="badge"></span></span>
+										</button>
+									</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="widget">
+			<div class="widget-header">
+				<h3>Add a new player for <club-text club_id="<% clubId %>"></club-text></h3>
+			</div>
+			<div class="widget-content">
+				<form novalidate name="AddPlayerForm" id="add-player-form" method="post" class="form-horizontal" role="form">
 					<div class="form-group">
 						<label for="handicap" class="col-sm-2 control-label">Handicap</label>
 						<div class="col-sm-10">

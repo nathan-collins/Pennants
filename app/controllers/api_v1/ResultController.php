@@ -1,6 +1,13 @@
 <?php namespace api_v1;
 
+use Pennants\Result\ResultRepositoryInterface;
+
 class ResultController extends \BaseController {
+
+	public function __construct(ResultRepositoryInterface $result)
+	{
+		$this->result = $result;
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -9,17 +16,9 @@ class ResultController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
-	}
+		$results = $this->result->all();
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
+		return $results;
 	}
 
 	/**
@@ -32,6 +31,29 @@ class ResultController extends \BaseController {
 		//
 	}
 
+	public function getResultsByMatch($season_id, $grade_id, $match_id)
+	{
+		if(empty($season_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'season' => array('message' => "No season supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		if(empty($grade_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'grade' => array('message' => "No grade supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		$result = $this->result->getActiveResults($season_id, $grade_id, $match_id)->get();
+
+		return $result;
+	}
+
 	/**
 	 * Display the specified resource.
 	 *
@@ -40,7 +62,9 @@ class ResultController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$result = $this->result->find($id);
+
+		return $result;
 	}
 
 	/**
@@ -74,6 +98,29 @@ class ResultController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function getResultFromMatch($season_id, $grade_id, $match_id)
+	{
+		if(empty($season_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'season' => array('message' => "No season supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		if(empty($grade_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'grade' => array('message' => "No grade supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		$result = $this->result->getResultsByParams($season_id, $grade_id, $match_id)->get();
+
+		return $result;
 	}
 
 }

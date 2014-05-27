@@ -17,16 +17,6 @@ pennantsApp.directive('clubselect', function($cookies, $http, $cacheFactory) {
 
       var clubsCache = cache.get('/api/v1/pennants/club/season/'+seasonId+'/'+gradeId);
 
-      function intersects(a, b) {
-        var i = 0, len = a.length, inboth = [];
-
-        for (i; i < len; i++) {
-          if (b.indexOf(a[i]) !== -1) inboth.push(a[i]);
-        }
-
-        return inboth.length > 0;
-      }
-
       if(!clubsCache) {
         $http.get('/api/v1/pennants/club/season/'+seasonId+'/'+gradeId).success(function(clubs) {
           $scope.clubs = clubs;
@@ -34,22 +24,49 @@ pennantsApp.directive('clubselect', function($cookies, $http, $cacheFactory) {
       } else {
         $scope.clubs = clubsCache;
       }
+    }
+  }
+});
 
-      var existingClubs = cache.get('/api/v1/pennants/game/season/'+seasonId+'/'+gradeId);
+pennantsApp.directive('clubmatchselect', function($cookies, $http, $cacheFactory) {
+  return {
+    restrict: 'E',
+    scope: {
+      id: '@',
+      model: '=',
+      name: '@'
+    },
+    template: "<select ng-options='club.name for club in clubs'></select>",
+    replace: true,
+    link: function($scope, elem, attr) {
+      var seasonId = $cookies.pennantsSeason;
+      var gradeId = $cookies.pennantsGrade;
+      var hostId = Pennants.hostId;
 
-      if(!existingClubs) {
-        $http.get('/api/v1/pennants/game/season/'+seasonId+'/'+gradeId).success(function(hostClubs) {
-          $scope.hostClubs = hostClubs;
-          cache.put('/api/v1/pennants/game/season/'+seasonId+'/'+gradeId, hostClubs);
-        });
-      } else {
-        $scope.hostClubs = existingClubs;
-      }
+      $http.get('/api/v1/pennants/club/match/'+seasonId+'/'+gradeId+'/'+hostId).success(function(clubs) {
+        $scope.clubs = clubs;
+      });
+    }
+  }
+});
 
-      $scope.clubsFilter = function(clubs) {
-        if($scope.hostClubs.length === 0) return true;
-        return intersects($scope.hostClubs.host_id, clubs.id)
-      }
+pennantsApp.directive('filteredclubselect', function($cookies, $http, $cacheFactory) {
+  return {
+    restrict: 'E',
+    scope: {
+      id: '@',
+      model: '=',
+      name: '@'
+    },
+    template: "<select ng-options='club.name for club in clubs'></select>",
+    replace: true,
+    link: function($scope, elem, attr) {
+      var seasonId = $cookies.pennantsSeason;
+      var gradeId = $cookies.pennantsGrade;
+
+      $http.get('/api/v1/pennants/club/host/'+seasonId+'/'+gradeId+'/').success(function(clubs) {
+        $scope.clubs = clubs;
+      });
     }
   }
 });

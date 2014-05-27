@@ -14,6 +14,8 @@ class CreateResultsTable extends Migration {
 	{
 		Schema::create('results', function(Blueprint $table) {
 			$table->increments('id');
+			$table->integer('season_id');
+			$table->integer('grade_id');
 			$table->integer('game_id');
 			$table->integer('player_id');
 			$table->integer('versus_id');

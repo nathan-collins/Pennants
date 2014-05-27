@@ -26,6 +26,23 @@ pennantsApp.controller('AddPlayerController', function($scope, $http, $cookies) 
 
   $scope.selected = undefined;
 
+  $scope.addPlayer = function(player, AddPlayerForm) {
+    player.season_id = seasonId;
+    player.grade_id = gradeId;
+    player.club_id = clubId;
+
+    $http.post('/api/v1/pennants/player', player).success(function() {
+      $scope.reset();
+    });
+
+    $scope.reset = function() {
+      $scope.player = angular.copy($scope.master);
+    }
+
+  }
+});
+
+pennantsApp.controller('PreviousPlayerController', function($scope, $http) {
   $scope.getPlayer = function(val) {
     return $http.get('/api/v1/pennants/player', {
       params: {
@@ -40,22 +57,4 @@ pennantsApp.controller('AddPlayerController', function($scope, $http, $cookies) 
       return players;
     });
   }
-
-  $scope.addPlayer = function(player, AddPlayerForm) {
-    player.season_id = seasonId;
-    player.grade_id = gradeId;
-    player.club_id = clubId;
-
-    $http.post('/api/v1/pennants/player', player).success(function() {
-      $scope.reset();
-      $scope.activePath = $location.path('/pennants/player')
-    });
-
-    $scope.reset = function() {
-      $scope.player = angular.copy($scope.master);
-    }
-
-  }
-
-
 });

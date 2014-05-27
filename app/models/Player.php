@@ -16,4 +16,8 @@ class Player extends Magniloquent {
 		),
 		"update" => array()
 	);
+
+	protected static $relationships = array(
+		'player_season' => array('hasMany', 'Player', 'player_id'),
+	);
 }

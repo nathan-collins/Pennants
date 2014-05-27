@@ -40,7 +40,7 @@
 					<div class="form-group">
 						<label for="host_id" class="col-sm-2 control-label">Host Club</label>
 						<div class="col-sm-10">
-							<clubselect id="select-game-host" ng-model="game.host" class="form-control"></clubselect>
+							<filteredclubselect id="select-game-host" ng-model="game.host" class="form-control"></filteredclubselect>
 						</div>
 					</div>
 					<div class="form-group">

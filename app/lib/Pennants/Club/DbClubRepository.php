@@ -1,6 +1,9 @@
 <?php namespace Pennants\Club;
 
 use Club;
+use Match;
+use Game;
+use Illuminate\Support\Collection;
 
 class DbClubRepository implements ClubRepositoryInterface {
 
@@ -162,6 +165,51 @@ class DbClubRepository implements ClubRepositoryInterface {
 	 */
 	public function getActiveClubs($season_id, $grade_id)
 	{
-		return Club::getSeason($season_id)->getGrade($grade_id)->getActive('Y');
+		return Club::getSeason($season_id)->getGrade($grade_id)->getActive('Y')->orderBy('name');
+	}
+
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @param $game_id
+	 * @return array
+	 */
+	public function getFilteredClubsByGame($season_id, $grade_id, $game_id)
+	{
+		$clubs = Club::select('id', 'name')->getSeason($season_id)->getGrade($grade_id)->getActive('Y')->get();
+		$matches = Match::select('club_id', 'opponent_id')->getSeason($season_id)->getGrade($grade_id)->getGame($game_id)->lists('club_id', 'opponent_id');
+		$existing = list($keys, $values) = array_divide($matches);
+		$existing = array_flatten($existing);
+		$newClubs = new Collection();
+		$key = 0;
+		foreach($clubs as $index => $club) {
+			if(!in_array($club->id, $existing)) {
+				array_add($newClubs, $key, $club);
+				$key++;
+			}
+		}
+		return $newClubs;
+	}
+
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @return array
+	 */
+	public function getFilteredClubs($season_id, $grade_id)
+	{
+		$clubs = Club::select('id', 'name')->getSeason($season_id)->getGrade($grade_id)->getActive('Y')->get();
+		$matches = Game::select('host_id')->getSeason($season_id)->getGrade($grade_id)->lists('host_id');
+
+		$key = 0;
+
+		$newClubs = new Collection();
+		foreach($clubs as $index => $club) {
+			if(!in_array($club->id, $matches)) {
+				array_add($newClubs, $key, $club);
+				$key++;
+			}
+		}
+		return $newClubs;
 	}
 }

@@ -24,16 +24,6 @@ class ClubController extends \BaseController {
 	}
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return \View::make('clubs.create');
-	}
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
@@ -94,6 +84,60 @@ class ClubController extends \BaseController {
 		}
 
 		$club = $this->club->getActiveClubs($season_id, $grade_id)->get();
+
+		return $club;
+	}
+
+	public function getClubByMatch($season_id, $grade_id, $match_id)
+	{
+		if(empty($season_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'season' => array('message' => "No season supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		if(empty($grade_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'grade' => array('message' => "No grade supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		if(empty($match_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'grade' => array('message' => "No match supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		$club = $this->club->getFilteredClubsByGame($season_id, $grade_id, $match_id);
+
+		return $club;
+	}
+
+	public function getFilteredClub($season_id, $grade_id)
+	{
+		if(empty($season_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'season' => array('message' => "No season supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		if(empty($grade_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'grade' => array('message' => "No grade supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		$club = $this->club->getFilteredClubs($season_id, $grade_id);
 
 		return $club;
 	}

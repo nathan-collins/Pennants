@@ -42,6 +42,14 @@ class Match extends Magniloquent {
 
 	/**
 	 * @param $query
+	 * @param $match_id
+	 */
+	public function scopeGetGame($query, $game_id) {
+		$query->where('matches.game_id', '=', $game_id);
+	}
+
+	/**
+	 * @param $query
 	 * @param $club_id
 	 */
 	public function scopeGetClubOrOpponent($query, $club_id)

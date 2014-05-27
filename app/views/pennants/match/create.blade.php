@@ -4,6 +4,10 @@
 Add Match
 @stop
 
+@section('header_scripts')
+{{ HTML::style('assets/styles/backend/match/match.css') }}
+@stop
+
 @section('footer_scripts')
 {{ HTML::script('scripts/controllers/pennants/MatchController.js') }}
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
@@ -28,17 +32,17 @@ Add Match
 					<div class="form-group">
 						<label for="host_id" class="col-sm-2 control-label">Club</label>
 						<div class="col-sm-10">
-							<clubselect id="select-match-host" ng-model="match.game_id" class="form-control"></clubselect>
+							<clubmatchselect id="select-match-game" ng-model="match.game_id" class="form-control"></clubmatchselect>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="host_id" class="col-sm-2 control-label">Versus</label>
 						<div class="col-sm-10">
-							<clubselect id="select-match-host" ng-model="match.opponent_id" class="form-control"></clubselect>
+							<clubmatchselect id="select-match-opponent" ng-model="match.opponent_id" class="form-control"></clubmatchselect>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="host_id" class="col-sm-2 control-label">Tee time</label>
+						<label for="host_id" class="col-sm-2 control-label game-time-label">Tee time</label>
 						<div class="col-sm-10">
 							<timepicker ng-model="game_time" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
 						</div>
