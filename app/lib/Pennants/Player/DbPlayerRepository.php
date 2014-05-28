@@ -11,7 +11,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function all()
 	{
-		return Player::get()->player_season;
+		return Player::leftJoin('player_seasons', 'players.id', '=', 'player_seasons.player_id')->get();
 	}
 
 	/**

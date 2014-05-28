@@ -96,7 +96,3 @@ pennantsApp.config(function($httpProvider) {
     }
   })
 });
-
-$(function() {
-  $('#display-info').hide();
-});

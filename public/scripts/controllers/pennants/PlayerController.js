@@ -1,4 +1,4 @@
-var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ngRoute'], function($interpolateProvider) {
+var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ui.bootstrap'], function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
   $interpolateProvider.endSymbol('%>');
 });
@@ -40,10 +40,9 @@ pennantsApp.controller('AddPlayerController', function($scope, $http, $cookies) 
     }
 
   }
-});
 
-pennantsApp.controller('PreviousPlayerController', function($scope, $http) {
   $scope.getPlayer = function(val) {
+    console.log(val);
     return $http.get('/api/v1/pennants/player', {
       params: {
         player: val,
@@ -52,7 +51,7 @@ pennantsApp.controller('PreviousPlayerController', function($scope, $http) {
     }).then(function(res) {
       var players = [];
       angular.forEach(res.data.results, function(item) {
-        players.push(item);
+        players.push(item.name);
       });
       return players;
     });

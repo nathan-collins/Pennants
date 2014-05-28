@@ -9,7 +9,6 @@ Pennants Draws
 @stop
 
 @section('footer_scripts')
-{{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
 {{ HTML::script('scripts/controllers/pennants/DrawController.js') }}
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}

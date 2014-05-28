@@ -4,7 +4,6 @@
   "directory": "public/",
   "dependencies": {
     "modernizr": "~2.6.2",
-    "requirejs": "~2.1.9",
     "bootstrap": "~3.0.3",
     "font-awesome": "~4.0.3",
     "angular": "~1.2.8",

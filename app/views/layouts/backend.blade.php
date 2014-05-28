@@ -51,7 +51,6 @@
 	</div>
 	@include('partials.scripts.userscripts')
 	{{ HTML::script('assets/scripts/backend/min/core.js') }}
-	{{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
 	{{ HTML::script('scripts/controllers/dashboard/DropdownController.js') }}
 	@section('footer_scripts')
 	@show
