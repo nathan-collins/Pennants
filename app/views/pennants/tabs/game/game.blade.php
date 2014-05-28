@@ -23,6 +23,7 @@
 						</a>
 					</td>
 				</tr>
+				<p ng-show="!games.length">No games have been added.</p>
 			</table>
 		</div>
 	</div>

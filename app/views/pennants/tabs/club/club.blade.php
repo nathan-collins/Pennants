@@ -34,6 +34,7 @@
 						</a>
 					</td>
 				</tr>
+				<p ng-show="!clubs.length">No clubs have been added.</p>
 			</table>
 		</div>
 	</div>

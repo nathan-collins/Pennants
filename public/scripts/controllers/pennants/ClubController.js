@@ -18,7 +18,7 @@ pennantsApp.controller('AddClubController', function($scope, $http, $cookies, $l
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
 
-  $scope.addClub = function(club) {
+  $scope.addClub = function(club, isValid) {
 
     if(_.isUndefined(club)) {
       var club = {};
