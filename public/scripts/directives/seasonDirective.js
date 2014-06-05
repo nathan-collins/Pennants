@@ -24,6 +24,31 @@ pennantsApp.directive('seasonDisplay', function($cookies, $http, $cacheFactory) 
   }
 });
 
+pennantsApp.directive('seasonConcat', function($cookies, $http, $cacheFactory) {
+  return {
+    restrict: 'AE',
+    scope: {
+      id: '@',
+      season_id: '@'
+    },
+    template: '<% season.name %> (<% season.year %>)',
+    link: function($scope, element, attr) {
+      var cache = $cacheFactory.get('$http');
+
+      var cacheData = cache.get('/api/v1/pennants/season/'+attr.seasonId);
+
+      if(!cacheData) {
+        $http.get('/api/v1/pennants/season/'+attr.seasonId, {cache: true}).success(function(season) {
+          $scope.season = season;
+          cache.put('/api/v1/pennants/season/'+attr.seasonId, season);
+        });
+      } else {
+        $scope.season = cacheData;
+      }
+    }
+  }
+});
+
 pennantsApp.directive('seasonSelect', function($cookies, $http, $cacheFactory) {
   return {
     restrict: 'AE',
@@ -34,17 +59,17 @@ pennantsApp.directive('seasonSelect', function($cookies, $http, $cacheFactory) {
     },
     template: "<select ng-options='season.name for season in seasons'></select>",
     replace: true,
-    link: function($scope) {
+    link: function(scope, elem, attr) {
       var cache = $cacheFactory.get('$http');
 
       var seasonsCache = cache.get('/api/v1/pennants/season');
 
       if(!seasonsCache) {
         $http.get('/api/v1/pennants/season').success(function(seasons) {
-          $scope.seasons = seasons;
+          scope.seasons = seasons;
         });
       } else {
-        $scope.seasons = seasonsCache;
+        scope.seasons = seasonsCache;
       }
     }
   }

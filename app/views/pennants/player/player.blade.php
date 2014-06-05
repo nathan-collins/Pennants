@@ -7,16 +7,9 @@
 @stop
 
 @section('content')
-<div class="col-xs-12 col-md-12 col-lg-12 outer content-container">
-  <section ng-controller="AddPlayerController">
-    <a class="btn btn-default"  ng-href="/dashboard/pennants/player/add/<% clubId %>" role="button">Add Player</a>
-    <h1>Select a player</h1>
-    <div class="list-group">
-      <a ng-href="/dashboard/pennants/player/<% player.id %>" class="list-group-item" ng-repeat="player in players">
-        <h4><% player.name %></h4>
-      </a>
-      <p ng-show="!players.length">No players for this club</p>
-    </div>
+<div class="col-md-6 content-container">
+  <section ng-controller="PlayerController">
+		<h1><?php echo $player->name?></h1>
   </section>
 </div>
 @stop

@@ -133,6 +133,9 @@ pennantsApp.controller('ClubPlayerController', function($scope, $http, $cookies)
   var gradeId = $cookies.pennantsGrade;
   var clubId = Pennants.clubId;
 
+  $scope.seasonId = seasonId;
+  $scope.gradeId = gradeId;
+
   $http.get('/api/v1/pennants/player/season/'+seasonId+'/'+gradeId+'/'+clubId).success(function(players) {
     $scope.players = players;
   });

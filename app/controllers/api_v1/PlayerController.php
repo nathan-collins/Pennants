@@ -75,6 +75,16 @@ class PlayerController extends \BaseController {
 		));
 	}
 
+	/**
+	 * @param $name
+	 * @return mixed
+	 */
+	public function searchPlayer($name) {
+		$players = $this->player->searchPlayerByName($name)->get();
+
+		return $players;
+	}
+
 	public function getPlayerbySeason($season_id, $grade_id, $club_id) {
 		if(empty($season_id)) {
 			return \Response::json(array(
@@ -95,19 +105,6 @@ class PlayerController extends \BaseController {
 		$player = $this->player_season->getPlayerByParams($season_id, $grade_id, $club_id)->get();
 
 		return $player;
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		$player = $this->player->find($id);
-
-		return \View::make('player.edit')->with('player', $player);
 	}
 
 	/**

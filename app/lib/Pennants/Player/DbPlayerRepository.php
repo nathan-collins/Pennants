@@ -22,7 +22,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function find($id)
 	{
-		return Player::find($id)->player_season;
+		return Player::find($id);
 	}
 
 	/**
@@ -42,8 +42,6 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	/**
 	 * @param $id
-	 * @param $season_id
-	 *
 	 * @return bool
 	 */
 
@@ -78,6 +76,29 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 		$player->save($player->toArray());
 
+		$player_season_data = $this->playerSeasonData($player, $data);
+
+		$player_season = new PlayerSeason($player_season_data);
+		$player_season->save($player_season->toArray());
+
+		return $player;
+	}
+
+	/**
+	 * @param $name
+	 * @return mixed
+	 */
+	public function searchPlayerByName($name)
+	{
+		return Player::join('player_seasons', function($join) use ($name)
+		{
+			$join->on('players.id', '=', 'player_seasons.player_id')
+					 ->where('players.name', 'LIKE', '%'.$name.'%');
+		});
+	}
+
+	private function playerSeasonData($player, $data)
+	{
 		$player_season_data = array(
 			'player_id' 				=> $player->id,
 			'season_id' 				=> $data['season_id'],
@@ -87,9 +108,6 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 			'handicap' 					=> $data['handicap']
 		);
 
-		$player_season = new PlayerSeason($player_season_data);
-		$player_season->save($player_season->toArray());
-
-		return $player;
+		return $player_season_data;
 	}
 }

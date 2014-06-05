@@ -34,7 +34,14 @@ Pennants Club Players
 				<tr ng-repeat="player in players">
 					<td><% player.name %></td>
 					<td><% player.golf_link_number %></td>
-					<td><% player.handicap %></td>
+					<td width="60px"><% player.handicap %></td>
+					<td width="40px">
+						<a ng-href="/dashboard/pennants/player/<% player.id %>/<% seasonId %>/<% gradeId %>">
+							<button type="button" class="btn btn-default btn-sm">
+								<span class="fa fa-user" title="View Player Details"></span>
+							</button>
+						</a>
+					</td>
 				</tr>
 				<p ng-show="!players.length">No players for this club</p>
 			</table>

@@ -3,8 +3,18 @@ var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ui.bootstrap'], f
   $interpolateProvider.endSymbol('%>');
 });
 
+pennantsApp.factory('playerFactory', function($http) {
+  return {
+    get: function(url) {
+      return $http.get(url, {params: {sensor: false}}).then(function(resp) {
+        return resp.data; // success callback returns this
+      });
+    }
+  }
+});
 
-pennantsApp.controller('PlayerController', function($scope, $http, $cookies, $routeParams) {
+
+pennantsApp.controller('PlayerController', function($scope, $http, $cookies) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
   var clubId = Pennants.clubId;
@@ -17,14 +27,14 @@ pennantsApp.controller('PlayerController', function($scope, $http, $cookies, $ro
 })
 
 
-pennantsApp.controller('AddPlayerController', function($scope, $http, $cookies) {
+pennantsApp.controller('AddPlayerController', function($scope, $http, $cookies, playerFactory) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
   var clubId = Pennants.clubId;
 
   $scope.clubId = clubId;
 
-  $scope.selected = undefined;
+  $('.typeahead').removeClass('dropdown-menu');
 
   $scope.addPlayer = function(player, AddPlayerForm) {
     player.season_id = seasonId;
@@ -42,18 +52,37 @@ pennantsApp.controller('AddPlayerController', function($scope, $http, $cookies) 
   }
 
   $scope.getPlayer = function(val) {
-    console.log(val);
-    return $http.get('/api/v1/pennants/player', {
-      params: {
-        player: val,
-        sensor: false
+    playerFactory.get('/api/v1/pennants/player/search/'+val)
+      .then(function(data) {
+        $scope.open=false;
+        $scope.loadingPlayers = false;
+        $scope.player.show_name=false;
+        if(_.size(data) > 0) {
+          $scope.player.show=true;
+        } else {
+          $scope.player.show=false;
+        }
+        console.log(data);
+        $scope.players = data;
       }
-    }).then(function(res) {
-      var players = [];
-      angular.forEach(res.data.results, function(item) {
-        players.push(item.name);
-      });
-      return players;
-    });
+    );
+  }
+
+  $scope.populateSettings = function(player) {
+    $scope.player.playerId = player.player_id;
+    $scope.player.player_name = player.name;
+    $scope.player.handicap = player.handicap;
+    $scope.player.golf_link_number = player.golf_link_number;
+
+    $scope.player.show_name=true;
+  }
+
+  $scope.clearPlayer = function() {
+    delete($scope.player.playerId);
+    $scope.player.player_name = '';
+    $scope.player.handicap = '';
+    $scope.player.golf_link_number = '';
+
+    $scope.player.show_name=false;
   }
 });

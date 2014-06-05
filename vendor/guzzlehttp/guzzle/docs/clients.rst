@@ -432,6 +432,33 @@ This setting can be set to any of the following types:
       $stream = GuzzleHttp\Stream\Stream::factory('contents...');
       $client->post('/post', ['body' => $stream]);
 
+json
+----
+
+:Summary: The ``json`` option is used to easily upload JSON encoded data as the
+    body of a request. A Content-Type header of ``application/json`` will be
+    added if no Content-Type header is already present on the message.
+:Types:
+    Any PHP type that can be operated on by PHP's ``json_encode()`` function.
+:Default: None
+
+.. code-block:: php
+
+    $request = $client->createRequest('/put', ['json' => ['foo' => 'bar']]);
+    echo $request->getHeader('Content-Type');
+    // application/json
+    echo $request->getBody();
+    // {"foo":"bar"}
+
+.. note::
+
+    This request option does not support customizing the Content-Type header
+    or any of the options from PHP's `json_encode() <http://www.php.net/manual/en/function.json-encode.php>`_
+    function. If you need to customize these settings, then you must pass the
+    JSON encoded data into the request yourself using the ``body`` request
+    option and you must specify the correct Content-Type header using the
+    ``headers`` request option.
+
 query
 -----
 
@@ -517,7 +544,7 @@ to ensure that they are fired last or near last in the event chain.
      * Listens to the "before" event of a request and only modifies the request
      * when the "auth" config setting of the request is "foo".
      */
-    class FooAuth implements GuzzleHttp\Common\SubscriberInterface
+    class FooAuth implements GuzzleHttp\Event\SubscriberInterface
     {
         private $password;
 
@@ -539,7 +566,7 @@ to ensure that they are fired last or near last in the event chain.
         }
     }
 
-    $client->getEmitter->attach(new FooAuth('password'));
+    $client->getEmitter()->attach(new FooAuth('password'));
     $client->get('/', ['auth' => 'foo']);
 
 Adapter Specific Authentication Schemes

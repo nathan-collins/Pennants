@@ -37,6 +37,7 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 	Route::resource('pennants/player_result', 'api_v1\PlayerResultController');
 	Route::resource('pennants/user', 'api_v1\UserController');
 	Route::resource('pennants/player', 'api_v1\PlayerController');
+	Route::get('pennants/player/search/{name?}', 'api_v1\PlayerController@searchPlayer');
 	Route::get('pennants/player/season/{seasonId}/{gradeId}/{clubId}', 'api_v1\PlayerController@getPlayerBySeason');
 	Route::resource('pennants/team', 'api_v1\TeamController');
 	Route::resource('pennants/rating', 'api_v1\RatingController');
@@ -63,8 +64,9 @@ Route::group(array('prefix' => 'dashboard', 'before' => 'auth'), function()
 
 	Route::get('pennants/game/add', 'dashboard\pennants\GameController@addGame');
 
-	Route::get('pennants/player/{clubId}', 'dashboard\pennants\PlayerController@showPlayer');
+	Route::get('pennants/player/{clubId}', 'dashboard\pennants\PlayerController@showPlayersByClub');
 	Route::get('pennants/player/add/{clubId}', 'dashboard\pennants\PlayerController@addPlayer');
+	Route::get('pennants/player/{playerId}/{seasonId}/{gradeId}', 'dashboard\pennants\PlayerController@showPlayer');
 
 	Route::get('pennants/match/{matchId}', 'dashboard\pennants\MatchController@showMatch');
 	Route::get('pennants/match/add/{hostId}', 'dashboard\pennants\MatchController@addMatch');

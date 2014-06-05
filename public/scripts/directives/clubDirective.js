@@ -78,7 +78,7 @@ pennantsApp.directive('clubText', function($cookies, $http, $cacheFactory) {
       id: '@',
       club_id: '@'
     },
-    template: '{{club}}',
+    template: '<% club %>',
     link: function(scope, elem, attr) {
       var cache = $cacheFactory.get('$http');
 

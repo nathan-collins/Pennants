@@ -13,6 +13,7 @@ Add a new player
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
+{{ HTML::script('scripts/directives/playerDirective.js') }}
 @stop
 
 @section('content')
@@ -31,36 +32,42 @@ Add a new player
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Name</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" ng-model="player.name" id="player-input-name" placeholder="Name" typeahead="player for player in getPlayer($viewValue)" typeahead-loading="loadingPlayers">
+							<input type="text" class="form-control" ng-model="player.name" placeholder="Name" typeahead="player for player in getPlayer($viewValue)" typeahead-loading="loadingPlayers" typeahead-min-length="4">
 							<i ng-show="loadingPlayers" class="glyphicon glyphicon-refresh"></i>
 						</div>
 					</div>
 					<div class="player-display">
 						<table class="table">
-							<tr>
+							<tr ng-show="player.show">
 								<th>Player Name</th>
 								<th>Year</th>
 								<th>Club</th>
 								<th>Golf Link Number</th>
 								<th width="40px">Action</th>
 							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+							<tr ng-repeat="player in players">
+								<td><% player.name %></td>
+								<td season_id="<% player.season_id %>" season-concat></td>
+								<td club_id="<% player.club_id %>" club-text></td>
+								<td><% player.golf_link_number %></td>
 								<td>
-									<a ng-href="/dashboard/pennants/results/<% match.id %>">
+									<a ng-click="populateSettings(player)">
 										<button type="button" class="btn btn-default btn-sm">
-											<span class="fa fa-hand-o-down" title="Results"><span class="badge"></span></span>
+											<span class="fa fa-hand-o-down" title="Results"></span>
 										</button>
 									</a>
 								</td>
 							</tr>
 						</table>
 					</div>
-					<fieldset ng-show="player-showFieldset">
+					<fieldset>
 						<legend>Players Settings</legend>
+						<div class="form-group" ng-show="player.show_name">
+							<label for="handicap" class="col-sm-2 control-label">Player Name</label>
+							<div class="col-sm-10 player-name">
+								<input name="player.id" type="hidden" value="<% player.playerId %>" /><% player.player_name %>
+							</div>
+						</div>
 						<div class="form-group">
 							<label for="handicap" class="col-sm-2 control-label">Handicap</label>
 							<div class="col-sm-10">
@@ -81,8 +88,11 @@ Add a new player
 								</div>
 							</div>
 						</div>
-						<div class="input-group">
+						<div class="input-group pull-left">
 							<button type="submit" class="btn btn-default" ng-disabled="AddPlayerForm.$invalid || isUnchanged(player)" ng-click="addPlayer(player)">Submit</button>
+						</div>
+						<div class="input-group pull-right">
+							<button type="cancel" class="btn btn-default" ng-click="clearPlayer(player)">Cancel</button>
 						</div>
 					</fieldset>
 				</form>

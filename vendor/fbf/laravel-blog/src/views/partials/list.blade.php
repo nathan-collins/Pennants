@@ -6,11 +6,11 @@
 	
 			<div class="item{{ $post->is_sticky ? ' item__sticky' : '' }}">
 		
-				<h3 class="item--title new">
+				<h2 class="item--title">
 					<a href="{{ $post->getUrl() }}" title="{{ $post->title }}">
 						{{ $post->title }}
 					</a>
-				</h3>
+				</h2>
 		
 				<p class="item--date">
 					{{ $post->getDate() }}
