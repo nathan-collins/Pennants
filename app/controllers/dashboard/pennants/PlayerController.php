@@ -2,12 +2,14 @@
 
 use Laracasts\Utilities\JavaScript\Facades\JavaScript;
 use Pennants\Player\PlayerRepositoryInterface;
+use Pennants\PlayerSeason\PlayerSeasonRepositoryInterface;
 
 class PlayerController extends \BaseController {
 
-	public function __construct(PlayerRepositoryInterface $player)
+	public function __construct(PlayerRepositoryInterface $player, PlayerRepositoryInterface $player_season)
 	{
 		$this->player = $player;
+		$this->player_season = $player_season;
 	}
 
 	public function showPlayersByClub($clubId) {
@@ -62,7 +64,8 @@ class PlayerController extends \BaseController {
 		);
 
 		$player = $this->player->find($playerId);
+		$playerSeasons = $this->player_season->getPlayerById($playerId)->get();
 
-		return \View::make('pennants.player.player', $data)->with('player', $player);
+		return \View::make('pennants.player.player', $data)->with('player', $player)->with('player_seasons', $playerSeasons);
 	}
 }

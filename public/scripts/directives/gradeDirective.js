@@ -20,3 +20,30 @@ pennantsApp.directive('gradeDisplay', function($cookies, $http, $cacheFactory) {
     }
   }
 });
+
+pennantsApp.directive('gradeText', function($cookies, $http, $cacheFactory) {
+  return {
+    restrict: 'AE',
+    scope: {
+      id: '@',
+      grade_id: '@'
+    },
+    template: '<% grade %>',
+    link: function(scope, elem, attr) {
+      var cache = $cacheFactory.get('$http');
+
+      var cacheData = cache.get('/api/v1/pennants/grade/'+attr.gradeId);
+
+      cache.remove('/api/v1/pennants/grade/'+attr.gradeId);
+
+      if(!cacheData) {
+        $http.get('/api/v1/pennants/grade/'+attr.gradeId).success(function(grade) {
+          scope.grade = grade.name;
+          cache.put('/api/v1/pennants/grade/'+attr.gradeId, grade.name);
+        });
+      } else {
+        scope.grade = cacheData;
+      }
+    }
+  }
+});

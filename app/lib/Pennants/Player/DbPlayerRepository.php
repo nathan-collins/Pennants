@@ -110,4 +110,14 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 		return $player_season_data;
 	}
+
+	/**
+	 * @param $playerId
+	 * @return mixed
+	 */
+
+	public function getPlayerById($playerId)
+	{
+		return PlayerSeason::where('player_id', $playerId);
+	}
 }

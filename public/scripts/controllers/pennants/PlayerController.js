@@ -17,13 +17,6 @@ pennantsApp.factory('playerFactory', function($http) {
 pennantsApp.controller('PlayerController', function($scope, $http, $cookies) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
-  var clubId = Pennants.clubId;
-
-  $http.get('/api/v1/pennants/player/season/'+seasonId+'/'+gradeId+'/'+clubId).success(function(players) {
-    $scope.players = players;
-  });
-
-  $scope.clubId = clubId;
 })
 
 

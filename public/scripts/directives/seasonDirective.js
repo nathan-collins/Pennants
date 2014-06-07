@@ -73,4 +73,32 @@ pennantsApp.directive('seasonSelect', function($cookies, $http, $cacheFactory) {
       }
     }
   }
-})
+});
+
+
+pennantsApp.directive('seasonText', function($cookies, $http, $cacheFactory) {
+  return {
+    restrict: 'AE',
+    scope: {
+      id: '@',
+      season_id: '@'
+    },
+    template: '<% season %>',
+    link: function(scope, elem, attr) {
+      var cache = $cacheFactory.get('$http');
+
+      var cacheData = cache.get('/api/v1/pennants/season/'+attr.seasonId);
+
+      cache.remove('/api/v1/pennants/season/'+attr.seasonId);
+
+      if(!cacheData) {
+        $http.get('/api/v1/pennants/season/'+attr.seasonId).success(function(season) {
+          scope.season = season.name + ' ('+ season.year + ')';
+          cache.put('/api/v1/pennants/season/'+attr.seasonId, season.name);
+        });
+      } else {
+        scope.season = cacheData;
+      }
+    }
+  }
+});
