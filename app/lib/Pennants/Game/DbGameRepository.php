@@ -42,10 +42,8 @@ class DbGameRepository implements GameRepositoryInterface {
 
 	public function create($data)
 	{
-		$date = Carbon::createFromFormat("Y-m-d H:i.s.B0", $data['game_date'], 'Australia/Brisbane')->format("Y-m-d");
-		$date->setTimezone('UTC');
+		$date = Carbon::createFromFormat("Y-m-d", $data['game_date'])->toDateString();
 		$data['game_date'] = $date;
-
 
 		$game = new Game($data);
 

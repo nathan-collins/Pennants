@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('title')
+Add a game
+@stop
+
 @section('header_scripts')
 {{ HTML::style('assets/styles/game/game.css') }}
 @stop
@@ -9,7 +13,6 @@
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
-{{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
 @stop
 
 @section('content')
