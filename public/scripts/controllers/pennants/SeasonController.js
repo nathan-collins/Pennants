@@ -1,6 +1,16 @@
-var pennantsApp = angular.module('pennantsApp', ["ngCookies"], function($interpolateProvider) {
+var pennantsApp = angular.module('pennantsApp', ["ngCookies", 'ui.bootstrap'], function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
   $interpolateProvider.endSymbol('%>');
+});
+
+pennantsApp.factory('CompetitionFactory', function($http) {
+  return {
+    get: function(url) {
+      return $http.get(url, {params: {sensor: false}}).then(function(resp) {
+        return resp.data; // success callback returns this
+      });
+    }
+  }
 });
 
 function SeasonController($scope, $http, $cookies) {
@@ -23,7 +33,7 @@ function SeasonController($scope, $http, $cookies) {
   }
 };
 
-function AddSeasonController($scope, $http, $location) {
+function AddSeasonController($scope, $http, CompetitionFactory) {
   $scope.master = {};
   $scope.activePath = null;
 
@@ -41,6 +51,28 @@ function AddSeasonController($scope, $http, $location) {
     }
 
 //          $scope.reset();
+  }
+
+  $scope.getCompetition = function(val) {
+    CompetitionFactory.get('/api/v1/pennants/competition/search/'+val)
+      .then(function(data) {
+        $scope.open=false;
+        $scope.loadingCompetitions = false;
+        $scope.competition.show_name=false;
+        if(_.size(data) > 0) {
+          $scope.competition.show=true;
+        } else {
+          $scope.competition.show=false;
+        }
+        $scope.competitions = data;
+      });
+  }
+
+  $scope.populateSettings = function(season) {
+    $scope.season.competitionId = season.id;
+    $scope.season.name = season.name;
+
+    $scope.player.show_name=true;
   }
 }
 

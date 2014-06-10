@@ -15,10 +15,11 @@ pennantsApp.controller('MatchHostController', function($scope, $http, $cookies) 
   $scope.hostId = hostId;
 });
 
-pennantsApp.controller('AddMatchController', function($scope, $http, $cookies) {
+pennantsApp.controller('AddMatchController', function($scope, $http, $cookies, $filter) {
   var seasonId = $cookies.pennantsSeason;
   var gradeId = $cookies.pennantsGrade;
   var hostId = Pennants.hostId;
+  var timeFilter = $filter('date');
 
   $scope.game_time = new Date();
   $scope.game_time.setHours( 6 );
@@ -36,12 +37,20 @@ pennantsApp.controller('AddMatchController', function($scope, $http, $cookies) {
     $scope.ismeridian = ! $scope.ismeridian;
   };
 
+  $scope.changed = function () {
+    $scope.match.game_time = timeFilter($scope.game_time, "HH:mm");
+  };
+
   $scope.addMatch = function(match, AddMatchForm) {
-    match.seasonId = seasonId;
-    match.gradeId = gradeId;
+    match.season_id = seasonId;
+    match.grade_id = gradeId;
+    match.club_id = match.club_id.id;
+    match.game_id = Pennants.hostId;
+    match.opponent_id = match.opponent_id.id;
 
     $http.post('/api/v1/pennants/match', match).success(function() {
       $scope.reset();
+      window.location = "/dashboard/pennants/match/"+Pennants.hostId;
     });
 
     $scope.reset = function() {

@@ -55,7 +55,6 @@ pennantsApp.controller('AddPlayerController', function($scope, $http, $cookies, 
         } else {
           $scope.player.show=false;
         }
-        console.log(data);
         $scope.players = data;
       }
     );

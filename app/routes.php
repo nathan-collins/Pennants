@@ -19,6 +19,7 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function()
 	Route::get('auth/status', 'api_v1\AuthController@status');
 	Route::get('auth/secrets','api_v1\AuthController@secrets');
 
+	Route::get('pennants/competition/search/{name?}', 'api_v1\CompetitionController@searchCompetition');
 	Route::resource('pennants/season', 'api_v1\SeasonController');
 	Route::resource('pennants/grade', 'api_v1\GradeController');
 	Route::get('pennants/grade/season/{seasonId}', 'api_v1\GradeController@getSeasons');

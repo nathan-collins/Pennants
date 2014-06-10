@@ -13,7 +13,6 @@ Add Match
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
-{{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
 @stop
 
 @section('content')
@@ -32,7 +31,7 @@ Add Match
 					<div class="form-group">
 						<label for="host_id" class="col-sm-2 control-label">Club</label>
 						<div class="col-sm-10">
-							<clubmatchselect id="select-match-game" ng-model="match.game_id" class="form-control"></clubmatchselect>
+							<clubmatchselect id="select-match-game" ng-model="match.club_id" class="form-control"></clubmatchselect>
 						</div>
 					</div>
 					<div class="form-group">
@@ -49,7 +48,7 @@ Add Match
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button type="submit" class="btn btn-default" ng-disabled="AddGameForm.$invalid || isUnchanged(club)" ng-click="addMatch(match)">Submit</button>
+							<input type="hidden" name="match.game_time" value="<% match.game_time %>" /><button type="submit" class="btn btn-default" ng-disabled="AddMatchForm.$invalid || isUnchanged(match)" ng-click="addMatch(match)">Submit</button>
 						</div>
 					</div>
 				</form>

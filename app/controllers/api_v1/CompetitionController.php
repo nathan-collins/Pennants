@@ -45,6 +45,16 @@ class CompetitionController extends BaseController {
 	}
 
 	/**
+	 * @param $name
+	 * @return mixed
+	 */
+	public function searchCompetition($name) {
+		$players = $this->competition->searchCompetitionByName($name)->get();
+
+		return $players;
+	}
+
+	/**
 	 * Display the specified resource.
 	 *
 	 * @param  int  $id

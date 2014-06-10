@@ -17,10 +17,20 @@ class SeasonController extends \BaseController {
 	}
 
 	public function addSeason() {
+		\Breadcrumb::addbreadcrumb('Dashboard', '/dashboard');
+		\Breadcrumb::addBreadcrumb('Pennants', '/dashboard/pennants/season');
+		\Breadcrumb::addBreadcrumb('Add Season', '/season/add');
+
+		\Breadcrumb::setSeperator(null);
+
 		\JavaScript::put([
 			'competition_id' => \Config::get('pennants.competition_id')
 		]);
 
-		return \View::make('pennants.season.create');
+		$data = array(
+			'breadcrumbs' => \Breadcrumb::generate() //Breadcrumbs UL is generated and stored in an array.
+		);
+
+		return \View::make('pennants.season.create', $data);
 	}
 }

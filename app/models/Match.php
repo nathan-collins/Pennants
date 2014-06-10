@@ -5,7 +5,7 @@ use Magniloquent\Magniloquent\Magniloquent;
 class Match extends Magniloquent {
 	protected $guarded = array('id');
 
-	protected $fillable = array('season_id', 'grade_id', 'game_time', 'club_id', 'opponent_id');
+	protected $fillable = array('season_id', 'grade_id', 'game_time', 'club_id', 'opponent_id', 'game_id');
 
 	protected static $relationships = array(
 		'game' => array('hasOne', 'Game', 'host_id')
