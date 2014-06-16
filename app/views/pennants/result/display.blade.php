@@ -14,10 +14,12 @@
 				</div>
 				<div class="widget-content">
 					<table class="table-condensed message-table" width="100%">
-						<tr ng-repeat="player in players">
-							<td><% result %></td>
-							<td><% result %></td>
-							<td><?php echo Form::checkbox("opponent_<% player.id %>")?></td>
+						<tr ng-repeat="team_player in team_players">
+							<td><% player.name %></td>
+							<td><% player.handicap %></td>
+							<td width="70px">
+								<toggle-switch model="team" on-label="Yes" off-label="No" class="switch-small"></toggle-switch>
+							</td>
 						</tr>
 						<p ng-show="!players.length">No players for this match</p>
 					</table>
@@ -42,8 +44,11 @@
 				<div class="widget-content">
 					<table class="table-condensed message-table" width="100%">
 						<tr ng-repeat="player in players">
-							<td><% result %></td>
-							<td><?php echo Form::checkbox("opponent_<% player.id %>")?></td>
+							<td><% player.name %></td>
+							<td><% player.handicap %></td>
+							<td width="70px">
+								<toggle-switch model="opponent" on-label="Yes" off-label="No" class="switch-small"></toggle-switch>
+							</td>
 						</tr>
 						<p ng-show="!players.length">No players for this match</p>
 					</table>

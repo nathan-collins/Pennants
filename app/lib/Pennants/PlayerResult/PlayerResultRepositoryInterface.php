@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace Pennants\Interfaces;
+namespace Pennants\PlayerResult;
 
 
 interface PlayerResultRepositoryInterface {

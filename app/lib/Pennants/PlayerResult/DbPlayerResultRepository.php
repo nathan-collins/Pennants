@@ -1,4 +1,4 @@
-<?php namespace Pennants\PlayerResults;
+<?php namespace Pennants\PlayerResult;
 
 use PlayerResult;
 
@@ -8,7 +8,7 @@ class DbPlayerResultRepository implements PlayerResultRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function getAll()
+	public function all()
 	{
 		return PlayerResult::all();
 	}

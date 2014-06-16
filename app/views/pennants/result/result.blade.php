@@ -6,16 +6,15 @@ Pennants Results
 
 @section('header_scripts')
 {{ HTML::style('assets/styles/backend/results/results.css') }}
-{{ HTML::style('vendor/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css') }}
+{{ HTML::style('vendor/angular-toggle-switch/angular-toggle-switch.css') }}
 @stop
 
 @section('footer_scripts')
-{{ HTML::script('assets/scripts/backend/min/ui-bootstrap-custom-tpls-0.10.0.min.js') }}
 {{ HTML::script('scripts/controllers/pennants/ResultController.js') }}
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
-{{ HTML::script('vendor/bootstrap-switch/dist/js/bootstrap-switch.min.js') }}
+{{ HTML::script('vendor/angular-toggle-switch/angular-toggle-switch.min.js') }}
 @stop
 
 @section('content')

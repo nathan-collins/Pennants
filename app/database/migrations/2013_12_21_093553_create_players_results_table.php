@@ -16,7 +16,8 @@ class CreatePlayersResultsTable extends Migration {
 			$table->increments('id');
 			$table->integer('player_id');
 			$table->integer('grade_id');
-			$table->integer('game_id');
+			$table->integer('season_id');
+			$table->integer('match_id');
 			$table->smallInteger('hole');
 			$table->smallInteger('score');
 			$table->enum('status', array('up', 'down'));

@@ -126,6 +126,11 @@ module.exports = function (grunt) {
             './public/styles/less/match/match.less'
           ],
 
+          './public/assets/styles/backend/results/results.css':
+            [
+              './public/styles/less/results/results.less'
+            ],
+
 
           './public/assets/styles/backend/font-awesome.css':
           [

@@ -29,11 +29,11 @@ class ResultController extends \BaseController {
 
 		$match = $this->match->find($matchId);
 
-		JavaScript::put([
+		JavaScript::put(array(
 			'matchId' => $matchId,
 			'clubId' => $match->club_id,
 			'opponentId' => $match->opponent_id
-		]);
+		));
 
 		return \View::make('pennants.result.result', $data)->with('matchId', $matchId)->with('clubId', $match->club_id)->with('opponentId', $match->opponent_id);
 	}

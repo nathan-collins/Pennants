@@ -64,17 +64,21 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function create($data)
 	{
-		$player_data = array(
-			'name' => $data['name'],
-		);
+		if(!isset($data['playerId'])) {
+			$player_data = array(
+				'name' => $data['name'],
+			);
 
-		unset($data['name']);
+			unset($data['name']);
 
-		$player = new Player($player_data);
+			$player = new Player($player_data);
+			$player->settings = json_encode(array());
 
-		$player->settings = json_encode(array());
-
-		$player->save($player->toArray());
+			$player->save($player->toArray());
+		} else {
+			$player = new Player();
+			$player->id = $data['playerId'];
+		}
 
 		$player_season_data = $this->playerSeasonData($player, $data);
 
@@ -115,7 +119,6 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	 * @param $playerId
 	 * @return mixed
 	 */
-
 	public function getPlayerById($playerId)
 	{
 		return PlayerSeason::where('player_id', $playerId);
