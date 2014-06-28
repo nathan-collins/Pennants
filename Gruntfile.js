@@ -81,6 +81,7 @@ module.exports = function (grunt) {
             './public/assets/lib/bootstrap/input-groups.css',
             './public/assets/lib/bootstrap/wells.css',
             './public/assets/lib/bootstrap/buttons.css',
+            './public/assets/lib/bootstrap/button-groups.css',
             './public/assets/lib/bootstrap/responsive-utilities.css',
           ],
           './public/assets/styles/frontend/blog/blog.css':
@@ -166,6 +167,7 @@ module.exports = function (grunt) {
             './public/assets/lib/bootstrap/panels.css',
             './public/assets/lib/bootstrap/tables.css',
             './public/assets/lib/bootstrap/buttons.css',
+            './public/assets/lib/bootstrap/button-groups.css',
             './public/assets/lib/bootstrap/jumbotron.css',
             './public/assets/lib/bootstrap/dropdowns.css',
             './public/assets/lib/bootstrap/responsive-utilities.css',

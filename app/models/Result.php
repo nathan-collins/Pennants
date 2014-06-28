@@ -52,7 +52,7 @@ class Result extends Magniloquent {
 
 	/**
 	 * @param $query
-	 * @param $match_id
+	 * @param $game_id
 	 * @return mixed
 	 */
 	public function scopeGetMatch($query, $game_id)

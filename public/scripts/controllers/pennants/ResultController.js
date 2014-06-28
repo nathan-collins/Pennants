@@ -1,4 +1,4 @@
-var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ui.bootstrap', 'toggle-switch'], function($interpolateProvider) {
+var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ui.bootstrap'], function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
   $interpolateProvider.endSymbol('%>');
 });
@@ -11,8 +11,6 @@ pennantsApp.controller('ResultController', function($scope, $http, $cookies) {
   $http.get('/api/v1/pennants/results/season/'+seasonId+'/'+gradeId+'/'+matchId).success(function(results) {
     $scope.results = results;
   });
-
-  $scope.matchId = matchId;
 });
 
 pennantsApp.controller('TeamController', function($scope, $http, $cookies) {
@@ -20,12 +18,12 @@ pennantsApp.controller('TeamController', function($scope, $http, $cookies) {
   var gradeId = $cookies.pennantsGrade;
   var clubId = Pennants.clubId;
 
-  $scope.$watch = function() {
+  $scope.teamPlayer = function(status, playerId) {
+    _.debounce(function(e) {
+      $http.post('/api/v1/pennants/player').success(function() {
 
-  }
-
-  $scope.$watchCollection = function() {
-
+      });
+    }, 500);
   }
 
   $http.get('/api/v1/pennants/player/season/'+seasonId+'/'+gradeId+'/'+clubId).success(function(players) {
@@ -39,8 +37,8 @@ pennantsApp.controller('OpponentController', function($scope, $http, $cookies) {
   var gradeId = $cookies.pennantsGrade;
   var opponentId = Pennants.opponentId;
 
-  $scope.toggle = function() {
-
+  $scope.opponentPlayer = function(status, playerId) {
+    alert("Yes");
   }
 
   $http.get('/api/v1/pennants/player/season/'+seasonId+'/'+gradeId+'/'+opponentId).success(function(players) {

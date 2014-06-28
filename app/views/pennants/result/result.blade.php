@@ -6,7 +6,6 @@ Pennants Results
 
 @section('header_scripts')
 {{ HTML::style('assets/styles/backend/results/results.css') }}
-{{ HTML::style('vendor/angular-toggle-switch/angular-toggle-switch.css') }}
 @stop
 
 @section('footer_scripts')
@@ -14,7 +13,6 @@ Pennants Results
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
-{{ HTML::script('vendor/angular-toggle-switch/angular-toggle-switch.min.js') }}
 @stop
 
 @section('content')

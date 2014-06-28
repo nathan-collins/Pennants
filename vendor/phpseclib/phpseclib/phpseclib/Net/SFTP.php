@@ -14,7 +14,7 @@
  * Here's a short example of how to use this library:
  * <code>
  * <?php
- *    include('Net/SFTP.php');
+ *    include 'Net/SFTP.php';
  *
  *    $sftp = new Net_SFTP('www.domain.tld');
  *    if (!$sftp->login('username', 'password')) {
@@ -263,6 +263,16 @@ class Net_SFTP extends Net_SSH2
     var $use_stat_cache = true;
 
     /**
+     * Sort Options
+     *
+     * @see Net_SFTP::_comparator()
+     * @see Net_SFTP::setListOrder()
+     * @var Array
+     * @access private
+     */
+    var $sortOptions = array();
+
+    /**
      * Default Constructor.
      *
      * Connects to an SFTP server
@@ -302,6 +312,8 @@ class Net_SFTP extends Net_SSH2
                    SFTPv5+: http://tools.ietf.org/html/draft-ietf-secsh-filexfer-13#section-8.3
                pre-SFTPv5 : http://tools.ietf.org/html/draft-ietf-secsh-filexfer-04#section-6.5 */
             18 => 'NET_SFTP_RENAME',
+            19 => 'NET_SFTP_READLINK',
+            20 => 'NET_SFTP_SYMLINK',
 
             101=> 'NET_SFTP_STATUS',
             102=> 'NET_SFTP_HANDLE',
@@ -809,16 +821,12 @@ class Net_SFTP extends Net_SSH2
     /**
      * Reads a list, be it detailed or not, of files in the given directory
      *
-     * $realpath exists because, in the case of the recursive deletes and recursive chmod's $realpath has already
-     * been calculated.
-     *
      * @param String $dir
      * @param optional Boolean $raw
-     * @param optional Boolean $realpath
      * @return Mixed
      * @access private
      */
-    function _list($dir, $raw = true, $realpath = true)
+    function _list($dir, $raw = true)
     {
         if (!($this->bitmap & NET_SSH2_MASK_LOGIN)) {
             return false;
@@ -878,11 +886,7 @@ class Net_SFTP extends Net_SSH2
                                 $attributes['type'] = $fileType;
                             }
                         }
-                        if (!$raw) {
-                            $contents[] = $shortname;
-                        } else {
-                            $contents[$shortname] = $attributes;
-                        }
+                        $contents[$shortname] = $attributes + array('filename' => $shortname);
 
                         if (isset($attributes['type']) && $attributes['type'] == NET_SFTP_TYPE_DIRECTORY && ($shortname != '.' && $shortname != '..')) {
                             $this->_update_stat_cache($dir . '/' . $shortname, array());
@@ -915,7 +919,111 @@ class Net_SFTP extends Net_SSH2
             return false;
         }
 
-        return $contents;
+        if (count($this->sortOptions)) {
+            uasort($contents, array(&$this, '_comparator'));
+        }
+
+        return $raw ? $contents : array_keys($contents);
+    }
+
+    /**
+     * Compares two rawlist entries using parameters set by setListOrder()
+     *
+     * Intended for use with uasort()
+     *
+     * @param Array $a
+     * @param Array $b
+     * @return Integer
+     * @access private
+     */
+    function _comparator($a, $b)
+    {
+        switch (true) {
+            case $a['filename'] === '.' || $b['filename'] === '.':
+                if ($a['filename'] === $b['filename']) {
+                    return 0;
+                }
+                return $a['filename'] === '.' ? -1 : 1;
+            case $a['filename'] === '..' || $b['filename'] === '..':
+                if ($a['filename'] === $b['filename']) {
+                    return 0;
+                }
+                return $a['filename'] === '..' ? -1 : 1;
+            case isset($a['type']) && $a['type'] === NET_SFTP_TYPE_DIRECTORY:
+                if (!isset($b['type'])) {
+                    return 1;
+                }
+                if ($b['type'] !== $a['type']) {
+                    return -1;
+                }
+                break;
+            case isset($b['type']) && $b['type'] === NET_SFTP_TYPE_DIRECTORY:
+                return 1;
+        }
+        foreach ($this->sortOptions as $sort => $order) {
+            if (!isset($a[$sort]) || !isset($b[$sort])) {
+                if (isset($a[$sort])) {
+                    return -1;
+                }
+                if (isset($b[$sort])) {
+                    return 1;
+                }
+                return 0;
+            }
+            switch ($sort) {
+                case 'filename':
+                    $result = strcasecmp($a['filename'], $b['filename']);
+                    if ($result) {
+                        return $order === SORT_DESC ? -$result : $result;
+                    }
+                    break;
+                case 'permissions':
+                case 'mode':
+                    $a[$sort]&= 07777;
+                    $b[$sort]&= 07777;
+                default:
+                    if ($a[$sort] === $b[$sort]) {
+                        break;
+                    }
+                    return $order === SORT_ASC ? $a[$sort] - $b[$sort] : $b[$sort] - $a[$sort];
+            }
+        }
+    }
+
+    /**
+     * Defines how nlist() and rawlist() will be sorted - if at all.
+     *
+     * If sorting is enabled directories and files will be sorted independently with
+     * directories appearing before files in the resultant array that is returned.
+     *
+     * Any parameter returned by stat is a valid sort parameter for this function.
+     * Filename comparisons are case insensitive.
+     *
+     * Examples:
+     *
+     * $sftp->setListOrder('filename', SORT_ASC);
+     * $sftp->setListOrder('size', SORT_DESC, 'filename', SORT_ASC);
+     * $sftp->setListOrder(true);
+     *    Separates directories from files but doesn't do any sorting beyond that
+     * $sftp->setListOrder();
+     *    Don't do any sort of sorting
+     *
+     * @access public
+     */
+    function setListOrder()
+    {
+        $this->sortOptions = array();
+        $args = func_get_args();
+        if (empty($args)) {
+            return;
+        }
+        $len = count($args) & 0x7FFFFFFE;
+        for ($i = 0; $i < $len; $i+=2) {
+            $this->sortOptions[$args[$i]] = $args[$i + 1];
+        }
+        if (!count($this->sortOptions)) {
+            $this->sortOptions = array('bogus' => true);
+        }
     }
 
     /**
@@ -1446,6 +1554,86 @@ class Net_SFTP extends Net_SSH2
                 return false;
             }
             $i = 0;
+        }
+
+        return true;
+    }
+
+    /**
+     * Return the target of a symbolic link
+     *
+     * @param String $link
+     * @return Mixed
+     * @access public
+     */
+    function readlink($link)
+    {
+        if (!($this->bitmap & NET_SSH2_MASK_LOGIN)) {
+            return false;
+        }
+
+        $link = $this->_realpath($link);
+
+        if (!$this->_send_sftp_packet(NET_SFTP_READLINK, pack('Na*', strlen($link), $link))) {
+            return false;
+        }
+
+        $response = $this->_get_sftp_packet();
+        switch ($this->packet_type) {
+            case NET_SFTP_NAME:
+                break;
+            case NET_SFTP_STATUS:
+                $this->_logError($response);
+                return false;
+            default:
+                user_error('Expected SSH_FXP_NAME or SSH_FXP_STATUS');
+                return false;
+        }
+
+        extract(unpack('Ncount', $this->_string_shift($response, 4)));
+        // the file isn't a symlink
+        if (!$count) {
+            return false;
+        }
+
+        extract(unpack('Nlength', $this->_string_shift($response, 4)));
+        return $this->_string_shift($response, $length);
+    }
+
+    /**
+     * Create a symlink
+     *
+     * symlink() creates a symbolic link to the existing target with the specified name link.
+     *
+     * @param String $target
+     * @param String $link
+     * @return Boolean
+     * @access public
+     */
+    function symlink($target, $link)
+    {
+        if (!($this->bitmap & NET_SSH2_MASK_LOGIN)) {
+            return false;
+        }
+
+        $target = $this->_realpath($target);
+        $link = $this->_realpath($link);
+
+        $packet = pack('Na*Na*', strlen($target), $target, strlen($link), $link);
+        if (!$this->_send_sftp_packet(NET_SFTP_SYMLINK, $packet)) {
+            return false;
+        }
+
+        $response = $this->_get_sftp_packet();
+        if ($this->packet_type != NET_SFTP_STATUS) {
+            user_error('Expected SSH_FXP_STATUS');
+            return false;
+        }
+
+        extract(unpack('Nstatus', $this->_string_shift($response, 4)));
+        if ($status != NET_SFTP_STATUS_OK) {
+            $this->_logError($response, $status);
+            return false;
         }
 
         return true;

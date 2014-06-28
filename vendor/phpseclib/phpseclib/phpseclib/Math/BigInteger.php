@@ -31,7 +31,7 @@
  * Here's an example of how to use this library:
  * <code>
  * <?php
- *    include('Math/BigInteger.php');
+ *    include 'Math/BigInteger.php';
  *
  *    $a = new Math_BigInteger(2);
  *    $b = new Math_BigInteger(3);
@@ -238,7 +238,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('0x32', 16); // 50 in base-16
      *
@@ -506,7 +506,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('65');
      *
@@ -603,7 +603,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('65');
      *
@@ -630,7 +630,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('65');
      *
@@ -668,7 +668,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('50');
      *
@@ -821,7 +821,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('10');
      *    $b = new Math_BigInteger('20');
@@ -952,7 +952,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('10');
      *    $b = new Math_BigInteger('20');
@@ -1088,7 +1088,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('10');
      *    $b = new Math_BigInteger('20');
@@ -1372,7 +1372,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('10');
      *    $b = new Math_BigInteger('20');
@@ -1591,7 +1591,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger('10');
      *    $b = new Math_BigInteger('20');
@@ -2396,7 +2396,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger(30);
      *    $b = new Math_BigInteger(17);
@@ -2464,7 +2464,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger(693);
      *    $b = new Math_BigInteger(609);
@@ -2599,7 +2599,7 @@ class Math_BigInteger
      * Here's an example:
      * <code>
      * <?php
-     *    include('Math/BigInteger.php');
+     *    include 'Math/BigInteger.php';
      *
      *    $a = new Math_BigInteger(693);
      *    $b = new Math_BigInteger(609);
@@ -3066,8 +3066,7 @@ class Math_BigInteger
      */
     function _random_number_helper($size)
     {
-        $crypt_random = function_exists('crypt_random_string') || (!class_exists('Crypt_Random') && function_exists('crypt_random_string'));
-        if ($crypt_random) {
+        if (function_exists('crypt_random_string')) {
             $random = crypt_random_string($size);
         } else {
             $random = '';
@@ -3089,19 +3088,31 @@ class Math_BigInteger
     /**
      * Generate a random number
      *
-     * @param optional Integer $min
-     * @param optional Integer $max
+     * Returns a random number between $min and $max where $min and $max
+     * can be defined using one of the two methods:
+     *
+     * $min->random($max)
+     * $max->random($min)
+     *
+     * @param Math_BigInteger $arg1
+     * @param optional Math_BigInteger $arg2
      * @return Math_BigInteger
      * @access public
+     * @internal The API for creating random numbers used to be $a->random($min, $max), where $a was a Math_BigInteger object.
+     *           That method is still supported for BC purposes.
      */
-    function random($min = false, $max = false)
+    function random($arg1, $arg2 = false)
     {
-        if ($min === false) {
-            $min = new Math_BigInteger(0);
+        if ($arg1 === false) {
+            return false;
         }
 
-        if ($max === false) {
-            $max = new Math_BigInteger(0x7FFFFFFF);
+        if ($arg2 === false) {
+            $max = $arg1;
+            $min = $this;
+        } else {
+            $min = $arg1;
+            $max = $arg2;
         }
 
         $compare = $max->compare($min);
@@ -3164,21 +3175,25 @@ class Math_BigInteger
      * If there's not a prime within the given range, false will be returned.  If more than $timeout seconds have elapsed,
      * give up and return false.
      *
-     * @param optional Integer $min
-     * @param optional Integer $max
+     * @param Math_BigInteger $arg1
+     * @param optional Math_BigInteger $arg2
      * @param optional Integer $timeout
-     * @return Math_BigInteger
+     * @return Mixed
      * @access public
      * @internal See {@link http://www.cacr.math.uwaterloo.ca/hac/about/chap4.pdf#page=15 HAC 4.44}.
      */
-    function randomPrime($min = false, $max = false, $timeout = false)
+    function randomPrime($arg1, $arg2 = false, $timeout = false)
     {
-        if ($min === false) {
-            $min = new Math_BigInteger(0);
+        if ($arg1 === false) {
+            return false;
         }
 
-        if ($max === false) {
-            $max = new Math_BigInteger(0x7FFFFFFF);
+        if ($arg2 === false) {
+            $max = $arg1;
+            $min = $this;
+        } else {
+            $min = $arg1;
+            $max = $arg2;
         }
 
         $compare = $max->compare($min);
@@ -3290,7 +3305,7 @@ class Math_BigInteger
      * $t parameter is distributability.  Math_BigInteger::randomPrime() can be distributed across multiple pageloads
      * on a website instead of just one.
      *
-     * @param optional Integer $t
+     * @param optional Math_BigInteger $t
      * @return Boolean
      * @access public
      * @internal Uses the

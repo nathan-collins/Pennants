@@ -14,11 +14,15 @@
 				</div>
 				<div class="widget-content">
 					<table class="table-condensed message-table" width="100%">
-						<tr ng-repeat="team_player in team_players">
+						<tr ng-repeat="player in players">
 							<td><% player.name %></td>
 							<td><% player.handicap %></td>
-							<td width="70px">
-								<toggle-switch model="team" on-label="Yes" off-label="No" class="switch-small"></toggle-switch>
+							<td width="170px">
+								<div class="btn-group btn-group-sm" data-toggle="buttons-checkbox">
+									<button type="button" ng-click="teamPlayer('Yes', '<% player.id %>')" ng-model="team.yes" class="btn btn-default">Yes</button>
+									<button type="button" ng-click="teamPlayer('Res', '<% player.id %>')" ng-model="team.res" class="btn btn-default">Reserve</button>
+									<button type="button" ng-click="teamPlayer('No', '<% player.id %>')" ng-model="team.no" class="btn btn-default">No</button>
+								</div>
 							</td>
 						</tr>
 						<p ng-show="!players.length">No players for this match</p>
@@ -46,8 +50,12 @@
 						<tr ng-repeat="player in players">
 							<td><% player.name %></td>
 							<td><% player.handicap %></td>
-							<td width="70px">
-								<toggle-switch model="opponent" on-label="Yes" off-label="No" class="switch-small"></toggle-switch>
+							<td width="170px">
+								<div class="btn-group btn-group-sm" data-toggle="buttons-checkbox">
+									<button type="button" ng-click="opponentPlayer('Yes', '<% player.id %>')" ng-model="team.yes" ng-value="<% player.id %>" class="btn btn-default">Yes</button>
+									<button type="button" ng-click="opponentPlayer('Res', '<% player.id %>')" ng-model="team.avail" ng-value="<% player.id %>" class="btn btn-default">Reserve</button>
+									<button type="button" ng-click="opponentPlayer('No', '<% player.id %>')" ng-model="team.no" ng-value="<% player.id %>" class="btn btn-default">No</button>
+								</div>
 							</td>
 						</tr>
 						<p ng-show="!players.length">No players for this match</p>

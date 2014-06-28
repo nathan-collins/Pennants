@@ -54,6 +54,11 @@ class Magniloquent extends Model {
     protected $customMessages = array();
 
     /**
+     * @var array The attributes needed to be hashed before saving
+     */
+    protected static $needsHash = array();
+
+    /**
      * The constructor of the model. Takes optional array of attributes.
      * Also, it sets validationErrors to be an empty MessageBag instance.
      *
@@ -411,10 +416,17 @@ class Magniloquent extends Model {
      */
     private function autoHash()
     {
-        if (isset($this->attributes['password']))
-        {
-            if ($this->attributes['password'] != $this->getOriginal('password'))
-                $this->attributes['password'] = Hash::make($this->attributes['password']);
+        $attributes = array_merge(static::$needsHash, array('password'));
+
+        foreach ($attributes as $name) {
+
+            if (isset($this->attributes[$name]) && $this->isDirty($name))
+            {
+                if ( ! Hash::check($this->attributes[$name], $this->getOriginal($name))) 
+                {
+                    $this->attributes[$name] = Hash::make($this->attributes[$name]);                
+                }
+            }
         }
     }
 

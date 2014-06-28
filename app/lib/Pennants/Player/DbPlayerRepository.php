@@ -3,7 +3,8 @@
 use Player;
 use PlayerSeason;
 
-class DbPlayerRepository implements PlayerRepositoryInterface {
+class DbPlayerRepository implements PlayerRepositoryInterface
+{
 
 	/**
 	 * @return mixed
@@ -11,7 +12,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 
 	public function all()
 	{
-		return Player::leftJoin('player_seasons', 'players.id', '=', 'player_seasons.player_id')->get();
+		return Player::leftJoin( 'player_seasons', 'players.id', '=', 'player_seasons.player_id' )->get();
 	}
 
 	/**
@@ -20,9 +21,9 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function find($id)
+	public function find( $id )
 	{
-		return Player::find($id);
+		return Player::find( $id );
 	}
 
 	/**
@@ -31,11 +32,11 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	 * @return mixed
 	 */
 
-	public function update($id)
+	public function update( $id )
 	{
-		$player = $this->get($id);
+		$player = $this->get( $id );
 
-		$player->save(\Input::all());
+		$player->save( \Input::all() );
 
 		return $player;
 	}
@@ -45,11 +46,11 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	 * @return bool
 	 */
 
-	public function delete($id)
+	public function delete( $id )
 	{
-		$player = $this->get($id);
+		$player = $this->get( $id );
 
-		if(!$player) {
+		if ( !$player ) {
 			return false;
 		}
 
@@ -62,28 +63,26 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	 * @return Players
 	 */
 
-	public function create($data)
+	public function create( $data )
 	{
-		if(!isset($data['playerId'])) {
-			$player_data = array(
-				'name' => $data['name'],
-			);
+		if ( !isset( $data[ 'playerId' ] ) ) {
+			$player_data = array( 'name' => $data[ 'name' ], );
 
-			unset($data['name']);
+			unset( $data[ 'name' ] );
 
-			$player = new Player($player_data);
-			$player->settings = json_encode(array());
+			$player = new Player( $player_data );
+			$player->settings = json_encode( array() );
 
-			$player->save($player->toArray());
+			$player->save( $player->toArray() );
 		} else {
 			$player = new Player();
-			$player->id = $data['playerId'];
+			$player->id = $data[ 'playerId' ];
 		}
 
-		$player_season_data = $this->playerSeasonData($player, $data);
+		$player_season_data = $this->playerSeasonData( $player, $data );
 
-		$player_season = new PlayerSeason($player_season_data);
-		$player_season->save($player_season->toArray());
+		$player_season = new PlayerSeason( $player_season_data );
+		$player_season->save( $player_season->toArray() );
 
 		return $player;
 	}
@@ -92,35 +91,32 @@ class DbPlayerRepository implements PlayerRepositoryInterface {
 	 * @param $name
 	 * @return mixed
 	 */
-	public function searchPlayerByName($name)
+	public function searchPlayerByName( $name )
 	{
-		return Player::join('player_seasons', function($join) use ($name)
-		{
-			$join->on('players.id', '=', 'player_seasons.player_id')
-					 ->where('players.name', 'LIKE', '%'.$name.'%');
-		});
+		return Player::join( 'player_seasons', function ( $join ) use ( $name ) {
+			$join->on( 'players.id', '=', 'player_seasons.player_id' )->where( 'players.name', 'LIKE', '%' . $name . '%' );
+		} );
 	}
 
-	private function playerSeasonData($player, $data)
+	private function playerSeasonData( $player, $data )
 	{
-		$player_season_data = array(
-			'player_id' 				=> $player->id,
-			'season_id' 				=> $data['season_id'],
-			'club_id' 					=> $data['club_id'],
-			'grade_id'		 			=> $data['grade_id'],
-			'golf_link_number' 	=> isset($data['golf_link_number']) ? $data['golf_link_number'] : '',
-			'handicap' 					=> $data['handicap']
-		);
+		$playerSeasonData = new \stdClass();
+		$playerSeasonData->player_id 				= $player->id;
+		$playerSeasonData->season_id 				= $data[ 'season_id' ];
+		$playerSeasonData->club_id 					= $data[ 'club_id' ];
+		$playerSeasonData->grade_id 				= $data[ 'grade_id' ];
+		$playerSeasonData->golf_link_number = isset( $data[ 'golf_link_number' ] ) ? $data[ 'golf_link_number' ] : '';
+		$playerSeasonData->handicap 				= $data[ 'handicap' ];
 
-		return $player_season_data;
+		return $playerSeasonData;
 	}
 
 	/**
 	 * @param $playerId
 	 * @return mixed
 	 */
-	public function getPlayerById($playerId)
+	public function getPlayerById( $playerId )
 	{
-		return PlayerSeason::where('player_id', $playerId);
+		return PlayerSeason::where( 'player_id', $playerId );
 	}
 }

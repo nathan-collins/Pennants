@@ -13,4 +13,5 @@ namespace Pennants\PlayerResult;
 interface PlayerResultRepositoryInterface {
 	public function all();
 	public function find($id);
+	public function create($data);
 }

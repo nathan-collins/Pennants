@@ -19,6 +19,7 @@ class CreateResultsTable extends Migration {
 			$table->integer('game_id');
 			$table->integer('player_id');
 			$table->integer('versus_id');
+			$table->smallInteger('position');
 			$table->text('result');
 			$table->timestamps();
 		});

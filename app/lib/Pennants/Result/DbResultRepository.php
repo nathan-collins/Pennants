@@ -33,4 +33,9 @@ class DbResultRepository implements ResultRepositoryInterface {
 	{
 		return Result::getSeason($season_id)->getGrade($grade_id)->getMatch($match_id);
 	}
+
+	public function create($data)
+	{
+
+	}
 }
