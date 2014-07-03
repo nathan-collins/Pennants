@@ -16,7 +16,7 @@ class CreateResultsTable extends Migration {
 			$table->increments('id');
 			$table->integer('season_id');
 			$table->integer('grade_id');
-			$table->integer('game_id');
+			$table->integer('match_id');
 			$table->integer('player_id');
 			$table->integer('versus_id');
 			$table->smallInteger('position');

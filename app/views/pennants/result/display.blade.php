@@ -18,10 +18,10 @@
 							<td><% player.name %></td>
 							<td><% player.handicap %></td>
 							<td width="170px">
-								<div class="btn-group btn-group-sm" data-toggle="buttons-checkbox">
-									<button type="button" ng-click="teamPlayer('Yes', '<% player.id %>')" ng-model="team.yes" class="btn btn-default">Yes</button>
-									<button type="button" ng-click="teamPlayer('Res', '<% player.id %>')" ng-model="team.res" class="btn btn-default">Reserve</button>
-									<button type="button" ng-click="teamPlayer('No', '<% player.id %>')" ng-model="team.no" class="btn btn-default">No</button>
+								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox">
+									<button type="button" ng-click="teamPlayer(player.id, 'Yes', <?php echo $clubId ?>)" ng-model="team.yes" class="btn btn-default">Yes</button>
+									<button type="button" ng-click="teamPlayer(player.id, 'Res', <?php echo $clubId ?>)" ng-model="team.res" class="btn btn-default">Reserve</button>
+									<button type="button" ng-click="teamPlayer(player.id, 'No', <?php echo $clubId ?>)" ng-model="team.no" class="btn btn-default">No</button>
 								</div>
 							</td>
 						</tr>
@@ -51,10 +51,10 @@
 							<td><% player.name %></td>
 							<td><% player.handicap %></td>
 							<td width="170px">
-								<div class="btn-group btn-group-sm" data-toggle="buttons-checkbox">
-									<button type="button" ng-click="opponentPlayer('Yes', '<% player.id %>')" ng-model="team.yes" ng-value="<% player.id %>" class="btn btn-default">Yes</button>
-									<button type="button" ng-click="opponentPlayer('Res', '<% player.id %>')" ng-model="team.avail" ng-value="<% player.id %>" class="btn btn-default">Reserve</button>
-									<button type="button" ng-click="opponentPlayer('No', '<% player.id %>')" ng-model="team.no" ng-value="<% player.id %>" class="btn btn-default">No</button>
+								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox">
+									<button type="button" ng-click="opponentPlayer(player.id, 'Yes', <?php echo $opponentId?>)" ng-model="opponent.yes" class="btn btn-default">Yes</button>
+									<button type="button" ng-click="opponentPlayer(player.id, 'Res', <?php echo $opponentId?>)" ng-model="opponent.res" class="btn btn-default">Reserve</button>
+									<button type="button" ng-click="opponentPlayer(player.id, 'No', <?php echo $opponentId?>)" ng-model="opponent.no" class="btn btn-default">No</button>
 								</div>
 							</td>
 						</tr>

@@ -1,10 +1,16 @@
 <?php namespace Pennants\Player;
 
+use Pennants\PlayerSeason\PlayerSeasonRepositoryInterface;
 use Player;
 use PlayerSeason;
 
 class DbPlayerRepository implements PlayerRepositoryInterface
 {
+
+	public function __construct(PlayerSeasonRepositoryInterface $playerSeason)
+	{
+		$this->playerSeason = $playerSeason;
+	}
 
 	/**
 	 * @return mixed
@@ -81,7 +87,7 @@ class DbPlayerRepository implements PlayerRepositoryInterface
 
 		$player_season_data = $this->playerSeasonData( $player, $data );
 
-		$player_season = new PlayerSeason( $player_season_data );
+		$player_season = new PlayerSeason( (array)$player_season_data );
 		$player_season->save( $player_season->toArray() );
 
 		return $player;
@@ -98,6 +104,11 @@ class DbPlayerRepository implements PlayerRepositoryInterface
 		} );
 	}
 
+	/**
+	 * @param $player
+	 * @param $data
+	 * @return \stdClass
+	 */
 	private function playerSeasonData( $player, $data )
 	{
 		$playerSeasonData = new \stdClass();
@@ -118,5 +129,13 @@ class DbPlayerRepository implements PlayerRepositoryInterface
 	public function getPlayerById( $playerId )
 	{
 		return PlayerSeason::where( 'player_id', $playerId );
+	}
+
+	/**
+	 * @param $playerId
+	 */
+	public function getPlayerHandicap( $player_id ) {
+		$handicap = $this->playerSeason->getPlayerHandicap($player_id);
+		return $handicap;
 	}
 }

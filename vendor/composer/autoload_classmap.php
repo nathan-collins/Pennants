@@ -843,6 +843,7 @@ return array(
     'Monolog\\Handler\\RedisHandler' => $vendorDir . '/monolog/monolog/src/Monolog/Handler/RedisHandler.php',
     'Monolog\\Handler\\RollbarHandler' => $vendorDir . '/monolog/monolog/src/Monolog/Handler/RollbarHandler.php',
     'Monolog\\Handler\\RotatingFileHandler' => $vendorDir . '/monolog/monolog/src/Monolog/Handler/RotatingFileHandler.php',
+    'Monolog\\Handler\\SlackHandler' => $vendorDir . '/monolog/monolog/src/Monolog/Handler/SlackHandler.php',
     'Monolog\\Handler\\SocketHandler' => $vendorDir . '/monolog/monolog/src/Monolog/Handler/SocketHandler.php',
     'Monolog\\Handler\\StreamHandler' => $vendorDir . '/monolog/monolog/src/Monolog/Handler/StreamHandler.php',
     'Monolog\\Handler\\SwiftMailerHandler' => $vendorDir . '/monolog/monolog/src/Monolog/Handler/SwiftMailerHandler.php',

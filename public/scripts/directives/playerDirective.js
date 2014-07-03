@@ -14,8 +14,13 @@ pennantsApp.directive('playerText', function($cookies, $http, $cacheFactory) {
 
       cache.remove('/api/v1/pennants/player/'+attr.playerId);
 
+      if(attr.playerId == 0) {
+        return scope.player = "No Opponent";
+      }
+
       if(!cacheData) {
         $http.get('/api/v1/pennants/player/'+attr.playerId).success(function(player) {
+          console.log(player);
           scope.player = player.name;
           cache.put('/api/v1/pennants/player/'+attr.playerId, player.name);
         });

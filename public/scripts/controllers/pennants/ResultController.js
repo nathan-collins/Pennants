@@ -8,7 +8,7 @@ pennantsApp.controller('ResultController', function($scope, $http, $cookies) {
   var gradeId = $cookies.pennantsGrade;
   var matchId = Pennants.matchId;
 
-  $http.get('/api/v1/pennants/results/season/'+seasonId+'/'+gradeId+'/'+matchId).success(function(results) {
+  $http.get('/api/v1/pennants/result/match/'+seasonId+'/'+gradeId+'/'+matchId).success(function(results) {
     $scope.results = results;
   });
 });
@@ -18,12 +18,24 @@ pennantsApp.controller('TeamController', function($scope, $http, $cookies) {
   var gradeId = $cookies.pennantsGrade;
   var clubId = Pennants.clubId;
 
-  $scope.teamPlayer = function(status, playerId) {
-    _.debounce(function(e) {
-      $http.post('/api/v1/pennants/player').success(function() {
+  $('.player-group button').prop('disabled', false);
 
-      });
-    }, 500);
+  $scope.teamPlayer = function(playerId, status, clubId) {
+    $('.player-group button').prop('disabled', true);
+
+    $http.post('/api/v1/pennants/result',
+      {
+        status: status,
+        player_id: playerId,
+        match_id: Pennants.matchId,
+        grade_id: $cookies.pennantsGrade,
+        season_id: $cookies.pennantsSeason,
+        club_id: clubId,
+        player_type: 'player'
+      }
+    ).success(function() {
+      $('.player-group button').prop('disabled', false);
+    });
   }
 
   $http.get('/api/v1/pennants/player/season/'+seasonId+'/'+gradeId+'/'+clubId).success(function(players) {
@@ -37,8 +49,24 @@ pennantsApp.controller('OpponentController', function($scope, $http, $cookies) {
   var gradeId = $cookies.pennantsGrade;
   var opponentId = Pennants.opponentId;
 
-  $scope.opponentPlayer = function(status, playerId) {
-    alert("Yes");
+  $('.player-group button').prop('disabled', false);
+
+  $scope.opponentPlayer = function(playerId, status, clubId) {
+    $('.player-group button').prop('disabled', true);
+
+    $http.post('/api/v1/pennants/result',
+      {
+        status: status,
+        versus_id: playerId,
+        match_id: Pennants.matchId,
+        grade_id: $cookies.pennantsGrade,
+        season_id: $cookies.pennantsSeason,
+        club_id: clubId,
+        player_type: 'opponent'
+      }
+    ).success(function() {
+      $('.player-group button').prop('disabled', false);
+    });
   }
 
   $http.get('/api/v1/pennants/player/season/'+seasonId+'/'+gradeId+'/'+opponentId).success(function(players) {

@@ -20,8 +20,9 @@ class CreatePlayersResultsTable extends Migration {
 			$table->integer('match_id');
 			$table->smallInteger('hole');
 			$table->smallInteger('score');
+			$table->string('handicap', 10);
 			$table->enum('status', array('up', 'down', 'square'));
-			$table->enum('finished', array('Y', 'N'));
+			$table->enum('finished', array('Y', 'N'))->default('N');
 			$table->timestamps();
 		});
 	}

@@ -28,9 +28,19 @@ class ResultController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$s = $this->result->create(\Input::all());
+
+		if($s->isSaved()) {
+
+		}
 	}
 
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @param $match_id
+	 * @return mixed
+	 */
 	public function getResultsByMatch($season_id, $grade_id, $match_id)
 	{
 		if(empty($season_id)) {
@@ -49,7 +59,7 @@ class ResultController extends \BaseController {
 			));
 		}
 
-		$result = $this->result->getActiveResults($season_id, $grade_id, $match_id)->get();
+		$result = $this->result->getResultsByParams($season_id, $grade_id, $match_id)->get();
 
 		return $result;
 	}

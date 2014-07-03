@@ -68,11 +68,7 @@ class PlayerController extends \BaseController {
 	{
 		$player = $this->player->find($id);
 
-		return \Response::json(array(
-			'error' => false,
-			'player' => $player->toArray(),
-			'code' 	=> 200
-		));
+		return $player;
 	}
 
 	/**
@@ -85,6 +81,12 @@ class PlayerController extends \BaseController {
 		return $players;
 	}
 
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @param $club_id
+	 * @return mixed
+	 */
 	public function getPlayerbySeason($season_id, $grade_id, $club_id) {
 		if(empty($season_id)) {
 			return \Response::json(array(

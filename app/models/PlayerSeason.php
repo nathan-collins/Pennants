@@ -66,4 +66,14 @@ class PlayerSeason extends Magniloquent {
 	{
 		return $query->where('club_id', '=', $club_id);
 	}
+
+	/**
+	 * @param $query
+	 * @param $player_id
+	 * @return mixed
+	 */
+	public function scopePlayer($query, $player_id)
+	{
+		return $query->where('player_id', '=', $player_id);
+	}
 }

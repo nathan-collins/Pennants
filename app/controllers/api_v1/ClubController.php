@@ -30,8 +30,6 @@ class ClubController extends \BaseController {
 	 */
 	public function store()
 	{
-
-
 		$s = $this->club->create(\Input::all());
 
 		if($s->isSaved()) {

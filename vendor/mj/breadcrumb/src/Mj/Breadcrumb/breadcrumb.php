@@ -29,8 +29,6 @@ class Breadcrumb
      */
     public function __construct()
     {
-        $this->config = Config::get('breadcrumb');
-
         $this->seperator = (Config::get('breadcrumb::enable_seperator') === true)
                             ? '<span class="divider">'.Config::get('breadcrumb::default_seperator').'</span>'
                             : '';

@@ -1,7 +1,6 @@
 <?php namespace Pennants\PlayerResult;
 
 use PlayerResult;
-use Result;
 
 class DbPlayerResultRepository implements PlayerResultRepositoryInterface {
 
@@ -63,5 +62,14 @@ class DbPlayerResultRepository implements PlayerResultRepositoryInterface {
 		$resultData->grade_id;
 		$resultData->position;
 		return $resultData;
+	}
+
+	public function playerExists($player_id, $season_id, $grade_id, $match_id)
+	{
+		$player = PlayerResult::getSeason($season_id)->getgrade($grade_id)->getMatch($match_id)->getPlayer($player_id)->count();
+		if($player) {
+			return true;
+		}
+		return false;
 	}
 }

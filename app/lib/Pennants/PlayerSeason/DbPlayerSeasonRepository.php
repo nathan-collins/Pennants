@@ -1,6 +1,7 @@
 <?php namespace Pennants\PlayerSeason;
 
 use PlayerSeason;
+use Illuminate\Support\Facades\DB;
 
 class DbPlayerSeasonRepository implements PlayerSeasonRepositoryInterface {
 
@@ -32,6 +33,15 @@ class DbPlayerSeasonRepository implements PlayerSeasonRepositoryInterface {
 	 */
 	public function getPlayerByParams($season_id, $grade_id, $club_id)
 	{
-		return PlayerSeason::season($season_id)->grade($grade_id)->club($club_id)->join('players', 'player_seasons.player_id', '=', 'players.id')->orderBy('player_seasons.handicap');
+		return PlayerSeason::season($season_id)->grade($grade_id)->club($club_id)->join('players', 'player_seasons.player_id', '=', 'players.id')->orderBy(DB::raw('player_seasons.handicap * 1'));
+	}
+
+	/**
+	 * @param $player_id
+	 * @return mixed
+	 */
+	public function getPlayerHandicap($player_id)
+	{
+		return PlayerSeason::select('handicap')->player($player_id);
 	}
 }

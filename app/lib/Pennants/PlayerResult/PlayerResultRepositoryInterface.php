@@ -14,4 +14,5 @@ interface PlayerResultRepositoryInterface {
 	public function all();
 	public function find($id);
 	public function create($data);
+	public function playerExists($player_id, $season_id, $grade_id, $match_id);
 }

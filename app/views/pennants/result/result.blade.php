@@ -13,6 +13,7 @@ Pennants Results
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
+{{ HTML::script('scripts/directives/playerDirective.js') }}
 @stop
 
 @section('content')
@@ -28,12 +29,27 @@ Pennants Results
 			</div>
 			<div class="widget-content">
 				<table class="table-condensed message-table" width="100%">
-					<tr ng-repeat="result in results">
-						<td><% result %></td>
-						<td><% result %></td>
-						<td><% result %></td>
+					<tr>
+						<th colspan="2" club_id="<?php echo $clubId?>" club-text></th>
+						<th></th>
+						<th colspan="2" club_id="<?php echo $opponentId?>" club-text></th>
 					</tr>
-					<p ng-show="!players.length">No players for this match</p>
+					<tr ng-repeat="result in results">
+						<td player_id="<% result.player_id %>" player-text></td>
+						<td>
+							<button type="button" class="btn btn-default btn-sm pull-right">
+								<span><% result.position %></span>
+							</button>
+						</td>
+						<td>VS</td>
+						<td player_id="<% result.versus_id %>" player-text></td>
+						<td>
+							<button type="button" class="btn btn-default btn-sm pull-right">
+								<span><% result.position %></span>
+							</button>
+						</td>
+					</tr>
+					<p ng-show="!results.length">No matches found for this game</p>
 				</table>
 			</div>
 		</div>
