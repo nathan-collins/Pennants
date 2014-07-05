@@ -5,6 +5,6 @@ interface ResultRepositoryInterface {
 	public function all();
 	public function find($id);
 	public function create($data);
-	public function update($set_data, $match_id, $player_id);
-	public function getResultsByParams($season_id, $grade_id, $match_id);
+	public function update($data, $result_id);
+	public function updatePosition($set_data, $match_id, $position);
 }

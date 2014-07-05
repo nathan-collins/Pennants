@@ -35,14 +35,23 @@ class DbResultRepository implements ResultRepositoryInterface {
 	}
 
 	/**
+	 * @param $data
+	 * @param $result_id
+	 */
+	public function update($data, $result_id)
+	{
+
+	}
+
+	/**
 	 * @param $set_data
 	 * @param $match_id
-	 * @param $player_id
+	 * @param $position
 	 * @return mixed
 	 */
-	public function update($set_data, $match_id, $player_id)
+	public function updatePosition($set_data, $match_id, $position)
 	{
-		$result = Result::getMatch($match_id)->getPlayer($player_id);
+		$result = Result::getMatch($match_id)->getPosition($position)->first();
 
 		$result->save($set_data);
 
@@ -64,54 +73,47 @@ class DbResultRepository implements ResultRepositoryInterface {
 	 */
 	public function create($data)
 	{
-		$player_result = new PlayerResult($data);
+		$position = $this->initializePosition($data['status']);
+
 		$result_player = ($data['player_type'] == "player") ? $data['player_id'] : $data['versus_id'];
+
+		$player_result = new PlayerResult($data);
 		$player_result['handicap'] = $this->playerSeason->getPlayerHandicap($result_player)->pluck('handicap');
-		$data['position'] = $this->position($data['status'], $data['match_id'], $data['season_id'], $data['grade_id'], $data['club_id']);
+
 		$result = new Result($data);
 
-		$exists = $this->getResultByParams($result->season_id, $result->grade_id, $data['position'], $result->match_id)->first();
+		$exists = $this->getResultByParams($result->season_id, $result->grade_id, $result->match_id, $result_player)->first();
 
 		if(!$exists) {
-			$result->save($result->toArray());
 			unset($player_result->status);
+			$player_result->player_id = $result_player;
 			$player_result->save($player_result->toArray());
+			// We need to have a position here
+			$result->position = $this->setPosition($data['match_id'], $data['season_id'], $data['grade_id'], $data['club_id'], $player_result->player_id, $data['player_type'], $position);
+			$position_id = $this->positionExists($result->position);
+			if($position_id) {
+				$result_update = Result::find($position_id);
+				$result_update->update($result->toArray());
+				$this->setPosition($data['match_id'], $data['season_id'], $data['grade_id'], $data['club_id'], null, $data['player_type'], $position);
+			} else {
+				$result->save($result->toArray());
+				// We need to update the order again since a new player has been added
+				$this->setPosition($data['match_id'], $data['season_id'], $data['grade_id'], $data['club_id'], null, $data['player_type'], $position);
+			}
 		} else {
-			$result_update = Result::find($exists->id);
-			$result_update->update($result->toArray());
 			$player_exists = $this->playerResult->playerExists($result_player, $data['season_id'], $data['grade_id'], $data['match_id']);
 			if(!$player_exists) {
 				unset($player_result->status);
 				$player_result->player_id = $result_player;
 				$player_result->save($player_result->toArray());
+				$result_update = Result::find($exists->id);
+				$result_update->update($result->toArray());
 			}
+			$result->position = $this->setPosition($data['match_id'], $data['season_id'], $data['grade_id'], $data['club_id'], null, $data['player_type'], $position);
 		}
 	}
 
-	/**
-	 * @param $season_id
-	 * @param $grade_id
-	 * @param $position
-	 * @param $match_id
-	 * @return mixed
-	 */
-	protected function getResultByParams($season_id, $grade_id, $position,  $match_id)
-	{
-		return Result::getSeason($season_id)->getGrade($grade_id)->getPosition($position)->getMatch($match_id);
-	}
-
-	/**
-	 * @param $player_id
-	 * @param $status
-	 * @param $match_id
-	 * @param $season_id
-	 * @param $grade_id
-	 * @param $handicap
-	 * @param $club_id
-	 * @return int
-	 */
-	protected function position($status, $match_id, $season_id, $grade_id, $club_id)
-	{
+	protected function initializePosition($status) {
 		$position = 0;
 		switch($status) {
 			case "Yes":
@@ -124,32 +126,60 @@ class DbResultRepository implements ResultRepositoryInterface {
 				$position = 0;
 				break;
 		}
+		return $position;
+	}
+
+	protected function positionExists($position)
+	{
+		$id = Result::getPosition($position)->pluck('id');
+		if($id) {
+			return $id;
+		}
+		return false;
+	}
+
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @param $match_id
+	 * @param $player_id
+	 * @return mixed
+	 */
+	protected function getResultByParams($season_id, $grade_id,  $match_id, $player_id)
+	{
+		return Result::getSeason($season_id)->getGrade($grade_id)->getMatch($match_id)->getPlayer($player_id);
+	}
+
+	/**
+	 * @param $match_id
+	 * @param $season_id
+	 * @param $grade_id
+	 * @param $club_id
+	 * @param $player_id
+	 * @param $player_type
+	 * @param $position
+	 * @return mixed
+	 */
+	protected function setPosition($match_id, $season_id, $grade_id, $club_id, $player_id, $player_type, $position)
+	{
+		$player_id_field = ($player_type == 'player') ? 'player_id' : 'versus_id';
 
 		if($position == 1) {
-			$players = Result::join('players', function($join) use( $season_id, $grade_id, $match_id ) {
-				$join->on('players.id', '=', 'results.player_id')
-					->where('results.season_id', '=', $season_id)
-					->where('results.grade_id', '=', $grade_id)
-					->where('results.match_id', '=', $match_id)
-					->where('results.status', '=', 'Yes');
-			})
-			->leftJoin('player_results', function($join) use( $season_id, $grade_id, $match_id ) {
-				$join->on('player_results.player_id', '=', 'results.player_id')
-					->where('results.season_id', '=', $season_id)
-					->where('results.grade_id', '=', $grade_id)
-					->where('results.match_id', '=', $match_id)
-					->where('results.status', '=', 'Yes');
-			})
-			->join('player_seasons', function($join) use ($club_id) {
-				$join->on('player_seasons.player_id', '=', 'results.player_id')
-					->where('player_seasons.club_id', '=', $club_id);
+			$players = PlayerResult::join('players', function($join) use( $season_id, $grade_id, $match_id, $club_id ) {
+				$join->on('players.id', '=', 'player_results.player_id')
+					->where('player_results.season_id', '=', $season_id)
+					->where('player_results.grade_id', '=', $grade_id)
+					->where('player_results.match_id', '=', $match_id)
+					->where('player_results.club_id', '=', $club_id);
 			})->orderBy(DB::raw('player_results.handicap * 1'))->get();
 
 			if(count($players) > 0) {
 				foreach($players as $player) {
-					// Update the position
-					$this->update(array('position' => $position), $player->match_id, $player->player_id);
-					$position++;
+					if($player->id !== $player_id) {
+						// Update the position
+						$this->updatePosition(array('position' => $position, $player_id_field => $player->id), $player->match_id, $position);
+						$position++;
+					}
 				}
 			}
 

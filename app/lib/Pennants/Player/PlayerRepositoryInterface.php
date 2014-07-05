@@ -8,4 +8,5 @@ interface PlayerRepositoryInterface {
 	public function create($data);
 	public function searchPlayerByName($name);
 	public function getPlayerById($playerId);
+	public function getPlayerAndHandicap( $player_id );
 }

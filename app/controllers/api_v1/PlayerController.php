@@ -66,7 +66,7 @@ class PlayerController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$player = $this->player->find($id);
+		$player = $this->player->getPlayerAndHandicap($id)->first();
 
 		return $player;
 	}

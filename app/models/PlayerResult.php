@@ -5,7 +5,7 @@ use Magniloquent\Magniloquent\Magniloquent;
 class PlayerResult extends Magniloquent {
 	protected $guarded = array('id');
 
-	protected $fillable = array('player_id', 'grade_id', 'season_id', 'match_id', 'hole', 'score', 'status', 'finished');
+	protected $fillable = array('player_id', 'grade_id', 'season_id', 'match_id', 'club_id', 'hole', 'score', 'status', 'finished');
 
 	public static $rules = array(
 		"save" => array(
@@ -13,12 +13,14 @@ class PlayerResult extends Magniloquent {
 			'grade_id' => 'required|numeric',
 			'match_id' => 'required|numeric',
 			'player_id'	=> 'required|numeric',
+			'club_id'	=> 'required|numeric'
 		),
 		"create" => array(
 			'season_id' => 'required|numeric',
 			'grade_id' => 'required|numeric',
 			'match_id' => 'required|numeric',
 			'player_id'	=> 'required|numeric',
+			'club_id'	=> 'required|numeric'
 		),
 		"update" => array()
 	);

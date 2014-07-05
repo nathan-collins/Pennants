@@ -123,16 +123,25 @@ class DbPlayerRepository implements PlayerRepositoryInterface
 	}
 
 	/**
-	 * @param $playerId
+	 * @param $player_id
 	 * @return mixed
 	 */
-	public function getPlayerById( $playerId )
+	public function getPlayerById( $player_id )
 	{
-		return PlayerSeason::where( 'player_id', $playerId );
+		return PlayerSeason::where( 'player_id', $player_id );
+	}
+
+	public function getPlayerAndHandicap( $player_id )
+	{
+		return Player::join('player_seasons', function($join) use($player_id) {
+			$join->on('players.id', '=', 'player_seasons.player_id')
+				->where('player_seasons.player_id', '=', $player_id);
+		});
 	}
 
 	/**
-	 * @param $playerId
+	 * @param $player_id
+	 * @return mixed
 	 */
 	public function getPlayerHandicap( $player_id ) {
 		$handicap = $this->playerSeason->getPlayerHandicap($player_id);

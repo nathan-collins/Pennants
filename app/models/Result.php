@@ -12,13 +12,11 @@ class Result extends Magniloquent {
 			'season_id' => 'required|numeric',
 			'grade_id' => 'required|numeric',
 			'match_id' => 'required|numeric',
-			'player_id'	=> 'required|numeric',
 		),
 		"create" => array(
 			'season_id' => 'required|numeric',
 			'grade_id' => 'required|numeric',
 			'match_id' => 'required|numeric',
-			'player_id'	=> 'required|numeric',
 		),
 		"update" => array()
 	);
@@ -68,6 +66,11 @@ class Result extends Magniloquent {
 		return $query->where('player_id', '=', $player_id)->orWhere('versus_id', '=', $player_id);
 	}
 
+	/**
+	 * @param $query
+	 * @param $position
+	 * @return mixed
+	 */
 	public function scopeGetPosition($query, $position)
 	{
 		return $query->where('position', '=', $position);

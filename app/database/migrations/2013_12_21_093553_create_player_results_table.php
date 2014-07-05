@@ -18,6 +18,7 @@ class CreatePlayersResultsTable extends Migration {
 			$table->integer('grade_id');
 			$table->integer('season_id');
 			$table->integer('match_id');
+			$table->integer('club_id');
 			$table->smallInteger('hole');
 			$table->smallInteger('score');
 			$table->string('handicap', 10);

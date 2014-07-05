@@ -128,7 +128,7 @@ class ResultController extends \BaseController {
 			));
 		}
 
-		$result = $this->result->getResultsByParams($season_id, $grade_id, $match_id)->get();
+		$result = $this->result->getResultsByParams($season_id, $grade_id, $match_id)->orderBy('position')->get();
 
 		return $result;
 	}

@@ -21,7 +21,7 @@ pennantsApp.directive('playerText', function($cookies, $http, $cacheFactory) {
       if(!cacheData) {
         $http.get('/api/v1/pennants/player/'+attr.playerId).success(function(player) {
           console.log(player);
-          scope.player = player.name;
+          scope.player = player.name+' ('+player.handicap+')';
           cache.put('/api/v1/pennants/player/'+attr.playerId, player.name);
         });
       } else {
