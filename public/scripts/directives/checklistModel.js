@@ -1,74 +1,7 @@
-pennantsApp.directive('gradeDisplay', function($cookies, $http, $cacheFactory) {
-  return {
-    restrict: 'A',
-    template: '<h4>Grade: <% grade.name %></h4>',
-    link: function($scope, element, attrs) {
-      var gradeId = $cookies.pennantsGrade;
-
-      var cache = $cacheFactory.get('$http');
-
-      var cacheData = cache.get('/api/v1/pennants/grade/'+gradeId);
-
-      if(!cacheData) {
-        $http.get('/api/v1/pennants/grade/'+gradeId).success(function(grade) {
-          $scope.grade = grade;
-          cache.put('/api/v1/pennants/grade/'+gradeId, grade);
-        });
-      } else {
-        $scope.grade = cacheData;
-      }
-    }
-  }
-});
-
-pennantsApp.directive('gradeText', function($cookies, $http, $cacheFactory) {
-  return {
-    restrict: 'AE',
-    scope: {
-      id: '@',
-      grade_id: '@'
-    },
-    template: '<% grade %>',
-    link: function(scope, elem, attr) {
-      var cache = $cacheFactory.get('$http');
-
-      var cacheData = cache.get('/api/v1/pennants/grade/'+attr.gradeId);
-
-      cache.remove('/api/v1/pennants/grade/'+attr.gradeId);
-
-      if(!cacheData) {
-        $http.get('/api/v1/pennants/grade/'+attr.gradeId).success(function(grade) {
-          scope.grade = grade.name;
-          cache.put('/api/v1/pennants/grade/'+attr.gradeId, grade.name);
-        });
-      } else {
-        scope.grade = cacheData;
-      }
-    }
-  }
-});
-
-pennantsApp.directive('gradeSettingsPlayers', function ($parse) {
-  return {
-    restrict: 'A',
-    link: function(scope, element, attrs) {
-      scope.$watch('grade.settings_players', function(val) {
-        scope.maxPlayers = _.range(1, (_.isEmpty(val)) ? 0 : parseInt(val) + 1);
-      });
-    }
-  }
-});
-
-pennantsApp.directive('handicappedPlayers', function() {
-  return {
-    restrict: 'A',
-    link: function(scope, element, attrs) {
-      scope.$watch('grade.settings_not_handicapped', function(val) {
-        scope.limitPlayers = parseInt(val);
-      });
-    }
-  }
-});
+/**
+ * Checklist-model
+ * AngularJS directive for list of checkboxes
+ */
 
 pennantsApp.directive('checklistModel', ['$parse', '$compile', function($parse, $compile) {
   // contains
@@ -122,6 +55,7 @@ pennantsApp.directive('checklistModel', ['$parse', '$compile', function($parse, 
 
     // watch UI checked change
     scope.$watch('checked', function(newValue, oldValue) {
+      console.log($parse(attrs.checklistLimit)(scope.parent));
       if (newValue === oldValue) {
         return;
       }
@@ -131,19 +65,11 @@ pennantsApp.directive('checklistModel', ['$parse', '$compile', function($parse, 
       } else {
         setter(scope.$parent, remove(current, value));
       }
-      if(_.isArray(current)) {
-        if(current.length >= scope.limitPlayers) {
-          $('.not-handicapped').not(':checked').each(function(){
-            $(this).attr('disabled','disabled');
-          });
-        } else {
-          $('.not-handicapped').attr('disabled',false);
-        }
-      }
     });
 
     // watch original model change
     scope.$parent.$watch(attrs.checklistModel, function(newArr, oldArr) {
+      scope.limit = $parse(attrs.checklistLimit)(scope.parent);
       scope.checked = contains(newArr, value);
     }, true);
   }

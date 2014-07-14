@@ -1,4 +1,4 @@
-var pennantsApp = angular.module('pennantsApp', ["ngCookies"], function($interpolateProvider) {
+var pennantsApp = angular.module('pennantsApp', ["ngCookies", "ui.bootstrap"], function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
   $interpolateProvider.endSymbol('%>');
 });
@@ -17,18 +17,10 @@ pennantsApp.controller('GradeController',
         $scope.grades = grades;
       });
 
-      $scope.RightNavigation = "list";
-
       $scope.seasonDisplay = true;
-
-      $scope.page =
-      {
-        title: 'Pennants'
-      }
 
       $scope.storeGrade = function(gradeId) {
         // Set the season we are using
-        console.log(gradeId);
         $cookies.pennantsGrade = gradeId;
       }
 
@@ -50,17 +42,12 @@ pennantsApp.controller('AddGradeController',
     '$location',
     '$cookies',
 
-    function($scope, $http, $location, $cookies)
+    function($scope, $http, $cookies)
     {
       var seasonId = $cookies.pennantsSeason;
 
-      $scope.page =
-      {
-        title: 'Pennants - Add Grade'
-      }
-
       if(_.isUndefined(seasonId)) {
-        $location.path('/pennants/grade');
+
       }
 
       $scope.addGrade = function(grade) {
@@ -69,7 +56,6 @@ pennantsApp.controller('AddGradeController',
 
         $http.post('/api/v1/pennants/grade', grade).success(function() {
           $scope.reset();
-          $scope.activePath = $location.path('/pennants/grade');
         });
 
         $scope.reset = function() {
@@ -84,21 +70,18 @@ pennantsApp.controller('EditGradeController',
   [
     '$scope',
     '$http',
-    '$routeParams',
     '$location',
     '$cookies',
 
-    function($scope, $http, $routeParams, $location, $cookies) {
+    function($scope, $http, $cookies) {
 
       var seasonId = $cookies.pennantsSeason;
 
-      $http.get('/api/v1/pennants/grade/'+gradeId).success(function(grade) {
+      $scope.settingsHandicapped = "all";
+
+      $http.get('/api/v1/pennants/grade/'+Pennants.gradeId).success(function(grade) {
         $scope.grade = grade;
-      })
-        .error(function(data) {
-          FlashService.show(data.message);
-        }
-      );
+      });
 
       $scope.editGrade = function() {
 
@@ -110,12 +93,9 @@ pennantsApp.controller('EditGradeController',
 
         $scope.grades.push(grade);
 
-        $http.post('/api/v1/pennants/grade/'+gradeId, grade).success(function() {
-          $location.path('/pennants/grade')
-        })
-          .error(function(data) {
-            FlashService.show(data.message);
-          });
+        $http.post('/api/v1/pennants/grade/'+Pennants.gradeId, grade).success(function() {
+
+        });
       }
     }
   ]

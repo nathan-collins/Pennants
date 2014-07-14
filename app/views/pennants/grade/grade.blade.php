@@ -19,7 +19,7 @@ Pennants Grades
 @stop
 
 @section('content')
-<div class="col-md-4 content-container">
+<div class="col-md-6 content-container">
   <div class="well well-lg knowledge-recent-popular">
     <div season-display></div>
   </div>
@@ -40,8 +40,25 @@ Pennants Grades
 					<table class="table-condensed message-table" width="100%">
 						<tr ng-repeat="grade in grades">
 							<td width="25px"><i class="fa fa-th-list pull-left inline"></i></td>
-							<td><a ng-href="/dashboard/pennants/draws"  ng-click="storeGrade(grade.id)"><% grade.name %></a></td>
-							<td><a ng-href="/dashboard/pennants/draws" class="inline pull-right"><span class="glyphicon glyphicon-remove"></span></a></td>
+							<td>
+								<a ng-href="/dashboard/pennants/draws"  ng-click="storeGrade(grade.id)">
+									<% grade.name %>
+								</a>
+							</td>
+							<td style="width:40px">
+								<a ng-href="/dashboard/pennants/grade/<% grade.id %>/edit" class="inline pull-right">
+									<button type="button" class="btn btn-default btn-sm">
+										<span class="fa fa-pencil-square-o" title="Remove"><span class="badge"></span></span>
+									</button>
+								</a>
+							</td>
+							<td style="width:40px">
+								<a ng-href="/dashboard/pennants/grade/<% grade.id %>/delete" class="inline pull-right">
+									<button type="button" class="btn btn-default btn-sm">
+										<span class="fa fa-trash-o" title="Remove"><span class="badge"></span></span>
+									</button>
+								</a>
+							</td>
 						</tr>
 					</table>
 				</div>

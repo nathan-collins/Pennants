@@ -90,7 +90,18 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function create($data)
 	{
+		$settings = array();
+
 		$grade = new Grade($data);
+
+		foreach($data as $key => $setting) {
+			if(strpos($key, 'settings_') !== false) {
+				$key = strstr($key, '_');
+				$settings[ltrim($key, '_')] = $setting;
+			}
+		}
+
+		$grade->settings = json_encode($settings);
 
 		$grade->save($grade->toArray());
 

@@ -55,6 +55,7 @@ Route::group(array('prefix' => 'dashboard', 'before' => 'auth'), function()
 
 	Route::get('pennants/grade', 'dashboard\pennants\GradeController@showGrade');
 	Route::get('pennants/grade/add', 'dashboard\pennants\GradeController@addGrade');
+	Route::get('pennants/grade/{gradeId}/edit', 'dashboard\pennants\GradeController@editGrade');
 
 	Route::get('pennants/draws', 'dashboard\pennants\DrawController@showDraw');
 
