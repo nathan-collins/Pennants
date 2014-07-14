@@ -131,8 +131,17 @@ pennantsApp.directive('checklistModel', ['$parse', '$compile', function($parse, 
       } else {
         setter(scope.$parent, remove(current, value));
       }
+
       if(_.isArray(current)) {
         if(current.length >= scope.limitPlayers) {
+          $('.not-handicapped').not(':checked').each(function(){
+            $(this).attr('disabled','disabled');
+          });
+        } else {
+          $('.not-handicapped').attr('disabled',false);
+        }
+      } else {
+        if(value >= scope.limitPlayers) {
           $('.not-handicapped').not(':checked').each(function(){
             $(this).attr('disabled','disabled');
           });
