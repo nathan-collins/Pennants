@@ -52,7 +52,7 @@ pennantsApp.directive('gradeSettingsPlayers', function ($parse) {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
-      scope.$watch('grade.settings_players', function(val) {
+      scope.$watch('grade.settings.players', function(val) {
         scope.maxPlayers = _.range(1, (_.isEmpty(val)) ? 0 : parseInt(val) + 1);
       });
     }
@@ -63,7 +63,7 @@ pennantsApp.directive('handicappedPlayers', function() {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
-      scope.$watch('grade.settings_not_handicapped', function(val) {
+      scope.$watch('grade.settings.not_handicapped', function(val) {
         scope.limitPlayers = parseInt(val);
       });
     }

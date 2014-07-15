@@ -58,9 +58,12 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function update($id)
 	{
-		$grade = $this->get($id);
+		$grade = $this->find($id);
 
-		$grade->save(\Input::all());
+		$data = \Input::all();
+		$data['settings'] = json_encode($data['settings']);
+
+		$grade->save($data);
 
 		return $grade;
 	}

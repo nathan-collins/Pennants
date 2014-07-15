@@ -70,30 +70,40 @@ pennantsApp.controller('EditGradeController',
   [
     '$scope',
     '$http',
-    '$location',
     '$cookies',
 
     function($scope, $http, $cookies) {
 
       var seasonId = $cookies.pennantsSeason;
+      var gradeId = Pennants.gradeId;
 
       $scope.settingsHandicapped = "all";
 
-      $http.get('/api/v1/pennants/grade/'+Pennants.gradeId).success(function(grade) {
+      $http.get('/api/v1/pennants/grade/'+gradeId).success(function(grade) {
         $scope.grade = grade;
+        $scope.grade.settings = angular.fromJson(grade.settings);
+
+
       });
 
-      $scope.editGrade = function() {
+      $scope.editGrade = function(grade) {
 
-        var grade = {
-          year: $scope.year,
-          name: $scope.name,
-          id: gradeId
+        console.log(grade);
+        grade.settings = {
+          home_away: grade.settings.home_away,
+          players: grade.settings.players,
+          reserves: grade.settings.reserves,
+          handicapped: grade.settings.handicapped
         }
 
-        $scope.grades.push(grade);
+        console.log(grade);
 
-        $http.post('/api/v1/pennants/grade/'+Pennants.gradeId, grade).success(function() {
+//        delete(grade.settings.home_away);
+//        delete(grade.settings.players);
+//        delete(grade.settings.reserves);
+//        delete(grade.settings.handicapped);
+
+        $http.put('/api/v1/pennants/grade/'+gradeId, grade).success(function() {
 
         });
       }
