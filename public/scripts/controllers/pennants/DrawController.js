@@ -3,13 +3,19 @@ var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ui.bootstrap'], f
   $interpolateProvider.endSymbol('%>');
 });
 
+/**
+ * Draw Controller
+ */
+
 pennantsApp.controller('DrawController', function($scope, $http) {
   $scope.getRatings = function(clubId, clubName) {
     $scope.clubId = clubId;
     $scope.clubName = clubName;
+
     $('#display-info').show();
     $('#display-info .widget').slideUp();
     $('#hoverable').addClass('fa fa-spinner fa-4 fa-spin');
+
     $http.get('/api/v1/pennants/rating/club/'+clubId).success(function(ratings) {
       $scope.ratings = ratings;
       $('#hoverable').removeClass('fa fa-spinner fa-4 fa-spin');
@@ -49,6 +55,10 @@ pennantsApp.controller('ClubController', function($scope, $http, $cookies, $root
   }
 });
 
+/**
+ * Game Controller
+ */
+
 pennantsApp.controller('GameController', function($scope, $http, $cookies, $cacheFactory)
 {
   var seasonId = $cookies.pennantsSeason;
@@ -68,6 +78,10 @@ pennantsApp.controller('GameController', function($scope, $http, $cookies, $cach
     $scope.games = cacheData;
   }
 });
+
+/**
+ * Match Controller
+ */
 
 pennantsApp.controller('MatchController', function($scope, $http, $cookies)
 {

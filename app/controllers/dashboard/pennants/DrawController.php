@@ -1,6 +1,13 @@
 <?php namespace dashboard\pennants;
 
+use Pennants\Grade\GradeRepositoryInterface;
+
 class DrawController extends \BaseController {
+
+	public function __construct(GradeRepositoryInterface $grade)
+	{
+		$this->grade = $grade;
+	}
 
 	public function showDraw()
 	{

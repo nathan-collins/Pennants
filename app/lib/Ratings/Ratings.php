@@ -24,7 +24,7 @@ class Ratings {
 	{
 		$this->state = $state;
 		$this->ratingsPath = "http://www.golf.org.au/default.aspx?s=aus-slope-ratings&State=";
-		$this->courseName = $courseName;
+		$this->courseName = $courseName." (".$this->state.")";
 		$this->club = $club;
 		$this->position = $position;
 		$this->rating = $rating;
@@ -174,6 +174,14 @@ class Ratings {
 			} else {
 				// filter out items that are not needed
 				switch(count($rating)) {
+					case '11':
+						unset($rating[0]);
+						unset($rating[1]);
+						unset($rating[2]);
+						unset($rating[3]);
+						unset($rating[4]);
+						$rating = array_values($rating);
+						break;
 					case '10':
 						$holes = $rating[6];
 						unset($rating[0]);
@@ -236,19 +244,20 @@ class Ratings {
 					}
 				} else {
 					if($check_rating) {
-						foreach($check_rating as $rating) {
+						// This needs to be fix idiot (why would I do this)?
+						foreach($check_rating as $updateRatings) {
 							$check = array(
-								'club_id' 	=> $rating->club_id,
-								'par' 			=> (int)$rating->par,
-								'tee_name' 	=> $rating->tee_name,
-								'tee_sex' 	=> $rating->tee_sex,
-								'holes' 		=> $rating->holes,
-								'scratch' 	=> (int)$rating->scratch,
-								'slope' 		=> (int)$rating->slope
+								'club_id' 	=> $updateRatings->club_id,
+								'par' 			=> (int)$updateRatings->par,
+								'tee_name' 	=> $updateRatings->tee_name,
+								'tee_sex' 	=> $updateRatings->tee_sex,
+								'holes' 		=> $updateRatings->holes,
+								'scratch' 	=> (int)$updateRatings->scratch,
+								'slope' 		=> (int)$updateRatings->slope
 							);
 
 							if(array_diff_assoc($values, $check)) {
-								$updated = $this->rating->update($values, $rating->id);
+								$updated = $this->rating->update($values, $updateRatings->id);
 								if($updated) {
 									$action[] = $updated;
 								}

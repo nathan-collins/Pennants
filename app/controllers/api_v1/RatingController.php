@@ -66,7 +66,7 @@ class RatingController extends \BaseController {
 		$course = $ratings->checkCourse();
 
 		if(!empty($course)) {
-			$total_ratings = $ratings->getRatings();
+			$ratings->getRatings();
 		} else {
 			return false;
 		}

@@ -47,11 +47,7 @@ class GradeController extends \BaseController {
 
 	public function getSeasons($season_id)
 	{
-		$fields = array(
-			'season_id' => $season_id
-		);
-
-		$grade = $this->grade->getWhere($fields);
+		$grade = $this->grade->getGrades($season_id);
 
 		return $grade;
 	}
@@ -90,13 +86,8 @@ class GradeController extends \BaseController {
 		$s = $this->grade->update($id);
 
 		if($s->isSaved()) {
-			return \Redirect::route('api.v1.pennants.grade.show', $id)
-				->with('flash', 'The grade was updated');
-		}
 
-		return \Redirect::route('api.v1.pennants.grade.edit', $id)
-			->withInput()
-			->withErrors($s->errors());
+		}
 	}
 
 	/**

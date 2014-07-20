@@ -37,4 +37,13 @@ class Grade extends Magniloquent {
 		'season_id' => 'factory|Season',
 		'added_by' => 'factory|User'
 	);
+
+	/**
+	 * @param $query
+	 * @param $season_id
+	 */
+	public function scopeGetBySeason($query, $season_id)
+	{
+	 	$query->where('grades.season_id', '=', $season_id);
+	}
 }

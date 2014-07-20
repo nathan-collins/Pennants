@@ -24,19 +24,20 @@ class DbGradeRepository implements GradeRepositoryInterface {
 		return Grade::find($id);
 	}
 
+
 	/**
-	 * @param $rows
-	 *
+	 * @param $seasonId
+	 * @param $gradeId
 	 * @return mixed
 	 */
-
-	public function getWhere($rows)
+	public function getSettings($seasonId, $gradeId)
 	{
-		foreach($rows as $column => $value) {
-			$grade = Grade::where($column, '=', $value);
-		}
+		return Grade::find($gradeId)->getBySeason($seasonId)->pluck('settings');
+	}
 
-		return $grade->orderBy('name')->get();
+	public function getGrades($seasonId)
+	{
+		return Grade::getBySeason($seasonId)->get();
 	}
 
 	/**
@@ -93,18 +94,9 @@ class DbGradeRepository implements GradeRepositoryInterface {
 
 	public function create($data)
 	{
-		$settings = array();
-
 		$grade = new Grade($data);
 
-		foreach($data as $key => $setting) {
-			if(strpos($key, 'settings_') !== false) {
-				$key = strstr($key, '_');
-				$settings[ltrim($key, '_')] = $setting;
-			}
-		}
-
-		$grade->settings = json_encode($settings);
+		$grade->settings = json_encode($data['settings']);
 
 		$grade->save($grade->toArray());
 

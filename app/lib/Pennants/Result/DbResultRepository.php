@@ -2,16 +2,18 @@
 
 use Pennants\PlayerResult\PlayerResultRepositoryInterface;
 use Pennants\PlayerSeason\PlayerSeasonRepositoryInterface;
+use Pennants\Grade\GradeRepositoryInterface;
 use Result;
 use PlayerResult;
 use Illuminate\Support\Facades\DB;
 
 class DbResultRepository implements ResultRepositoryInterface {
 
-	public function __construct(PlayerSeasonRepositoryInterface $playerSeason, PlayerResultRepositoryInterface $playerResult)
+	public function __construct(PlayerSeasonRepositoryInterface $playerSeason, PlayerResultRepositoryInterface $playerResult, GradeRepositoryInterface $grade)
 	{
 		$this->playerSeason = $playerSeason;
 		$this->playerResult = $playerResult;
+		$this->grade = $grade;
 	}
 
 	/**
@@ -78,6 +80,7 @@ class DbResultRepository implements ResultRepositoryInterface {
 		$result_player = ($data['player_type'] == "player") ? $data['player_id'] : $data['versus_id'];
 
 		$player_result = new PlayerResult($data);
+		// Get players handicap
 		$player_result['handicap'] = $this->playerSeason->getPlayerHandicap($result_player)->pluck('handicap');
 
 		$result = new Result($data);

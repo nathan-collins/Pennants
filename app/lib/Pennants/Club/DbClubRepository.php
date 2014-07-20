@@ -139,9 +139,7 @@ class DbClubRepository implements ClubRepositoryInterface {
 		if(count($exists) == 0) {
 			$club->save($club->toArray());
 		} else {
-			foreach($exists as $club) {
-				$club = $club;
-			}
+			$club = $exists;
 		}
 
 		return $club;

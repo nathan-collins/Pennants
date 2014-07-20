@@ -84,7 +84,7 @@ Pennants Grades
 									<label class="col-sm-10 control-label">Which players are not handicapped?</label>
 									<div class="col-sm-2">
 										<label ng-repeat="num in maxPlayers" class="control-label not-handicapped">
-											<input type="checkbox" checklist-model="grade.settings.not_handicapped" checklist-value="num" ng-disable="disabled" checklist-limit="grade.settings.not_handicapped" class="not-handicapped" /> <%num%>
+											<input type="checkbox" checklist-model="grade.settings.not_handicapped_players" checklist-value="num" ng-disable="disabled" checklist-limit="grade.settings.not_handicapped_players" class="not-handicapped" /> <%num%>
 										</label>
 									</div>
 								</div>

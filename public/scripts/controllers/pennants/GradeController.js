@@ -25,7 +25,7 @@ pennantsApp.controller('GradeController',
       }
 
       $scope.deleteGrade = function(grade) {
-        grade.seasonId = seasonId;
+        grade.season_id = seasonId;
 
         $http.delete('/api/v1/pennants/grade/'+grade.id).success(function() {
           $scope.activePath = $location.path('/pennants/grade');
@@ -39,19 +39,13 @@ pennantsApp.controller('AddGradeController',
   [
     '$scope',
     '$http',
-    '$location',
     '$cookies',
 
     function($scope, $http, $cookies)
     {
       var seasonId = $cookies.pennantsSeason;
 
-      if(_.isUndefined(seasonId)) {
-
-      }
-
       $scope.addGrade = function(grade) {
-
         grade.season_id = seasonId;
 
         $http.post('/api/v1/pennants/grade', grade).success(function() {
@@ -82,26 +76,10 @@ pennantsApp.controller('EditGradeController',
       $http.get('/api/v1/pennants/grade/'+gradeId).success(function(grade) {
         $scope.grade = grade;
         $scope.grade.settings = angular.fromJson(grade.settings);
-
-
       });
 
       $scope.editGrade = function(grade) {
-
-        console.log(grade);
-        grade.settings = {
-          home_away: grade.settings.home_away,
-          players: grade.settings.players,
-          reserves: grade.settings.reserves,
-          handicapped: grade.settings.handicapped
-        }
-
-        console.log(grade);
-
-//        delete(grade.settings.home_away);
-//        delete(grade.settings.players);
-//        delete(grade.settings.reserves);
-//        delete(grade.settings.handicapped);
+        grade.season_id = seasonId;
 
         $http.put('/api/v1/pennants/grade/'+gradeId, grade).success(function() {
 

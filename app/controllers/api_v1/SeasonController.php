@@ -1,5 +1,6 @@
 <?php namespace api_v1;
 
+use Illuminate\Http\Request;
 use Pennants\Competition\CompetitionRepositoryInterface;
 use Pennants\Season\SeasonRepositoryInterface;
 
