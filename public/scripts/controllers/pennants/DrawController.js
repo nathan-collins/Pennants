@@ -7,7 +7,7 @@ var pennantsApp = angular.module('pennantsApp', ['ngCookies', 'ui.bootstrap'], f
  * Draw Controller
  */
 
-pennantsApp.controller('DrawController', function($scope, $http) {
+pennantsApp.controller('DrawController', function($scope, $http, $cookies) {
   $scope.getRatings = function(clubId, clubName) {
     $scope.clubId = clubId;
     $scope.clubName = clubName;

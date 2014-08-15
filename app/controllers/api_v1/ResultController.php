@@ -110,6 +110,12 @@ class ResultController extends \BaseController {
 		//
 	}
 
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @param $match_id
+	 * @return mixed
+	 */
 	public function getResultFromMatch($season_id, $grade_id, $match_id)
 	{
 		if(empty($season_id)) {

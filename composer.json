@@ -17,7 +17,11 @@
     "way/generators": "2.*",
     "fabpot/goutte":"*",
     "mj/breadcrumb": "dev-master",
-    "phpspec/phpspec": "~2.0"
+    "phpunit/phpunit": "4.1.*",
+    "behat/behat": "~3.0.6",
+    "behat/mink": "1.5.*@stable",
+    "behat/mink-extension": "*",
+    "behat/mink-goutte-driver": "*"
   },
 	"autoload": {
 		"psr-4":  {
@@ -46,7 +50,8 @@
 		]
 	},
 	"config": {
-		"preferred-install": "dist"
+		"preferred-install": "dist",
+    "bin-dir": "bin"
 	},
 	"minimum-stability": "dev"
 }

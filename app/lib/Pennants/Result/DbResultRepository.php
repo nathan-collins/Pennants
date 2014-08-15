@@ -75,7 +75,9 @@ class DbResultRepository implements ResultRepositoryInterface {
 	 */
 	public function create($data)
 	{
-		$position = $this->initializePosition($data['status']);
+		$settings = json_decode($this->grade->getSettings($data['season_id'], $data['grade_id']));
+
+		$position = $this->initializePosition($data['status'], $settings);
 
 		$result_player = ($data['player_type'] == "player") ? $data['player_id'] : $data['versus_id'];
 
@@ -116,14 +118,14 @@ class DbResultRepository implements ResultRepositoryInterface {
 		}
 	}
 
-	protected function initializePosition($status) {
+	protected function initializePosition($status, $settings) {
 		$position = 0;
 		switch($status) {
 			case "Yes":
 				$position = 1;
 				break;
 			case "Res":
-				$position = 8;
+				$position = $settings['players'] + 1;
 				break;
 			case "No":
 				$position = 0;
