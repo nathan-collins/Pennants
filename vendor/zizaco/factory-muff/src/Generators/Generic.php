@@ -5,21 +5,26 @@ namespace League\FactoryMuffin\Generators;
 use InvalidArgumentException;
 
 /**
- * Class Generic.
+ * This is the generic generator class.
  *
- * @package League\FactoryMuffin\Generator
+ * The generic generator will be the generator you use the most. It will
+ * communicate with the faker library in order to generate your attribute.
+ * Please note that class is not be considered part of the public api, and
+ * should only be used internally by Factory Muffin.
+ *
+ * @package League\FactoryMuffin\Generators
  * @author  Zizaco <zizaco@gmail.com>
  * @author  Scott Robertson <scottymeuk@gmail.com>
  * @author  Graham Campbell <graham@mineuk.com>
  * @license <https://github.com/thephpleague/factory-muffin/blob/master/LICENSE> MIT
  */
-class Generic extends Base
+final class Generic extends Base
 {
     /**
      * Generate, and return the attribute.
      *
-     * We attempt to use Faker for any string passed in.
-     * If a Faker property does not exist, we'll return the original string.
+     * We attempt to use Faker for any string passed in. If a Faker property
+     * does not exist, we'll return the original string.
      *
      * @return mixed
      */
@@ -31,18 +36,28 @@ class Generic extends Base
         }
 
         try {
-            if ($prefix = $this->getPrefix()) {
-                $faker = $this->faker->$prefix();
-            } else {
-                $faker = $this->faker;
-            }
-
-            return call_user_func_array(array($faker, $this->getGeneratorWithoutPrefix()), $this->getOptions());
+            return $this->execute();
         } catch (InvalidArgumentException $e) {
-            // If it fails to call it, it must not be a real thing
+            // If it fails to call it, it must not exist
+            return $this->getGenerator();
+        }
+    }
+
+    /**
+     * Call faker to generate the attribute.
+     *
+     * @return mixed
+     */
+    private function execute()
+    {
+        if ($prefix = $this->getPrefix()) {
+            $faker = $this->faker->$prefix();
+        } else {
+            $faker = $this->faker;
         }
 
-        // Just return the literal string
-        return $this->getGenerator();
+        $generator = $this->getGeneratorWithoutPrefix();
+
+        return call_user_func_array(array($faker, $generator), $this->getOptions());
     }
 }

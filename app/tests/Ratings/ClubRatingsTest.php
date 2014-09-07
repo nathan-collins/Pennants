@@ -40,6 +40,8 @@ class ClubRatingsTest extends \TestCase
 
 		$rating = new ClubRatings($ratingRepository, $clubRepository);
 
+		$this->assertInstanceOf('Ratings\ClubRatings', $rating);
+
 		$courseList = $rating->getCourses($this->crawler);
 		$courseName = $rating->setCourseName($course, $state);
 

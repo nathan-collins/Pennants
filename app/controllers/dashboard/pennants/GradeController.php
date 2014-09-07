@@ -1,20 +1,27 @@
 <?php namespace dashboard\pennants;
 
 use Laracasts\Utilities\JavaScript\Facades\JavaScript;
+use Mj\Breadcrumb\Breadcrumb;
 
 class GradeController extends \BaseController {
 
+	public function __construct()
+	{
+		$this->breadcrumb = new Breadcrumb();
+	}
+
 	public function showGrade()
 	{
-		\Breadcrumb::addbreadcrumb('Dashboard', '/dashboard');
-		\Breadcrumb::addBreadcrumb('Pennants', '/dashboard/pennants');
-		\Breadcrumb::addBreadcrumb('Season', '/dashboard/pennants/season');
-		\Breadcrumb::addBreadcrumb('Grade', '/grade');
+		$this->breadcrumb = new Breadcrumb();
+		$this->breadcrumb->addbreadcrumb('Dashboard', '/dashboard');
+		$this->breadcrumb->addBreadcrumb('Pennants', '/dashboard/pennants');
+		$this->breadcrumb->addBreadcrumb('Season', '/dashboard/pennants/season');
+		$this->breadcrumb->addBreadcrumb('Grade', '/grade');
 
-		\Breadcrumb::setSeperator(null);
+		$this->breadcrumb->setSeparator(null);
 
 		$data = array(
-			'breadcrumbs' => \Breadcrumb::generate() //Breadcrumbs UL is generated and stored in an array.
+			'breadcrumbs' => $this->breadcrumb->generate() //Breadcrumbs UL is generated and stored in an array.
 		);
 
 		return \View::make('pennants.grade.grade', $data);
@@ -22,15 +29,16 @@ class GradeController extends \BaseController {
 
 	public function addGrade()
 	{
-		\Breadcrumb::addbreadcrumb('Dashboard', '/dashboard');
-		\Breadcrumb::addBreadcrumb('Pennants', '/dashboard/pennants');
-		\Breadcrumb::addBreadcrumb('Season', '/dashboard/pennants/season');
-		\Breadcrumb::addBreadcrumb('Grade', '/grade');
+		$this->breadcrumb = new Breadcrumb();
+		$this->breadcrumb->addbreadcrumb('Dashboard', '/dashboard');
+		$this->breadcrumb->addBreadcrumb('Pennants', '/dashboard/pennants');
+		$this->breadcrumb->addBreadcrumb('Season', '/dashboard/pennants/season');
+		$this->breadcrumb->addBreadcrumb('Grade', '/grade');
 
-		\Breadcrumb::setSeperator(null);
+		$this->breadcrumb->setSeparator(null);
 
 		$data = array(
-			'breadcrumbs' => \Breadcrumb::generate() //Breadcrumbs UL is generated and stored in an array.
+			'breadcrumbs' => $this->breadcrumb->generate() //Breadcrumbs UL is generated and stored in an array.
 		);
 
 		return \View::make('pennants.grade.create', $data);
@@ -38,15 +46,16 @@ class GradeController extends \BaseController {
 
 	public function editGrade($gradeId)
 	{
-		\Breadcrumb::addbreadcrumb('Dashboard', '/dashboard');
-		\Breadcrumb::addBreadcrumb('Pennants', '/dashboard/pennants');
-		\Breadcrumb::addBreadcrumb('Season', '/dashboard/pennants/season');
-		\Breadcrumb::addBreadcrumb('Edit Grade', '/grade');
+		$this->breadcrumb = new Breadcrumb();
+		$this->breadcrumb->addbreadcrumb('Dashboard', '/dashboard');
+		$this->breadcrumb->addBreadcrumb('Pennants', '/dashboard/pennants');
+		$this->breadcrumb->addBreadcrumb('Season', '/dashboard/pennants/season');
+		$this->breadcrumb->addBreadcrumb('Edit Grade', '/grade');
 
-		\Breadcrumb::setSeperator(null);
+		$this->breadcrumb->setSeparator(null);
 
 		$data = array(
-			'breadcrumbs' => \Breadcrumb::generate() //Breadcrumbs UL is generated and stored in an array.
+			'breadcrumbs' => $this->breadcrumb->generate() //Breadcrumbs UL is generated and stored in an array.
 		);
 
 		JavaScript::put([

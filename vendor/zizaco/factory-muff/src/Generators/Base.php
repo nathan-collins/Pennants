@@ -2,10 +2,16 @@
 
 namespace League\FactoryMuffin\Generators;
 
+use League\FactoryMuffin\Arr;
+use League\FactoryMuffin\Facade as FactoryMuffin;
+
 /**
- * Class Base.
+ * This is the abstract base generator class.
  *
- * @package League\FactoryMuffin
+ * Please note that class is not be considered part of the public api, and
+ * should only be used internally by Factory Muffin.
+ *
+ * @package League\FactoryMuffin\Generators
  * @author  Zizaco <zizaco@gmail.com>
  * @author  Scott Robertson <scottymeuk@gmail.com>
  * @author  Graham Campbell <graham@mineuk.com>
@@ -14,15 +20,14 @@ namespace League\FactoryMuffin\Generators;
 abstract class Base
 {
     /**
-     * The Generator classes that are available.
+     * The generator classes that are available.
      *
      * @var string[]
      */
-    protected static $availableGenerators = array(
+    private static $generators = array(
         'call',
         'closure',
         'factory',
-        'generic',
     );
 
     /**
@@ -35,27 +40,27 @@ abstract class Base
     /**
      * The model instance.
      *
-     * @var object
+     * @var object|null
      */
     protected $object;
 
     /**
      * The faker factory or generator instance.
      *
-     * @var \Faker\Generator
+     * @var \Faker\Generator|null
      */
     protected $faker;
 
     /**
      * Initialise our Generator.
      *
-     * @param string           $kind   The kind of attribute that will be generated.
-     * @param object           $object The model instance.
-     * @param \Faker\Generator $faker  The faker instance.
+     * @param string                $kind   The kind of attribute
+     * @param object|null           $object The model instance.
+     * @param \Faker\Generator|null $faker  The faker instance.
      *
      * @return void
      */
-    public function __construct($kind, $object, $faker)
+    public function __construct($kind, $object = null, $faker = null)
     {
         $this->kind = $kind;
         $this->object = $object;
@@ -65,11 +70,11 @@ abstract class Base
     /**
      * Detect the type of Generator we are processing.
      *
-     * @param string           $kind   The kind of attribute that will be generated.
-     * @param object           $object The model instance.
-     * @param \Faker\Generator $faker  The faker instance.
+     * @param string                $kind   The kind of attribute.
+     * @param object|null           $object The model instance.
+     * @param \Faker\Generator|null $faker  The faker instance.
      *
-     * @return \League\FactoryMuffin\Generator
+     * @return \League\FactoryMuffin\Generators\Base
      */
     public static function detect($kind, $object = null, $faker = null)
     {
@@ -77,10 +82,10 @@ abstract class Base
             return new Closure($kind, $object, $faker);
         }
 
-        $class = '\\League\\FactoryMuffin\\Generators\\Generic';
-        foreach (static::$availableGenerators as $availableGenerator) {
-            if (substr($kind, 0, strlen($availableGenerator)) === $availableGenerator) {
-                $class = '\\League\\FactoryMuffin\\Generators\\' . ucfirst($availableGenerator);
+        $class = __NAMESPACE__.'\\Generic';
+        foreach (self::$generators as $generator) {
+            if (substr($kind, 0, strlen($generator)) === $generator) {
+                $class = __NAMESPACE__.'\\'.ucfirst($generator);
                 break;
             }
         }
@@ -124,7 +129,7 @@ abstract class Base
     protected function getGeneratorWithoutPrefix()
     {
         if ($prefix = $this->getPrefix()) {
-            return str_replace($prefix . ':', '', $this->getGenerator());
+            return str_replace($prefix.':', '', $this->getGenerator());
         }
 
         return $this->getGenerator();
@@ -139,7 +144,27 @@ abstract class Base
     {
         $prefixes = array('unique', 'optional');
         $prefix = current(explode(':', $this->getGenerator()));
-        return in_array($prefix, $prefixes) ? $prefix : false;
+
+        return Arr::has($prefixes, $prefix) ? $prefix : false;
+    }
+
+    /**
+     * Create an instance of the model.
+     *
+     * This model will be automatically saved to the database if the model we
+     * are generating it for has been saved (the create function was used).
+     *
+     * @param string $model Model class name.
+     *
+     * @return object
+     */
+    protected function factory($model)
+    {
+        if (FactoryMuffin::isPendingOrSaved($this->object)) {
+            return FactoryMuffin::create($model);
+        }
+
+        return FactoryMuffin::instance($model);
     }
 
     /**

@@ -2,7 +2,7 @@
 
 use Laracasts\Utilities\JavaScript\Facades\JavaScript;
 use Pennants\Player\PlayerRepositoryInterface;
-use Pennants\PlayerSeason\PlayerSeasonRepositoryInterface;
+use Mj\Breadcrumb\Breadcrumb;
 
 class PlayerController extends \BaseController {
 
@@ -10,6 +10,7 @@ class PlayerController extends \BaseController {
 	{
 		$this->player = $player;
 		$this->player_season = $player_season;
+		$this->breadcrumb = new Breadcrumb();
 	}
 
 	public function showPlayersByClub($clubId) {
@@ -25,16 +26,16 @@ class PlayerController extends \BaseController {
 	 * @return mixed
 	 */
 	public function addPlayer($clubId) {
-		\Breadcrumb::addbreadcrumb('Dashboard', '/dashboard');
-		\Breadcrumb::addBreadcrumb('Pennants', '/dashboard/pennants');
-		\Breadcrumb::addBreadcrumb('Season', '/dashboard/pennants/season');
-		\Breadcrumb::addBreadcrumb('Grade', '/dashboard/pennants/grade');
-		\Breadcrumb::addBreadcrumb('Players', '/dashboard/pennants/player/add');
+		$this->breadcrumb->addbreadcrumb('Dashboard', '/dashboard');
+		$this->breadcrumb->addBreadcrumb('Pennants', '/dashboard/pennants');
+		$this->breadcrumb->addBreadcrumb('Season', '/dashboard/pennants/season');
+		$this->breadcrumb->addBreadcrumb('Grade', '/dashboard/pennants/grade');
+		$this->breadcrumb->addBreadcrumb('Players', '/dashboard/pennants/player/add');
 
-		\Breadcrumb::setSeperator(null);
+		$this->breadcrumb->setSeparator(null);
 
 		$data = array(
-			'breadcrumbs' => \Breadcrumb::generate() //Breadcrumbs UL is generated and stored in an array.
+			'breadcrumbs' => $this->breadcrumb->generate() //Breadcrumbs UL is generated and stored in an array.
 		);
 
 		JavaScript::put([
@@ -51,16 +52,16 @@ class PlayerController extends \BaseController {
 	 */
 	public function showPlayer($playerId, $seasonId, $gradeId)
 	{
-		\Breadcrumb::addbreadcrumb('Dashboard', '/dashboard');
-		\Breadcrumb::addBreadcrumb('Pennants', '/dashboard/pennants');
-		\Breadcrumb::addBreadcrumb('Season', '/dashboard/pennants/season');
-		\Breadcrumb::addBreadcrumb('Grade', '/dashboard/pennants/grade');
-		\Breadcrumb::addBreadcrumb('Player', '/dashboard/pennants/player/');
+		$this->breadcrumb->addbreadcrumb('Dashboard', '/dashboard');
+		$this->breadcrumb->addBreadcrumb('Pennants', '/dashboard/pennants');
+		$this->breadcrumb->addBreadcrumb('Season', '/dashboard/pennants/season');
+		$this->breadcrumb->addBreadcrumb('Grade', '/dashboard/pennants/grade');
+		$this->breadcrumb->addBreadcrumb('Player', '/dashboard/pennants/player/');
 
-		\Breadcrumb::setSeperator(null);
+		$this->breadcrumb->setSeparator(null);
 
 		$data = array(
-			'breadcrumbs' => \Breadcrumb::generate() //Breadcrumbs UL is generated and stored in an array.
+			'breadcrumbs' => $this->breadcrumb->generate() //Breadcrumbs UL is generated and stored in an array.
 		);
 
 		$player = $this->player->find($playerId);

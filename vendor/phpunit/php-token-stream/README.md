@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sebastianbergmann/php-token-stream.svg?branch=master)](https://travis-ci.org/sebastianbergmann/php-token-stream)
+
 # PHP_TokenStream
 
 ## Installation
@@ -6,6 +8,6 @@ To add this package as a local, per-project dependency to your project, simply a
 
     {
         "require": {
-            "phpunit/php-token-stream": "*"
+            "phpunit/php-token-stream": "~1.2"
         }
     }

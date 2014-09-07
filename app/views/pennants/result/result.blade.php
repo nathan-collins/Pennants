@@ -35,6 +35,9 @@ Pennants Results
 						<th colspan="2" club_id="<?php echo $opponentId?>" club-text></th>
 					</tr>
 					<tr ng-repeat="result in results">
+						<td>
+						  @include('pennants.result.result_dropdown')
+						</td>
 						<td player_id="<% result.player_id %>" player-text></td>
 						<td>
 							<button type="button" class="btn btn-default btn-sm pull-right">
@@ -47,6 +50,9 @@ Pennants Results
 							<button type="button" class="btn btn-default btn-sm pull-right">
 								<span><% result.position %></span>
 							</button>
+						</td>
+						<td>
+							@include('pennants.result.result_dropdown')
 						</td>
 					</tr>
 					<p ng-show="!results.length">No matches found for this game</p>

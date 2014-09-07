@@ -13,7 +13,7 @@
     "nesbot/Carbon": "*",
     "magniloquent/magniloquent": "dev-master",
     "zizaco/factory-muff": "dev-master",
-    "fzaninotto/faker": "1.3.*@dev",
+    "fzaninotto/faker": "1.4.*",
     "way/generators": "2.*",
     "fabpot/goutte":"*",
     "mj/breadcrumb": "dev-master",

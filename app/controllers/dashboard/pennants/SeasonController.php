@@ -1,34 +1,41 @@
 <?php namespace dashboard\pennants;
 
+use Mj\Breadcrumb\Breadcrumb;
+
 class SeasonController extends \BaseController {
 
-	public function showSeason() {
-		\Breadcrumb::addbreadcrumb('Dashboard', '/dashboard');
-		\Breadcrumb::addBreadcrumb('Pennants', '/dashboard/pennants/season');
-		\Breadcrumb::addBreadcrumb('Season', '/season');
+	public function __construct()
+	{
+		$this->breadcrumb = new Breadcrumb();
+	}
 
-		\Breadcrumb::setSeperator(null);
+	public function showSeason() {
+		$this->breadcrumb->addbreadcrumb('Dashboard', '/dashboard');
+		$this->breadcrumb->addBreadcrumb('Pennants', '/dashboard/pennants/season');
+		$this->breadcrumb->addBreadcrumb('Season', '/season');
+
+		$this->breadcrumb->setSeparator(null);
 
 		$data = array(
-			'breadcrumbs' => \Breadcrumb::generate() //Breadcrumbs UL is generated and stored in an array.
+			'breadcrumbs' => $this->breadcrumb->generate() //Breadcrumbs UL is generated and stored in an array.
 		);
 
 		return \View::make('pennants.season.season', $data);
 	}
 
 	public function addSeason() {
-		\Breadcrumb::addbreadcrumb('Dashboard', '/dashboard');
-		\Breadcrumb::addBreadcrumb('Pennants', '/dashboard/pennants/season');
-		\Breadcrumb::addBreadcrumb('Add Season', '/season/add');
+		$this->breadcrumb->addbreadcrumb('Dashboard', '/dashboard');
+		$this->breadcrumb->addBreadcrumb('Pennants', '/dashboard/pennants/season');
+		$this->breadcrumb->addBreadcrumb('Add Season', '/season/add');
 
-		\Breadcrumb::setSeperator(null);
+		$this->breadcrumb->setSeparator(null);
 
 		\JavaScript::put([
 			'competition_id' => \Config::get('pennants.competition_id')
 		]);
 
 		$data = array(
-			'breadcrumbs' => \Breadcrumb::generate() //Breadcrumbs UL is generated and stored in an array.
+			'breadcrumbs' => $this->breadcrumb->generate() //Breadcrumbs UL is generated and stored in an array.
 		);
 
 		return \View::make('pennants.season.create', $data);

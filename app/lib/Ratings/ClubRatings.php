@@ -34,7 +34,6 @@ class ClubRatings {
 
 		if(isset($course)) {
 			$course = $this->setCourseName($course, $state);
-
 		}
 
 		$courses = $this->getCourses($crawler);

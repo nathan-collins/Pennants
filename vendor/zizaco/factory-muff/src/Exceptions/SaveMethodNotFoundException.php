@@ -3,10 +3,13 @@
 namespace League\FactoryMuffin\Exceptions;
 
 /**
- * Class SaveMethodNotFoundException.
+ * This is the save method not found exception class.
  *
- * @package League\FactoryMuffin\Exception
- * @author  Zizaco <zizaco@gmail.com>
+ * This is thrown when the save method of a model does not exist. This class
+ * extends MethodNotFoundException and ModelException, so you may want to try
+ * to catch one of those exceptions instead, if you want to be more general.
+ *
+ * @package League\FactoryMuffin\Exceptions
  * @author  Scott Robertson <scottymeuk@gmail.com>
  * @author  Graham Campbell <graham@mineuk.com>
  * @license <https://github.com/thephpleague/factory-muffin/blob/master/LICENSE> MIT
@@ -23,9 +26,9 @@ class SaveMethodNotFoundException extends MethodNotFoundException
     /**
      * Create a new instance.
      *
-     * @param object $object
-     * @param string $method
-     * @param string $message
+     * @param object      $object
+     * @param string      $method
+     * @param string|null $message
      *
      * @return void
      */

@@ -2,12 +2,14 @@
 
 use Laracasts\Utilities\JavaScript\Facades\JavaScript;
 use Pennants\Match\MatchRepositoryInterface;
+use Mj\Breadcrumb\Breadcrumb;
 
 class ResultController extends \BaseController {
 
 	public function __construct(MatchRepositoryInterface $match)
 	{
 		$this->match = $match;
+		$this->breadcrumb = new Breadcrumb();
 	}
 
 	/**
@@ -15,16 +17,16 @@ class ResultController extends \BaseController {
 	 */
 	public function showResults($matchId)
 	{
-		\Breadcrumb::addbreadcrumb('Dashboard', '/dashboard');
-		\Breadcrumb::addBreadcrumb('Pennants', '/dashboard/pennants');
-		\Breadcrumb::addBreadcrumb('Season', '/dashboard/pennants/season');
-		\Breadcrumb::addBreadcrumb('Grade', '/dashboard/pennants/grade');
-		\Breadcrumb::addBreadcrumb('Results', '/dashboard/pennants/results/'.$matchId);
+		$this->breadcrumb->addbreadcrumb('Dashboard', '/dashboard');
+		$this->breadcrumb->addBreadcrumb('Pennants', '/dashboard/pennants');
+		$this->breadcrumb->addBreadcrumb('Season', '/dashboard/pennants/season');
+		$this->breadcrumb->addBreadcrumb('Grade', '/dashboard/pennants/grade');
+		$this->breadcrumb->addBreadcrumb('Results', '/dashboard/pennants/results/'.$matchId);
 
-		\Breadcrumb::setSeperator(null);
+		$this->breadcrumb->setSeparator(null);
 
 		$data = array(
-			'breadcrumbs' => \Breadcrumb::generate() //Breadcrumbs UL is generated and stored in an array.
+			'breadcrumbs' => $this->breadcrumb->generate() //Breadcrumbs UL is generated and stored in an array.
 		);
 
 		$match = $this->match->find($matchId);

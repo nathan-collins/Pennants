@@ -56,6 +56,10 @@ namespace SebastianBergmann\Diff;
  */
 class Parser
 {
+    /**
+     * @param  string $string
+     * @return Diff[]
+     */
     public function parse($string)
     {
         $lines     = preg_split('(\r\n|\r|\n)', $string);
@@ -88,6 +92,10 @@ class Parser
         return $diffs;
     }
 
+    /**
+     * @param Diff  $diff
+     * @param array $lines
+     */
     private function parseFileDiff(Diff $diff, array $lines)
     {
         $chunks = array();
@@ -111,13 +119,13 @@ class Parser
 
             while (count($lines) &&
                   (preg_match('(^(?P<type>[+ -])?(?P<line>.*))', $last = array_shift($lines), $match) ||
-                  (strpos($last, '\\ No newline at end of file' ) === 0))) {
+                  (strpos($last, '\\ No newline at end of file') === 0))) {
                 if (count($match)) {
                     $type = Line::UNCHANGED;
 
                     if ($match['type'] == '+') {
                         $type = Line::ADDED;
-                    } else if ($match['type'] == '-') {
+                    } elseif ($match['type'] == '-') {
                         $type = Line::REMOVED;
                     }
 

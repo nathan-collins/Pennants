@@ -3,10 +3,12 @@
 namespace League\FactoryMuffin\Exceptions;
 
 /**
- * Class MethodNotFoundException.
+ * This is the method not found exception class.
  *
- * @package League\FactoryMuffin\Exception
- * @author  Zizaco <zizaco@gmail.com>
+ * This exception is never directly thrown, but you may try to catch this
+ * exception rather than the 2 other exceptions that extend this class.
+ *
+ * @package League\FactoryMuffin\Exceptions
  * @author  Scott Robertson <scottymeuk@gmail.com>
  * @author  Graham Campbell <graham@mineuk.com>
  * @license <https://github.com/thephpleague/factory-muffin/blob/master/LICENSE> MIT
@@ -23,9 +25,9 @@ class MethodNotFoundException extends ModelException
     /**
      * Create a new instance.
      *
-     * @param string $model
-     * @param string $method
-     * @param string $message
+     * @param string      $model
+     * @param string      $method
+     * @param string|null $message
      *
      * @return void
      */

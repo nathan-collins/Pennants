@@ -2,16 +2,23 @@
 
 namespace League\FactoryMuffin\Generators;
 
+use League\FactoryMuffin\Facade as FactoryMuffin;
+
 /**
- * Class Closure.
+ * This is the closure generator class.
  *
- * @package League\FactoryMuffin\Generator
+ * The closure generator can be used if you want a more custom solution.
+ * Whatever you return from the closure you write will be set as the attribute.
+ * Please note that class is not be considered part of the public api, and
+ * should only be used internally by Factory Muffin.
+ *
+ * @package League\FactoryMuffin\Generators
  * @author  Zizaco <zizaco@gmail.com>
  * @author  Scott Robertson <scottymeuk@gmail.com>
  * @author  Graham Campbell <graham@mineuk.com>
  * @license <https://github.com/thephpleague/factory-muffin/blob/master/LICENSE> MIT
  */
-class Closure extends Base
+final class Closure extends Base
 {
     /**
      * Generate, and return the attribute.
@@ -22,6 +29,8 @@ class Closure extends Base
     {
         $kind = $this->kind;
 
-        return $kind();
+        $saved = FactoryMuffin::isPendingOrSaved($this->object);
+
+        return $kind($this->object, $saved);
     }
 }
