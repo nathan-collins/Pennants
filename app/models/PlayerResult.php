@@ -58,6 +58,17 @@ class PlayerResult extends Magniloquent {
 
 	/**
 	 * @param $query
+	 * @param $club_id
+	 * @return mixed
+	 */
+
+	public function scopeGetClub($query, $club_id)
+	{
+		return $query->where('club_id', '=', $club_id);
+	}
+
+	/**
+	 * @param $query
 	 * @param $match_id
 	 * @return mixed
 	 */

@@ -85,11 +85,16 @@ class DbMatchRepository implements MatchRepositoryInterface {
 	/**
 	 * @param $season_id
 	 * @param $grade_id
-	 * @param $host_id
+	 * @param $club_id
 	 * @return mixed
 	 */
 	public function getMatchesFromHost($season_id, $grade_id, $club_id)
 	{
 		return Match::getSeason($season_id)->getGrade($grade_id)->getHost($club_id);
+	}
+
+	public function getGameFromMatch($match_id)
+	{
+		return Match::JoinGame()->getMatch($match_id);
 	}
 }

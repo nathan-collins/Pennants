@@ -16,6 +16,11 @@ class Match extends Magniloquent {
 		$query->leftJoin('games', 'matches.game_id', '=', 'games.id');
 	}
 
+	public function scopeGetMatch($query, $match_id)
+	{
+		$query->where('matches.id', '=', $match_id);
+	}
+
 	/**
 	 * @param $query
 	 * @param $season_id
@@ -42,10 +47,10 @@ class Match extends Magniloquent {
 
 	/**
 	 * @param $query
-	 * @param $match_id
+	 * @param $game_id
 	 */
 	public function scopeGetGame($query, $game_id) {
-		$query->where('matches.game_id', '=', $game_id);
+		$query->where('games.id', '=', $game_id);
 	}
 
 	/**

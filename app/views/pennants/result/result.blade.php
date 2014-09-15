@@ -23,9 +23,10 @@ Pennants Results
 			<div season-display></div>
 			<div grade-display></div>
 		</div>
+		<h3>Results for <span club_id="<?php echo $clubId?>" club-text></span> VS <span club_id="<?php echo $opponentId?>" club-text></span></h3>
 		<div class="widget" style="margin-top: 10px">
 			<div class="widget-header">
-				<h3>Results for <span club_id="<?php echo $clubId?>" club-text></span> VS <span club_id="<?php echo $opponentId?>" club-text></span></h3>
+
 			</div>
 			<div class="widget-content">
 				<table class="table-condensed message-table" width="100%">
@@ -35,23 +36,23 @@ Pennants Results
 						<th colspan="2" club_id="<?php echo $opponentId?>" club-text></th>
 					</tr>
 					<tr ng-repeat="result in results">
-						<td>
+						<td width="100px">
 						  @include('pennants.result.result_dropdown')
 						</td>
-						<td player_id="<% result.player_id %>" player-text></td>
+						<td player_id="<% result.player_id %>" player-match-club-text></td>
 						<td>
 							<button type="button" class="btn btn-default btn-sm pull-right">
 								<span><% result.position %></span>
 							</button>
 						</td>
 						<td>VS</td>
-						<td player_id="<% result.versus_id %>" player-text></td>
+						<td player_id="<% result.versus_id %>" player-match-opponent-text></td>
 						<td>
 							<button type="button" class="btn btn-default btn-sm pull-right">
 								<span><% result.position %></span>
 							</button>
 						</td>
-						<td>
+						<td width="100px">
 							@include('pennants.result.result_dropdown')
 						</td>
 					</tr>

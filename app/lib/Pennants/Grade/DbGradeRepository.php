@@ -32,9 +32,13 @@ class DbGradeRepository implements GradeRepositoryInterface {
 	 */
 	public function getSettings($seasonId, $gradeId)
 	{
-		return Grade::find($gradeId)->getBySeason($seasonId)->pluck('settings');
+		return Grade::getByGrade($gradeId)->getBySeason($seasonId)->pluck('settings');
 	}
 
+	/**
+	 * @param $seasonId
+	 * @return mixed
+	 */
 	public function getGrades($seasonId)
 	{
 		return Grade::getBySeason($seasonId)->get();

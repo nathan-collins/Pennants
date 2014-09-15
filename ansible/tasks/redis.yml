@@ -1,0 +1,6 @@
+---
+
+- name: Redis-Server
+  apt: package={{ item  }} state=present
+  with_items:
+    - redis-server

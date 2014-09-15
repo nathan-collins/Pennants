@@ -1,5 +1,6 @@
 <?php namespace api_v1;
 
+use Pennants\PlayerResult\PlayerResultRepositoryInterface;
 use Pennants\PlayerSeason\PlayerSeasonRepositoryInterface;
 use Pennants\Player\PlayerRepositoryInterface;
 
@@ -7,10 +8,11 @@ class PlayerController extends \BaseController {
 
 	protected $player;
 
-	public function __construct(PlayerRepositoryInterface $player, PlayerSeasonRepositoryInterface $player_season)
+	public function __construct(PlayerRepositoryInterface $player, PlayerSeasonRepositoryInterface $player_season, PlayerResultRepositoryInterface $player_result)
 	{
 		$this->player = $player;
 		$this->player_season = $player_season;
+		$this->player_result = $player_result;
 	}
 
 	/**
@@ -87,7 +89,7 @@ class PlayerController extends \BaseController {
 	 * @param $club_id
 	 * @return mixed
 	 */
-	public function getPlayerbySeason($season_id, $grade_id, $club_id) {
+	public function getPlayerBySeason($season_id, $grade_id, $club_id) {
 		if(empty($season_id)) {
 			return \Response::json(array(
 				'error' => true,
@@ -104,7 +106,65 @@ class PlayerController extends \BaseController {
 			));
 		}
 
-		$player = $this->player_season->getPlayerByParams($season_id, $grade_id, $club_id)->get();
+		$player = $this->player_season->getPlayerBySeasons($season_id, $grade_id, $club_id)->get();
+
+		return $player;
+	}
+
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @param $club_id
+	 * @return mixed
+	 */
+	public function getPlayerByResult($season_id, $grade_id, $club_id) {
+		if(empty($season_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'season' => array('message' => "No season supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		if(empty($grade_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'grade' => array('message' => "No grade supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		$player = $this->player_result->getPlayerByResults($season_id, $grade_id, $club_id)->get();
+
+		return $player;
+	}
+
+	/**
+	 * @param $season_id
+	 * @param $grade_id
+	 * @param $club_id
+	 * @param $match_id
+	 * @param $player_id
+	 * @return mixed
+	 */
+	public function getPlayerByMatch($season_id, $grade_id, $club_id, $match_id, $player_id) {
+		if(empty($season_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'season' => array('message' => "No season supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		if(empty($grade_id)) {
+			return \Response::json(array(
+				'error' => true,
+				'grade' => array('message' => "No grade supplied"),
+				'code' 	=> 400
+			));
+		}
+
+		$player = $this->player_result->getPlayerByMatch($season_id, $grade_id, $club_id, $match_id, $player_id)->first();
 
 		return $player;
 	}

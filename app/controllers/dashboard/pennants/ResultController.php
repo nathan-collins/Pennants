@@ -32,6 +32,8 @@ class ResultController extends \BaseController {
 		$match = $this->match->find($matchId);
 
 		JavaScript::put(array(
+			'seasonId' => $match->season_id,
+			'gradeId' => $match->grade_id,
 			'matchId' => $matchId,
 			'clubId' => $match->club_id,
 			'opponentId' => $match->opponent_id

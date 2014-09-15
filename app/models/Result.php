@@ -75,4 +75,13 @@ class Result extends Magniloquent {
 	{
 		return $query->where('position', '=', $position);
 	}
+
+	/**
+	 * @param $query
+	 * @return mixed
+	 */
+	public function scopeFilterStatus($query)
+	{
+		return $query->where('status', '=', 'Yes');
+	}
 }

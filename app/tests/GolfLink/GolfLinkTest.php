@@ -100,4 +100,17 @@ class GolfLinkTest extends \TestCase
 
 		$this->assertTrue(checkdate($anchorDateMonth, $anchorDateDay, $anchorDateYear));
 	}
+
+	public function testSearchAndConvertByDate()
+	{
+		$golfLink = new GolfLink();
+		$golfLinkNumber = "4131602203";
+		$date = "06-06-2014";
+		$crawler = $golfLink->initialize($golfLinkNumber);
+		$dates = $golfLink->getDates($crawler);
+
+		$closest = $golfLink->getNearestDate($dates, $date);
+
+		$this->assertEquals("31/05/2014", $closest['date']);
+	}
 }

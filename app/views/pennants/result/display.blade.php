@@ -1,9 +1,9 @@
 <div class="col-md-4" id="display-info">
 	<div class="well well-lg">
 	  <section ng-controller="TeamController">
+			<h3><span club_id="<?php echo $clubId?>" club-text></span> Players</h3>
 			<div class="widget" style="margin-top: 10px">
 				<div class="widget-header">
-					<h3><span club_id="<?php echo $clubId?>" club-text></span> Players</h3>
 					<div class="btn-group widget-header-toolbar">
 					<a ng-href="/dashboard/pennants/player/add/<?php echo $clubId ?>">
 						<button type="button" class="btn btn-primary btn-sm btn-ajax"><i class="fa fa-floppy-o"></i>
@@ -17,6 +17,7 @@
 						<tr ng-repeat="player in players">
 							<td><% player.name %></td>
 							<td><% player.handicap %></td>
+							<td><a href="#"><i class="fa fa-refresh"></i></a></td>
 							<td width="170px">
 								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox">
 									<button type="button" ng-click="teamPlayer(player.id, 'Yes', <?php echo $clubId ?>)" ng-model="team.yes" class="btn btn-default">Yes</button>
@@ -34,9 +35,9 @@
 	<h1>VS</h1>
 	<div class="well well-lg">
 		<section ng-controller="OpponentController">
+			<h3><span club_id="<?php echo $opponentId?>" club-text></span> Players</h3>
 			<div class="widget" style="margin-top: 10px">
 				<div class="widget-header">
-					<h3><span club_id="<?php echo $opponentId?>" club-text></span> Players</h3>
 					<div class="btn-group widget-header-toolbar">
 					<a ng-href="/dashboard/pennants/player/add/<?php echo $opponentId ?>">
 						<button type="button" class="btn btn-primary btn-sm btn-ajax"><i class="fa fa-floppy-o"></i>

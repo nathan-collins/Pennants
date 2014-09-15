@@ -12,6 +12,7 @@
     - include: tasks/development.yml
     - include: tasks/host.yml
     - include: tasks/app.yml
+    - include: tasks/redis.yml
 
   handlers:
     - name: restart apache

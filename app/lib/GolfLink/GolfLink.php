@@ -120,6 +120,9 @@ class GolfLink {
 
 	public function getNearestDate($dates, $searchDate)
 	{
+		$date = new DateTime($searchDate);
+		$searchDate = $date->format("d/m/Y");
+
 		$searchDate = DateTime::createFromFormat('d/m/Y', $searchDate);
 		$position = 0;
 		foreach($dates as $date) {
@@ -138,5 +141,16 @@ class GolfLink {
 		$closest = key($interval);
 
 		return array('date' => $dates[$closest], 'interval' => $closest);
+	}
+
+	public function getHandicapByDate($crawler, $date)
+	{
+		$dates = $this->getDates($crawler);
+
+		$closest = $this->getNearestDate($dates, $date);
+
+		$handicap = $this->retrieveDateHandicap($crawler, $closest['interval']);
+
+		return $handicap;
 	}
 }

@@ -8,4 +8,5 @@ interface MatchRepositoryInterface {
 	public function create($data);
 	public function getMatchesFromClub($season_id, $grade_id, $club_id);
 	public function getMatchesFromHost($season_id, $grade_id, $host_id);
+	public function getGameFromMatch($match_id);
 }
