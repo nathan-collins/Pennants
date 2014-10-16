@@ -31,7 +31,16 @@ class ResultController extends \BaseController {
 		$s = $this->result->create(\Input::all());
 
 		if($s->isSaved()) {
+			// We have saved the result so now what do we good
+			return $s;
+		} else {
+			$error = array(
+				'status' => 'error',
+				'type' => 'danger',
+				'message' => 'Player already exists within this game.'
+			);
 
+			return \Response::json($error, 500);
 		}
 	}
 

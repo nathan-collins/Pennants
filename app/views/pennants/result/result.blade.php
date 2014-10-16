@@ -10,6 +10,7 @@ Pennants Results
 
 @section('footer_scripts')
 {{ HTML::script('scripts/controllers/pennants/ResultController.js') }}
+{{ HTML::script('scripts/services/pennants/ResultService.js') }}
 {{ HTML::script('scripts/directives/seasonDirective.js') }}
 {{ HTML::script('scripts/directives/gradeDirective.js') }}
 {{ HTML::script('scripts/directives/clubDirective.js') }}
@@ -37,7 +38,7 @@ Pennants Results
 					</tr>
 					<tr ng-repeat="result in results">
 						<td width="100px">
-						  @include('pennants.result.result_dropdown')
+						  @include('pennants.result.result_dropdown', array('results' => $results, 'clubId' => $clubId))
 						</td>
 						<td player_id="<% result.player_id %>" player-match-club-text></td>
 						<td>
@@ -53,7 +54,7 @@ Pennants Results
 							</button>
 						</td>
 						<td width="100px">
-							@include('pennants.result.result_dropdown')
+							@include('pennants.result.result_dropdown', array('results' => $results, 'clubId' => $clubId))
 						</td>
 					</tr>
 					<p ng-show="!results.length">No matches found for this game</p>

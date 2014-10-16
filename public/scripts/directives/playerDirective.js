@@ -1,4 +1,4 @@
-pennantsApp.directive('playerText', function($cookies, $http, $cacheFactory) {
+pennantsApp.directive('playerText', function($cookies, $http) {
   return {
     restrict: 'AE',
     scope: {
@@ -7,30 +7,18 @@ pennantsApp.directive('playerText', function($cookies, $http, $cacheFactory) {
     },
     template: '<% player %>',
     link: function(scope, elem, attr) {
-
-      var cache = $cacheFactory.get('$http');
-
-      var cacheData = cache.get('/api/v1/pennants/player/'+attr.playerId);
-
-      cache.remove('/api/v1/pennants/player/'+attr.playerId);
-
       if(attr.playerId == 0) {
         return scope.player = "No Opponent";
       }
 
-      if(!cacheData) {
-        $http.get('/api/v1/pennants/player/'+attr.playerId).success(function(player) {
-          scope.player = player.name+' ('+player.handicap+')';
-          cache.put('/api/v1/pennants/player/'+attr.playerId, player.name);
-        });
-      } else {
-        scope.player = cacheData;
-      }
+      $http.get('/api/v1/pennants/player/'+attr.playerId).success(function(player) {
+        scope.player = player.name+' ('+player.handicap+')';
+      });
     }
   }
 });
 
-pennantsApp.directive('playerResultText', function($cookies, $http, $cacheFactory) {
+pennantsApp.directive('playerResultText', function($cookies, $http) {
   return {
     restrict: 'AE',
     scope: {
@@ -39,30 +27,18 @@ pennantsApp.directive('playerResultText', function($cookies, $http, $cacheFactor
     },
     template: '<% player %>',
     link: function(scope, elem, attr) {
-
-      var cache = $cacheFactory.get('$http');
-      var cacheData = cache.get('/api/v1/pennants/player/result/'+Pennants.seasonId+'/'+Pennants.gradeId+'/'+attr.playerId);
-
-      cache.remove('/api/v1/pennants/player/result/'+Pennants.seasonId+'/'+Pennants.gradeId+'/'+attr.playerId);
-
       if(attr.playerId == 0) {
         return scope.player = "No Opponent";
       }
 
-      if(!cacheData) {
-        $http.get('/api/v1/pennants/player/result/'+Pennants.seasonId+'/'+Pennants.gradeId+'/'+attr.playerId).success(function(player) {
-          scope.player = player.name+' ('+player.handicap+')';
-          cache.put('/api/v1/pennants/player/result/'+Pennants.seasonId+'/'+Pennants.gradeId+'/'+attr.playerId, player.name);
-        });
-      } else {
-        scope.player = cacheData;
-      }
+      $http.get('/api/v1/pennants/player/result/'+Pennants.seasonId+'/'+Pennants.gradeId+'/'+attr.playerId).success(function(player) {
+        scope.player = player.name+' ('+player.handicap+')';
+      });
     }
   }
 });
 
-pennantsApp.directive('playerMatchClubText', function($cookies, $http, $cacheFactory) {
-  var SLASH = "/";
+pennantsApp.directive('playerMatchClubText', function($cookies, $http) {
   return {
     restrict: 'AE',
     scope: {
@@ -71,31 +47,18 @@ pennantsApp.directive('playerMatchClubText', function($cookies, $http, $cacheFac
     },
     template: '<% player %>',
     link: function(scope, elem, attr) {
-
-      var cache = $cacheFactory.get('$http');
-      var path = '/api/v1/pennants/player/match/'+Pennants.seasonId+SLASH+Pennants.gradeId+SLASH+Pennants.clubId+SLASH+Pennants.matchId+SLASH+attr.playerId;
-      var cacheData = cache.get(path);
-
-      console.log(cacheData);
-
       if(attr.playerId == 0) {
         return scope.player = "No Opponent";
       }
 
-      if(!cacheData) {
-        $http.get(path).success(function(player) {
-          scope.player = player.name+' ('+player.handicap+')';
-          cache.put(path, scope.player);
-        });
-      } else {
-        scope.player = cacheData;
-      }
+      $http.get('/api/v1/pennants/player/match/'+Pennants.seasonId+'/'+Pennants.gradeId+'/'+Pennants.clubId+'/'+Pennants.matchId+'/'+attr.playerId).success(function(player) {
+        scope.player = player.name+' ('+player.handicap+')';
+      });
     }
   }
 });
 
-pennantsApp.directive('playerMatchOpponentText', function($cookies, $http, $cacheFactory) {
-  var SLASH = "/";
+pennantsApp.directive('playerMatchOpponentText', function($cookies, $http) {
   return {
     restrict: 'AE',
     scope: {
@@ -105,24 +68,13 @@ pennantsApp.directive('playerMatchOpponentText', function($cookies, $http, $cach
     template: '<% player %>',
     link: function(scope, elem, attr) {
 
-      var cache = $cacheFactory.get('$http');
-      var path = '/api/v1/pennants/player/match/'+Pennants.seasonId+SLASH+Pennants.gradeId+SLASH+Pennants.opponentId+SLASH+Pennants.matchId+SLASH+attr.playerId;
-      var cacheData = cache.get(path);
-
-      console.log(cacheData);
-
       if(attr.playerId == 0) {
         return scope.player = "No Opponent";
       }
 
-      if(!cacheData) {
-        $http.get(path).success(function(player) {
-          scope.player = player.name+' ('+player.handicap+')';
-          cache.put(path, scope.player);
-        });
-      } else {
-        scope.player = cacheData;
-      }
+      $http.get('/api/v1/pennants/player/match/'+Pennants.seasonId+'/'+Pennants.gradeId+'/'+Pennants.opponentId+'/'+Pennants.matchId+'/'+attr.playerId).success(function(player) {
+        scope.player = player.name+' ('+player.handicap+')';
+      });
     }
   }
 });

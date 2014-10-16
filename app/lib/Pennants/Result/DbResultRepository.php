@@ -46,7 +46,9 @@ class DbResultRepository implements ResultRepositoryInterface {
 	 */
 	public function update($data, $result_id)
 	{
-
+		$result = new Result($result_id);
+		$result->score = $data['result'];
+		$result->save();
 	}
 
 	/**
@@ -71,7 +73,7 @@ class DbResultRepository implements ResultRepositoryInterface {
 	 */
 	public function getResultsByParams($season_id, $grade_id, $match_id)
 	{
-		return Result::getSeason($season_id)->getGrade($grade_id)->getMatch($match_id)->filterStatus();
+		return Result::getSeason($season_id)->getGrade($grade_id)->getMatch($match_id);
 	}
 
 	protected function buildCacheKey($data, $type)
@@ -150,12 +152,15 @@ class DbResultRepository implements ResultRepositoryInterface {
 			}
 		} else {
 			$player_exists = $this->playerResult->playerExists($result_player, $data['season_id'], $data['grade_id'], $data['match_id']);
+
 			if(!$player_exists) {
 				unset($player_result->status);
 				$player_result->player_id = $result_player;
 				$player_result->save($player_result->toArray());
 				$result_update = Result::find($exists->id);
 				$result_update->update($result->toArray());
+			} else {
+				$this->playerResult->updateAvailability($data['status'], $data);
 			}
 		}
 
@@ -168,7 +173,7 @@ class DbResultRepository implements ResultRepositoryInterface {
 		// We need to update the order again since a new player has been added
 		$this->setPosition($data, $position, $settings);
 
-		return true;
+		return $result;
 	}
 
 	/**
@@ -258,7 +263,7 @@ class DbResultRepository implements ResultRepositoryInterface {
 	 */
 	protected function getResultByParams($season_id, $grade_id,  $match_id, $player_id)
 	{
-		return Result::getSeason($season_id)->getGrade($grade_id)->getMatch($match_id)->getPlayer($player_id)->filterStatus();
+		return Result::getSeason($season_id)->getGrade($grade_id)->getMatch($match_id)->getPlayer($player_id);
 	}
 
 	/**

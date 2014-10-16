@@ -344,6 +344,23 @@ class ContainerBuilderTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers Symfony\Component\DependencyInjection\ContainerBuilder::createService
      */
+    public function testCreateServiceFactory()
+    {
+        $builder = new ContainerBuilder();
+        $builder->register('foo', 'Bar\FooClass')->setFactory('Bar\FooClass::getInstance');
+        $builder->register('qux', 'Bar\FooClass')->setFactory(array('Bar\FooClass', 'getInstance'));
+        $builder->register('bar', 'Bar\FooClass')->setFactory(array(new Definition('Bar\FooClass'), 'getInstance'));
+        $builder->register('baz', 'Bar\FooClass')->setFactory(array(new Reference('bar'), 'getInstance'));
+
+        $this->assertTrue($builder->get('foo')->called, '->createService() calls the factory method to create the service instance');
+        $this->assertTrue($builder->get('qux')->called, '->createService() calls the factory method to create the service instance');
+        $this->assertTrue($builder->get('bar')->called, '->createService() uses anonymous service as factory');
+        $this->assertTrue($builder->get('baz')->called, '->createService() uses another service as factory');
+    }
+
+    /**
+     * @covers Symfony\Component\DependencyInjection\ContainerBuilder::createService
+     */
     public function testCreateServiceMethodCalls()
     {
         $builder = new ContainerBuilder();
@@ -486,7 +503,7 @@ class ContainerBuilderTest extends \PHPUnit_Framework_TestCase
             'foo' => array(
                 array('foo' => 'foo'),
                 array('foofoo' => 'foofoo'),
-            )
+            ),
         ), '->findTaggedServiceIds() returns an array of service ids and its tag attributes');
         $this->assertEquals(array(), $builder->findTaggedServiceIds('foobar'), '->findTaggedServiceIds() returns an empty array if there is annotated services');
     }
@@ -652,7 +669,7 @@ class ContainerBuilderTest extends \PHPUnit_Framework_TestCase
 
         $container->addDefinitions(array(
             'bar'       => $fooDefinition,
-            'bar_user'  => $fooUserDefinition
+            'bar_user'  => $fooUserDefinition,
         ));
 
         $container->compile();
@@ -805,7 +822,9 @@ class ContainerBuilderTest extends \PHPUnit_Framework_TestCase
     }
 }
 
-class FooClass {}
+class FooClass
+{
+}
 
 class ProjectContainer extends ContainerBuilder
 {

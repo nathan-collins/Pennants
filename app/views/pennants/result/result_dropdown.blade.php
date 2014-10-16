@@ -4,24 +4,8 @@
 		<span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu" role="menu" aria-labelledby="match-result">
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">SQ</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">1UP</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">2UP</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">2/1</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">3/1</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">3/2</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/2</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/3</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">5/3</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">5/4</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">6/4</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">6/5</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">7/5</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">7/6</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">8/6</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">8/7</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">9/7</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">9/8</a></li>
-		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">10/8</a></li>
+		<?php foreach($results as $result):?>
+			<li ng-click="setResult(player.id, <?php echo $result?>, <?php echo $clubId ?>)" role="presentation"><a role="menuitem" tabindex="-1" href="#"><?php echo $result?></a></li>
+		<?php endforeach;?>
 	</ul>
 </div>

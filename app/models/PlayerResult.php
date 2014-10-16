@@ -5,7 +5,7 @@ use Magniloquent\Magniloquent\Magniloquent;
 class PlayerResult extends Magniloquent {
 	protected $guarded = array('id');
 
-	protected $fillable = array('player_id', 'grade_id', 'season_id', 'match_id', 'club_id', 'hole', 'score', 'status', 'finished');
+	protected $fillable = array('player_id', 'grade_id', 'season_id', 'match_id', 'club_id', 'hole', 'score', 'availability', 'finished');
 
 	public static $rules = array(
 		"save" => array(
@@ -75,5 +75,14 @@ class PlayerResult extends Magniloquent {
 	public function scopeGetMatch($query, $match_id)
 	{
 		return $query->where('match_id', '=', $match_id);
+	}
+
+	/**
+	 * @param $query
+	 * @return mixed
+	 */
+	public function scopeFilterAvailability($query)
+	{
+		return $query->where('availability', '=', 'Yes');
 	}
 }

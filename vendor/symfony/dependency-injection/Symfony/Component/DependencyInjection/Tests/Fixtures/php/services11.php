@@ -16,7 +16,9 @@ use Symfony\Component\DependencyInjection\ParameterBag\FrozenParameterBag;
  */
 class ProjectServiceContainer extends Container
 {
-    private $parameters;
+    private static $parameters = array(
+
+        );
 
     /**
      * Constructor.
@@ -36,6 +38,14 @@ class ProjectServiceContainer extends Container
         );
 
         $this->aliases = array();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function compile()
+    {
+        throw new LogicException('You cannot compile a dumped frozen container.');
     }
 
     /**

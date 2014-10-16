@@ -2,8 +2,15 @@
 # Development related tasks
 
 # Apache
-- name: Apache
-  apt: pkg=apache2 state=installed
+- name: Install Apache2
+  apt: pkg={{ item }} state=present
+  notify: restart apache
+  tags: common
+  with_items:
+    - apache2
+    - apache2-utils
+    - apache2.2-common
+    - apache2-mpm-prefork
 
 - name: Apache Modules
   command: a2enmod {{ item }}

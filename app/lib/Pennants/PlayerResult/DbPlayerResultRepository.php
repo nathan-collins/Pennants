@@ -112,11 +112,13 @@ class DbPlayerResultRepository implements PlayerResultRepositoryInterface {
 	 * @param $season_id
 	 * @param $grade_id
 	 * @param $club_id
+	 * @param $match_id
+	 * @param $player_id
 	 * @return mixed
 	 */
 	public function getPlayerByMatch($season_id, $grade_id, $club_id, $match_id, $player_id)
 	{
-		return PlayerResult::getSeason($season_id)->getGrade($grade_id)->getClub($club_id)->getMatch($match_id)->getPlayer($player_id)->join('players', 'player_results.player_id', '=', 'players.id');
+		return PlayerResult::getSeason($season_id)->getGrade($grade_id)->getClub($club_id)->getMatch($match_id)->getPlayer($player_id)->leftJoin('players', 'player_results.player_id', '=', 'players.id')->filterAvailability();
 	}
 
 	/**
@@ -128,5 +130,16 @@ class DbPlayerResultRepository implements PlayerResultRepositoryInterface {
 	public function getPlayerHandicap($season_id, $grade_id,$player_id)
 	{
 		return PlayerResult::getSeason($season_id)->getGrade($grade_id)->getPlayer($player_id)->pluck('handicap');
+	}
+
+	/**
+	 * @param $availability
+	 * @param $data
+	 */
+	public function updateAvailability($availability, $data)
+	{
+		$playerSeason = PlayerResult::getSeason($data['season_id'])->getGrade($data['grade_id'])->getPlayer($data['player_id'])->getClub($data['club_id'])->first();
+		$playerSeason->availability = $availability;
+		$playerSeason->save();
 	}
 }

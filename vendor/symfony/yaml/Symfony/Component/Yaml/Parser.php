@@ -94,8 +94,8 @@ class Parser
                 if (!isset($values['value']) || '' == trim($values['value'], ' ') || 0 === strpos(ltrim($values['value'], ' '), '#')) {
                     $c = $this->getRealCurrentLineNb() + 1;
                     $parser = new Parser($c);
-                    $parser->refs =& $this->refs;
-                    $data[] = $parser->parse($this->getNextEmbedBlock(), $exceptionOnInvalidType, $objectSupport, $objectForMap);
+                    $parser->refs = & $this->refs;
+                    $data[] = $parser->parse($this->getNextEmbedBlock(null, true), $exceptionOnInvalidType, $objectSupport, $objectForMap);
                 } else {
                     if (isset($values['leadspaces'])
                         && ' ' == $values['leadspaces']
@@ -104,7 +104,7 @@ class Parser
                         // this is a compact notation element, add to next block and parse
                         $c = $this->getRealCurrentLineNb();
                         $parser = new Parser($c);
-                        $parser->refs =& $this->refs;
+                        $parser->refs = & $this->refs;
 
                         $block = $values['value'];
                         if ($this->isNextLineIndented()) {
@@ -161,7 +161,7 @@ class Parser
                         }
                         $c = $this->getRealCurrentLineNb() + 1;
                         $parser = new Parser($c);
-                        $parser->refs =& $this->refs;
+                        $parser->refs = & $this->refs;
                         $parsed = $parser->parse($value, $exceptionOnInvalidType, $objectSupport, $objectForMap);
 
                         if (!is_array($parsed)) {
@@ -212,7 +212,7 @@ class Parser
                     } else {
                         $c = $this->getRealCurrentLineNb() + 1;
                         $parser = new Parser($c);
-                        $parser->refs =& $this->refs;
+                        $parser->refs = & $this->refs;
                         $value = $parser->parse($this->getNextEmbedBlock(), $exceptionOnInvalidType, $objectSupport, $objectForMap);
                         // Spec: Keys MUST be unique; first one wins.
                         // But overwriting is allowed when a merge node is used in current block.
@@ -317,15 +317,20 @@ class Parser
     /**
      * Returns the next embed block of YAML.
      *
-     * @param int     $indentation The indent level at which the block is to be read, or null for default
+     * @param int  $indentation The indent level at which the block is to be read, or null for default
+     * @param bool $inSequence  True if the enclosing data structure is a sequence
      *
      * @return string A YAML string
      *
      * @throws ParseException When indentation problem are detected
      */
-    private function getNextEmbedBlock($indentation = null)
+    private function getNextEmbedBlock($indentation = null, $inSequence = false)
     {
-        $this->moveToNextLine();
+        $oldLineIndentation = $this->getCurrentLineIndentation();
+
+        if (!$this->moveToNextLine()) {
+            return;
+        }
 
         if (null === $indentation) {
             $newIndent = $this->getCurrentLineIndentation();
@@ -340,6 +345,14 @@ class Parser
         }
 
         $data = array(substr($this->currentLine, $newIndent));
+
+        if ($inSequence && $oldLineIndentation === $newIndent && '-' === $data[0][0]) {
+            // the previous line contained a dash but no item content, this line is a sequence item with the same indentation
+            // and therefore no nested list or mapping
+            $this->moveToPreviousLine();
+
+            return;
+        }
 
         $isItUnindentedCollection = $this->isStringUnIndentedCollectionItem($this->currentLine);
 
@@ -671,5 +684,4 @@ class Parser
     {
         return (0 === strpos($this->currentLine, '- '));
     }
-
 }

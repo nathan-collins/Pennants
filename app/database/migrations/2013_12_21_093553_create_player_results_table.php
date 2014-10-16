@@ -24,6 +24,7 @@ class CreatePlayersResultsTable extends Migration {
 			$table->string('handicap', 10);
 			$table->enum('status', array('up', 'down', 'square'));
 			$table->enum('finished', array('Y', 'N'))->default('N');
+			$table->enum('availability', array('Yes', 'Res', 'No'))->default('No');
 			$table->timestamps();
 		});
 	}

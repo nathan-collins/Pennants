@@ -62,7 +62,7 @@ class PhpDumperTest extends \PHPUnit_Framework_TestCase
             'concatenation from the start value' => '\'\'.',
             '.' => 'dot as a key',
             '.\'\'.' => 'concatenation as a key',
-            '\'\'.' =>'concatenation from the start key',
+            '\'\'.' => 'concatenation from the start key',
             'optimize concatenation' => "string1%some_string%string2",
             'optimize concatenation with empty string' => "string1%empty_value%string2",
             'optimize concatenation from the start' => '%empty_value%start',
@@ -118,6 +118,14 @@ class PhpDumperTest extends \PHPUnit_Framework_TestCase
             $this->assertInstanceOf('\Symfony\Component\DependencyInjection\Exception\RuntimeException', $e, '->dump() throws a RuntimeException if the container to be dumped has reference to objects or resources');
             $this->assertEquals('Unable to dump a service container if a parameter is an object or a resource.', $e->getMessage(), '->dump() throws a RuntimeException if the container to be dumped has reference to objects or resources');
         }
+    }
+
+    public function testServicesWithAnonymousFactories()
+    {
+        $container = include self::$fixturesPath.'/containers/container19.php';
+        $dumper = new PhpDumper($container);
+
+        $this->assertStringEqualsFile(self::$fixturesPath.'/php/services19.php', $dumper->dump(), '->dump() dumps services with anonymous factories');
     }
 
     /**

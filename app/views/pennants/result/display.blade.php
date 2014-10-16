@@ -14,15 +14,22 @@
 				</div>
 				<div class="widget-content">
 					<table class="table-condensed message-table" width="100%">
-						<tr ng-repeat="player in players">
+						<tr ng-repeat="player in players" ng-class="player.availability == 'No' ? 'alert-danger' : ''">
 							<td><% player.name %></td>
 							<td><% player.handicap %></td>
 							<td><a href="#"><i class="fa fa-refresh"></i></a></td>
 							<td width="170px">
-								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox">
-									<button type="button" ng-click="teamPlayer(player.id, 'Yes', <?php echo $clubId ?>)" ng-model="team.yes" class="btn btn-default">Yes</button>
+								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox" ng-if="player.availability == 'Res'">
+									<button type="button" ng-click="teamPlayer(player.id, 'Yes', <?php echo $clubId ?>)" ng-model="team.yes" class="btn btn-default">Playing</button>
+									<button type="button" ng-click="teamPlayer(player.id, 'No', <?php echo $clubId ?>)" ng-model="team.no" class="btn btn-default">Away</button>
+								</div>
+								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox" ng-if="player.availability == 'No'">
+									<button type="button" ng-click="teamPlayer(player.id, 'Yes', <?php echo $clubId ?>)" ng-model="team.yes" class="btn btn-default">Playing</button>
 									<button type="button" ng-click="teamPlayer(player.id, 'Res', <?php echo $clubId ?>)" ng-model="team.res" class="btn btn-default">Reserve</button>
-									<button type="button" ng-click="teamPlayer(player.id, 'No', <?php echo $clubId ?>)" ng-model="team.no" class="btn btn-default">No</button>
+								</div>
+								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox" ng-if="player.availability == 'Yes'">
+									<button type="button" ng-click="teamPlayer(player.id, 'Res', <?php echo $clubId ?>)" ng-model="team.res" class="btn btn-default">Reserve</button>
+									<button type="button" ng-click="teamPlayer(player.id, 'No', <?php echo $clubId ?>)" ng-model="team.no" class="btn btn-default">Away</button>
 								</div>
 							</td>
 						</tr>
@@ -52,10 +59,17 @@
 							<td><% player.name %></td>
 							<td><% player.handicap %></td>
 							<td width="170px">
-								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox">
-									<button type="button" ng-click="opponentPlayer(player.id, 'Yes', <?php echo $opponentId?>)" ng-model="opponent.yes" class="btn btn-default">Yes</button>
-									<button type="button" ng-click="opponentPlayer(player.id, 'Res', <?php echo $opponentId?>)" ng-model="opponent.res" class="btn btn-default">Reserve</button>
-									<button type="button" ng-click="opponentPlayer(player.id, 'No', <?php echo $opponentId?>)" ng-model="opponent.no" class="btn btn-default">No</button>
+								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox" ng-if="player.availability == 'Res'">
+									<button type="button" ng-click="teamPlayer(player.id, 'Yes', <?php echo $opponentId ?>)" ng-model="team.yes" class="btn btn-default">Yes</button>
+									<button type="button" ng-click="teamPlayer(player.id, 'No', <?php echo $opponentId ?>)" ng-model="team.no" class="btn btn-default">No</button>
+								</div>
+								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox" ng-if="player.availability == 'No'">
+									<button type="button" ng-click="teamPlayer(player.id, 'Yes', <?php echo $opponentId ?>)" ng-model="team.yes" class="btn btn-default">Yes</button>
+									<button type="button" ng-click="teamPlayer(player.id, 'Res', <?php echo $opponentId ?>)" ng-model="team.res" class="btn btn-default">Reserve</button>
+								</div>
+								<div class="btn-group btn-group-sm player-group" data-toggle="buttons-checkbox" ng-if="player.availability == 'Yes'">
+									<button type="button" ng-click="teamPlayer(player.id, 'Res', <?php echo $opponentId ?>)" ng-model="team.res" class="btn btn-default">Reserve</button>
+									<button type="button" ng-click="teamPlayer(player.id, 'No', <?php echo $opponentId ?>)" ng-model="team.no" class="btn btn-default">No</button>
 								</div>
 							</td>
 						</tr>
