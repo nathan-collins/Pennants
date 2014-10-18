@@ -77,10 +77,11 @@ class DbPlayerResultRepository implements PlayerResultRepositoryInterface {
 	/**
 	 * @param $handicap
 	 * @param $data
+	 * @param $player_id
 	 */
-	public function updateHandicap($handicap, $data)
+	public function updateHandicap($handicap, $data, $player_id)
 	{
-		$playerSeason = PlayerResult::getSeason($data['season_id'])->getgrade($data['grade_id'])->getMatch($data['match_id'])->getPlayer($data['player_id'])->first();
+		$playerSeason = PlayerResult::getSeason($data['season_id'])->getgrade($data['grade_id'])->getMatch($data['match_id'])->getPlayer($player_id)->first();
 		$playerSeason->handicap = $handicap;
 		$playerSeason->save();
 	}
@@ -105,7 +106,11 @@ class DbPlayerResultRepository implements PlayerResultRepositoryInterface {
 	 */
 	public function getPlayerByResults($season_id, $grade_id, $club_id)
 	{
-		return PlayerResult::getSeason($season_id)->getGrade($grade_id)->getClub($club_id)->join('players', 'player_results.player_id', '=', 'players.id')->orderBy(DB::raw('player_results.handicap * 1'));
+		return PlayerResult::getSeason($season_id)
+			->getGrade($grade_id)
+			->getClub($club_id)
+			->leftJoin('players', 'players.id', '=', 'player_results.player_id')
+			->orderBy(DB::raw('player_results.handicap * 1'));
 	}
 
 	/**
@@ -136,9 +141,9 @@ class DbPlayerResultRepository implements PlayerResultRepositoryInterface {
 	 * @param $availability
 	 * @param $data
 	 */
-	public function updateAvailability($availability, $data)
+	public function updateAvailability($availability, $data, $player_id)
 	{
-		$playerSeason = PlayerResult::getSeason($data['season_id'])->getGrade($data['grade_id'])->getPlayer($data['player_id'])->getClub($data['club_id'])->first();
+		$playerSeason = PlayerResult::getSeason($data['season_id'])->getGrade($data['grade_id'])->getPlayer($player_id)->getClub($data['club_id'])->first();
 		$playerSeason->availability = $availability;
 		$playerSeason->save();
 	}

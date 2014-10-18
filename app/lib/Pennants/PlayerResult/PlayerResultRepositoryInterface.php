@@ -15,9 +15,10 @@ interface PlayerResultRepositoryInterface {
 	public function find($id);
 	public function create($data);
 	public function playerExists($player_id, $season_id, $grade_id, $match_id);
-	public function updateHandicap($current_handicap, $id);
+	public function updateHandicap($current_handicap, $id, $player_id);
 	public function getPlayerByPlayerId($season_id, $grade_id, $match_id, $player_id);
 	public function getPlayerByResults($season_id, $grade_id, $club_id);
 	public function getPlayerHandicap($season_id, $grade_id,$player_id);
 	public function getPlayerByMatch($season_id, $grade_id, $club_id, $match_id, $player_id);
+	public function updateAvailability($availability, $data, $player_id);
 }

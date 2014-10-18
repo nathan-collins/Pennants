@@ -106,7 +106,7 @@ class PlayerController extends \BaseController {
 			));
 		}
 
-		$player = $this->player_result->getPlayerByResults($season_id, $grade_id, $club_id)->get();
+		$player = $this->player_season->getPlayerByResults($season_id, $grade_id, $club_id)->get();
 
 		return $player;
 	}

@@ -76,12 +76,18 @@ class DbResultRepository implements ResultRepositoryInterface {
 		return Result::getSeason($season_id)->getGrade($grade_id)->getMatch($match_id);
 	}
 
-	protected function buildCacheKey($data, $type)
+	/**
+	 * @param $data
+	 * @param $type
+	 * @param $player_id
+	 * @return string
+	 */
+	protected function buildCacheKey($data, $type, $player_id)
 	{
 		if($type == "match") {
-			$cacheKey = $data['season_id'].$data['grade_id'].$data['match_id'].$data['club_id'].$data['player_id'];
+			$cacheKey = $data['season_id'].$data['grade_id'].$data['match_id'].$data['club_id'].$player_id;
 		} else {
-			$cacheKey = $data['season_id'].$data['grade_id'].$data['club_id'].$data['player_id'];
+			$cacheKey = $data['season_id'].$data['grade_id'].$data['club_id'].$player_id;
 		}
 		return $cacheKey;
 	}
@@ -134,14 +140,15 @@ class DbResultRepository implements ResultRepositoryInterface {
 			$position_id = false;
 			// Remove the status
 			if($data['status'] == "Yes") {
-				unset($player_result->status);
+
+				$player_result->availability = $data['status'];
 				$player_result->player_id = $result_player;
 				$player_result->save($player_result->toArray());
 
 				// We need to have a position here
-				$result->position = $this->setPosition($data, $position, $settings, $player_result->player_id);
+				$result->position = $this->setPosition($data, $position, $settings, $result_player);
 
-				$position_id = $this->positionExists($result->position);
+				$position_id = $this->resultExists($result->position, $data['season_id'], $data['grade_id'], $data['match_id']);
 			}
 
 			if($position_id) {
@@ -160,7 +167,7 @@ class DbResultRepository implements ResultRepositoryInterface {
 				$result_update = Result::find($exists->id);
 				$result_update->update($result->toArray());
 			} else {
-				$this->playerResult->updateAvailability($data['status'], $data);
+				$this->playerResult->updateAvailability($data['status'], $data, $result_player);
 			}
 		}
 
@@ -168,7 +175,7 @@ class DbResultRepository implements ResultRepositoryInterface {
 
 		// Get players handicap if the game is handicapped
 		if(in_array($settings->handicapped, array('all', 'some'))) {
-			$player_result['handicap'] = $this->actionHandicap($data, $game_date);
+			$player_result['handicap'] = $this->actionHandicap($data, $game_date, $result_player);
 		}
 		// We need to update the order again since a new player has been added
 		$this->setPosition($data, $position, $settings);
@@ -179,29 +186,31 @@ class DbResultRepository implements ResultRepositoryInterface {
 	/**
 	 * @param $data
 	 * @param $game_date
+	 * @param $player_id / $versus_id
 	 * @return mixed
 	 */
-	protected function actionHandicap($data, $game_date)
+	protected function actionHandicap($data, $game_date, $player_id)
 	{
-		$golf_link_number = $this->playerSeason->getPlayerByPlayerId($data['season_id'], $data['grade_id'], $data['player_id'])->pluck('golf_link_number');
+		$golf_link_number = $this->playerSeason->getPlayerByPlayerId($data['season_id'], $data['grade_id'], $player_id)->pluck('golf_link_number');
 		// we should cache this value for a very long time because it should never change
 		if(!empty($golf_link_number)) {
-			$cache_key = $this->buildCacheKey($data, "match");
+			$cache_key = $this->buildCacheKey($data, "match", $player_id);
 			$match_handicap = \Cache::rememberForever($cache_key, function() use($golf_link_number, $game_date) {
 				return $this->checkForMatchHandicap($golf_link_number, $game_date);
 			});
 
-			$cache_key = $this->buildCacheKey($data, "current");
+			$cache_key = $this->buildCacheKey($data, "current", $player_id);
 			$day = strtotime('+1 day', 0);
 			$current_handicap = \Cache::remember($cache_key, $day, function() use($golf_link_number) {
 				return $this->checkForCurrentHandicap($golf_link_number);
 			});
 			// Update the handicap for the current selected match
-			$this->playerResult->updateHandicap($match_handicap, $data);
+			$this->playerResult->updateHandicap($match_handicap, $data, $player_id);
 			// Update Match Handicap
-			$this->playerSeason->updateHandicap($current_handicap, $data);
+			$this->playerSeason->updateHandicap($current_handicap, $data, $player_id);
 		} else {
-			$match_handicap = $this->playerResult->getPlayerHandicap($data['season_id'], $data['grade_id'], $data['player_id']);
+			$match_handicap = $this->playerSeason->getPlayerHandicap($data['season_id'], $data['grade_id'], $player_id);
+			$this->playerResult->updateHandicap($match_handicap, $data, $player_id);
 		}
 
 		return $match_handicap;
@@ -232,7 +241,7 @@ class DbResultRepository implements ResultRepositoryInterface {
 				$position = 1;
 				break;
 			case "Res":
-				$position = $settings['players'] + 1;
+				$position = $settings->players + 1;
 				break;
 			case "No":
 				$position = 0;
@@ -245,9 +254,9 @@ class DbResultRepository implements ResultRepositoryInterface {
 	 * @param $position
 	 * @return bool
 	 */
-	protected function positionExists($position)
+	protected function resultExists($position, $season_id, $grade_id, $match_id)
 	{
-		$id = Result::getPosition($position)->pluck('id');
+		$id = Result::getPosition($position)->getSeason($season_id)->getGrade($grade_id)->getMatch($match_id)->pluck('id');
 		if($id) {
 			return $id;
 		}
@@ -288,14 +297,24 @@ class DbResultRepository implements ResultRepositoryInterface {
 					->where('player_results.season_id', '=', $season_id)
 					->where('player_results.grade_id', '=', $grade_id)
 					->where('player_results.match_id', '=', $match_id)
-					->where('player_results.club_id', '=', $club_id);
+					->where('player_results.club_id', '=', $club_id)
+					->where('player_results.availability', '=', 'Yes');
 			})
 				->orderBy(DB::raw('player_results.handicap * 1'))
 				->groupBy('players.name')
 				->get();
 
+			$players_count = count($players);
 
 			if(count($players) > 0) {
+				if(count($players) >= $settings->players && !is_null($player_id)) {
+					return json_encode(array(
+						'code' => 400,
+						'message' => 'You have reached the maximum amount of players for this event.',
+						'type' => 'danger'
+					));
+				}
+
 				foreach($players as $player) {
 					if($player->id !== $player_id) {
 						// Update the position

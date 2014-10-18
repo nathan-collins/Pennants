@@ -43,7 +43,7 @@ class PlayerSeason extends Magniloquent {
 	 */
 	public function scopeGetSeason($query, $season_id)
 	{
-		return $query->where('season_id', '=', $season_id);
+		return $query->where('player_seasons.season_id', '=', $season_id);
 	}
 
 	/**
@@ -53,7 +53,7 @@ class PlayerSeason extends Magniloquent {
 	 */
 	public function scopeGetGrade($query, $grade_id)
 	{
-		return $query->where('grade_id', '=', $grade_id);
+		return $query->where('player_seasons.grade_id', '=', $grade_id);
 	}
 
 	/**
@@ -64,7 +64,7 @@ class PlayerSeason extends Magniloquent {
 
 	public function scopeGetClub($query, $club_id)
 	{
-		return $query->where('club_id', '=', $club_id);
+		return $query->where('player_seasons.club_id', '=', $club_id);
 	}
 
 	/**
@@ -74,6 +74,6 @@ class PlayerSeason extends Magniloquent {
 	 */
 	public function scopeGetPlayer($query, $player_id)
 	{
-		return $query->where('player_id', '=', $player_id);
+		return $query->where('player_seasons.player_id', '=', $player_id);
 	}
 }
